@@ -1,0 +1,222 @@
+{
+  "report_date": "2026-06-05 19:01:53",
+  "data_summary": {
+    "total_records": 108,
+    "companies": [
+      "Lululemon",
+      "Nike",
+      "Adidas"
+    ],
+    "brands": [
+      "Athletica高端线",
+      "Performance主品牌",
+      "Originals复古线"
+    ],
+    "expense_types": [
+      "sga",
+      "rd",
+      "marketing"
+    ],
+    "date_range": "2021-2023",
+    "total_expense": 97255000000,
+    "avg_expense_ratio": 13.6
+  },
+  "trend_analysis": [
+    {
+      "company": "Lululemon",
+      "expense_type": "sga",
+      "cagr": 22.47,
+      "ratio_trend": {
+        "first_ratio": 23.3,
+        "last_ratio": 22.1,
+        "absolute_change": -1.2,
+        "relative_change": -5.15
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Lululemon",
+      "expense_type": "rd",
+      "cagr": 20.19,
+      "ratio_trend": {
+        "first_ratio": 3.8,
+        "last_ratio": 3.4,
+        "absolute_change": -0.4,
+        "relative_change": -10.53
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Lululemon",
+      "expense_type": "marketing",
+      "cagr": 29.78,
+      "ratio_trend": {
+        "first_ratio": 7.9,
+        "last_ratio": 8.4,
+        "absolute_change": 0.5,
+        "relative_change": 6.33
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Nike",
+      "expense_type": "sga",
+      "cagr": 15.47,
+      "ratio_trend": {
+        "first_ratio": 20.4,
+        "last_ratio": 20.9,
+        "absolute_change": 0.5,
+        "relative_change": 2.45
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Nike",
+      "expense_type": "rd",
+      "cagr": 12.36,
+      "ratio_trend": {
+        "first_ratio": 7.8,
+        "last_ratio": 7.5,
+        "absolute_change": -0.3,
+        "relative_change": -3.85
+      },
+      "pattern": "无明显趋势"
+    },
+    {
+      "company": "Nike",
+      "expense_type": "marketing",
+      "cagr": 13.32,
+      "ratio_trend": {
+        "first_ratio": 9.2,
+        "last_ratio": 9.1,
+        "absolute_change": -0.1,
+        "relative_change": -1.09
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Adidas",
+      "expense_type": "sga",
+      "cagr": 13.14,
+      "ratio_trend": {
+        "first_ratio": 25.9,
+        "last_ratio": 29.5,
+        "absolute_change": 3.6,
+        "relative_change": 13.9
+      },
+      "pattern": "周期性波动"
+    },
+    {
+      "company": "Adidas",
+      "expense_type": "rd",
+      "cagr": 6.17,
+      "ratio_trend": {
+        "first_ratio": 9.5,
+        "last_ratio": 9.5,
+        "absolute_change": 0.0,
+        "relative_change": 0.0
+      },
+      "pattern": "无明显趋势"
+    },
+    {
+      "company": "Adidas",
+      "expense_type": "marketing",
+      "cagr": 2.06,
+      "ratio_trend": {
+        "first_ratio": 12.4,
+        "last_ratio": 11.5,
+        "absolute_change": -0.9,
+        "relative_change": -7.26
+      },
+      "pattern": "周期性波动"
+    }
+  ],
+  "brand_comparison": {
+    "expense_structure": {
+      "marketing": {
+        "Athletica高端线": 8.225,
+        "Originals复古线": 11.916666666666666,
+        "Performance主品牌": 9.275
+      },
+      "rd": {
+        "Athletica高端线": 3.75,
+        "Originals复古线": 9.408333333333333,
+        "Performance主品牌": 7.691666666666666
+      },
+      "sga": {
+        "Athletica高端线": 23.416666666666668,
+        "Originals复古线": 27.866666666666664,
+        "Performance主品牌": 20.849999999999998
+      }
+    },
+    "efficiency_comparison": {
+      "brand": {
+        "0": "Athletica高端线",
+        "1": "Originals复古线",
+        "2": "Performance主品牌"
+      },
+      "avg_expense_ratio": {
+        "0": 11.797222222222222,
+        "1": 16.397222222222222,
+        "2": 12.605555555555556
+      },
+      "avg_growth_rate": {
+        "0": 15.01388888888889,
+        "1": 4.125,
+        "2": 9.547222222222222
+      },
+      "total_expense": {
+        "0": 6305000000,
+        "1": 36880000000,
+        "2": 54070000000
+      }
+    },
+    "comparison_matrix": {
+      "Athletica高端线": {
+        "Athletica高端线": 0,
+        "Performance主品牌": 0.81,
+        "Originals复古线": 4.6
+      },
+      "Performance主品牌": {
+        "Athletica高端线": -0.81,
+        "Performance主品牌": 0,
+        "Originals复古线": 3.79
+      },
+      "Originals复古线": {
+        "Athletica高端线": -4.6,
+        "Performance主品牌": -3.79,
+        "Originals复古线": 0
+      }
+    }
+  },
+  "keyword_analysis": {
+    "total_texts": 0,
+    "categories": {}
+  },
+  "key_findings": [
+    {
+      "type": "brand_gap",
+      "brands": [
+        "Athletica高端线",
+        "Performance主品牌"
+      ],
+      "finding": "Athletica高端线与Performance主品牌的SG&A费用占比差距为2.57个百分点"
+    },
+    {
+      "type": "brand_gap",
+      "brands": [
+        "Athletica高端线",
+        "Originals复古线"
+      ],
+      "finding": "Athletica高端线与Originals复古线的SG&A费用占比差距为-4.45个百分点"
+    },
+    {
+      "type": "brand_gap",
+      "brands": [
+        "Performance主品牌",
+        "Originals复古线"
+      ],
+      "finding": "Performance主品牌与Originals复古线的SG&A费用占比差距为-7.02个百分点"
+    }
+  ]
+}

@@ -1,0 +1,2385 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞品财报研究分享 · Section 01 — Decathlon</title>
+
+    <!-- Fonts: Space Grotesk + JetBrains Mono + Noto Sans SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           NEO-GRID BOLD × DECATHLON — v3
+           v2 → v3: 修复编辑功能 / P6 删迪卡侬 / P8-9 合并 /
+                    补 P9 数据提取示例 / P10 长图可滚动 /
+                    P11 删第 6 点 / P12 重做为产出分享
+           ========================================================= */
+
+        :root {
+            --paper: #f5f4ef;
+            --bg: #ecece8;
+            --ink: #002855;
+            --ink-deep: #001a3d;
+            --accent: #0066cc;
+            --accent-2: #0080ff;
+            --green: #1ee89a;
+            --muted: #8a8a85;
+            --rule: rgba(0, 40, 85, 0.85);
+            --rule-soft: rgba(0, 40, 85, 0.18);
+            --stage-bg: #0a1530;
+
+            --font-display: 'Space Grotesk', 'Noto Sans SC', 'Helvetica Neue', sans-serif;
+            --font-mono: 'JetBrains Mono', 'Noto Sans SC', ui-monospace, monospace;
+            --font-cjk: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 100%; height: 100%;
+            margin: 0; overflow: hidden;
+            background: var(--stage-bg);
+            font-family: var(--font-display);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--stage-bg); }
+        .deck-stage {
+            position: absolute; left: 0; top: 0;
+            width: 1920px; height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--bg);
+        }
+        .slide {
+            position: absolute; inset: 0;
+            width: 1920px; height: 1080px;
+            overflow: hidden; display: block;
+            visibility: hidden; opacity: 0;
+            pointer-events: none; background: var(--bg);
+        }
+        .slide.active, .slide.visible {
+            visibility: visible; opacity: 1; pointer-events: auto; z-index: 1;
+        }
+
+        /* ============================================================
+           FRAME — 12-col × 8-row, 32px inset, 10px gap
+           ============================================================ */
+        .frame {
+            position: absolute; inset: 32px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            gap: 10px;
+        }
+
+        .panel { position: relative; overflow: hidden; padding: 20px 24px; }
+        .panel.paper { background: var(--paper); }
+        .panel.ink { background: var(--ink); color: var(--paper); }
+        .panel.ink-deep { background: var(--ink-deep); color: var(--paper); }
+        .panel.accent { background: var(--accent); color: var(--paper); }
+        .panel.bg { background: var(--bg); }
+        .panel.green { background: var(--green); color: var(--ink); }
+
+        /* === Persistent chrome === */
+        .pagenum {
+            position: absolute; right: 0; top: 0;
+            background: var(--paper); color: var(--ink);
+            padding: 10px 18px;
+            font-family: var(--font-mono);
+            font-size: 22px; font-weight: 500;
+            letter-spacing: 0.04em;
+            z-index: 5;
+        }
+        .pagenum.invert { background: var(--ink); color: var(--paper); }
+        .pagenum.accent { background: var(--accent); color: var(--paper); }
+        .pagenum.green { background: var(--green); color: var(--ink); }
+
+        .corner-mark {
+            position: absolute; top: 22px; right: 22px;
+            width: 32px; height: 32px;
+            display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+            gap: 4px; z-index: 5;
+        }
+        .corner-mark span { background: currentColor; }
+        .corner-mark span:nth-child(2),
+        .corner-mark span:nth-child(3) { background: transparent; }
+        .corner-mark.ink { color: var(--ink); }
+        .corner-mark.paper { color: var(--paper); }
+        .corner-mark.green { color: var(--green); }
+
+        /* === Top strip === */
+        .top-strip {
+            grid-column: 1 / -1; grid-row: 1;
+            display: flex; justify-content: space-between; align-items: center;
+            font-family: var(--font-mono);
+            font-size: 13px; font-weight: 500;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 0 4px;
+            color: #5a5a55;
+        }
+        .top-strip .left, .top-strip .right {
+            display: inline-flex; align-items: center; gap: 12px;
+        }
+        .top-strip .marker {
+            display: inline-block;
+            width: 12px; height: 12px;
+            background: var(--accent);
+        }
+        .top-strip .right .step::before {
+            content: ''; width: 10px; height: 10px;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        /* === Type tokens === */
+        .display {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 132px; line-height: 0.92;
+            letter-spacing: -0.025em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .display .cjk { font-family: var(--font-cjk); font-weight: 900; text-transform: none; letter-spacing: 0; }
+
+        .title {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 76px; line-height: 0.98;
+            letter-spacing: -0.02em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .title .cjk { font-family: var(--font-cjk); font-weight: 900; text-transform: none; letter-spacing: 0; line-height: 1.1; }
+
+        .subtitle {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 44px; line-height: 1.05;
+            letter-spacing: -0.01em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .subtitle .cjk { font-family: var(--font-cjk); font-weight: 900; text-transform: none; letter-spacing: 0; }
+
+        .stat {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 168px; line-height: 0.9;
+            letter-spacing: -0.03em; color: var(--ink);
+        }
+        .stat.green { color: var(--green); }
+        .stat-sm { font-size: 96px; }
+
+        .card-h {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 38px; line-height: 1.05;
+            letter-spacing: -0.005em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .card-h .cjk { font-family: var(--font-cjk); font-weight: 900; text-transform: none; letter-spacing: 0; }
+
+        .card-h3 {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 28px; line-height: 1.1;
+            letter-spacing: -0.003em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .card-h3 .cjk { font-family: var(--font-cjk); font-weight: 900; text-transform: none; letter-spacing: 0; }
+
+        .body {
+            font-family: var(--font-cjk);
+            font-size: 28px; font-weight: 400; line-height: 1.5;
+            color: var(--ink);
+        }
+        .body-sm {
+            font-family: var(--font-cjk);
+            font-size: 24px; font-weight: 400; line-height: 1.5;
+            color: var(--ink);
+        }
+        .body-xs {
+            font-family: var(--font-cjk);
+            font-size: 22px; font-weight: 400; line-height: 1.5;
+            color: var(--ink);
+        }
+
+        .label {
+            font-family: var(--font-mono);
+            font-size: 22px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .label-sm {
+            font-family: var(--font-mono);
+            font-size: 30px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--ink);
+        }
+
+        .muted-text { color: var(--muted); }
+
+        mark {
+            background: var(--accent);
+            color: var(--paper);
+            padding: 0 8px;
+            font-weight: 700;
+        }
+        em { font-style: normal; color: var(--accent); font-weight: 700; }
+        em.green { color: var(--green); }
+
+        .pill {
+            display: inline-block;
+            padding: 7px 16px;
+            font-family: var(--font-mono);
+            font-size: 26px; font-weight: 700;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            line-height: 1.4;
+        }
+        .pill.yes { background: var(--accent); color: var(--paper); }
+        .pill.green { background: var(--green); color: var(--ink); }
+        .pill.part { background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink); }
+        .pill.no { background: var(--ink); color: var(--paper); }
+
+        .blockmark {
+            width: 56px; height: 56px;
+            display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+            gap: 4px; flex-shrink: 0;
+        }
+        .blockmark span { background: currentColor; }
+        .blockmark span:nth-child(2),
+        .blockmark span:nth-child(3) { background: transparent; }
+        .blockmark.lg { width: 96px; height: 96px; }
+
+        /* === Animations === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .slide.visible .reveal:nth-child(1)  { transition-delay: 0.06s; }
+        .slide.visible .reveal:nth-child(2)  { transition-delay: 0.14s; }
+        .slide.visible .reveal:nth-child(3)  { transition-delay: 0.22s; }
+        .slide.visible .reveal:nth-child(4)  { transition-delay: 0.30s; }
+        .slide.visible .reveal:nth-child(5)  { transition-delay: 0.38s; }
+        .slide.visible .reveal:nth-child(6)  { transition-delay: 0.46s; }
+        .slide.visible .reveal:nth-child(7)  { transition-delay: 0.54s; }
+        .slide.visible .reveal:nth-child(8)  { transition-delay: 0.62s; }
+        .slide.visible .reveal:nth-child(9)  { transition-delay: 0.70s; }
+        .slide.visible .reveal:nth-child(10) { transition-delay: 0.78s; }
+        .slide.visible .reveal:nth-child(11) { transition-delay: 0.86s; }
+        .slide.visible .reveal:nth-child(12) { transition-delay: 0.94s; }
+        .slide.visible .reveal:nth-child(13) { transition-delay: 1.02s; }
+        .slide.visible .reveal:nth-child(14) { transition-delay: 1.10s; }
+        .slide.visible .reveal:nth-child(15) { transition-delay: 1.18s; }
+        .slide.visible .reveal:nth-child(16) { transition-delay: 1.26s; }
+        .slide.visible .reveal:nth-child(17) { transition-delay: 1.34s; }
+        .slide.visible .reveal:nth-child(18) { transition-delay: 1.42s; }
+        .slide.visible .reveal:nth-child(19) { transition-delay: 1.50s; }
+        .slide.visible .reveal:nth-child(20) { transition-delay: 1.58s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+        }
+
+        /* ============================================================
+           SLIDE 01 — TITLE
+           ============================================================ */
+        .slide-01 .frame { grid-template-rows: 60px repeat(6, 1fr) 60px; }
+        .slide-01 .eyebrow-panel {
+            grid-column: 1 / span 5; grid-row: 2;
+            background: var(--accent); color: var(--paper);
+            padding: 22px 28px;
+            display: flex; align-items: center; gap: 18px;
+        }
+        .slide-01 .eyebrow-panel .blockmark { color: var(--paper); }
+        .slide-01 .eyebrow-panel .eyebrow-text {
+            font-family: var(--font-mono);
+            font-size: 27px; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+        }
+        .slide-01 .display-block {
+            grid-column: 1 / span 8; grid-row: 3 / span 4;
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 20px 8px;
+        }
+        .slide-01 .display-block h1 {
+            font-family: var(--font-cjk);
+            font-weight: 900; font-size: 188px;
+            line-height: 0.95; letter-spacing: 0;
+            color: var(--ink);
+        }
+        .slide-01 .display-block h1 .en {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 78px; line-height: 1;
+            letter-spacing: -0.02em; text-transform: uppercase;
+            color: var(--muted);
+            display: block; margin-top: 18px;
+        }
+        .slide-01 .side-panel-1 {
+            grid-column: 9 / span 4; grid-row: 2 / span 3;
+            background: var(--ink); color: var(--paper);
+            padding: 30px 28px;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .slide-01 .side-panel-1 .stat { font-size: 132px; line-height: 0.9; color: var(--green); }
+        .slide-01 .side-panel-1 .stat .small {
+            display: block; font-family: var(--font-mono);
+            font-size: 21px; font-weight: 500; letter-spacing: 0.14em;
+            text-transform: uppercase; margin-top: 10px; color: var(--accent-2);
+        }
+        .slide-01 .side-panel-1 .body-sm {
+            color: rgba(245, 244, 239, 0.78);
+            font-size: 28px; line-height: 1.7;
+        }
+        .slide-01 .side-panel-2 {
+            grid-column: 9 / span 4; grid-row: 5 / span 2;
+            background: var(--paper); border: 2px solid var(--ink);
+            padding: 24px 28px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .slide-01 .side-panel-2 .label { margin-bottom: 10px; }
+        .slide-01 .side-panel-2 .body { font-size: 110px; line-height: 1.2; }
+        .slide-01 .index-strip {
+            grid-column: 1 / -1; grid-row: 7;
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+        }
+        .slide-01 .index-strip .cell {
+            border-top: 2px solid var(--ink);
+            padding-top: 12px;
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .slide-01 .index-strip .cell .id {
+            font-family: var(--font-mono);
+            font-size: 27px; font-weight: 700;
+            letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--ink);
+        }
+        .slide-01 .index-strip .cell .name {
+            font-family: var(--font-cjk);
+            font-weight: 900; font-size: 30px; color: var(--ink);
+        }
+        .slide-01 .index-strip .cell.active {
+            background: var(--accent);
+            border-top: 2px solid var(--ink);
+            margin: -12px 0 -2px 0;
+            padding: 12px 16px 14px 16px;
+        }
+        .slide-01 .index-strip .cell.active .id,
+        .slide-01 .index-strip .cell.active .name { color: var(--paper); }
+
+        /* ============================================================
+           SLIDE 02 — TOC
+           ============================================================ */
+        .slide-02 .toc-title {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: center; gap: 28px;
+        }
+        .slide-02 .toc-title h2 {
+            font-family: var(--font-cjk);
+            font-weight: 900; font-size: 120px; line-height: 0.95;
+            color: var(--ink); letter-spacing: 0;
+        }
+        .slide-02 .toc-title .label { color: var(--muted); font-size: 22px; }
+        .slide-02 .toc-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 5;
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+        }
+        .slide-02 .toc-grid .item {
+            background: var(--paper);
+            padding: 28px 26px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            min-height: 0;
+        }
+        .slide-02 .toc-grid .item .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 88px; line-height: 1;
+            letter-spacing: -0.03em; color: var(--ink);
+        }
+        .slide-02 .toc-grid .item .label-sm { margin-top: 14px; color: var(--muted); }
+        .slide-02 .toc-grid .item .cn {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 28px; line-height: 1.2;
+            color: var(--ink); margin-top: 12px;
+        }
+        .slide-02 .toc-grid .item .en {
+            font-family: var(--font-mono);
+            font-size: 27px; font-weight: 500;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--muted); margin-top: 6px;
+        }
+        .slide-02 .toc-grid .item.first { background: var(--ink); color: var(--paper); }
+        .slide-02 .toc-grid .item.first .num { color: var(--green); }
+        .slide-02 .toc-grid .item.first .cn { color: var(--paper); }
+        .slide-02 .toc-grid .item.first .label-sm,
+        .slide-02 .toc-grid .item.first .en { color: var(--accent-2); }
+        .slide-02 .toc-footer {
+            grid-column: 1 / -1; grid-row: 8;
+            display: flex; justify-content: space-between; align-items: center;
+            font-family: var(--font-mono);
+            font-size: 22px; font-weight: 500;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--muted);
+        }
+        .slide-02 .toc-footer .progress { color: var(--ink); }
+
+        /* ============================================================
+           SLIDE 03 — Background
+           ============================================================ */
+        .slide-03 .eyebrow-line {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: baseline; gap: 24px;
+            padding-bottom: 8px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-03 .eyebrow-line .big {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 78px; line-height: 1;
+            letter-spacing: -0.02em; color: var(--ink);
+        }
+        .slide-03 .eyebrow-line .label { color: var(--muted); font-size: 30px; }
+        .slide-03 .question-panel {
+            grid-column: 1 / span 12; grid-row: 3 / span 2;
+            background: var(--accent); color: var(--paper);
+            padding: 32px 40px;
+            display: flex; align-items: center; gap: 36px;
+        }
+        .slide-03 .question-panel .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 78px; line-height: 0.9;
+            letter-spacing: -0.03em; color: var(--paper);
+        }
+        .slide-03 .question-panel .text {
+            font-family: var(--font-cjk);
+            font-weight: 900; font-size: 36px; line-height: 1.2; letter-spacing: 0;
+        }
+        .slide-03 .problem-grid {
+            grid-column: 1 / -1; grid-row: 5 / span 4;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+        }
+        .slide-03 .problem-grid .item {
+            background: var(--paper);
+            padding: 28px 28px 24px 28px;
+            display: flex; flex-direction: column; gap: 14px;
+        }
+        .slide-03 .problem-grid .item .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 78px; line-height: 0.9;
+            letter-spacing: -0.03em; color: var(--accent);
+        }
+        .slide-03 .problem-grid .item .label { color: var(--ink); font-size: 36px; }
+        .slide-03 .problem-grid .item .body { font-size: 28px; line-height: 1.5; }
+        .slide-03 .problem-grid .item.deep { background: var(--ink); color: var(--paper); }
+        .slide-03 .problem-grid .item.deep .num { color: var(--green); }
+        .slide-03 .problem-grid .item.deep .label { color: var(--accent-2); }
+        .slide-03 .problem-grid .item.deep .body { color: var(--paper); }
+
+        /* ============================================================
+           SLIDE 04 — Method & tooling
+           ============================================================ */
+        .slide-04 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-04 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; letter-spacing: 0; color: var(--ink);
+        }
+        .slide-04 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-04 .stage-flow {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+        }
+        .slide-04 .stage-flow .stage {
+            background: var(--paper);
+            padding: 24px 24px 22px 24px;
+            display: flex; flex-direction: column; gap: 12px;
+            position: relative;
+        }
+        .slide-04 .stage-flow .stage.deep-stage { background: var(--ink); color: var(--paper); }
+        .slide-04 .stage-flow .stage.deep-stage .stage-num { color: var(--green); }
+        .slide-04 .stage-flow .stage.deep-stage .label-sm { color: var(--accent-2); }
+        .slide-04 .stage-flow .stage.deep-stage .body,
+        .slide-04 .stage-flow .stage.deep-stage .body-sm,
+        .slide-04 .stage-flow .stage.deep-stage .opt-line { color: var(--paper); }
+        .slide-04 .stage-flow .stage.accent-stage { background: var(--accent); color: var(--paper); }
+        .slide-04 .stage-flow .stage.accent-stage .stage-num { color: var(--paper); }
+        .slide-04 .stage-flow .stage.accent-stage .label-sm { color: var(--paper); }
+        .slide-04 .stage-flow .stage.accent-stage .body,
+        .slide-04 .stage-flow .stage.accent-stage .body-sm { color: var(--paper); }
+        .slide-04 .stage .stage-num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 64px; line-height: 1;
+            letter-spacing: -0.02em; color: var(--accent);
+        }
+        .slide-04 .stage .stage-title {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 36px; line-height: 1.15;
+        }
+        .slide-04 .stage .opt-line {
+            display: flex; flex-direction: column; gap: 8px;
+            border-top: 1px solid rgba(0, 40, 85, 0.18);
+            padding-top: 10px;
+        }
+        .slide-04 .stage.deep-stage .opt-line { border-color: rgba(245, 244, 239, 0.18); }
+        .slide-04 .stage.accent-stage .opt-line { border-color: rgba(245, 244, 239, 0.4); }
+        .slide-04 .stage .opt-line .opt {
+            display: flex; align-items: center; gap: 10px;
+            font-family: var(--font-cjk); font-size: 22px; line-height: 1.4;
+        }
+        .slide-04 .stage .opt-line .opt .pill { font-size: 21px; padding: 4px 10px; }
+        .slide-04 .stage .final {
+            background: rgba(0, 102, 204, 0.15);
+            border: 2px solid var(--accent);
+            padding: 12px 14px;
+            font-family: var(--font-cjk);
+            font-size: 28px; font-weight: 500; line-height: 1.4;
+            color: var(--ink);
+        }
+        .slide-04 .stage.deep-stage .final { background: var(--green); border-color: var(--green); color: var(--ink); }
+        .slide-04 .stage.accent-stage .final { background: var(--paper); border-color: var(--paper); color: var(--ink); }
+        .slide-04 .stage .final strong { font-weight: 900; }
+
+        /* ============================================================
+           SLIDE 05 — Interactive
+           ============================================================ */
+        .slide-05 .interactive-grid {
+            grid-column: 1 / -1; grid-row: 2 / span 7;
+            display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px;
+        }
+        .slide-05 .left-panel {
+            background: var(--accent); color: var(--paper);
+            padding: 48px 44px;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .slide-05 .left-panel .label-sm { color: var(--paper); opacity: 0.85; }
+        .slide-05 .left-panel .big {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 240px; line-height: 0.85;
+            letter-spacing: -0.04em; color: var(--paper);
+        }
+        .slide-05 .left-panel .big .q { font-style: italic; }
+        .slide-05 .left-panel .cn {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 48px; line-height: 1.15; margin-top: 20px;
+        }
+        .slide-05 .right-panel { display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+        .slide-05 .right-panel .q-card {
+            background: var(--paper);
+            padding: 32px 36px;
+            display: flex; flex-direction: column; gap: 14px;
+        }
+        .slide-05 .right-panel .q-card.deep-card { background: var(--ink); color: var(--paper); }
+        .slide-05 .right-panel .q-card .q-num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 64px; line-height: 0.9;
+            letter-spacing: -0.03em; color: var(--accent);
+        }
+        .slide-05 .right-panel .q-card.deep-card .q-num { color: var(--green); }
+        .slide-05 .right-panel .q-card .q-text {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 32px; line-height: 1.25;
+        }
+        .slide-05 .right-panel .q-card .q-hint {
+            font-family: var(--font-mono);
+            font-size: 21px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--muted);
+        }
+        .slide-05 .right-panel .q-card.deep-card .q-hint { color: var(--accent-2); }
+
+        /* ============================================================
+           SLIDE 06 — Brand list (迪卡侬 removed)
+           ============================================================ */
+        .slide-06 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-06 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-06 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-06 .header .count-badge {
+            display: flex; align-items: baseline; gap: 8px;
+            background: var(--ink); color: var(--paper);
+            padding: 10px 18px;
+        }
+        .slide-06 .header .count-badge .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 36px; line-height: 1;
+            color: var(--green);
+        }
+        .slide-06 .header .count-badge .lbl {
+            font-family: var(--font-mono);
+            font-size: 28px; font-weight: 700;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--paper);
+        }
+        .slide-06 .category-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 5;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+        }
+        .slide-06 .category {
+            background: var(--paper);
+            padding: 20px 22px 18px 22px;
+            display: flex; flex-direction: column; gap: 8px;
+        }
+        .slide-06 .category .cat-head {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-bottom: 8px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-06 .category .cat-name {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 28px; line-height: 1.1;
+        }
+        .slide-06 .category .cat-en {
+            font-family: var(--font-mono);
+            font-size: 27px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--muted); margin-top: 4px;
+        }
+        .slide-06 .category .cat-count {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 28px; line-height: 1;
+            color: var(--green);
+        }
+        .slide-06 .category .cat-count .lbl {
+            font-family: var(--font-mono);
+            font-size: 24px; font-weight: 700;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--muted); display: block; margin-top: 4px;
+        }
+        .slide-06 .category .brand-list {
+            display: flex; flex-direction: column; gap: 4px;
+            font-family: var(--font-cjk); font-size: 14px; line-height: 1.35;
+        }
+        .slide-06 .category .brand-list .brand.listed {
+            color: var(--ink);
+            font-weight: 700;
+            background: var(--green);
+            padding: 4px 10px; margin: 0 -4px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .slide-06 .category .brand-list .brand.listed::before {
+            content: '✓'; font-weight: 700; color: var(--ink);
+        }
+        .slide-06 .category .brand-list .brand.candidate {
+            color: var(--muted);
+            font-size: 11px;
+            padding: 2px 0 2px 12px;
+        }
+        .slide-06 .category .brand-list .brand.candidate::before {
+            content: '·'; color: var(--muted); margin-right: 6px;
+        }
+        .slide-06 .category .brand-list .sub {
+            font-family: var(--font-mono);
+            font-size: 12px; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--muted); margin-top: 6px;
+        }
+        .slide-06 .filter-result {
+            grid-column: 1 / -1; grid-row: 8;
+            background: transparent; color: var(--ink);
+            border: none;
+            padding: 6px 4px;
+            display: flex; align-items: baseline; justify-content: flex-end; gap: 12px;
+        }
+        .slide-06 .filter-result .stat { display: none; }
+        .slide-06 .filter-result .text {
+            font-family: var(--font-cjk); font-weight: 400;
+            font-size: 11px; line-height: 1.4; color: var(--muted);
+        }
+        .slide-06 .filter-result .text strong { font-weight: 700; }
+        .slide-06 .filter-result .label-sm { display: none; }
+
+        /* ============================================================
+           SLIDE 07 — Metrics
+           ============================================================ */
+        .slide-07 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-07 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-07 .header .label { color: var(--muted); font-size: 20px; }
+        .slide-07 .header .legend {
+            display: flex; gap: 16px; align-items: center;
+        }
+        .slide-07 .header .legend .leg {
+            display: flex; align-items: center; gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 18px; font-weight: 700;
+            letter-spacing: 0.10em; text-transform: uppercase;
+        }
+        .slide-07 .header .legend .leg .swatch {
+            width: 36px; height: 18px; display: inline-block;
+        }
+        .slide-07 .header .legend .leg .swatch.star2 { background: var(--green); }
+        .slide-07 .header .legend .leg .swatch.star1 { background: var(--accent); }
+        .slide-07 .metric-table {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: flex; flex-direction: column; gap: 5px;
+        }
+        .slide-07 .modual-band {
+            background: var(--ink); color: var(--paper);
+            padding: 6px 18px;
+            display: flex; align-items: baseline; gap: 16px;
+        }
+        .slide-07 .modual-band .name {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 22px; line-height: 1;
+        }
+        .slide-07 .modual-band .name .en {
+            font-family: var(--font-mono);
+            font-size: 18px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--accent-2); margin-left: 12px;
+        }
+        .slide-07 .modual-band .count {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 22px; line-height: 1;
+            color: var(--green);
+        }
+        .slide-07 .metric-row {
+            background: var(--paper);
+            display: grid;
+            grid-template-columns: 80px 1.4fr 1.6fr 1.6fr 1.8fr;
+            gap: 0;
+            align-items: stretch;
+            border: 1.5px solid var(--rule-soft);
+        }
+        .slide-07 .metric-row.star2 {
+            background: var(--green);
+            border-color: var(--green);
+        }
+        .slide-07 .metric-row.star2 .m-stars { color: var(--ink); }
+        .slide-07 .metric-row.star2 .m-name,
+        .slide-07 .metric-row.star2 .m-term,
+        .slide-07 .metric-row.star2 .m-en,
+        .slide-07 .metric-row.star2 .m-note { color: var(--ink); }
+        .slide-07 .metric-row.star1 {
+            background: var(--paper);
+            border: 2.5px solid var(--accent);
+        }
+        .slide-07 .metric-row > div {
+            padding: 5px 12px;
+            display: flex; flex-direction: column; justify-content: center;
+            font-family: var(--font-cjk);
+            font-size: 16px; line-height: 1.3;
+        }
+        .slide-07 .metric-row .m-stars {
+            font-family: var(--font-display);
+            font-size: 18px; font-weight: 700;
+            color: var(--accent);
+            align-items: center; text-align: center;
+        }
+        .slide-07 .metric-row .m-name { font-weight: 900; font-size: 18px; color: var(--ink); }
+        .slide-07 .metric-row .m-term { color: var(--ink); font-size: 15px; }
+        .slide-07 .metric-row .m-en {
+            font-family: var(--font-mono);
+            font-size: 13px; line-height: 1.2;
+            color: var(--muted);
+            min-width: 0;
+            overflow-wrap: break-word;
+        }
+        .slide-07 .metric-row .m-note { color: var(--ink); font-size: 15px; }
+
+        /* ============================================================
+           SLIDE 08 — Coverage + Caliber (MERGED)
+           Image big, caliber as side note
+           ============================================================ */
+        .slide-08 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-08 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-08 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-08 .body-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid; grid-template-columns: 1.7fr 1fr; gap: 12px;
+        }
+        .slide-08 .screenshot-panel {
+            background: var(--paper);
+            padding: 0;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--ink);
+            overflow: hidden;
+        }
+        .slide-08 .screenshot-panel img {
+            width: 100%; height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .slide-08 .caliber-side {
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .slide-08 .caliber-side .head {
+            background: var(--ink); color: var(--paper);
+            padding: 16px 20px;
+        }
+        .slide-08 .caliber-side .head .label-sm { color: var(--accent-2); }
+        .slide-08 .caliber-side .head h3 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 30px; line-height: 1.1;
+            margin-top: 6px;
+        }
+        .slide-08 .caliber-side .item {
+            background: var(--paper);
+            padding: 12px 16px;
+            display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: center;
+        }
+        .slide-08 .caliber-side .item .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 28px; line-height: 1;
+            color: var(--accent);
+        }
+        .slide-08 .caliber-side .item .body {
+            font-family: var(--font-cjk);
+            font-size: 21px; line-height: 1.45;
+        }
+        .slide-08 .caliber-side .item .body strong { font-weight: 900; }
+        .slide-08 .caliber-side .item .body em { font-style: normal; color: var(--accent); font-weight: 700; }
+
+        /* ============================================================
+           SLIDE 09 — Data extraction examples (NEW)
+           ============================================================ */
+        .slide-09 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-09 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-09 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-09 .screenshot-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .slide-09 .ss-card {
+            background: var(--paper);
+            padding: 0;
+            display: flex; flex-direction: column; gap: 0;
+            border: 2px solid var(--ink);
+            overflow: hidden;
+        }
+        .slide-09 .ss-card .head {
+            display: flex; align-items: baseline; justify-content: space-between;
+            padding: 10px 16px;
+        }
+        .slide-09 .ss-card .head .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 44px; line-height: 1;
+            color: var(--accent);
+        }
+        .slide-09 .ss-card .head .label-sm { color: var(--muted); }
+        .slide-09 .ss-card .head .name {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 26px; line-height: 1.1;
+        }
+        .slide-09 .ss-card .img-wrap {
+            flex: 1; min-height: 0;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            background: var(--bg);
+            margin: 0;
+        }
+        .slide-09 .ss-card .img-wrap img {
+            width: 100%; height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .slide-09 .ss-card.green { background: var(--green); border-color: var(--ink); }
+        .slide-09 .ss-card.green .head .num { color: var(--ink); }
+        .slide-09 .ss-card.green .head .name { color: var(--ink); }
+        .slide-09 .ss-card.green .head .label-sm { color: var(--ink); }
+
+        /* ============================================================
+           SLIDE 10 — Workflow V3 with vertical scrollable long image
+           ============================================================ */
+        .slide-10 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-10 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-10 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-10 .body-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid; grid-template-columns: 1fr 1.3fr; gap: 12px;
+        }
+        .slide-10 .stage-list {
+            display: flex; flex-direction: column; gap: 6px;
+        }
+        .slide-10 .stage-list .step {
+            background: var(--paper);
+            padding: 10px 14px;
+            display: grid; grid-template-columns: 50px 1fr; gap: 12px;
+            align-items: center;
+            border-left: 4px solid var(--accent);
+        }
+        .slide-10 .stage-list .step.deep-step { background: var(--ink); color: var(--paper); border-left-color: var(--green); }
+        .slide-10 .stage-list .step.green-step { background: var(--green); color: var(--ink); border-left-color: var(--ink); }
+        .slide-10 .stage-list .step .step-num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 32px; line-height: 1;
+            letter-spacing: -0.02em; color: var(--accent);
+        }
+        .slide-10 .stage-list .step.deep-step .step-num { color: var(--green); }
+        .slide-10 .stage-list .step.green-step .step-num { color: var(--ink); }
+        .slide-10 .stage-list .step .step-name {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 30px; line-height: 1.15;
+        }
+        .slide-10 .stage-list .step .step-desc {
+            font-family: var(--font-cjk); font-size: 24px;
+            line-height: 1.4; color: var(--muted);
+        }
+        .slide-10 .stage-list .step.deep-step .step-desc,
+        .slide-10 .stage-list .step.green-step .step-desc { color: inherit; opacity: 0.85; }
+
+        /* SCROLLABLE WORKFLOW LONG IMAGE */
+        .slide-10 .long-image-panel {
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-10 .long-image-header {
+            position: absolute; top: 0; left: 0; right: 0;
+            background: var(--ink); color: var(--paper);
+            padding: 8px 16px;
+            display: flex; align-items: center; justify-content: space-between;
+            z-index: 2;
+        }
+        .slide-10 .long-image-header .label-sm { color: var(--accent-2); }
+        .slide-10 .long-image-header .hint {
+            font-family: var(--font-mono);
+            font-size: 28px; font-weight: 700;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--green);
+        }
+        .slide-10 .long-image-scroll {
+            position: absolute; top: 40px; left: 0; right: 0; bottom: 0;
+            overflow-y: auto;
+            overflow-x: auto;
+            padding: 18px 20px;
+            background: var(--bg);
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) var(--ink);
+        }
+        .slide-10 .long-image-scroll::-webkit-scrollbar { width: 10px; height: 10px; }
+        .slide-10 .long-image-scroll::-webkit-scrollbar-track { background: var(--ink); }
+        .slide-10 .long-image-scroll::-webkit-scrollbar-thumb { background: var(--accent); }
+
+        .slide-10 .workflow-pre {
+            font-family: var(--font-mono);
+            font-size: 24px;
+            line-height: 1.4;
+            color: var(--ink);
+            white-space: pre;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide-10 .long-image {
+            display: flex; flex-direction: column; gap: 0;
+        }
+        .slide-10 .long-image .stage-card {
+            background: var(--paper);
+            padding: 12px 16px;
+            display: flex; flex-direction: column; gap: 6px;
+            border-left: 5px solid var(--accent);
+        }
+        .slide-10 .long-image .stage-card.ink { background: var(--ink); color: var(--paper); border-left-color: var(--green); }
+        .slide-10 .long-image .stage-card.green { background: var(--green); color: var(--ink); border-left-color: var(--ink); }
+        .slide-10 .long-image .stage-card .head {
+            display: flex; align-items: baseline; gap: 10px;
+        }
+        .slide-10 .long-image .stage-card .head .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 22px; line-height: 1;
+            color: var(--accent);
+        }
+        .slide-10 .long-image .stage-card.ink .head .num { color: var(--green); }
+        .slide-10 .long-image .stage-card.green .head .num { color: var(--ink); }
+        .slide-10 .long-image .stage-card .head .name {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 22px; line-height: 1.1;
+        }
+        .slide-10 .long-image .stage-card .head .en {
+            font-family: var(--font-mono);
+            font-size: 28px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            color: var(--muted);
+            margin-left: auto;
+        }
+        .slide-10 .long-image .stage-card.ink .head .en,
+        .slide-10 .long-image .stage-card.green .head .en { color: var(--accent-2); }
+        .slide-10 .long-image .stage-card .sub {
+            display: flex; flex-direction: column; gap: 3px;
+        }
+        .slide-10 .long-image .stage-card .sub .row {
+            font-family: var(--font-cjk);
+            font-size: 24px; line-height: 1.45;
+            padding-left: 8px;
+        }
+        .slide-10 .long-image .stage-card .sub .row::before {
+            content: '▸'; color: var(--accent); margin-right: 6px;
+        }
+        .slide-10 .long-image .stage-card.ink .sub .row::before { color: var(--green); }
+        .slide-10 .long-image .stage-card.green .sub .row::before { color: var(--ink); }
+        .slide-10 .long-image .arrow {
+            height: 18px; display: flex; align-items: center; justify-content: center;
+            color: var(--ink);
+            font-family: var(--font-display);
+            font-size: 27px; font-weight: 700;
+        }
+        .slide-10 .long-image .arrow::before { content: '↓'; }
+        .slide-10 .long-image .stage-card .output {
+            margin-top: 4px;
+            padding: 6px 8px;
+            background: rgba(0, 102, 204, 0.10);
+            font-family: var(--font-mono);
+            font-size: 21px; font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--ink);
+        }
+        .slide-10 .long-image .stage-card.ink .output {
+            background: rgba(30, 232, 154, 0.20);
+        }
+        .slide-10 .long-image .stage-card.green .output {
+            background: rgba(0, 40, 85, 0.18);
+        }
+
+        /* ============================================================
+           SLIDE 11 — Pitfalls (6 items, point 6 家族企业 removed)
+           ============================================================ */
+        .slide-11 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-11 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-11 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-11 .body-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 14px;
+        }
+        .slide-11 .pitfall {
+            background: var(--paper);
+            padding: 26px 30px 22px 30px;
+            display: flex; flex-direction: column; gap: 14px;
+            border-left: 6px solid var(--accent);
+        }
+        .slide-11 .pitfall.deep { background: var(--ink); color: var(--paper); border-left-color: var(--green); }
+        .slide-11 .pitfall.green { background: var(--green); color: var(--ink); border-left-color: var(--ink); }
+        .slide-11 .pitfall .head {
+            display: flex; align-items: center; gap: 18px;
+        }
+        .slide-11 .pitfall .head .num {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 64px; line-height: 0.9;
+            color: var(--accent);
+        }
+        .slide-11 .pitfall.deep .head .num { color: var(--green); }
+        .slide-11 .pitfall.green .head .num { color: var(--ink); }
+        .slide-11 .pitfall .head .label { color: var(--ink); font-size: 32px; font-weight: 900; }
+        .slide-11 .pitfall.deep .head .label { color: var(--paper); }
+        .slide-11 .pitfall .text {
+            font-family: var(--font-cjk); font-size: 52px;
+            line-height: 1.4;
+        }
+        .slide-11 .pitfall .text strong { font-weight: 900; }
+        .slide-11 .pitfall .text em { font-style: normal; color: var(--accent); font-weight: 700; }
+        .slide-11 .pitfall.deep .text em { color: var(--green); }
+        .slide-11 .pitfall.deep .text strong { color: var(--green); }
+        .slide-11 .pitfall.green .text em { color: var(--accent); }
+
+        /* ============================================================
+           SLIDE 12 — Outputs (placeholder for screenshots/links)
+           ============================================================ */
+        .slide-12 .header {
+            grid-column: 1 / -1; grid-row: 2;
+            display: flex; align-items: flex-end; justify-content: space-between;
+            padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+        }
+        .slide-12 .header h2 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 78px; line-height: 0.95; color: var(--ink);
+        }
+        .slide-12 .header .label { color: var(--muted); font-size: 30px; }
+        .slide-12 .body-grid {
+            grid-column: 1 / -1; grid-row: 3 / span 6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 14px;
+        }
+        .slide-12 .sub-title {
+            display: flex; align-items: baseline; gap: 16px;
+            padding: 18px 24px;
+        }
+        .slide-12 .sub-title.left { background: var(--accent); color: var(--paper); }
+        .slide-12 .sub-title.right { background: var(--ink); color: var(--paper); }
+        .slide-12 .sub-title .label-sm {
+            color: inherit;
+            opacity: 0.85;
+        }
+        .slide-12 .sub-title h3 {
+            font-family: var(--font-cjk); font-weight: 900;
+            font-size: 38px; line-height: 1.05;
+        }
+        .slide-12 .output-card {
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            display: flex; flex-direction: column;
+            position: relative;
+            min-height: 0;
+            overflow: hidden;
+        }
+        .slide-12 .output-card .img-scroll {
+            flex: 1;
+            min-height: 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 16px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) var(--ink);
+        }
+        .slide-12 .output-card .img-scroll::-webkit-scrollbar { height: 10px; }
+        .slide-12 .output-card .img-scroll::-webkit-scrollbar-track { background: var(--ink); }
+        .slide-12 .output-card .img-scroll::-webkit-scrollbar-thumb { background: var(--accent); }
+        .slide-12 .output-card .img-scroll img {
+            display: block;
+            height: 100%;
+            max-height: 100%;
+            width: auto;
+            max-width: none;
+        }
+        .slide-12 .output-card .img-fill {
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+        }
+        .slide-12 .output-card .img-fill img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .slide-12 .output-card .footer {
+            padding: 14px 24px;
+            background: var(--bg);
+            display: flex; align-items: center; justify-content: space-between;
+            border-top: 1.5px solid var(--rule-soft);
+            gap: 16px;
+        }
+        .slide-12 .output-card .footer .lbl {
+            font-family: var(--font-cjk);
+            font-size: 27px; color: var(--ink);
+            font-weight: 500;
+            display: flex; align-items: center; gap: 10px;
+            flex: 1; min-width: 0;
+        }
+        .slide-12 .output-card .footer .lbl .lbl-text {
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .slide-12 .output-card .footer a.link {
+            font-family: var(--font-mono);
+            font-size: 21px; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            color: var(--paper);
+            background: var(--accent);
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 2px solid var(--accent);
+            white-space: nowrap;
+            transition: all 0.18s ease;
+        }
+        .slide-12 .output-card .footer a.link:hover {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--green);
+        }
+    </style>
+</head>
+<body>
+
+<div class="deck-viewport">
+        <main class="deck-stage" id="deckStage" style="transform: translate(79.1111px, 0px) scale(0.584259);">
+
+            <!-- ============================================
+                 SLIDE 01 — TITLE
+                 ============================================ -->
+            <section class="slide slide-01" data-slide="1">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">SECTION 01 / 05</span>
+                            <span>INTERNAL SHARE</span>
+                        </span>
+                    </div>
+
+                    <div class="eyebrow-panel reveal">
+                        <div class="blockmark"><span></span><span></span><span></span><span></span></div>
+                        <span class="eyebrow-text">Section 01 · Project Brief</span>
+                    </div>
+
+                    <div class="display-block">
+                        <h1 class="reveal">竞品财报<br>数据提取</h1>
+                        <span><br></span>
+                    </div>
+
+                    <div class="side-panel-1 reveal">
+                        <div>26<span class="small">Listed Brands Covered</span></div>
+                        <div style="font-family: var(--font-mono); font-size: 28px; line-height: 1.7; letter-spacing: 0.06em; text-transform: uppercase;">
+                            A 股 · 港股 · 美股 · 欧股 · 日股 · 加股<br>2023-2025</div>
+                    </div>
+
+                    <div class="side-panel-2 reveal">
+                        <div class="label" style="color: var(--muted);">研究范围</div>
+                        <div>运动鞋服 · 户外装备 · 自行车 · 服饰零售<br>四大品类上市公司</div>
+                    </div>
+
+                    <div class="index-strip">
+                        <div class="cell active reveal">
+                            <span class="id">01 · Background</span>
+                            <span class="name">项目背景</span>
+                        </div>
+                        <div class="cell reveal">
+                            <span class="id">02 · Scope</span>
+                            <span class="name">竞品 &amp; 指标</span>
+                        </div>
+                        <div class="cell reveal">
+                            <span class="id">03 · Method</span>
+                            <span class="name">方法 &amp; 工具</span>
+                        </div>
+                        <div class="cell reveal">
+                            <span class="id">04 · Output</span>
+                            <span class="name">产出分享</span>
+                        </div>
+                        <div class="cell reveal">
+                            <span class="id">05 · AI 心得</span>
+                            <span class="name">AI 落地心得</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum accent">01 / 12</div>
+                <div class="corner-mark paper"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 02 — TABLE OF CONTENTS
+                 ============================================ -->
+            <section class="slide slide-02" data-slide="2">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">02 / 12</span>
+                            <span>TABLE OF CONTENTS</span>
+                        </span>
+                    </div>
+
+                    <div class="toc-title">
+                        <h2 class="reveal">目录</h2>
+                        <span>CONTENTS</span>
+                    </div>
+
+                    <div class="toc-grid">
+                        <div class="item first reveal">
+                            <div class="num">01</div>
+                            <div>
+                                <div class="label-sm">SECTION</div>
+                                <div class="cn">项目背景 &amp; 目标</div>
+                                <div class="en">Project Background</div>
+                            </div>
+                        </div>
+                        <div class="item reveal">
+                            <div class="num">02</div>
+                            <div>
+                                <div class="label-sm">SECTION</div>
+                                <div class="cn">竞品 &amp; 指标选择</div>
+                                <div class="en">Brands &amp; Metrics</div>
+                            </div>
+                        </div>
+                        <div class="item reveal">
+                            <div class="num">03</div>
+                            <div>
+                                <div class="label-sm">SECTION</div>
+                                <div class="cn">研究方法与工具选型</div>
+                                <div class="en">Method &amp; Tooling</div>
+                            </div>
+                        </div>
+                        <div class="item reveal">
+                            <div class="num">04</div>
+                            <div>
+                                <div class="label-sm">SECTION</div>
+                                <div class="cn">产出分享</div>
+                                <div class="en">Outputs · Database + Report</div>
+                            </div>
+                        </div>
+                        <div class="item reveal">
+                            <div class="num">05</div>
+                            <div>
+                                <div class="label-sm">SECTION</div>
+                                <div class="cn">AI 工具落地实战</div>
+                                <div class="en">AI in Practice</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="toc-footer">
+                        <span class="progress">SECTION 01 · 12 SLIDES TOTAL</span>
+                        <span>DECATHLON · INTERNAL · 2026</span>
+                    </div>
+                </div>
+                <div class="pagenum">02 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 03 — 项目背景
+                 ============================================ -->
+            <section class="slide slide-03" data-slide="3">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">03 / 12</span>
+                            <span>SECTION 01 · BACKGROUND</span>
+                        </span>
+                    </div>
+
+                    <div class="eyebrow-line">
+                        <span class="big reveal">01</span>
+                        <span>项目背景 &amp; 目标</span>
+                    </div>
+
+                    <div class="question-panel">
+                        <span class="num reveal">?</span>
+                        <span>该项目尝试回答的问题</span>
+                    </div>
+
+                    <div class="problem-grid">
+                        <div class="item deep reveal">
+                            <span class="num">01</span>
+                            <span>收集竞品业绩数据</span>
+                            <p>理解<strong>运动户外行业</strong>整体发展趋势，建立行业坐标系</p>
+                        </div>
+                        <div class="item reveal">
+                            <span class="num">02</span>
+                            <span>技术提效</span>
+                            <p>如何用技术手段对<strong>数据收集和解析流程</strong>提效</p>
+                        </div>
+                        <div class="item reveal">
+                            <span class="num">03</span>
+                            <span>经营提效机会</span>
+                            <p>从<strong>财务视角</strong>探索可以助力迪卡侬经营提效的机会</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum invert">03 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 04 — 研究全流程 & 工具选型
+                 ============================================ -->
+            <section class="slide slide-04" data-slide="4">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">04 / 12</span>
+                            <span>SECTION 03 · METHOD</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">研究全流程 &amp; 工具选型对比</h2>
+                        <span>完整链路：采集 → 提取 → 分析</span>
+                    </div>
+
+                    <div class="stage-flow">
+                        <div class="stage reveal">
+                            <div class="stage-num">01</div>
+                            <div class="stage-title">财报采集环节</div>
+                            <div class="opt-line">
+                                <div class="opt"><span class="pill part">RPA</span><span>标准化 · 兼容性差</span></div>
+                                <div class="opt"><span class="pill part">爬虫</span><span>受限，成功率低</span></div>
+                                <div class="opt"><span class="pill part">供应商</span><span>成品化 · ROI 难量化</span></div>
+                            </div>
+                            <div class="final"><strong>✅ 最终方案：</strong>Python 爬 + 手动补</div>
+                        </div>
+
+                        <div class="stage deep-stage reveal">
+                            <div class="stage-num">02</div>
+                            <div class="stage-title">结构化数据提取</div>
+                            <div class="opt-line">
+                                <div class="opt"><span class="pill green">AI</span><span>批量完成文本 / 数字提取</span></div>
+                                <div class="opt"><span class="pill green">循环</span><span>提取 — 核对 — 纠错 — 迭代</span></div>
+                                <div class="opt"><span class="pill green">校准</span><span>降低人工复核工作量</span></div>
+                            </div>
+                            <div class="final"><strong>AI 辅助 + 人工校验</strong> 迭代机制</div>
+                        </div>
+
+                        <div class="stage accent-stage reveal">
+                            <div class="stage-num">03</div>
+                            <div class="stage-title">分析与汇报输出</div>
+                            <div class="opt-line">
+                                <div class="opt"><span class="pill green">提示词</span><span>AI 提示词驱动深度分析</span></div>
+                                <div class="opt"><span class="pill green">桌面研究</span><span>行业研究补充背景</span></div>
+                                <div class="opt"><span class="pill green">结构化</span><span>数据库 + 报告双产出</span></div>
+                            </div>
+                            <div class="final"><strong>AI 提示词 &amp; 桌面研究</strong> 双轮驱动</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">04 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 05 — 互动页
+                 ============================================ -->
+            <section class="slide slide-05" data-slide="5">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">05 / 12</span>
+                            <span>INTERACTIVE · 互动</span>
+                        </span>
+                    </div>
+
+                    <div class="interactive-grid">
+                        <div class="left-panel reveal">
+                            <div>
+                                <span class="label-sm">LIVE QUESTION</span>
+                                <div class="big">Q<span class="q">.</span></div>
+                            </div>
+                            <div>
+                                <div><br></div>
+                            </div>
+                        </div>
+                        <div class="right-panel">
+                            <div class="q-card reveal">
+                                <span class="q-num">A</span>
+                                <div class="q-text">AI 工具理论可覆盖<br>百分之多少的<em>重复性工作</em>？</div>
+                                <div class="q-hint">DISCUSSION</div>
+                            </div>
+                            <div class="q-card deep-card reveal">
+                                <span class="q-num">B</span>
+                                <div class="q-text">人工<em class="green">不可替代</em>的环节<br>集中在哪？</div>
+                                <div class="q-hint">DISCUSSION</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum accent">05 / 12</div>
+                <div class="corner-mark paper"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 06 — 竞品品牌清单 (迪卡侬 removed)
+                 ============================================ -->
+            <section class="slide slide-06" data-slide="6">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">06 / 12</span>
+                            <span>SECTION 02 · SCOPE</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">竞品品牌清单</h2>
+                        <div class="count-badge reveal">
+                            <span class="num">26</span>
+                            <span class="lbl">Listed Selected</span>
+                        </div>
+                    </div>
+
+                    <div class="category-grid">
+                        <!-- 运动鞋服 -->
+                        <div class="category reveal">
+                            <div class="cat-head">
+                                <div>
+                                    <div>⚽ 运动鞋服</div>
+                                    <div class="cat-en">Athletic / Footwear</div>
+                                </div>
+                                <div class="cat-count">18<span class="lbl">SELECTED</span></div>
+                            </div>
+                            <div class="brand-list">
+                                <span class="brand listed">安踏</span>
+                                <span class="brand listed">Nike</span>
+                                <span class="brand listed">李宁</span>
+                                <span class="brand listed">Adidas</span>
+                                <span class="brand listed">特步</span>
+                                <span class="brand listed">361°</span>
+                                <span class="brand listed">斯凯奇</span>
+                                <span class="brand listed">ASICS</span>
+                                <span class="brand listed">彪马</span>
+                                <span class="brand listed">Lululemon</span>
+                                <span class="brand listed">昂跑</span>
+                                <span class="brand listed">安德玛</span>
+                                <span class="brand listed">美津浓</span>
+                                <span class="brand listed">亚玛芬</span>
+                                <span class="brand listed">威富集团</span>
+                                <span class="brand listed">哥伦比亚</span>
+                                <span class="brand listed">比音勒芬</span>
+                                <span class="brand listed">On Holding</span>
+                                <span class="sub">候选</span>
+                                <span class="brand candidate">FILA</span>
+                                <span class="brand candidate">新百伦</span>
+                                <span class="brand candidate">Hoka</span>
+                                <span class="brand candidate">迪桑特</span>
+                                <span class="brand candidate">乔丹</span>
+                                <span class="brand candidate">鸿星尔克</span>
+                                <span class="brand candidate">Altra</span>
+                            </div>
+                        </div>
+
+                        <!-- 户外装备 (迪卡侬 removed) -->
+                        <div class="category reveal">
+                            <div class="cat-head">
+                                <div>
+                                    <div>🏕️ 户外装备</div>
+                                    <div class="cat-en">Outdoor / Gear</div>
+                                </div>
+                                <div class="cat-count">4<span class="lbl">SELECTED</span></div>
+                            </div>
+                            <div class="brand-list">
+                                <span class="brand listed">Canada Goose</span>
+                                <span class="brand listed">探路者</span>
+                                <span class="brand listed">牧高笛</span>
+                                <span class="brand listed">伯希和</span>
+                                <span class="sub">候选</span>
+                                <span class="brand candidate">骆驼</span>
+                                <span class="brand candidate">凯乐石</span>
+                                <span class="brand candidate">黑冰</span>
+                                <span class="brand candidate">拓路者</span>
+                            </div>
+                        </div>
+
+                        <!-- 自行车 -->
+                        <div class="category reveal">
+                            <div class="cat-head">
+                                <div>
+                                    <div>🚲 自行车</div>
+                                    <div class="cat-en">Cycling</div>
+                                </div>
+                                <div class="cat-count">1<span class="lbl">SELECTED</span></div>
+                            </div>
+                            <div class="brand-list">
+                                <span class="brand listed">捷安特</span>
+                                <span class="sub">候选</span>
+                                <span class="brand candidate">喜德盛</span>
+                                <span class="brand candidate">闪电</span>
+                            </div>
+                        </div>
+
+                        <!-- 服饰零售 (含滔搏) -->
+                        <div class="category reveal">
+                            <div class="cat-head">
+                                <div>
+                                    <div>👔 服饰零售</div>
+                                    <div class="cat-en">Apparel Retail</div>
+                                </div>
+                                <div class="cat-count">3<span class="lbl">SELECTED</span></div>
+                            </div>
+                            <div class="brand-list">
+                                <span class="brand listed">Uniqlo</span>
+                                <span class="brand listed">Inditex</span>
+                                <span class="brand listed">滔搏</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-result reveal">
+                        <div>
+                            <span class="label-sm">FINAL · 26 LISTED</span>
+                            <div class="stat">26</div>
+                        </div>
+                        <div>
+                            <div>筛选后保留的<strong>上市公司</strong>，覆盖 A 股 / 港股 / 美股 / 欧股 / 日股 / 加股<br>⚠️ <strong>捷安特 2025 退市</strong> · <strong>牧高笛缺 2023 国内口径</strong> · 按"披露完整、可获取最新财报"原则过滤家族企业</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">06 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 07 — 指标选择
+                 ============================================ -->
+            <section class="slide slide-07" data-slide="7">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">07 / 12</span>
+                            <span>SECTION 02 · METRICS</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">指标选择</h2>
+                        <div class="legend reveal">
+                            <span class="leg"><span class="swatch star2"></span> ⭐⭐ 核心</span>
+                            <span class="leg"><span class="swatch star1"></span> ⭐ 重要</span>
+                            <span class="leg" style="color: var(--muted);">无星 = 参考</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-table">
+                        <div class="modual-band reveal">
+                            <span class="name">A · 规模与增长 <span class="en">Scale &amp; Growth</span></span>
+                            <span class="count">/ 2 INDICATORS</span>
+                        </div>
+                        <div class="metric-row star2 reveal">
+                            <div class="m-stars">⭐⭐</div>
+                            <div>1. 营业收入 / 销售额</div>
+                            <div>营业收入、主营业务收入、销售额</div>
+                            <div class="m-en">Revenue · Sales · Net Sales</div>
+                            <div>绝对规模与趋势，反映市场占有率</div>
+                        </div>
+                        <div class="metric-row star1 reveal">
+                            <div class="m-stars">⭐</div>
+                            <div>2. 同店销售增长</div>
+                            <div>同店销售额增长率、可比门店销售增长</div>
+                            <div class="m-en">Comparable Store Sales Growth (Comps/SSSG)</div>
+                            <div>内生增长质量，零售业关键指标</div>
+                        </div>
+
+                        <div class="modual-band reveal">
+                            <span class="name">B · 盈利能力 <span class="en">Profitability</span></span>
+                            <span class="count">/ 3 INDICATORS</span>
+                        </div>
+                        <div class="metric-row star2 reveal">
+                            <div class="m-stars">⭐⭐</div>
+                            <div>3. 毛利率</div>
+                            <div>毛利率 = (营收 − 营业成本) / 营收</div>
+                            <div class="m-en">Gross Margin = (Revenue − COGS) / Revenue</div>
+                            <div>产品竞争力与成本控制</div>
+                        </div>
+                        <div class="metric-row star1 reveal">
+                            <div class="m-stars">⭐</div>
+                            <div>4. 营业利润 / 率</div>
+                            <div>营业利润、营业利润率</div>
+                            <div class="m-en">Operating Income · Operating Profit Margin</div>
+                            <div>核心业务经营效率</div>
+                        </div>
+                        <div class="metric-row star2 reveal">
+                            <div class="m-stars">⭐⭐</div>
+                            <div>5. 净利润 / 率</div>
+                            <div>净利润、归母净利润、净利率</div>
+                            <div class="m-en">Net Income · Net Profit Margin · EBIT</div>
+                            <div>包含所有收入、成本、税费的整体盈利</div>
+                        </div>
+
+                        <div class="modual-band reveal">
+                            <span class="name">C · 运营效率 &amp; 财务健康度 <span class="en">Operation &amp; Risk</span></span>
+                            <span class="count">/ 4 INDICATORS</span>
+                        </div>
+                        <div class="metric-row star2 reveal">
+                            <div class="m-stars">⭐⭐</div>
+                            <div>6. 运营费用率</div>
+                            <div>销售费用率、管理费用率、研发费用率</div>
+                            <div class="m-en">SG&amp;A Rate · R&amp;D Expense Rate</div>
+                            <div>成本结构与管理水平</div>
+                        </div>
+                        <div class="metric-row star1 reveal">
+                            <div class="m-stars">⭐</div>
+                            <div>7. 库存周转率 / 天数</div>
+                            <div>存货周转率、存货周转天数</div>
+                            <div class="m-en">Inventory Turnover · DSI</div>
+                            <div>供应链与商品管理核心</div>
+                        </div>
+                        <div class="metric-row reveal">
+                            <div class="m-stars">—</div>
+                            <div>8. 经营活动现金流量净额</div>
+                            <div>经营活动产生的现金流量净额</div>
+                            <div class="m-en">Net Cash Provided by Operating Activities</div>
+                            <div>"造血"能力 — 现金流的稳定性</div>
+                        </div>
+                        <div class="metric-row reveal">
+                            <div class="m-stars">—</div>
+                            <div>9. 关键资产负债指标</div>
+                            <div>资产负债率、流动比率、速动比率</div>
+                            <div class="m-en">Debt-to-Asset · Current · Quick Ratio</div>
+                            <div>财务杠杆与短期偿债风险</div>
+                        </div>
+
+                        <div class="modual-band reveal">
+                            <span class="name">D · 战略 &amp; 长期价值 <span class="en">Strategy &amp; Long-term</span></span>
+                            <span class="count">/ 3 INDICATORS</span>
+                        </div>
+                        <div class="metric-row reveal">
+                            <div class="m-stars">—</div>
+                            <div>10. 资本支出 (CapEx)</div>
+                            <div>购建固定资产等支付的现金</div>
+                            <div class="m-en">Capital Expenditures (CapEx)</div>
+                            <div>未来扩张与再投资意图</div>
+                        </div>
+                        <div class="metric-row star1 reveal">
+                            <div class="m-stars">⭐</div>
+                            <div>11. 坪效 / 单店收入</div>
+                            <div>坪效、每平方米销售额</div>
+                            <div class="m-en">Sales per Square Meter/Foot</div>
+                            <div>门店空间利用效率 — 零售核心对标</div>
+                        </div>
+                        <div class="metric-row reveal">
+                            <div class="m-stars">—</div>
+                            <div>12. 研发投入</div>
+                            <div>研发费用</div>
+                            <div class="m-en">Research &amp; Development (R&amp;D) Expense</div>
+                            <div>创新与未来产品力</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">07 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 08 — 指标覆盖 + 口径 (MERGED, image big, caliber as side note)
+                 ============================================ -->
+            <section class="slide slide-08" data-slide="8">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">08 / 12</span>
+                            <span>SECTION 02 · COVERAGE + CALIBER</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">指标覆盖情况 · 口径说明</h2>
+                        <span>2025 FY · 25 / 26 上市品牌 · 10 指标</span>
+                    </div>
+
+                    <div class="body-grid">
+                        <div class="screenshot-panel reveal">
+                            <img src="分享section1/指标覆盖情况截图.png" alt="指标覆盖情况原表">
+                        </div>
+
+                        <div class="caliber-side">
+                            <div class="head reveal">
+                                <span class="label-sm">CALIBER · 备注</span>
+                                <h3>口径说明</h3>
+                            </div>
+                            <div class="item reveal">
+                                <span class="num">01</span>
+                                <span><strong>时间口径：</strong>按财年覆盖月份较多的年份归一化。例如 2025 数据包含 <em>FY2026-05-31</em>（即 2025-06-01 至 2026-05-31）</span>
+                            </div>
+                            <div class="item reveal">
+                                <span class="num">02</span>
+                                <span><strong>区域口径：</strong>按 <em>中国大陆 &gt; 大中华区 &gt; 亚太区 &gt; 全球</em> 优先级执行</span>
+                            </div>
+                            <div class="item reveal">
+                                <span class="num">03</span>
+                                <span><strong>货币单位：</strong>跨国公司原始货币已统一换算为<em>人民币</em>，本次分析不考虑汇率波动影响</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">08 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 09 — 数据提取示例 (NEW, 2 screenshots)
+                 ============================================ -->
+            <section class="slide slide-09" data-slide="9">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">09 / 12</span>
+                            <span>SECTION 03 · EXAMPLES</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">数据提取示例</h2>
+                        <span>数据提取 / 文本分析 · 2 截图示例</span>
+                    </div>
+
+                    <div class="screenshot-grid">
+                        <div class="ss-card reveal">
+                            <div class="head">
+                                <div>
+                                    <div class="num">01</div>
+                                    <div>数据提取</div>
+                                </div>
+                                <div class="label-sm">DATA EXTRACTION</div>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="分享section1/[示例]数据提取.png" alt="数据提取示例">
+                            </div>
+                        </div>
+
+                        <div class="ss-card green reveal">
+                            <div class="head">
+                                <div>
+                                    <div class="num">02</div>
+                                    <div>文本分析</div>
+                                </div>
+                                <div class="label-sm">TEXT ANALYSIS</div>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="分享section1/[示例]文本分析.png" alt="文本分析示例">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">09 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 10 — 工作流 V3 (vertical scrollable long image)
+                 ============================================ -->
+            <section class="slide slide-10" data-slide="10">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">10 / 12</span>
+                            <span>SECTION 04 · WORKFLOW V3</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">竞品财务数据提取工作流 V3</h2>
+                        <span>7 STAGES · 右侧原始 MD 格式工作流（可上下/左右拖动）</span>
+                    </div>
+
+                    <div class="body-grid">
+                        <div class="stage-list">
+                            <div class="step reveal">
+                                <span class="step-num">01</span>
+                                <div>
+                                    <div>输入识别</div>
+                                    <div>品牌 / 财报 / 指标 · 识别 A/H/US/EU/JP/CA 6 大市场</div>
+                                </div>
+                            </div>
+                            <div class="step deep-step reveal">
+                                <span class="step-num">02</span>
+                                <div>
+                                    <div>PDF 定位</div>
+                                    <div>扫描 PDF 库 · 按 年报 &gt; 季报 &gt; 新闻稿 优先级</div>
+                                </div>
+                            </div>
+                            <div class="step reveal">
+                                <span class="step-num">03</span>
+                                <div>
+                                    <div>数据提取</div>
+                                    <div>pdfplumber + 正则匹配 · 品牌特定处理 · 单位识别</div>
+                                </div>
+                            </div>
+                            <div class="step green-step reveal">
+                                <span class="step-num">04</span>
+                                <div>
+                                    <div>归一化 ⚠️</div>
+                                    <div>核心单位换算 × 衍生指标 · 财年格式标准化</div>
+                                </div>
+                            </div>
+                            <div class="step deep-step reveal">
+                                <span class="step-num">05</span>
+                                <div>
+                                    <div>数据校验 ⚠️</div>
+                                    <div>单位换算校验 · 重复检测 · 跨表一致性</div>
+                                </div>
+                            </div>
+                            <div class="step reveal">
+                                <span class="step-num">06</span>
+                                <div>
+                                    <div>输出与核验</div>
+                                    <div>写入 18 字段标准表 · 人工核验标记 · 入库</div>
+                                </div>
+                            </div>
+                            <div class="step deep-step reveal">
+                                <span class="step-num">07</span>
+                                <div>
+                                    <div>覆盖度统计</div>
+                                    <div>coverage_stats · 识别数据缺口 · 提示补充新财报</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="long-image-panel reveal">
+                            <div class="long-image-header">
+                                <span class="label-sm">📜 V3 WORKFLOW · RAW MD</span>
+                                <span class="hint">↕ 拖动滚动</span>
+                            </div>
+                            <div class="long-image-scroll" id="workflowScroll">
+                                <pre>┌─────────────────────────────────────────────────────────────────┐
+│                  竞品财务数据提取v3 工作流                          │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                        阶段 1: 输入识别
+═══════════════════════════════════════════════════════════════════
+
+        ┌──────────────────┐
+        │  用户输入请求     │
+        │  (品牌/财报/指标) │
+        └────────┬─────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  1. 识别品牌类型                      │
+        │     - A股上市公司 (探路者/牧高笛/...)  │
+        │     - 港股上市公司 (安踏/李宁/...)     │
+        │     - 美股上市公司 (Nike/Adidas/...)  │
+        │     - 欧股上市公司 (PUMA/ASICS/...)   │
+        │     - 加拿大 (Canada Goose)          │
+        │     - 日本 (ASICS/迪卡侬/...)        │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  2. 识别财报类型                      │
+        │     - 年报 (Annual Report) ← 优先    │
+        │     - 季报 (Q1/Q2/Q3/Q4)             │
+        │     - 半年报 (Interim)                │
+        │     - 业绩新闻稿 (Press Release)     │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  3. 识别财年结束日期                   │
+        │     - 12/31: Nike/Adidas/UA/Decathlon│
+        │     - 3/31:  安踏/李宁/特步/ASICS     │
+        │     - 3/30:  Canada Goose            │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    阶段 2: PDF文件定位
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  4. 扫描PDF库目录                     │
+        │     路径: 竞品财务PDF库/品牌名/        │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  5. 文件优先级排序                     │
+        │     ① 年报 + 最新                     │
+        │     ② 季报 + 最新                     │
+        │     ③ 业绩新闻稿                      │
+        │     ④ HTML格式报告                    │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  6. 区域口径优先级                     │
+        │     ① 中国内地 (粒度最细)              │
+        │     ② 大中华区 (港股常用)              │
+        │     ③ 亚太区                          │
+        │     ④ TOTAL (兜底)                   │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    阶段 3: 数据提取
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  7. PDF文本/表格提取                   │
+        │     - pdfplumber提取文本              │
+        │     - 正则匹配财务指标                │
+        │     - 关键词: revenue/sales/          │
+        │       gross profit/EBIT/operating     │
+        │       income/net income/margin       │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  8. 品牌特定处理 (见brand_scripts)     │
+        │     - 美津浓: 9M年度化估算            │
+        │     - 安德玛: P89-90 segment data     │
+        │     - ASICS: P65 Related Information │
+        │     - Lululemon: P32 China Mainland  │
+        │     - 加拿大鹅: 大中华区直接披露      │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  9. 单位识别                          │
+        │     - 美元 (USD)  / 百万美元 / 千美元  │
+        │     - 欧元 (EUR)  / 百万欧元 / 千欧元  │
+        │     - 日元 (JPY)  / 百万日元 / 10亿日元 │
+        │     - 加元 (CAD)  / 千加元             │
+        │     - 瑞郎 (CHF)  / 千瑞郎             │
+        │     - 人民币 (CNY) / 千元              │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  10. 数据值提取                        │
+        │      G列 = 原始引用值                  │
+        │      H列 = 原始单位                    │
+        │      (例: ¥1,218,186 千美元)          │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                  阶段 4: 归一化处理 ⚠️ 关键
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  11. 单位换算公式 (核心!)              │
+        │                                      │
+        │  ┌────────────────────────────────┐  │
+        │  │ 百万美元:  × 1,000 × 7.2     │  │
+        │  │ 千美元:    × 1     × 7.2     │  │
+        │  │ 百万欧元:  × 1,000 × 7.8     │  │
+        │  │ 10亿日元:  × 1,000,000 × 0.048│  │
+        │  │ 百万日元:  × 1,000 × 0.048   │  │
+        │  │ 千加元:    × 1     × 5.5     │  │
+        │  │ 千瑞郎:    × 1     × 8.1     │  │
+        │  │ 千元CNY:   × 1     × 1       │  │
+        │  └────────────────────────────────┘  │
+        │                                      │
+        │  M列 (归一化指标数值) = G列 × 换算系数 │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  12. 衍生指标计算                      │
+        │     - 净利率 = 净利润 / 营业收入      │
+        │     - 毛利率 = 毛利 / 营业收入        │
+        │     - 经营利润率 = 经营利润 / 营收    │
+        │     - 运营费用率 = 运营费用 / 营业收入 │
+        │     - 单店收入 = 营业收入 / 门店数    │
+        │     - 库存周转天数 = 365 / 存货周转率 │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  13. 财年格式标准化                    │
+        │     FY2024 → FY20241231 → 2024      │
+        │     FY2024 → FY20250331 → 2024      │
+        │     FY2024 → FY20240331 → 2023      │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    阶段 5: 数据校验 ⚠️ 双重确认
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  14. 单位换算校验 (重要!)              │
+        │      ✓ G列原始值 &lt; M列归一化值          │
+        │      ✓ 比例匹配 (例: 百万美元→7200x)  │
+        │      ✗ 警惕 G=M 情况 (单位漏×)        │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  15. 重复数据检测                      │
+        │     - 唯一键: 品牌+区域+年度+指标      │
+        │     - 已有数据: 跳过/更新              │
+        │     - 冲突数据: 标记人工核验          │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  16. 跨表一致性检查                    │
+        │     - 集团TOTAL = 区域1 + 区域2 + ...  │
+        │     - 同比变化合理性 (-50%~+200%)      │
+        │     - 与新闻/分析报告交叉验证          │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    阶段 6: 输出与核验
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  17. 写入Database sheet               │
+        │     18个字段:                         │
+        │     #,公司名称,品牌名称,区域,          │
+        │     指标名称(原始),报告周期,数据值,    │
+        │     单位,数据来源,所在页码,原文摘录,  │
+        │     归一化周期,归一化指标名称,         │
+        │     归一化指标数值,归一化计算逻辑,     │
+        │     备注,最后更新,人工核验            │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  18. 人工核验标记                      │
+        │     人工核验列 =                       │
+        │       '待核验' (新增)                  │
+        │       '已核验' (人工确认)              │
+        │       '有误' (需修正)                 │
+        └────────┬─────────────────────────────┘
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  19. 保存到                          │
+        │     竞品财务数据库_标准模板v2.xlsx    │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    阶段 7: 覆盖度统计
+═══════════════════════════════════════════════════════════════════
+
+                 │
+                 ▼
+        ┌──────────────────────────────────────┐
+        │  20. coverage_stats.py                │
+        │     统计各指标覆盖品牌数               │
+        │     识别数据缺口                      │
+        │     提示补充新财报                     │
+        └──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+                    ⚠️ 核心避坑清单
+═══════════════════════════════════════════════════════════════════
+
+  1. 百万日元 vs 10亿日元 千万不能混 (×1000 vs ×1,000,000)
+  2. G列原始值和M列归一化值不能相等 (检查单位换算)
+  3. 区域优先级: 中国内地 &gt; 大中华区 &gt; 亚太区 &gt; TOTAL
+  4. 财年结束日期要标注 (FY20240331 vs FY20241231)
+  5. 港股用大中华区, 美股用Greater China, 欧股用EMEA
+  6. 家族企业 (迪卡侬) 披露有限, 只能用公开数据
+  7. 季报数据×4/3 年度化 (美津浓特殊处理)
+
+═══════════════════════════════════════════════════════════════════
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">10 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 11 — 避坑清单 (6 items, 家族企业 removed)
+                 ============================================ -->
+            <section class="slide slide-11 active visible" data-slide="11">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">11 / 12</span>
+                            <span>SECTION 05 · PITFALLS</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">核心避坑清单</h2>
+                        <span>5 LESSONS LEARNED · 前车之鉴</span>
+                    </div>
+
+                    <div class="body-grid">
+                        <div class="pitfall deep reveal">
+                            <div class="head"><span class="num">01</span><span>单位换算屡屡犯错</span></div>
+                            <p><strong>百万日元</strong> vs <strong>10 亿日元</strong>（×1000 vs ×1,000,000）千万不能混</p>
+                        </div>
+                        <div class="pitfall green reveal">
+                            <div class="head"><span class="num">02</span><span>文档迭代前说后忘</span></div>
+                            <p><div>在上一版基础上<span style="color: rgb(0, 102, 204); font-weight: 700;">追加</span></div><div><span style="color: rgb(0, 102, 204); font-weight: 700;"><br></span></div><div><span style="color: rgb(0, 102, 204); font-weight: 700;">刚刚补的2025年数据怎么丢了</span><span style="color: rgb(0, 102, 204); font-weight: 700;"></span></div></p>
+                        </div>
+                        <div class="pitfall deep reveal">
+                            <div class="head"><span class="num">03</span><span>区域优先级</span></div>
+                            <p><strong>中国内地 &gt; 大中华区 &gt; 亚太区 &gt; TOTAL</strong></p>
+                        </div>
+                        <div class="pitfall green reveal">
+                            <div class="head"><span class="num">04</span><span>数据溯源不能编</span></div>
+                            <p>要<em>明确标注来自【文件名】【页码】【原文】</em><div><em><br></em></div><div><span style="background-color: rgb(30, 232, 154);">取自表格，记录表名</span><em></em></div></p>
+                        </div>
+                        <div class="pitfall deep reveal">
+                            <div class="head"><span class="num">05</span><span>财报版本对应不同取数模板</span></div>
+                            <p>港股用<strong>v1</strong>，美股用v2，欧股用 <b>...</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum">11 / 12</div>
+                <div class="corner-mark ink"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+            <!-- ============================================
+                 SLIDE 12 — 产出分享 (placeholder for screenshots/links)
+                 ============================================ -->
+            <section class="slide slide-12" data-slide="12">
+                <div class="frame">
+                    <div class="top-strip">
+                        <span class="left"><span class="marker"></span>DECATHLON · FINANCE / 2026.06.11</span>
+                        <span class="right">
+                            <span class="step">12 / 12</span>
+                            <span>SECTION 04 · OUTPUTS</span>
+                        </span>
+                    </div>
+
+                    <div class="header">
+                        <h2 class="reveal">产出分享</h2>
+                        <span>2 DELIVERABLES · DATABASE + REPORT</span>
+                    </div>
+
+                    <div class="body-grid">
+                        <div class="sub-title left reveal">
+                            <span class="label-sm">A · DATABASE</span>
+                            <h3>运动品牌财务数据源 · 网页版 database</h3>
+                        </div>
+                        <div class="sub-title right reveal">
+                            <span class="label-sm">B · REPORT</span>
+                            <h3>Section 2 · 运动品牌财务报告</h3>
+                        </div>
+
+                        <div class="output-card reveal">
+                            <div class="img-scroll" id="dbScroll">
+                                <img src="分享section1/运动品牌财务数据源_网页版database_preview.png" alt="运动品牌财务数据源 · 网页版 database 字段预览" draggable="false">
+                            </div>
+                            <div class="footer">
+                                <span class="lbl">
+                                    <span style="font-size: 22px;">🗄️</span>
+                                    <span>运动品牌财务数据源 · Google Sheets 协作库 · 678 行 × 17 字段 · ← 左右滑动查看 →</span>
+                                </span>
+                                <a class="link" href="https://docs.google.com/spreadsheets/d/1mzKHDfPCtbg2L6BFPqTklcrpWr4ZKOKbgT8vzHGgxTc/edit?gid=0#gid=0" target="_blank" rel="noopener">↗ 打开 SHEETS</a>
+                            </div>
+                        </div>
+
+                        <div class="output-card reveal">
+                            <div class="img-fill">
+                                <img src="分享section1/Section2_运动品牌财务报告_preview.png" alt="Section 2 运动品牌财务报告 预览" draggable="false">
+                            </div>
+                            <div class="footer">
+                                <span class="lbl">
+                                    <span style="font-size: 22px;">📊</span>
+                                    <span>Section 2-运动品牌财务报告.html · 完整图表分析 + 趋势对比</span>
+                                </span>
+                                <a class="link" href="Section 2-运动品牌财务报告.html" target="_blank" rel="noopener">↗ 打开报告</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagenum green">12 / 12</div>
+                <div class="corner-mark paper"><span></span><span></span><span></span><span></span></div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- === EDIT CONTROLS (always visible top-right) === -->
+    <!-- === EDIT MODE INDICATOR (bottom center, only visible in edit mode) === -->
+    <script>
+        /* ===========================================
+           STAGE SCALING (fixed 1920×1080)
+           =========================================== */
+        (function() {
+            const stage = document.getElementById('deckStage');
+            const scale = () => {
+                const f = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+                const x = (window.innerWidth - 1920 * f) / 2;
+                const y = (window.innerHeight - 1080 * f) / 2;
+                stage.style.transform = `translate(${x}px, ${y}px) scale(${f})`;
+            };
+            scale();
+            window.addEventListener('resize', scale);
+        })();
+
+        /* ===========================================
+           SLIDE NAVIGATION
+           =========================================== */
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.total = this.slides.length;
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.showSlide(0);
+            }
+            showSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.total - 1));
+                this.slides.forEach((s, i) => {
+                    const isActive = i === this.currentSlide;
+                    s.classList.toggle('active', isActive);
+                    s.classList.toggle('visible', isActive);
+                });
+            }
+            next() { this.showSlide(this.currentSlide + 1); }
+            prev() { this.showSlide(this.currentSlide - 1); }
+            setupKeyboardNav() {
+                
+            }
+            setupTouchNav() {
+                let startX = 0, startY = 0;
+                document.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+                }, { passive: true });
+                document.addEventListener('touchend', (e) => {
+                    const dx = e.changedTouches[0].clientX - startX;
+                    const dy = e.changedTouches[0].clientY - startY;
+                    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+                        if (dx < 0) this.next(); else this.prev();
+                    }
+                }, { passive: true });
+            }
+            setupWheelNav() {
+                let throttle = null;
+                document.addEventListener('wheel', (e) => {
+                    if (e.target.closest && e.target.closest('#workflowScroll')) {
+                        e.stopPropagation();
+                        return;
+                    }
+                    if (throttle) return;
+                    if (Math.abs(e.deltaY) > 30) {
+                        if (e.deltaY > 0) this.next(); else this.prev();
+                        throttle = setTimeout(() => { throttle = null; }, 600);
+                    }
+                }, { passive: true });
+            }
+        }
+        const pres = new SlidePresentation();
+    </script>
+
+</body></html>

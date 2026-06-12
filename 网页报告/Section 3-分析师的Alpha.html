@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿尔法 α · 共识之上，那一束光</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;700;900&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #0B1E3F;   /* 深海蓝主色 */
+    --ink-2:      #0F2A52;
+    --ink-3:      #1A3A6B;
+    --gold:       #D4A24C;   /* 暖金 */
+    --gold-2:     #E8C46A;
+    --gold-deep:  #A47A2C;
+    --paper:      #F5EFE0;   /* 米白纸 */
+    --paper-2:    #EFE6D2;
+    --ink-line:   #C9B985;
+    --accent:     #E76F51;   /* 橘红强调 */
+    --teal:       #2A8C8A;
+    --crimson:    #C13B3B;
+    --white:      #FFFCF4;
+
+    --serif-en: 'Cormorant Garamond', 'Noto Serif SC', serif;
+    --serif-cn: 'Noto Serif SC', 'Cormorant Garamond', serif;
+    --sans-en:  'Inter', 'Noto Sans SC', sans-serif;
+    --sans-cn:  'Noto Sans SC', 'Inter', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans-cn);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ===== 通用排版 ===== */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 36px; }
+  .eyebrow {
+    font-family: var(--sans-en);
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold-deep);
+  }
+  .h-cn {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .h-en {
+    font-family: var(--serif-en);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  /* ================== HERO ================== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 30% 20%, #16356B 0%, var(--ink) 55%, #050E20 100%);
+    color: var(--white);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      radial-gradient(1px 1px at 30% 65%, rgba(255,255,255,0.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 55% 18%, rgba(232,196,106,0.7) 50%, transparent 51%),
+      radial-gradient(1px 1px at 75% 50%, rgba(255,255,255,0.5) 50%, transparent 51%),
+      radial-gradient(1px 1px at 88% 30%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      radial-gradient(1.2px 1.2px at 42% 80%, rgba(232,196,106,0.5) 50%, transparent 51%),
+      radial-gradient(1px 1px at 65% 88%, rgba(255,255,255,0.4) 50%, transparent 51%);
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-left .eyebrow { color: var(--gold-2); }
+  .hero-title {
+    font-family: var(--serif-cn);
+    font-size: clamp(44px, 6.2vw, 92px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    margin: 22px 0 28px;
+  }
+  .hero-title .accent {
+    display: inline-block;
+    color: var(--gold-2);
+    font-style: italic;
+    font-family: var(--serif-en);
+    font-weight: 500;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,252,244,0.78);
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 36px;
+    border-top: 1px solid rgba(232,196,106,0.3);
+    padding-top: 24px;
+  }
+  .hero-meta div span {
+    display: block;
+    font-family: var(--sans-en);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-2);
+    margin-bottom: 4px;
+  }
+  .hero-meta div strong {
+    font-family: var(--serif-en);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--white);
+  }
+
+  /* Hero 右侧 — 大α 灯塔 */
+  .hero-right { position: relative; height: 540px; }
+  .lighthouse {
+    position: absolute;
+    right: 6%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .big-alpha {
+    position: absolute;
+    right: 8%;
+    top: 12%;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 360px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(232,196,106,0.55);
+    text-stroke: 1.5px rgba(232,196,106,0.55);
+    letter-spacing: -0.04em;
+    z-index: 1;
+  }
+  .big-alpha::after {
+    content: 'α';
+    position: absolute;
+    inset: 0;
+    color: var(--gold-2);
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 65%);
+    text-shadow: 0 0 60px rgba(232,196,106,0.35);
+  }
+  .beam {
+    position: absolute;
+    right: 18%;
+    top: 26%;
+    width: 90%;
+    height: 12px;
+    background: linear-gradient(90deg, rgba(232,196,106,0) 0%, rgba(232,196,106,0.7) 50%, rgba(232,196,106,0) 100%);
+    filter: blur(4px);
+    transform-origin: left center;
+    animation: sweep 7s ease-in-out infinite;
+    z-index: 2;
+  }
+  .beam-2 {
+    top: 32%;
+    opacity: 0.4;
+    animation-delay: -3.5s;
+  }
+  @keyframes sweep {
+    0%, 100% { transform: rotate(-18deg) scaleX(1); }
+    50%      { transform: rotate(8deg)  scaleX(0.85); }
+  }
+  .tide-line {
+    position: absolute;
+    left: 0; right: 0; bottom: 8%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-2) 50%, var(--gold) 70%, transparent);
+    opacity: 0.5;
+  }
+  .tide-label {
+    position: absolute;
+    right: 4%;
+    bottom: 2%;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold-2);
+    letter-spacing: 0.2em;
+  }
+
+  /* ================== SECTION 基础 ================== */
+  section { padding: 110px 0; position: relative; }
+  .section-head { margin-bottom: 64px; }
+  .section-head .eyebrow { display: block; margin-bottom: 14px; }
+  .section-head h2 {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
+  .section-head h2 em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .section-head p.lead {
+    margin-top: 18px;
+    font-size: 16px;
+    color: rgba(11,30,63,0.7);
+    max-width: 640px;
+  }
+
+  /* ================== 隐喻：潮汐 vs 灯塔 ================== */
+  .metaphor {
+    background: var(--paper);
+    border-top: 1px solid rgba(11,30,63,0.08);
+    border-bottom: 1px solid rgba(11,30,63,0.08);
+  }
+  .metaphor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .metaphor-art {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(180deg, #FAF6EA 0%, #ECE2C8 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(11,30,63,0.25);
+  }
+  .metaphor-art svg { width: 100%; height: 100%; display: block; }
+
+  .metaphor-text h2 {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: clamp(30px, 3.6vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+  .metaphor-text h2 em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .metaphor-text p {
+    font-size: 16px;
+    color: rgba(11,30,63,0.78);
+    margin-bottom: 18px;
+  }
+  .analogy {
+    margin-top: 32px;
+    border-left: 2px solid var(--gold);
+    padding: 4px 0 4px 24px;
+  }
+  .analogy .row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(11,30,63,0.15);
+  }
+  .analogy .row:last-child { border-bottom: none; }
+  .analogy .k {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--gold-deep);
+  }
+  .analogy .v {
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+
+  /* ================== 三道光柱 ================== */
+  .pillars {
+    background: var(--ink);
+    color: var(--white);
+  }
+  .pillars .section-head h2 { color: var(--white); }
+  .pillars .section-head h2 em { color: var(--gold-2); }
+  .pillars .section-head p.lead { color: rgba(255,252,244,0.6); }
+  .pillars .eyebrow { color: var(--gold-2); }
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .pillar {
+    position: relative;
+    padding: 44px 32px 40px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(232,196,106,0.18);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+  .pillar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+  }
+  .pillar:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232,196,106,0.45);
+    background: linear-gradient(180deg, rgba(232,196,106,0.06) 0%, rgba(255,255,255,0.01) 100%);
+  }
+  .pillar-num {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--gold-2);
+    opacity: 0.85;
+    margin-bottom: 28px;
+  }
+  .pillar-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+  }
+  .pillar h3 {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .pillar .en {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold-2);
+    margin-bottom: 18px;
+    letter-spacing: 0.06em;
+  }
+  .pillar p {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: rgba(255,252,244,0.72);
+  }
+  .pillar .quote {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(232,196,106,0.18);
+    font-family: var(--serif-cn);
+    font-size: 13px;
+    color: var(--gold-2);
+    letter-spacing: 0.1em;
+  }
+
+  /* ================== 两种 α ================== */
+  .definitions { background: var(--paper-2); }
+  .def-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 32px;
+  }
+  .def-card {
+    position: relative;
+    padding: 56px 44px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .def-narrow {
+    background: var(--ink);
+    color: var(--white);
+  }
+  .def-narrow::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--gold);
+  }
+  .def-broad {
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid rgba(11,30,63,0.1);
+  }
+  .def-broad::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--accent);
+  }
+  .def-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: var(--sans-en);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    border-radius: 1px;
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+  .def-narrow .def-tag { color: var(--gold-2); }
+  .def-broad .def-tag { color: var(--accent); }
+  .def-card h3 {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .def-card .en-name {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-deep);
+    margin-bottom: 24px;
+  }
+  .def-broad .en-name { color: var(--accent); }
+  .def-card p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .def-narrow p { color: rgba(255,252,244,0.78); }
+  .def-broad p { color: rgba(11,30,63,0.78); }
+  .def-formula {
+    margin-top: 30px;
+    padding: 22px 24px;
+    background: rgba(232,196,106,0.08);
+    border-left: 2px solid var(--gold);
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-2);
+    line-height: 1.6;
+  }
+  .def-broad .def-formula {
+    background: rgba(231,111,81,0.06);
+    border-left-color: var(--accent);
+    color: var(--accent);
+  }
+  .def-formula small {
+    display: block;
+    font-style: normal;
+    font-family: var(--sans-cn);
+    font-size: 12px;
+    color: rgba(11,30,63,0.5);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ================== α vs β 对比 ================== */
+  .compare { background: var(--white); }
+  .compare-table {
+    border-top: 1px solid rgba(11,30,63,0.15);
+    border-bottom: 1px solid rgba(11,30,63,0.15);
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: stretch;
+  }
+  .compare-row + .compare-row { border-top: 1px dashed rgba(11,30,63,0.12); }
+  .compare-cell {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .compare-cell.beta  { background: rgba(11,30,63,0.03); }
+  .compare-cell.alpha { background: rgba(212,162,76,0.06); }
+  .compare-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(11,30,63,0.35);
+    border-left: 1px solid rgba(11,30,63,0.1);
+    border-right: 1px solid rgba(11,30,63,0.1);
+  }
+  .compare-sym {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .compare-cell.beta .compare-sym  { color: var(--ink); }
+  .compare-cell.alpha .compare-sym { color: var(--gold-deep); }
+  .compare-name {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  .compare-tag {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-3);
+    margin-bottom: 16px;
+  }
+  .compare-cell.alpha .compare-tag { color: var(--gold-deep); }
+  .compare-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(11,30,63,0.7);
+  }
+  .compare-cell.alpha .compare-desc { color: rgba(11,30,63,0.85); }
+  .compare-foot {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    font-size: 12.5px;
+    color: rgba(11,30,63,0.5);
+    letter-spacing: 0.05em;
+  }
+  .compare-foot span::before {
+    content: '— ';
+    color: var(--gold);
+  }
+
+  /* ================== 收束 ================== */
+  .closing {
+    background: linear-gradient(180deg, var(--ink) 0%, #050E20 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 130px 0;
+  }
+  .closing .eyebrow { color: var(--gold-2); display: block; margin-bottom: 20px; }
+  .closing h2 {
+    font-family: var(--serif-cn);
+    font-weight: 700;
+    font-size: clamp(32px, 4.6vw, 60px);
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+  }
+  .closing h2 em {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold-2);
+    font-weight: 500;
+  }
+  .closing p {
+    max-width: 620px;
+    margin: 0 auto 48px;
+    color: rgba(255,252,244,0.7);
+    font-size: 15.5px;
+  }
+  .signature {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold-2);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  /* ================== 装饰 ================== */
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 0;
+  }
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .divider-ornament span {
+    margin: 0 18px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  /* SVG 内联样式 */
+  .ink { fill: var(--ink); }
+  .gold { fill: var(--gold); }
+  .gold-2 { fill: var(--gold-2); }
+  .paper { fill: var(--paper); }
+  .accent { fill: var(--accent); }
+  .teal { fill: var(--teal); }
+  .white { fill: var(--white); }
+  .stroke-ink { stroke: var(--ink); fill: none; }
+  .stroke-gold { stroke: var(--gold); fill: none; }
+  .stroke-paper { stroke: var(--paper); fill: none; }
+
+  /* 动画 */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .fade-up.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 响应式 */
+  @media (max-width: 960px) {
+    .hero-grid, .metaphor-grid, .def-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-right { height: 360px; }
+    .big-alpha { font-size: 220px; }
+    .pillar-grid { grid-template-columns: 1fr; }
+    .compare-row { grid-template-columns: 1fr; }
+    .compare-divider { display: none; }
+    section { padding: 80px 0; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 22px; }
+    .hero { padding: 90px 0 60px; }
+    .hero-right { height: 280px; }
+    .big-alpha { font-size: 160px; }
+    .def-card { padding: 36px 24px; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow">Alpha · The Edge of Insight</span>
+      <h1 class="hero-title">
+        共识之上<br>
+        那一束<span class="accent">光</span>
+      </h1>
+      <p class="hero-sub">
+        当信息像潮汐一样涌动，分析师的<strong>α</strong>是刺穿噪音的那束光——<br>
+        不靠共识吃饭，只靠<em>洞察、远见与独立判断</em>。
+      </p>
+      <div class="hero-meta">
+        <div>
+          <span>Symbol</span>
+          <strong>α</strong>
+        </div>
+        <div>
+          <span>Versus</span>
+          <strong>β</strong>
+        </div>
+        <div>
+          <span>Origin</span>
+          <strong>Greek Letter</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <svg class="lighthouse" viewBox="0 0 500 540" preserveAspectRatio="xMidYMax meet">
+        <!-- 远山轮廓 -->
+        <path d="M0 380 Q120 320 220 360 T500 340 L500 540 L0 540 Z" fill="#0A1A35" opacity="0.6"/>
+        <path d="M0 410 Q150 370 280 400 T500 390 L500 540 L0 540 Z" fill="#08152C" opacity="0.85"/>
+        <!-- 灯塔塔身 -->
+        <g>
+          <rect x="232" y="270" width="36" height="180" fill="#F5EFE0"/>
+          <rect x="232" y="270" width="36" height="180" fill="url(#stripes)"/>
+          <polygon points="226,270 274,270 268,200 232,200" fill="#0B1E3F"/>
+          <rect x="232" y="160" width="36" height="44" fill="#D4A24C"/>
+          <rect x="232" y="200" width="36" height="6" fill="#A47A2C"/>
+          <circle cx="250" cy="182" r="6" fill="#FFE9A8"/>
+          <!-- 塔顶 -->
+          <polygon points="232,160 268,160 250,138" fill="#0B1E3F"/>
+          <line x1="250" y1="138" x2="250" y2="118" stroke="#0B1E3F" stroke-width="2"/>
+          <circle cx="250" cy="115" r="3" fill="#D4A24C"/>
+          <!-- 灯塔底部岩石 -->
+          <path d="M218 450 L282 450 L300 540 L200 540 Z" fill="#050E20"/>
+        </g>
+        <!-- 光束 (灯塔射出) -->
+        <g opacity="0.55">
+          <polygon points="250,182 480,80 500,160" fill="url(#beamGrad)"/>
+          <polygon points="250,182 460,180 500,200" fill="url(#beamGrad2)"/>
+          <polygon points="250,182 30,90 20,170" fill="url(#beamGrad)" opacity="0.6"/>
+        </g>
+        <!-- 海平线 (β 潮汐) -->
+        <g>
+          <path d="M0 470 Q60 460 120 470 T240 470 T360 470 T500 470 L500 480 L0 480 Z" fill="#0F2A52" opacity="0.8"/>
+          <path d="M0 488 Q80 478 160 488 T320 488 T500 488 L500 500 L0 500 Z" fill="#0A1A35"/>
+        </g>
+        <defs>
+          <linearGradient id="stripes" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F5EFE0"/>
+            <stop offset="40%" stop-color="#F5EFE0"/>
+            <stop offset="40%" stop-color="#C13B3B"/>
+            <stop offset="55%" stop-color="#C13B3B"/>
+            <stop offset="55%" stop-color="#F5EFE0"/>
+            <stop offset="70%" stop-color="#F5EFE0"/>
+            <stop offset="70%" stop-color="#C13B3B"/>
+            <stop offset="85%" stop-color="#C13B3B"/>
+            <stop offset="85%" stop-color="#F5EFE0"/>
+          </linearGradient>
+          <radialGradient id="beamGrad" cx="0.1" cy="0.5" r="0.9">
+            <stop offset="0%" stop-color="#FFE9A8" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#FFE9A8" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="beamGrad2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E8C46A" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#E8C46A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="big-alpha">α</div>
+      <div class="beam"></div>
+      <div class="beam beam-2"></div>
+      <div class="tide-line"></div>
+      <div class="tide-label">— β · The Market Tide —</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 隐喻：潮汐 vs 灯塔 ===================== -->
+<section class="metaphor">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">01 · Metaphor</span>
+      <h2>把共识，<em>想成一片海</em></h2>
+      <p class="lead">β 是共识的潮汐——人云亦云、平均而模糊。α 是海面之上的灯塔——它不动，却能照见真相。</p>
+    </div>
+
+    <div class="metaphor-grid">
+      <div class="metaphor-art fade-up">
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+          <!-- 背景天 -->
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F5EFE0"/>
+              <stop offset="100%" stop-color="#EFE6D2"/>
+            </linearGradient>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1A3A6B"/>
+              <stop offset="100%" stop-color="#0B1E3F"/>
+            </linearGradient>
+            <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%" stop-color="#E8C46A"/>
+              <stop offset="100%" stop-color="#A47A2C"/>
+            </radialGradient>
+            <linearGradient id="lighthouseGlow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFE9A8"/>
+              <stop offset="100%" stop-color="#E8C46A"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="500" height="500" fill="url(#sky)"/>
+
+          <!-- 装饰: 月亮 -->
+          <circle cx="380" cy="90" r="32" fill="url(#moon)" opacity="0.85"/>
+          <circle cx="380" cy="90" r="44" fill="none" stroke="#D4A24C" stroke-width="0.6" opacity="0.4"/>
+          <circle cx="380" cy="90" r="56" fill="none" stroke="#D4A24C" stroke-width="0.4" opacity="0.25"/>
+
+          <!-- 远处帆船 (β 跟潮) -->
+          <g opacity="0.65">
+            <path d="M70 280 L70 250 L88 280 Z" fill="#0B1E3F"/>
+            <rect x="69" y="280" width="2" height="14" fill="#0B1E3F"/>
+          </g>
+          <g opacity="0.5">
+            <path d="M150 305 L150 285 L162 305 Z" fill="#0B1E3F"/>
+          </g>
+
+          <!-- 海平面 -->
+          <line x1="0" y1="320" x2="500" y2="320" stroke="#0B1E3F" stroke-width="0.5" opacity="0.3"/>
+          <text x="20" y="313" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#0B1E3F" opacity="0.5">market line —</text>
+
+          <!-- 浪 (β 潮汐) -->
+          <g>
+            <path d="M0 340 Q40 330 80 340 T160 340 T240 340 T320 340 T400 340 T500 340 L500 500 L0 500 Z" fill="url(#sea)"/>
+            <path d="M0 340 Q40 330 80 340 T160 340 T240 340 T320 340 T400 340 T500 340" stroke="#D4A24C" stroke-width="1" fill="none" opacity="0.4"/>
+            <path d="M0 370 Q50 360 100 370 T200 370 T300 370 T400 370 T500 370" stroke="#E8C46A" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M0 400 Q60 392 120 400 T240 400 T360 400 T500 400" stroke="#D4A24C" stroke-width="0.4" fill="none" opacity="0.25"/>
+            <path d="M0 430 Q70 422 140 430 T280 430 T420 430 T500 430" stroke="#D4A24C" stroke-width="0.3" fill="none" opacity="0.2"/>
+          </g>
+
+          <!-- β 标注 -->
+          <g transform="translate(50 380)">
+            <text font-family="Cormorant Garamond" font-style="italic" font-size="22" fill="#E8C46A" opacity="0.85">β</text>
+            <text x="0" y="14" font-family="Noto Sans SC" font-size="10" fill="#E8C46A" opacity="0.7" letter-spacing="2">潮汐 · 跟着走</text>
+          </g>
+
+          <!-- 灯塔 (在岩石上) -->
+          <g transform="translate(330 200)">
+            <!-- 岩石 -->
+            <path d="M-20 200 L80 200 L100 320 L-40 320 Z" fill="#050E20"/>
+            <!-- 塔身 -->
+            <rect x="20" y="100" width="22" height="100" fill="#F5EFE0"/>
+            <rect x="20" y="118" width="22" height="10" fill="#C13B3B"/>
+            <rect x="20" y="148" width="22" height="10" fill="#C13B3B"/>
+            <rect x="20" y="178" width="22" height="10" fill="#C13B3B"/>
+            <!-- 灯室 -->
+            <rect x="16" y="78" width="30" height="22" fill="#D4A24C"/>
+            <rect x="16" y="78" width="30" height="6" fill="#A47A2C"/>
+            <rect x="20" y="86" width="22" height="14" fill="url(#lighthouseGlow)"/>
+            <!-- 顶 -->
+            <polygon points="14,78 48,78 31,60" fill="#0B1E3F"/>
+            <line x1="31" y1="60" x2="31" y2="48" stroke="#0B1E3F" stroke-width="1.5"/>
+            <circle cx="31" cy="46" r="2" fill="#D4A24C"/>
+          </g>
+
+          <!-- α 光束 (从灯塔射向左上方) -->
+          <g opacity="0.7">
+            <polygon points="358,275 80,140 60,180" fill="url(#beamTop)"/>
+            <polygon points="358,275 90,200 70,220" fill="url(#beamTop)" opacity="0.6"/>
+            <polygon points="358,275 100,260 80,275" fill="url(#beamTop)" opacity="0.5"/>
+          </g>
+          <defs>
+            <linearGradient id="beamTop" x1="1" y1="0" x2="0" y2="0.5">
+              <stop offset="0%" stop-color="#FFE9A8" stop-opacity="0.75"/>
+              <stop offset="100%" stop-color="#FFE9A8" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- α 标注 -->
+          <g transform="translate(150 130)">
+            <text font-family="Cormorant Garamond" font-style="italic" font-size="34" fill="#A47A2C">α</text>
+            <text x="0" y="18" font-family="Noto Serif SC" font-size="12" fill="#0B1E3F" font-weight="700" letter-spacing="3">灯塔 · 照得见</text>
+          </g>
+
+          <!-- 装饰角标 -->
+          <text x="20" y="478" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#0B1E3F" opacity="0.4" letter-spacing="2">— VISUAL METAPHOR · NO. 01</text>
+          <text x="480" y="478" text-anchor="end" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="#0B1E3F" opacity="0.4" letter-spacing="2">TIDE &amp; LIGHT —</text>
+        </svg>
+      </div>
+
+      <div class="metaphor-text fade-up">
+        <h2>β 是<em>潮汐</em><br>α 是<em>灯塔</em></h2>
+        <p>人云亦云、跟随基准走——这是<strong>β</strong>，是行业的平均水位。</p>
+        <p>而<strong>α</strong>，是嘈杂之中你依然能看清的那份洞察，与潮汐无关。</p>
+
+        <div class="analogy">
+          <div class="row">
+            <span class="k">α · 灯塔</span>
+            <span class="v">扣除共识噪音后，纯粹依靠专业能力获取的<strong>超额价值</strong>。</span>
+          </div>
+          <div class="row">
+            <span class="k">β · 潮汐</span>
+            <span class="v">行业共识的<strong>平均水准</strong>，涨落随势，难以掌控。</span>
+          </div>
+          <div class="row">
+            <span class="k">一句话</span>
+            <span class="v">β 是<em>随浪起伏</em>；α 是<em>无浪时</em>，你也能辨认方向。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 三道光柱 ===================== -->
+<section class="pillars">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">02 · The Three Pillars</span>
+      <h2>三道<em>光柱</em><br>点亮 α 的方式</h2>
+      <p class="lead">分析师的 α 不是玄学，由三道光柱照亮：现场<strong>调研</strong>的深度、穿透共识的<strong>远见</strong>、以及独立<strong>判断</strong>的勇气。</p>
+    </div>
+
+    <div class="pillar-grid">
+      <!-- 1. 实地侦探 -->
+      <div class="pillar fade-up">
+        <div class="pillar-num">01</div>
+        <svg class="pillar-icon" viewBox="0 0 64 64" fill="none">
+          <circle cx="26" cy="26" r="14" stroke="#E8C46A" stroke-width="2"/>
+          <line x1="36" y1="36" x2="54" y2="54" stroke="#E8C46A" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="26" cy="26" r="6" stroke="#E8C46A" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="46" cy="20" r="1.5" fill="#E8C46A" opacity="0.5"/>
+          <circle cx="14" cy="40" r="1.5" fill="#E8C46A" opacity="0.5"/>
+          <circle cx="50" cy="46" r="1" fill="#E8C46A" opacity="0.4"/>
+        </svg>
+        <h3>实地探察</h3>
+        <div class="en">The Field Detective</div>
+        <p>走进工厂、蹲点门店、扫描卫星图、解构供应链——挖掘那些<em>尚未被共识捕捉的暗信息</em>。在别人看新闻时，你已看见下个季度的走向。</p>
+        <div class="quote">— 现场调研 · 另类数据 · 供应链接触 —</div>
+      </div>
+
+      <!-- 2. 预言家 -->
+      <div class="pillar fade-up">
+        <div class="pillar-num">02</div>
+        <svg class="pillar-icon" viewBox="0 0 64 64" fill="none">
+          <path d="M10 54 L10 18 L32 8 L54 18 L54 54 Z" stroke="#E8C46A" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="10" y1="32" x2="54" y2="32" stroke="#E8C46A" stroke-width="1.5"/>
+          <circle cx="32" cy="20" r="3" fill="#E8C46A"/>
+          <line x1="32" y1="20" x2="32" y2="14" stroke="#E8C46A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="29" y1="14" x2="35" y2="14" stroke="#E8C46A" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="22" cy="42" r="1.5" fill="#E8C46A" opacity="0.6"/>
+          <circle cx="42" cy="42" r="1.5" fill="#E8C46A" opacity="0.6"/>
+          <circle cx="32" cy="44" r="1.5" fill="#E8C46A" opacity="0.6"/>
+        </svg>
+        <h3>远见预判</h3>
+        <div class="en">The Forward Prophet</div>
+        <p>深厚的行业积淀、严谨的逻辑推演——对企业未来、对趋势拐点做出比<em>共识</em>更早、更准的判断。你不是在跟队，你是在<em>立旗</em>。</p>
+        <div class="quote">— 行业积淀 · 模型推演 · 拐点判断 —</div>
+      </div>
+
+      <!-- 3. 独立判断 -->
+      <div class="pillar fade-up">
+        <div class="pillar-num">03</div>
+        <svg class="pillar-icon" viewBox="0 0 64 64" fill="none">
+          <path d="M8 40 L20 28 L28 36 L44 20 L56 32" stroke="#E8C46A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="8" cy="40" r="2.5" fill="#E8C46A"/>
+          <circle cx="20" cy="28" r="2.5" fill="#E8C46A"/>
+          <circle cx="28" cy="36" r="2.5" fill="#E8C46A"/>
+          <circle cx="44" cy="20" r="2.5" fill="#E8C46A"/>
+          <circle cx="56" cy="32" r="2.5" fill="#E8C46A"/>
+          <path d="M8 50 L56 50" stroke="#E8C46A" stroke-width="0.8" opacity="0.4"/>
+          <text x="32" y="60" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#E8C46A" opacity="0.6">vs. crowd</text>
+        </svg>
+        <h3>独立判断</h3>
+        <div class="en">The Contrarian</div>
+        <p>洞察决策者的认知偏差，在<em>群体恐慌</em>中保持冷静，在<em>集体狂热</em>中敢于说不。你不随波逐流——赚的是<em>清醒的溢价</em>。</p>
+        <div class="quote">— 认知博弈 · 反向思考 · 清醒溢价 —</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 两种 α ===================== -->
+<section class="definitions">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">03 · Two Faces of α</span>
+      <h2>两种 α：<em>数字</em>与<em>能力</em></h2>
+      <p class="lead">同一个希腊字母，在不同语境下指向两种东西：一个是绩效表里<strong>冷冰冰的数值</strong>，一个是分析师身上<strong>热腾腾的修为</strong>。</p>
+    </div>
+
+    <div class="def-grid">
+      <!-- 狭义 -->
+      <div class="def-card def-narrow fade-up">
+        <span class="def-tag">Narrow · 狭义</span>
+        <h3>α 是一个数字</h3>
+        <div class="en-name">A Statistical Number</div>
+        <p>在绩效评估里，α 是一个<em>具体的数值</em>——当基准为 0 时，分析师所提方案仍能跑出的<strong>预期产出</strong>。</p>
+        <div class="def-formula">
+          α &gt; 0 → 创造了超额价值<br>
+          α &lt; 0 → 跑输基准<br>
+          <small>来源：詹森指数（Jensen's Alpha）</small>
+        </div>
+      </div>
+
+      <!-- 广义 -->
+      <div class="def-card def-broad fade-up">
+        <span class="def-tag">Broad · 广义</span>
+        <h3>α 是一种修为</h3>
+        <div class="en-name">A Core Competence</div>
+        <p>它指的是分析师<em>调研、推演、决策、复盘</em>的核心竞争力——一种无法被复制的<strong>认知与判断</strong>，藏在每一次专业输出里。</p>
+        <p style="margin-top: 14px;">它没有公式可循，只有日复一日的<em>积累、自省、克制</em>。它是分析师职业生涯里，那束<strong>始终亮着的灯</strong>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== α vs β 一图看懂 ===================== -->
+<section class="compare">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">04 · α vs β</span>
+      <h2>一图<em>看懂</em>两者的区别</h2>
+      <p class="lead">三个维度：来源、表现、门槛。看完这张表，你就能在对话里分清——同事说"我做出成绩了"，那是 α 还是 β？</p>
+    </div>
+
+    <div class="compare-table fade-up">
+      <div class="compare-row">
+        <div class="compare-cell beta">
+          <div class="compare-sym">β</div>
+          <div class="compare-name">跟着共识走</div>
+          <div class="compare-tag">— The Baseline —</div>
+          <p class="compare-desc">人云亦云、跟随基准——本质是"搭便车"，<em>承担系统风险</em>换来的<em>平均表现</em>。</p>
+        </div>
+        <div class="compare-divider">vs</div>
+        <div class="compare-cell alpha">
+          <div class="compare-sym">α</div>
+          <div class="compare-name">独立产出</div>
+          <div class="compare-tag">— The Excess Value —</div>
+          <p class="compare-desc">嘈杂之中依然能赢——靠<em>独立判断</em>、<em>深度调研</em>，获取与共识<strong>无关</strong>的超额价值。</p>
+        </div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell beta">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">收益来源</div>
+          <p class="compare-desc">行业共识的均值。涨是 β 涨，跌也是 β 跌。</p>
+        </div>
+        <div class="compare-divider">·</div>
+        <div class="compare-cell alpha">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">收益来源</div>
+          <p class="compare-desc">调研、推演、独立判断——纯粹的<em>专业能力溢价</em>。</p>
+        </div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell beta">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">是否可负</div>
+          <p class="compare-desc">下行期 β 表现显著为负，业绩会真实缩水。</p>
+        </div>
+        <div class="compare-divider">·</div>
+        <div class="compare-cell alpha">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">是否可负</div>
+          <p class="compare-desc">理论上 α 可正可负，<em>优秀的分析师能让 α 长期为正</em>。</p>
+        </div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell beta">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">门槛</div>
+          <p class="compare-desc">几乎为零，跟随行业基准即可。</p>
+        </div>
+        <div class="compare-divider">·</div>
+        <div class="compare-cell alpha">
+          <div class="compare-name" style="font-size:18px; margin-top:8px;">门槛</div>
+          <p class="compare-desc">极高——时间、纪律、独立思考，缺一不可。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-foot fade-up">
+      <span>β 是行业给所有人的"及格线"</span>
+      <span>α 是少数人写进自己简历的"加分项"</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 收束 ===================== -->
+<section class="closing">
+  <div class="wrap">
+    <span class="eyebrow">Closing · End Note</span>
+    <h2>愿你成为<br>那座<em>始终亮着</em>的灯塔</h2>
+    <p>β 是共识推给每个人的潮汐，<br>
+       α 是你用<strong>调研、远见、独立</strong>亲手点燃的那束光。<br>
+       不靠风，不靠浪，只靠你自己。</p>
+    <div class="divider-ornament"><span>α</span></div>
+    <div class="signature">— Alpha · The Edge of Insight —</div>
+  </div>
+</section>
+
+<script>
+  // 滚动渐入
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

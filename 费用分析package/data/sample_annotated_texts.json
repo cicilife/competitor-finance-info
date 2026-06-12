@@ -1,0 +1,224 @@
+{
+  "version": "1.0",
+  "description": "费用文本标注示例数据",
+  "texts": [
+    {
+      "id": "text_001",
+      "company": "示例公司",
+      "period": "2023Q1",
+      "source": "10-K MD&A",
+      "original_text": "SG&A expenses increased by 12% year-over-year, driven by continued investment in marketing and brand building initiatives across our premium segment.",
+      "annotations": {
+        "expense_type": "sga",
+        "trend": "increase",
+        "driver": "investment",
+        "brand_type": "premium",
+        "sentiment": "positive",
+        "growth_rate": 12.0
+      },
+      "segmented_keywords": {
+        "expense_type": ["SG&A"],
+        "trend": ["increased"],
+        "driver": ["investment", "marketing", "brand building"],
+        "context": ["premium segment"]
+      }
+    },
+    {
+      "id": "text_002",
+      "company": "示例公司",
+      "period": "2023Q2",
+      "source": "10-Q MD&A",
+      "original_text": "Operating expenses as a percentage of revenue declined to 18.5% from 20.1% in the prior year, reflecting our ongoing efficiency optimization programs and cost control measures.",
+      "annotations": {
+        "expense_type": "operating_expense",
+        "trend": "decrease",
+        "driver": "efficiency",
+        "brand_type": null,
+        "sentiment": "positive",
+        "ratio_change": -1.6
+      },
+      "segmented_keywords": {
+        "expense_type": ["Operating expenses", "percentage of revenue"],
+        "trend": ["declined"],
+        "driver": ["efficiency optimization", "cost control"],
+        "context": ["efficiency programs"]
+      }
+    },
+    {
+      "id": "text_003",
+      "company": "竞争公司A",
+      "period": "2023Q1",
+      "source": "Earnings Call Transcript",
+      "original_text": "R&D spending grew 15% to support our strategic product innovation initiatives, particularly in sustainable materials and digital technology development.",
+      "annotations": {
+        "expense_type": "rd",
+        "trend": "increase",
+        "driver": "investment",
+        "brand_type": null,
+        "sentiment": "positive",
+        "growth_rate": 15.0
+      },
+      "segmented_keywords": {
+        "expense_type": ["R&D spending"],
+        "trend": ["grew"],
+        "driver": ["strategic", "product innovation", "sustainable", "digital technology"],
+        "context": ["innovation initiatives"]
+      }
+    },
+    {
+      "id": "text_004",
+      "company": "竞争公司A",
+      "period": "2023Q2",
+      "source": "10-Q MD&A",
+      "original_text": "Marketing and advertising expenses increased significantly due to new product launches and increased digital marketing spend to drive customer acquisition.",
+      "annotations": {
+        "expense_type": "marketing",
+        "trend": "increase",
+        "driver": "business_expansion",
+        "brand_type": null,
+        "sentiment": "positive",
+        "growth_rate": null
+      },
+      "segmented_keywords": {
+        "expense_type": ["Marketing", "advertising expenses"],
+        "trend": ["increased significantly"],
+        "driver": ["new product launches", "digital marketing", "customer acquisition"],
+        "context": ["new products"]
+      }
+    },
+    {
+      "id": "text_005",
+      "company": "竞争公司B",
+      "period": "2023Q1",
+      "source": "Annual Report",
+      "original_text": "Personnel costs increased primarily due to headcount expansion in our Asia-Pacific operations and wage inflation in key markets.",
+      "annotations": {
+        "expense_type": "personnel",
+        "trend": "increase",
+        "driver": "external",
+        "brand_type": null,
+        "sentiment": "neutral",
+        "growth_rate": null
+      },
+      "segmented_keywords": {
+        "expense_type": ["Personnel costs"],
+        "trend": ["increased"],
+        "driver": ["headcount expansion", "Asia-Pacific", "wage inflation"],
+        "context": ["expansion", "inflation"]
+      }
+    },
+    {
+      "id": "text_006",
+      "company": "竞争公司B",
+      "period": "2023Q2",
+      "source": "10-Q MD&A",
+      "original_text": "Technology and infrastructure costs decreased as we completed our cloud migration and achieved improved operational efficiency in our data centers.",
+      "annotations": {
+        "expense_type": "technology",
+        "trend": "decrease",
+        "driver": "efficiency",
+        "brand_type": null,
+        "sentiment": "positive",
+        "growth_rate": null
+      },
+      "segmented_keywords": {
+        "expense_type": ["Technology", "infrastructure costs"],
+        "trend": ["decreased"],
+        "driver": ["cloud migration", "operational efficiency", "data centers"],
+        "context": ["efficiency improvement"]
+      }
+    },
+    {
+      "id": "text_007",
+      "company": "示例公司",
+      "period": "2023Q2",
+      "source": "Earnings Call Transcript",
+      "original_text": "We incurred one-time restructuring charges of $15 million related to our organizational optimization program, which we expect to generate annual savings of $25 million starting next year.",
+      "annotations": {
+        "expense_type": "other",
+        "trend": "new",
+        "driver": "restructuring",
+        "brand_type": null,
+        "sentiment": "positive",
+        "one_time_amount": 15.0,
+        "expected_savings": 25.0
+      },
+      "segmented_keywords": {
+        "expense_type": ["restructuring charges"],
+        "trend": ["one-time", "incurred"],
+        "driver": ["organizational optimization"],
+        "context": ["restructuring", "savings"]
+      }
+    },
+    {
+      "id": "text_008",
+      "company": "竞争公司A",
+      "period": "2023Q2",
+      "source": "10-K MD&A",
+      "original_text": "General and administrative expenses remained stable year-over-year, with productivity improvements offsetting wage increases and inflationary pressures.",
+      "annotations": {
+        "expense_type": "sga",
+        "trend": "stable",
+        "driver": "efficiency",
+        "brand_type": null,
+        "sentiment": "neutral",
+        "growth_rate": 0.0
+      },
+      "segmented_keywords": {
+        "expense_type": ["General and administrative expenses"],
+        "trend": ["remained stable"],
+        "driver": ["productivity improvements", "wage increases", "inflationary pressures"],
+        "context": ["offsetting"]
+      }
+    },
+    {
+      "id": "text_009",
+      "company": "竞争公司B",
+      "period": "2023Q1",
+      "source": "Annual Report",
+      "original_text": "Legal and compliance costs increased due to regulatory changes in the European market and ongoing litigation expenses related to intellectual property disputes.",
+      "annotations": {
+        "expense_type": "legal",
+        "trend": "increase",
+        "driver": "external",
+        "brand_type": null,
+        "sentiment": "negative",
+        "growth_rate": null
+      },
+      "segmented_keywords": {
+        "expense_type": ["Legal", "compliance costs"],
+        "trend": ["increased"],
+        "driver": ["regulatory changes", "European market", "litigation", "intellectual property"],
+        "context": ["regulatory", "litigation"]
+      }
+    },
+    {
+      "id": "text_010",
+      "company": "示例公司",
+      "period": "2023Q1",
+      "source": "10-Q MD&A",
+      "original_text": "Distribution and fulfillment costs as a percentage of net sales improved by 150 basis points, reflecting economies of scale from volume growth and logistics network optimization.",
+      "annotations": {
+        "expense_type": "operating_expense",
+        "trend": "decrease",
+        "driver": "efficiency",
+        "brand_type": null,
+        "sentiment": "positive",
+        "ratio_change": -1.5
+      },
+      "segmented_keywords": {
+        "expense_type": ["Distribution", "fulfillment costs", "net sales"],
+        "trend": ["improved"],
+        "driver": ["economies of scale", "volume growth", "logistics optimization"],
+        "context": ["efficiency gains"]
+      }
+    }
+  ],
+  "annotation_guidelines": {
+    "expense_type": "标注文本中提到的费用类型，使用预定义的标签体系",
+    "trend": "标注费用的变化趋势，包括上升、下降、持平、波动、新增、削减",
+    "driver": "标注导致费用变化的原因或驱动因素",
+    "brand_type": "如文本中明确提到品牌定位，则标注；否则为null",
+    "sentiment": "标注管理层对费用变化的情感倾向，正面表示乐观，负面表示担忧，中性表示客观描述"
+  }
+}

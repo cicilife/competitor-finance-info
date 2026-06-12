@@ -1,0 +1,3202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI辅助竞品财务信息洞察 - Decathlon China</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* FIXED 16:9 STAGE */
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #f8f6f1;
+    }
+
+    .deck-viewport {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      background: #f8f6f1;
+    }
+
+    .deck-stage {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      transform-origin: 0 0;
+      background: #f8f6f1;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      background: #f8f6f1;
+    }
+
+    .slide.active {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+      }
+    }
+
+    /* LIGHT THEME VARIABLES */
+    :root {
+      --primary: #f8f6f1;
+      --text-dark: #1a1a1a;
+      --text-gray: #666666;
+      --accent: #00a896;
+      --accent2: #e85d04;
+      --accent3: #7b2cbf;
+      --card-bg: #ffffff;
+      --card-border: #e8e4df;
+      --mint: #98d4bb;
+      --lavender: #c7b8ea;
+      --pink: #f4b8c5;
+      --sky: #a8d8ea;
+      --cream: #ffe6a7;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* TYPOGRAPHY */
+    .title-xl { font-family: 'Outfit', sans-serif; font-size: 80px; font-weight: 800; color: var(--text-dark); line-height: 1.1; }
+    .title-lg { font-family: 'Outfit', sans-serif; font-size: 56px; font-weight: 700; color: var(--text-dark); line-height: 1.2; }
+    .title-md { font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+    .title-sm { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 600; color: var(--text-dark); line-height: 1.4; }
+    .body-text { font-family: 'DM Sans', sans-serif; font-size: 20px; color: var(--text-gray); line-height: 1.6; }
+    .label-text { font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--text-gray); text-transform: uppercase; letter-spacing: 3px; }
+
+    /* EDITABLE CONTENT */
+    [contenteditable] {
+      outline: none;
+      border: 2px dashed transparent;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      cursor: text;
+      min-height: 1em;
+    }
+
+    [contenteditable]:hover {
+      border-color: rgba(0, 168, 150, 0.3);
+      background: rgba(0, 168, 150, 0.05);
+    }
+
+    [contenteditable]:focus {
+      border-color: var(--accent);
+      background: rgba(0, 168, 150, 0.08);
+    }
+
+    .editable-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--text-dark);
+    }
+
+    .editable-table th,
+    .editable-table td {
+      border: 1px solid var(--card-border);
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .editable-table th {
+      background: rgba(0, 168, 150, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .editable-table td {
+      background: var(--card-bg);
+    }
+
+    .editable-table td[contenteditable]:hover {
+      background: rgba(0, 168, 150, 0.05);
+    }
+
+    .editable-table td[contenteditable]:focus {
+      background: rgba(0, 168, 150, 0.1);
+    }
+
+    /* BACKGROUND EFFECTS */
+    .paper-bg {
+      position: absolute;
+      inset: 0;
+      background: #f8f6f1;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(152, 212, 187, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(199, 184, 234, 0.15) 0%, transparent 50%);
+    }
+
+    .decorative-shapes {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-accent {
+      background: linear-gradient(135deg, rgba(0, 168, 150, 0.08) 0%, rgba(0, 168, 150, 0.02) 100%);
+      border: 1px solid rgba(0, 168, 150, 0.2);
+    }
+
+    /* BADGES */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .badge-accent { background: var(--accent); color: white; }
+    .badge-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+    .badge-orange { background: var(--accent2); color: white; }
+    .badge-mint { background: var(--mint); color: var(--text-dark); }
+    .badge-lavender { background: var(--lavender); color: var(--text-dark); }
+    .badge-pink { background: var(--pink); color: var(--text-dark); }
+
+    /* SECTION NUMBER */
+    .section-num {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .num-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--accent);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 14px;
+    }
+
+    /* LIST STYLES */
+    .feature-list { list-style: none; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .feature-list li:last-child { border-bottom: none; }
+
+    .feature-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 168, 150, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    /* GRID */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    /* QUOTE */
+    .quote-box {
+      position: relative;
+      padding: 32px 40px;
+      background: linear-gradient(135deg, rgba(232, 93, 4, 0.08) 0%, rgba(232, 93, 4, 0.02) 100%);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .quote-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    /* COMPARISON CARDS */
+    .compare-card {
+      padding: 28px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+    }
+
+    .compare-card.selected {
+      background: linear-gradient(135deg, rgba(0, 168, 150, 0.12) 0%, rgba(0, 168, 150, 0.04) 100%);
+      border: 2px solid var(--accent);
+    }
+
+    .compare-card.rejected {
+      opacity: 0.6;
+      border: 1px dashed rgba(232, 93, 4, 0.3);
+    }
+
+    /* ACCENT BAR */
+    .accent-bar {
+      width: 120px;
+      height: 6px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 3px;
+    }
+
+    /* HIGHLIGHT TEXT */
+    .highlight { color: var(--accent); }
+    .highlight-orange { color: var(--accent2); }
+
+    /* TABS */
+    .tab-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tab {
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-gray);
+    }
+
+    .tab.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .slide.active .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
+    .slide.active .animate-scale-in { animation: scaleIn 0.5s ease-out forwards; }
+
+    .delay-1 { animation-delay: 0.1s !important; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s !important; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s !important; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s !important; opacity: 0; }
+    .delay-5 { animation-delay: 0.5s !important; opacity: 0; }
+
+    /* NAVIGATION */
+    .nav-controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 1000;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 100px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-btn {
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: rgba(0, 168, 150, 0.1);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover { background: var(--accent); }
+    .nav-btn:hover svg { stroke: white; }
+    .nav-btn svg { width: 20px; height: 20px; stroke: var(--accent); transition: stroke 0.3s ease; }
+
+    .page-indicator {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      color: var(--text-gray);
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .page-indicator span { color: var(--accent); font-weight: 600; }
+
+    /* EDIT HINT */
+    .edit-hint {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      background: rgba(0, 168, 150, 0.15);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      color: var(--accent);
+      z-index: 1000;
+    }
+
+    /* TABLE CONTAINER */
+    .table-container {
+      max-height: 500px;
+      overflow-y: auto;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+    }
+
+    .table-container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .table-container::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+
+    .table-container::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    /* DECORATIVE ELEMENTS */
+    .corner-deco {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      opacity: 0.6;
+    }
+
+    .corner-tl {
+      top: 0;
+      left: 0;
+      background: linear-gradient(135deg, var(--mint) 0%, transparent 60%);
+      border-radius: 0 0 200px 0;
+    }
+
+    .corner-br {
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(315deg, var(--lavender) 0%, transparent 60%);
+      border-radius: 200px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Edit Hint -->
+<div class="edit-hint">💡 点击文字/表格可直接编辑</div>
+
+<div class="deck-viewport">
+  <div class="deck-stage">
+
+    <!-- =============================================
+         SLIDE 1: Cover
+         ============================================= -->
+    <div class="slide active" id="slide-1">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="position: absolute; top: 50%; left: 100px; transform: translateY(-50%);">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">01</div>
+          <span class="label-text">Introduction</span>
+        </div>
+        <h1 class="title-xl animate-fade-up delay-1" style="max-width: 800px;">
+          AI辅助<br>
+          <span class="highlight">竞品财务</span><br>
+          信息洞察
+        </h1>
+        <p class="body-text animate-fade-up delay-2" style="margin-top: 24px; max-width: 500px;" contenteditable="true">
+          方法论与实践分享
+        </p>
+        <div class="accent-bar animate-fade-up delay-3" style="margin-top: 40px;"></div>
+      </div>
+
+      <div style="position: absolute; bottom: 40px; left: 100px; right: 100px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--text-gray);">DECATHLON CHINA</span>
+        <span style="font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--text-gray);" contenteditable="true">内部分享 · 2025</span>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 2: Table of Contents
+         ============================================= -->
+    <div class="slide" id="slide-2">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">02</div>
+          <span class="label-text">Agenda</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 40px;" contenteditable="true">分享目录</h2>
+
+        <div class="grid-3 animate-fade-up delay-2">
+          <div class="card card-accent">
+            <div class="tab-container" style="margin-bottom: 16px;">
+              <span class="badge badge-accent">01</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 8px;" contenteditable="true">Background & Methodology</h3>
+            <p class="body-text" style="font-size: 16px;" contenteditable="true">项目背景与分析方法</p>
+          </div>
+          <div class="card">
+            <div class="tab-container" style="margin-bottom: 16px;">
+              <span class="badge badge-outline" style="border-color: var(--lavender); color: var(--accent3);">02</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 8px;" contenteditable="true">Competitor Finance Report</h3>
+            <p class="body-text" style="font-size: 16px;" contenteditable="true">竞品财务报告分析</p>
+          </div>
+          <div class="card">
+            <div class="tab-container" style="margin-bottom: 16px;">
+              <span class="badge badge-outline" style="border-color: var(--pink); color: #d63384;">03</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 8px;" contenteditable="true">心路历程分享</h3>
+            <p class="body-text" style="font-size: 16px;" contenteditable="true">经验总结与感悟</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 3: Project Background
+         ============================================= -->
+    <div class="slide" id="slide-3">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">03</div>
+          <span class="label-text">Background</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 32px;" contenteditable="true">
+          项目背景：<span class="highlight">AI辅助竞品财务信息洞察</span>
+        </h2>
+
+        <div class="grid-2 animate-fade-up delay-2">
+          <div class="card">
+            <h3 class="title-sm" style="margin-bottom: 20px;" contenteditable="true">行业趋势</h3>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon">📈</div>
+                <div contenteditable="true">
+                  <h4 style="font-family: 'Outfit'; font-size: 18px; color: var(--text-dark); margin-bottom: 6px;">竞争加剧</h4>
+                  <p class="body-text" style="font-size: 14px;">体育用品市场竞争日益激烈，需要更精准的数据支撑决策</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon">🔍</div>
+                <div contenteditable="true">
+                  <h4 style="font-family: 'Outfit'; font-size: 18px; color: var(--text-dark); margin-bottom: 6px;">信息碎片化</h4>
+                  <p class="body-text" style="font-size: 14px;">竞品财务数据分散在年报、研报、新闻等多个渠道</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="title-sm" style="margin-bottom: 20px;" contenteditable="true">关注要点</h3>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon" style="background: rgba(232, 93, 4, 0.1);">💡</div>
+                <div contenteditable="true">
+                  <h4 style="font-family: 'Outfit'; font-size: 18px; color: var(--text-dark); margin-bottom: 6px;">盈利特征</h4>
+                  <p class="body-text" style="font-size: 14px;">盈利强的公司有什么特征？毛利率、库存周转、现金流</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon" style="background: rgba(123, 44, 191, 0.1);">🎯</div>
+                <div contenteditable="true">
+                  <h4 style="font-family: 'Outfit'; font-size: 18px; color: var(--text-dark); margin-bottom: 6px;">决策指标</h4>
+                  <p class="body-text" style="font-size: 14px;">从财务视角看，应该关注哪些指标辅助决策？</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon" style="background: rgba(232, 93, 4, 0.1);">🏆</div>
+                <div contenteditable="true">
+                  <h4 style="font-family: 'Outfit'; font-size: 18px; color: var(--text-dark); margin-bottom: 6px;">迪卡侬重点</h4>
+                  <p class="body-text" style="font-size: 14px;">对迪卡侬而言，重点应该关注什么指标，什么品牌？</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 4: Analysis Process & Tools
+         ============================================= -->
+    <div class="slide" id="slide-4">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">04</div>
+          <span class="label-text">Methodology</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 32px;" contenteditable="true">
+          分析方法 & <span class="highlight">使用工具</span>
+        </h2>
+
+        <div class="grid-3 animate-fade-up delay-2">
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <span class="badge badge-accent">Step 1</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 16px;" contenteditable="true">财报收集</h3>
+            <ul class="feature-list" style="font-size: 14px;">
+              <li>
+                <div class="feature-icon" style="width: 32px; height: 32px; font-size: 14px;">📊</div>
+                <div contenteditable="true">从公开渠道收集财务报告、年报等</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-accent">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <span class="badge badge-accent">Step 2</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 16px;" contenteditable="true">数据提取</h3>
+            <ul class="feature-list" style="font-size: 14px;">
+              <li>
+                <div class="feature-icon" style="width: 32px; height: 32px; font-size: 14px;">🤖</div>
+                <div contenteditable="true">AI Skill + 人工核验（重复纠错迭代）</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <span class="badge badge-outline">Step 3</span>
+            </div>
+            <h3 class="title-sm" style="margin-bottom: 16px;" contenteditable="true">分析汇报</h3>
+            <ul class="feature-list" style="font-size: 14px;">
+              <li>
+                <div class="feature-icon" style="width: 32px; height: 32px; font-size: 14px;">📝</div>
+                <div contenteditable="true">Prompt 驱动，输出结构化报告</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="quote-box animate-fade-up delay-3" style="margin-top: 32px;">
+          <p class="quote-text" contenteditable="true">"互动：AI可以覆盖___%的工作"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 5: Tool Comparison
+         ============================================= -->
+    <div class="slide" id="slide-5">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">05</div>
+          <span class="label-text">Data Collection</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 32px;" contenteditable="true">
+          数据收集：方案<span class="highlight-orange">对比</span>
+        </h2>
+
+        <div class="grid-3 animate-fade-up delay-2">
+          <div class="compare-card rejected">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <div style="width: 40px; height: 40px; background: rgba(232, 93, 4, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span>🏗️</span>
+              </div>
+              <h3 class="title-sm" style="font-size: 20px; color: var(--text-gray);" contenteditable="true">RPA方案</h3>
+            </div>
+            <p class="body-text" style="font-size: 14px; margin-bottom: 16px;" contenteditable="true">像大积木，标准化但缺乏灵活性</p>
+            <div style="padding: 12px; background: rgba(232, 93, 4, 0.08); border-radius: 8px; border: 1px dashed rgba(232, 93, 4, 0.3);">
+              <p style="font-size: 12px; color: var(--accent2);" contenteditable="true">痛点：难以应对非标准页面</p>
+            </div>
+          </div>
+
+          <div class="compare-card rejected">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <div style="width: 40px; height: 40px; background: rgba(232, 93, 4, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span>🏢</span>
+              </div>
+              <h3 class="title-sm" style="font-size: 20px; color: var(--text-gray);" contenteditable="true">供应商方案</h3>
+            </div>
+            <p class="body-text" style="font-size: 14px; margin-bottom: 16px;" contenteditable="true">现成方案但ROI不明确</p>
+            <div style="padding: 12px; background: rgba(232, 93, 4, 0.08); border-radius: 8px; border: 1px dashed rgba(232, 93, 4, 0.3);">
+              <p style="font-size: 12px; color: var(--accent2);" contenteditable="true">痛点：成本高，定制性差</p>
+            </div>
+          </div>
+
+          <div class="compare-card selected">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <div style="width: 40px; height: 40px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: white;">✓</span>
+              </div>
+              <h3 class="title-sm" style="font-size: 20px; color: var(--accent);" contenteditable="true">Python + 人工</h3>
+              <span class="badge badge-accent" style="margin-left: auto;">选中</span>
+            </div>
+            <p class="body-text" style="font-size: 14px; margin-bottom: 16px;" contenteditable="true">像小乐高，灵活组合，需要人工微调</p>
+            <div style="padding: 12px; background: rgba(0, 168, 150, 0.08); border-radius: 8px; border: 1px solid rgba(0, 168, 150, 0.3);">
+              <p style="font-size: 12px; color: var(--accent);" contenteditable="true">优势：灵活，成本可控、可迭代</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-box animate-fade-up delay-3" style="margin-top: 32px;">
+          <p class="quote-text" contenteditable="true">"RPA像大积木，Python像小乐高，但当我们需要布偶的时候，就需要人工"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 6: Competitor List
+         ============================================= -->
+    <div class="slide" id="slide-6">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">06</div>
+          <span class="label-text">Competitors</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 24px;" contenteditable="true">
+          竞品<span class="highlight">List</span>
+        </h2>
+
+        <div class="table-container animate-fade-up delay-2">
+          <table class="editable-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">序号</th>
+                <th>品牌</th>
+                <th>FY23-24变化率</th>
+                <th>FY24-25变化率</th>
+                <th>覆盖区域</th>
+                <th>备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">安踏</td>
+                <td contenteditable="true">13.6%</td>
+                <td contenteditable="true">13.3%</td>
+                <td contenteditable="true">中国公司</td>
+                <td contenteditable="true"></td>
+              </tr>
+              <tr>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">Nike</td>
+                <td contenteditable="true">4.1%</td>
+                <td contenteditable="true">-12.7%</td>
+                <td contenteditable="true">大中华区</td>
+                <td contenteditable="true">DTC渠道下降14%</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">3</td>
+                <td contenteditable="true">李宁</td>
+                <td contenteditable="true">3.9%</td>
+                <td contenteditable="true">3.2%</td>
+                <td contenteditable="true">中国公司</td>
+                <td contenteditable="true"></td>
+              </tr>
+              <tr>
+                <td contenteditable="true">4</td>
+                <td contenteditable="true">Lululemon</td>
+                <td contenteditable="true">41.3%</td>
+                <td contenteditable="true">28.9%</td>
+                <td contenteditable="true">中国内地</td>
+                <td contenteditable="true">Q4营收增长28%</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">5</td>
+                <td contenteditable="true">361度</td>
+                <td contenteditable="true">19.6%</td>
+                <td contenteditable="true">10.6%</td>
+                <td contenteditable="true">中国公司</td>
+                <td contenteditable="true">渠道下沉策略</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">6</td>
+                <td contenteditable="true">彪马</td>
+                <td contenteditable="true">3.7%</td>
+                <td contenteditable="true">-19.1%</td>
+                <td contenteditable="true">大中华区</td>
+                <td contenteditable="true">战略重组期</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">7</td>
+                <td contenteditable="true">安德玛</td>
+                <td contenteditable="true">5.8%</td>
+                <td contenteditable="true">-13.5%</td>
+                <td contenteditable="true">亚太区</td>
+                <td contenteditable="true">北美市场疲软</td>
+              </tr>
+              <tr>
+                <td contenteditable="true">8</td>
+                <td contenteditable="true">昂跑</td>
+                <td contenteditable="true">84.4%</td>
+                <td contenteditable="true">96.4%</td>
+                <td contenteditable="true">亚太区</td>
+                <td contenteditable="true">高速增长</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 7: Category Trend Review
+         ============================================= -->
+    <div class="slide" id="slide-7">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">07</div>
+          <span class="label-text">Trends</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 32px;" contenteditable="true">
+          Category <span class="highlight">Trend Review</span>
+        </h2>
+
+        <div class="grid-2 animate-fade-up delay-2">
+          <div class="card card-accent">
+            <h3 class="title-sm" style="margin-bottom: 24px;" contenteditable="true">核心指标趋势</h3>
+            <div class="table-container" style="max-height: 350px;">
+              <table class="editable-table" style="font-size: 14px;">
+                <thead>
+                  <tr>
+                    <th>指标</th>
+                    <th>FY2023</th>
+                    <th>FY2024</th>
+                    <th>FY2025</th>
+                    <th>趋势</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td contenteditable="true">营收增速</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">11.2%</td>
+                    <td contenteditable="true">-5.7%</td>
+                    <td style="color: var(--accent2);" contenteditable="true">25年xx%品牌营收下滑</td>
+                  </tr>
+                  <tr>
+                    <td contenteditable="true">毛利率均值</td>
+                    <td contenteditable="true">49.8%</td>
+                    <td contenteditable="true">49.4%</td>
+                    <td contenteditable="true">49.2%</td>
+                    <td style="color: var(--accent2);" contenteditable="true">↓ 小幅下滑</td>
+                  </tr>
+                  <tr>
+                    <td contenteditable="true">净利率均值</td>
+                    <td contenteditable="true">8.4%</td>
+                    <td contenteditable="true">9.9%</td>
+                    <td contenteditable="true">8.0%</td>
+                    <td style="color: var(--accent2);" contenteditable="true">↑后↓</td>
+                  </tr>
+                  <tr>
+                    <td contenteditable="true">运营费用率均值</td>
+                    <td contenteditable="true">33.5%</td>
+                    <td contenteditable="true">33.4%</td>
+                    <td contenteditable="true">34.1%</td>
+                    <td style="color: var(--accent2);" contenteditable="true">↑ 2025年小涨</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="title-sm" style="margin-bottom: 24px;" contenteditable="true">关键洞察</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="padding: 16px; background: rgba(232, 93, 4, 0.08); border-radius: 12px; border-left: 4px solid var(--accent2);">
+                <p style="font-family: 'DM Sans'; font-size: 14px; color: var(--text-dark);" contenteditable="true">
+                  <strong>整体承压：</strong>2025年行业营收增速转负，75%品牌出现下滑
+                </p>
+              </div>
+              <div style="padding: 16px; background: rgba(0, 168, 150, 0.08); border-radius: 12px; border-left: 4px solid var(--accent);">
+                <p style="font-family: 'DM Sans'; font-size: 14px; color: var(--text-dark);" contenteditable="true">
+                  <strong>分化明显：</strong>国产品牌（安踏、361度）逆势增长，国际品牌普遍下滑
+                </p>
+              </div>
+              <div style="padding: 16px; background: rgba(123, 44, 191, 0.08); border-radius: 12px; border-left: 4px solid var(--accent3);">
+                <p style="font-family: 'DM Sans'; font-size: 14px; color: var(--text-dark);" contenteditable="true">
+                  <strong>盈利挑战：</strong>运营费用率上升，净利率均值下降至8.0%
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 8: Brand Performance Bubble Chart
+         ============================================= -->
+    <div class="slide" id="slide-8">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 50px 80px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">08</div>
+          <span class="label-text">Performance</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 24px;" contenteditable="true">
+          品牌<span class="highlight">表现分化</span>：增长稳定性四象限
+        </h2>
+
+        <!-- Full Width Chart Area -->
+        <div class="animate-fade-up delay-2" style="position: relative; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; padding: 24px; height: 560px;">
+          <!-- Chart Area -->
+          <div id="bubbleChart" style="position: relative; height: 100%; border: 1px solid var(--card-border); border-radius: 12px; background: rgba(248, 246, 241, 0.9);">
+            <!-- Axis Labels -->
+            <div style="position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); font-size: 14px; color: var(--text-gray); font-family: 'Outfit'; font-weight: 500;" contenteditable="true">FY23-24增长率 →</div>
+            <div style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%) rotate(-90deg); font-size: 14px; color: var(--text-gray); font-family: 'Outfit'; font-weight: 500;" contenteditable="true">FY24-25增长率 →</div>
+
+            <!-- Quadrant Lines -->
+            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.08);"></div>
+            <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(0,0,0,0.08);"></div>
+
+            <!-- Quadrant Labels -->
+            <div style="position: absolute; top: 15%; left: 55%; font-size: 11px; color: var(--accent); font-weight: 500; opacity: 0.6;" contenteditable="true">双增长</div>
+            <div style="position: absolute; top: 15%; left: 15%; font-size: 11px; color: var(--accent2); font-weight: 500; opacity: 0.6;" contenteditable="true">减速</div>
+            <div style="position: absolute; top: 55%; left: 15%; font-size: 11px; color: var(--text-gray); font-weight: 500; opacity: 0.6;" contenteditable="true">双下滑</div>
+            <div style="position: absolute; top: 55%; left: 55%; font-size: 11px; color: var(--text-gray); font-weight: 500; opacity: 0.6;" contenteditable="true">复苏</div>
+
+            <!-- Legend -->
+            <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 16px; font-size: 12px; background: rgba(255,255,255,0.95); padding: 8px 14px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+              <span><span style="display: inline-block; width: 12px; height: 12px; background: var(--accent); border-radius: 50%; vertical-align: middle; opacity: 0.6;"></span> 中国公司</span>
+              <span><span style="display: inline-block; width: 12px; height: 12px; background: var(--accent2); border-radius: 50%; vertical-align: middle; opacity: 0.6;"></span> 大中华区</span>
+              <span><span style="display: inline-block; width: 12px; height: 12px; background: var(--accent3); border-radius: 50%; vertical-align: middle; opacity: 0.6;"></span> 亚太区</span>
+            </div>
+
+            <!-- Bubbles with Hover Tooltips - Semi-transparent for visibility -->
+            <div class="bubble" data-brand="安踏" data-growth1="13.6%" data-growth2="13.3%" data-region="中国公司" style="position: absolute; top: 20%; left: 70%; width: 80px; height: 80px; background: var(--accent); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(0,168,150,0.25);" contenteditable="true">安踏</div>
+
+            <div class="bubble" data-brand="Nike" data-growth1="4.1%" data-growth2="-12.7%" data-region="大中华区" style="position: absolute; top: 30%; left: 60%; width: 70px; height: 70px; background: var(--accent2); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(232,93,4,0.25);" contenteditable="true">Nike</div>
+
+            <div class="bubble" data-brand="李宁" data-growth1="3.9%" data-growth2="3.2%" data-region="中国公司" style="position: absolute; top: 38%; left: 50%; width: 58px; height: 58px; background: var(--accent); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 10px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(0,168,150,0.25);" contenteditable="true">李宁</div>
+
+            <div class="bubble" data-brand="Lululemon" data-growth1="41.3%" data-growth2="28.9%" data-region="中国内地" style="position: absolute; top: 12%; left: 78%; width: 60px; height: 60px; background: var(--accent3); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 9px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(123,44,191,0.25);" contenteditable="true">Lululemon</div>
+
+            <div class="bubble" data-brand="361度" data-growth1="19.6%" data-growth2="10.6%" data-region="中国公司" style="position: absolute; top: 24%; left: 74%; width: 54px; height: 54px; background: var(--accent); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 10px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(0,168,150,0.25);" contenteditable="true">361度</div>
+
+            <div class="bubble" data-brand="彪马" data-growth1="3.7%" data-growth2="-19.1%" data-region="大中华区" style="position: absolute; top: 52%; left: 40%; width: 50px; height: 50px; background: var(--accent2); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 9px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(232,93,4,0.25);" contenteditable="true">彪马</div>
+
+            <div class="bubble" data-brand="昂跑" data-growth1="84.4%" data-growth2="96.4%" data-region="亚太区" style="position: absolute; top: 8%; left: 86%; width: 52px; height: 52px; background: var(--accent); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 9px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(0,168,150,0.25);" contenteditable="true">昂跑</div>
+
+            <div class="bubble" data-brand="安德玛" data-growth1="5.8%" data-growth2="-13.5%" data-region="亚太区" style="position: absolute; top: 46%; left: 46%; width: 48px; height: 48px; background: var(--accent3); border-radius: 50%; opacity: 0.45; display: flex; align-items: center; justify-content: center; font-size: 8px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(123,44,191,0.25);" contenteditable="true">安德玛</div>
+
+            <!-- Tooltip -->
+            <div id="tooltip" style="position: absolute; display: none; background: rgba(26,26,26,0.95); color: white; padding: 14px 18px; border-radius: 12px; font-size: 13px; z-index: 100; pointer-events: none; min-width: 170px; box-shadow: 0 6px 24px rgba(0,0,0,0.25);">
+              <div id="tooltipBrand" style="font-weight: 600; font-size: 15px; margin-bottom: 10px; font-family: 'Outfit';"></div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 5px;"><span style="color: rgba(255,255,255,0.7);">FY23-24:</span><span id="tooltipG1" style="font-weight: 600;"></span></div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 5px;"><span style="color: rgba(255,255,255,0.7);">FY24-25:</span><span id="tooltipG2" style="font-weight: 600;"></span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="color: rgba(255,255,255,0.7);">区域:</span><span id="tooltipRegion" style="font-weight: 600;"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Bubble hover tooltip
+        document.querySelectorAll('.bubble').forEach(bubble => {
+          bubble.addEventListener('mouseenter', function(e) {
+            const tooltip = document.getElementById('tooltip');
+            const brand = this.getAttribute('data-brand');
+            const g1 = this.getAttribute('data-growth1');
+            const g2 = this.getAttribute('data-growth2');
+            const region = this.getAttribute('data-region');
+
+            document.getElementById('tooltipBrand').textContent = brand;
+            document.getElementById('tooltipG1').textContent = g1;
+            document.getElementById('tooltipG2').textContent = g2;
+            document.getElementById('tooltipRegion').textContent = region;
+
+            tooltip.style.display = 'block';
+
+            const rect = this.getBoundingClientRect();
+            const chartRect = document.getElementById('bubbleChart').getBoundingClientRect();
+
+            tooltip.style.left = (rect.left - chartRect.left + rect.width + 12) + 'px';
+            tooltip.style.top = (rect.top - chartRect.top - 20) + 'px';
+
+            this.style.transform = 'scale(1.12)';
+            this.style.opacity = '0.75';
+            this.style.zIndex = '50';
+          });
+
+          bubble.addEventListener('mouseleave', function() {
+            document.getElementById('tooltip').style.display = 'none';
+            this.style.transform = 'scale(1)';
+            this.style.opacity = '0.45';
+            this.style.zIndex = '1';
+          });
+        });
+      </script>
+    </div>
+
+    <!-- =============================================
+         SLIDE 9: Profitability Analysis
+         ============================================= -->
+    <div class="slide" id="slide-9">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="padding: 60px 100px;">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">09</div>
+          <span class="label-text">Analysis</span>
+        </div>
+        <h2 class="title-lg animate-fade-up delay-1" style="margin-bottom: 24px;" contenteditable="true">
+          盈利性分析：<span class="highlight-orange">2025年盈利</span> & 经营指标
+        </h2>
+
+        <div class="animate-fade-up delay-2">
+          <div class="table-container" style="max-height: 280px; margin-bottom: 24px;">
+            <table class="editable-table" style="font-size: 13px;">
+              <thead>
+                <tr>
+                  <th style="width: 40px;">排名</th>
+                  <th>公司</th>
+                  <th>净利率</th>
+                  <th>毛利率</th>
+                  <th>运营费用率</th>
+                  <th>盈利组</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: rgba(0, 168, 150, 0.1);">
+                  <td contenteditable="true">1</td>
+                  <td contenteditable="true"><strong>安踏</strong></td>
+                  <td contenteditable="true" style="color: var(--accent);">19.50%</td>
+                  <td contenteditable="true">62.00%</td>
+                  <td contenteditable="true">11.00%</td>
+                  <td><span class="badge badge-mint">高盈利组</span></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">2</td>
+                  <td contenteditable="true">Nike</td>
+                  <td contenteditable="true" style="color: var(--accent);">18.20%</td>
+                  <td contenteditable="true">46.00%</td>
+                  <td contenteditable="true">35.70%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">3</td>
+                  <td contenteditable="true">Inditex</td>
+                  <td contenteditable="true">15.60%</td>
+                  <td contenteditable="true">58.25%</td>
+                  <td contenteditable="true">-</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">4</td>
+                  <td contenteditable="true">Lululemon</td>
+                  <td contenteditable="true">14.20%</td>
+                  <td contenteditable="true">56.60%</td>
+                  <td contenteditable="true">36.60%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">5</td>
+                  <td contenteditable="true">比音勒芬</td>
+                  <td contenteditable="true">12.77%</td>
+                  <td contenteditable="true">75.35%</td>
+                  <td contenteditable="true">35.00%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">6</td>
+                  <td contenteditable="true">361度</td>
+                  <td contenteditable="true">11.70%</td>
+                  <td contenteditable="true">41.50%</td>
+                  <td contenteditable="true">22.30%</td>
+                  <td></td>
+                </tr>
+                <tr style="background: rgba(232, 93, 4, 0.08);">
+                  <td contenteditable="true">14</td>
+                  <td contenteditable="true">威富集团</td>
+                  <td contenteditable="true" style="color: var(--accent2);">2.70%</td>
+                  <td contenteditable="true">54.80%</td>
+                  <td contenteditable="true">48.50%</td>
+                  <td><span class="badge badge-orange">盈利承压</span></td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">17</td>
+                  <td contenteditable="true">安德玛</td>
+                  <td contenteditable="true" style="color: var(--accent2);">-3.90%</td>
+                  <td contenteditable="true">47.90%</td>
+                  <td contenteditable="true">42.00%</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid-2 animate-fade-up delay-3">
+            <div class="card card-accent">
+              <h3 class="title-sm" style="margin-bottom: 16px;" contenteditable="true">高盈利模式 A：高端高毛利</h3>
+              <p style="font-family: 'DM Sans'; font-size: 14px; color: var(--text-gray); margin-bottom: 12px;" contenteditable="true">代表：安踏、比音勒芬、Lululemon</p>
+              <ul style="list-style: none; font-size: 13px; color: var(--text-dark);">
+                <li style="padding: 8px 0; border-bottom: 1px solid var(--card-border);" contenteditable="true">✓ 毛利率 > 50%</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid var(--card-border);" contenteditable="true">✓ 品牌溢价能力强</li>
+                <li style="padding: 8px 0;" contenteditable="true">✓ 运营费用率相对可控</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 class="title-sm" style="margin-bottom: 16px;" contenteditable="true">高盈利模式 B：效率驱动型</h3>
+              <p style="font-family: 'DM Sans'; font-size: 14px; color: var(--text-gray); margin-bottom: 12px;" contenteditable="true">代表：安踏(运营费用率11%)、361度(22.3%)</p>
+              <ul style="list-style: none; font-size: 13px; color: var(--text-dark);">
+                <li style="padding: 8px 0; border-bottom: 1px solid var(--card-border);" contenteditable="true">✓ 供应链优化 + 渠道效率</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid var(--card-border);" contenteditable="true">✓ 不依赖高毛利率</li>
+                <li style="padding: 8px 0;" contenteditable="true">✓ 适合大众市场、规模化运营</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+         SLIDE 10: Summary
+         ============================================= -->
+    <div class="slide" id="slide-10">
+      <div class="paper-bg"></div>
+      <div class="corner-deco corner-tl"></div>
+      <div class="corner-deco corner-br"></div>
+
+      <div style="position: absolute; top: 50%; left: 100px; transform: translateY(-50%);">
+        <div class="section-num animate-fade-up">
+          <div class="num-box">10</div>
+          <span class="label-text">Summary</span>
+        </div>
+        <h2 class="title-xl animate-fade-up delay-1" style="max-width: 700px;">
+          核心<span class="highlight">发现</span>与<br>行动建议
+        </h2>
+        <div class="grid-2 animate-fade-up delay-2" style="margin-top: 40px; max-width: 800px; gap: 24px;">
+          <div class="card">
+            <h3 class="title-sm" style="margin-bottom: 12px;" contenteditable="true">关键发现</h3>
+            <ul class="feature-list" style="font-size: 14px;">
+              <li>
+                <div class="feature-icon" style="background: rgba(0, 168, 150, 0.1);">📊</div>
+                <div contenteditable="true">国产品牌逆势增长，安踏、361度表现亮眼</div>
+              </li>
+              <li>
+                <div class="feature-icon" style="background: rgba(232, 93, 4, 0.1);">📉</div>
+                <div contenteditable="true">国际品牌普遍承压，DTC转型面临挑战</div>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="title-sm" style="margin-bottom: 12px;" contenteditable="true">行动建议</h3>
+            <ul class="feature-list" style="font-size: 14px;">
+              <li>
+                <div class="feature-icon" style="background: rgba(123, 44, 191, 0.1);">🎯</div>
+                <div contenteditable="true">关注净利率>15%的高盈利品牌策略</div>
+              </li>
+              <li>
+                <div class="feature-icon" style="background: rgba(0, 168, 150, 0.1);">⚡</div>
+                <div contenteditable="true">效率驱动型模式值得借鉴</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="accent-bar animate-fade-up delay-3" style="margin-top: 40px;"></div>
+      </div>
+
+      <div style="position: absolute; bottom: 40px; left: 100px; right: 100px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--text-gray);">DECATHLON CHINA</span>
+        <span style="font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--text-gray);">感谢聆听</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Navigation Controls -->
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M15 18L9 12L15 6"/>
+    </svg>
+  </button>
+  <div class="page-indicator">
+    <span id="currentPage">1</span> / <span id="totalPages">10</span>
+  </div>
+  <button class="nav-btn" id="nextBtn" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M9 18L15 12L9 6"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+// Presentation Controller
+class SlidePresentation {
+  constructor() {
+    this.slides = document.querySelectorAll('.slide');
+    this.currentSlide = 0;
+    this.totalSlides = this.slides.length;
+    this.init();
+  }
+
+  init() {
+    this.bindEvents();
+    this.scaleStage();
+    this.showSlide(0);
+    window.addEventListener('resize', () => this.scaleStage());
+  }
+
+  bindEvents() {
+    document.addEventListener('keydown', (e) => {
+      if (e.target.getAttribute('contenteditable') || e.target.tagName === 'INPUT') return;
+      switch(e.key) {
+        case 'ArrowRight':
+        case 'ArrowDown':
+        case ' ':
+        case 'PageDown':
+          e.preventDefault();
+          this.next();
+          break;
+        case 'ArrowLeft':
+        case 'ArrowUp':
+        case 'PageUp':
+          e.preventDefault();
+          this.prev();
+          break;
+      }
+    });
+
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) this.next();
+        else this.prev();
+      }
+    }, { passive: true });
+
+    document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    document.getElementById('nextBtn').addEventListener('click', () => this.next());
+  }
+
+  scaleStage() {
+    const viewport = document.querySelector('.deck-viewport');
+    const stage = document.querySelector('.deck-stage');
+    const scale = Math.min(viewport.clientWidth / 1920, viewport.clientHeight / 1080);
+    const offsetX = (viewport.clientWidth - 1920 * scale) / 2;
+    const offsetY = (viewport.clientHeight - 1080 * scale) / 2;
+    stage.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+  }
+
+  showSlide(index) {
+    if (index < 0 || index >= this.totalSlides) return;
+    this.slides.forEach((s, i) => {
+      s.classList.remove('active');
+      if (i === index) s.classList.add('active');
+    });
+    this.currentSlide = index;
+    document.getElementById('currentPage').textContent = index + 1;
+  }
+
+  next() { if (this.currentSlide < this.totalSlides - 1) this.showSlide(this.currentSlide + 1); }
+  prev() { if (this.currentSlide > 0) this.showSlide(this.currentSlide - 1); }
+}
+
+document.addEventListener('DOMContentLoaded', () => new SlidePresentation());
+</script>
+
+
+<script>
+/**
+ * Iframe 元素高亮注入脚本
+ * 需要在目标网站中引入此脚本来支持跨域 iframe 高亮功能
+ *
+ * 使用方法：
+ * 1. 将此脚本添加到目标网站的 HTML 中
+ * 2. 或通过浏览器扩展、用户脚本等方式注入
+ */
+
+(function () {
+  "use strict";
+
+  // 检查是否在 iframe 中
+  if (window.self === window.top) {
+    return; // 不在 iframe 中，不执行
+  }
+
+  // 检查是否已经初始化过
+  if (window.__iframeHighlightInitialized) {
+    return;
+  }
+  window.__iframeHighlightInitialized = true;
+  console.log("Iframe 高亮脚本已加载");
+
+  // 创建高亮覆盖层
+  var overlay = document.createElement("div");
+  overlay.id = "iframe-highlight-overlay";
+  overlay.style.cssText = "\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    pointer-events: none;\n    z-index: 999999;\n    overflow: hidden;\n  ";
+
+  // 创建悬停高亮框（虚线边框）
+  var highlightBox = document.createElement("div");
+  highlightBox.id = "iframe-highlight-box";
+  highlightBox.style.cssText = "\n    position: absolute;\n    border: 2px dashed #007AFF;\n    background: rgba(0, 122, 255, 0.08);\n    pointer-events: none;\n    display: none;\n    transition: all 0.1s ease;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);\n    border-radius: 2px;\n  ";
+
+  // 创建选中节点的常驻高亮框（实线边框）
+  var selectedBox = document.createElement("div");
+  selectedBox.id = "iframe-selected-box";
+  selectedBox.style.cssText = "\n    position: absolute;\n    border: 2px solid #007AFF;\n    pointer-events: none;\n    display: none;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 107, 53, 0.4);\n    border-radius: 2px;\n    z-index: 1000000;\n  ";
+
+  // 创建悬停标签显示
+  var tagLabel = document.createElement("div");
+  tagLabel.id = "iframe-tag-label";
+  tagLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 2px 6px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 2px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000001;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n    font-weight: 500;\n  ";
+
+  // 创建选中节点标签
+  var selectedLabel = document.createElement("div");
+  selectedLabel.id = "iframe-selected-label";
+  selectedLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 3px 8px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 3px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000002;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n    font-weight: 600;\n  ";
+  overlay.appendChild(highlightBox);
+  overlay.appendChild(selectedBox);
+  overlay.appendChild(tagLabel);
+  overlay.appendChild(selectedLabel);
+  document.body.appendChild(overlay);
+
+  // 存储当前选中的元素
+  var selectedElement = null;
+  var highlightEnabled = false;
+
+  // 更新选中元素的高亮显示
+  function updateSelectedHighlight(element) {
+    console.log("updateSelectedHighlight called with:", element);
+    if (!element) {
+      selectedBox.style.display = "none";
+      selectedLabel.style.display = "none";
+      selectedElement = null;
+      console.log("Cleared selected highlight");
+      return;
+    }
+    selectedElement = element;
+    var rect = element.getBoundingClientRect();
+    console.log("Selected element rect:", rect);
+
+    // 更新选中高亮框位置
+    selectedBox.style.display = "block";
+    selectedBox.style.left = "".concat(rect.left - 2, "px");
+    selectedBox.style.top = "".concat(rect.top - 2, "px");
+    selectedBox.style.width = "".concat(rect.width + 4, "px");
+    selectedBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新选中标签位置和内容
+    selectedLabel.style.display = "block";
+    selectedLabel.textContent = "\u2713 <".concat(element.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 28;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 5) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    var labelWidth = selectedLabel.offsetWidth || 100; // 预估宽度
+    if (labelLeft + labelWidth > window.innerWidth - 10) {
+      labelLeft = window.innerWidth - labelWidth - 10;
+    }
+    selectedLabel.style.left = "".concat(Math.max(5, labelLeft), "px");
+    selectedLabel.style.top = "".concat(labelTop, "px");
+    console.log("Selected highlight positioned at:", {
+      left: selectedBox.style.left,
+      top: selectedBox.style.top,
+      width: selectedBox.style.width,
+      height: selectedBox.style.height
+    });
+  }
+  function getElementSelector(element) {
+    if (!(element instanceof Element)) throw new Error('Argument must be a DOM element');
+    var segments = [];
+    var current = element;
+    while (current !== document.documentElement) {
+      var selector = '';
+      // 优先检查唯一ID
+      if (current.id && document.querySelectorAll("#".concat(current.id)).length === 1) {
+        segments.unshift("#".concat(current.id));
+        break; // ID唯一，无需继续向上
+      }
+
+      // 生成类名选择器（取第一个有效类名）
+      var classes = Array.from(current.classList).filter(function (c) {
+        return !c.startsWith('js-');
+      });
+      var className = classes.length > 0 ? ".".concat(classes[0]) : '';
+
+      // 生成位置索引（nth-child）
+      var tag = current.tagName.toLowerCase();
+      if (!className) {
+        var siblings = Array.from(current.parentNode.children);
+        var index = siblings.findIndex(function (el) {
+          return el === current;
+        }) + 1;
+        selector = "".concat(tag, ":nth-child(").concat(index, ")");
+      } else {
+        selector = className;
+      }
+      segments.unshift(selector);
+      current = current.parentElement;
+    }
+
+    // 处理根元素
+    if (current === document.documentElement) {
+      segments.unshift('html');
+    }
+    return segments.join(' > ');
+  }
+
+  // 获取元素文本内容
+  function getElementText(element) {
+    var _element$textContent;
+    if (element.tagName === "INPUT") {
+      return element.value || element.placeholder || "";
+    }
+    if (element.tagName === "TEXTAREA") {
+      return element.value || element.placeholder || "";
+    }
+    var text = ((_element$textContent = element.textContent) === null || _element$textContent === void 0 ? void 0 : _element$textContent.trim()) || "";
+    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+  }
+
+  // 获取元素属性信息
+  function getElementAttributes(element) {
+    var attrs = {};
+    for (var i = 0; i < element.attributes.length; i++) {
+      var attr = element.attributes[i];
+      attrs[attr.name] = attr.value;
+    }
+    return attrs;
+  }
+
+  // 鼠标悬停事件处理
+  function handleMouseOver(e) {
+    if (!highlightEnabled) return;
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免高亮 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 如果是已选中的元素，不显示悬停高亮
+    if (target === selectedElement) {
+      highlightBox.style.display = "none";
+      tagLabel.style.display = "none";
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+
+    // 更新悬停高亮框位置
+    highlightBox.style.display = "block";
+    highlightBox.style.left = "".concat(rect.left - 2, "px");
+    highlightBox.style.top = "".concat(rect.top - 2, "px");
+    highlightBox.style.width = "".concat(rect.width + 4, "px");
+    highlightBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新标签位置和内容
+    tagLabel.style.display = "block";
+    tagLabel.textContent = "<".concat(target.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 22;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 0) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    if (labelLeft + tagLabel.offsetWidth > window.innerWidth) {
+      labelLeft = window.innerWidth - tagLabel.offsetWidth - 5;
+    }
+    tagLabel.style.left = "".concat(Math.max(0, labelLeft), "px");
+    tagLabel.style.top = "".concat(labelTop, "px");
+
+    // 发送消息到父窗口
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 鼠标离开事件处理
+  function handleMouseOut(e) {
+    if (!highlightEnabled) return;
+    var relatedTarget = e.relatedTarget;
+
+    // 如果鼠标移动到高亮相关元素上，不隐藏高亮
+    if (relatedTarget && (relatedTarget === highlightBox || relatedTarget === tagLabel || relatedTarget === overlay || relatedTarget === selectedBox || relatedTarget === selectedLabel)) {
+      return;
+    }
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: null,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 点击事件处理
+  function handleClick(e) {
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免处理 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 检查是否是交互元素，这些元素需要保留默认行为
+    var isInteractiveElement = ['input', 'textarea', 'select', 'button', 'a'].includes(target.tagName.toLowerCase());
+
+    // 如果高亮功能启用，对于非交互元素阻止默认行为和事件传播
+    if (highlightEnabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+    console.log("Element clicked:", {
+      tagName: target.tagName,
+      selector: selector,
+      rect: rect
+    });
+
+    // 立即更新选中高亮
+    updateSelectedHighlight(target);
+
+    // 隐藏悬停高亮，因为现在是选中状态
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-click",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 监听来自父窗口的消息
+  function handleParentMessage(event) {
+    console.log("Received message from parent:", event.data);
+    if (event.data.type === "iframe-highlight-toggle") {
+      var enabled = event.data.enabled;
+      console.log("Highlight toggle:", enabled);
+      if (enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "enable-iframe-highlight") {
+      console.log("Enable iframe highlight");
+      enableHighlight();
+    } else if (event.data.type === "disable-iframe-highlight") {
+      console.log("Disable iframe highlight");
+      disableHighlight();
+    } else if (event.data.type === "toggle-iframe-highlight") {
+      var _enabled = event.data.enabled !== undefined ? event.data.enabled : !highlightEnabled;
+      console.log("Toggle iframe highlight to:", _enabled);
+      if (_enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "update-selected-element") {
+      var selector = event.data.selector;
+      console.log("Update selected element with selector:", selector);
+      if (selector) {
+        try {
+          var element = document.querySelector(selector);
+          console.log("Found element by selector:", element);
+          updateSelectedHighlight(element);
+        } catch (error) {
+          console.warn("Failed to select element:", error);
+          updateSelectedHighlight(null);
+        }
+      } else {
+        updateSelectedHighlight(null);
+      }
+    } else if (event.data.type === "clear-selected-element") {
+      console.log("Clear selected element");
+      updateSelectedHighlight(null);
+    }
+  }
+
+  // 启用高亮功能
+  function enableHighlight() {
+    console.log("Enabling highlight");
+    document.addEventListener("mouseover", handleMouseOver, true);
+    document.addEventListener("mouseout", handleMouseOut, true);
+    document.addEventListener("click", handleClick, true);
+    highlightEnabled = true;
+    overlay.style.display = "block";
+  }
+
+  // 禁用高亮功能
+  function disableHighlight() {
+    console.log("Disabling highlight");
+    highlightEnabled = false;
+    // 保持事件监听器，但通过 highlightEnabled 变量控制行为
+    // 这样可以保留选中状态的显示
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    // 不隐藏 selectedBox 和 selectedLabel，保留选中状态
+  }
+
+  // 完全禁用高亮功能（移除所有监听器）
+  function fullyDisableHighlight() {
+    console.log("Fully disabling highlight");
+    highlightEnabled = false;
+    document.removeEventListener("mouseover", handleMouseOver, true);
+    document.removeEventListener("mouseout", handleMouseOut, true);
+    document.removeEventListener("click", handleClick, true);
+    overlay.style.display = "none";
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    selectedBox.style.display = "none";
+    selectedLabel.style.display = "none";
+  }
+
+  // 添加事件监听
+  enableHighlight();
+  window.addEventListener("message", handleParentMessage);
+
+  // 暴露全局函数供外部调用
+  window.__iframeHighlightControl = {
+    enable: enableHighlight,
+    disable: disableHighlight,
+    fullyDisable: fullyDisableHighlight,
+    isEnabled: function isEnabled() {
+      return highlightEnabled;
+    },
+    getSelectedElement: function getSelectedElement() {
+      return selectedElement;
+    },
+    updateSelected: updateSelectedHighlight,
+    // 通过消息发送开关控制
+    sendToggleMessage: function sendToggleMessage(enabled) {
+      window.parent.postMessage({
+        type: 'iframe-highlight-status',
+        enabled: enabled || highlightEnabled,
+        source: 'iframe-highlight-injector'
+      }, '*');
+    }
+  };
+
+  // 通知父窗口脚本已加载
+  try {
+    window.parent.postMessage({
+      type: "iframe-highlight-ready",
+      data: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: Date.now()
+      },
+      source: "iframe-highlight-injector"
+    }, "*");
+  } catch (error) {
+    console.warn("无法发送就绪消息到父窗口:", error);
+  }
+
+  // 清理函数
+  window.__iframeHighlightCleanup = function () {
+    fullyDisableHighlight();
+    window.removeEventListener("message", handleParentMessage);
+    if (overlay.parentElement) {
+      overlay.parentElement.removeChild(overlay);
+    }
+    delete window.__iframeHighlightInitialized;
+    delete window.__iframeHighlightCleanup;
+  };
+})();
+
+</script>
+
+<script>
+/**
+ * Iframe 元素高亮注入脚本
+ * 需要在目标网站中引入此脚本来支持跨域 iframe 高亮功能
+ *
+ * 使用方法：
+ * 1. 将此脚本添加到目标网站的 HTML 中
+ * 2. 或通过浏览器扩展、用户脚本等方式注入
+ */
+
+(function () {
+  "use strict";
+
+  // 检查是否在 iframe 中
+  if (window.self === window.top) {
+    return; // 不在 iframe 中，不执行
+  }
+
+  // 检查是否已经初始化过
+  if (window.__iframeHighlightInitialized) {
+    return;
+  }
+  window.__iframeHighlightInitialized = true;
+  console.log("Iframe 高亮脚本已加载");
+
+  // 创建高亮覆盖层
+  var overlay = document.createElement("div");
+  overlay.id = "iframe-highlight-overlay";
+  overlay.style.cssText = "\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    pointer-events: none;\n    z-index: 999999;\n    overflow: hidden;\n  ";
+
+  // 创建悬停高亮框（虚线边框）
+  var highlightBox = document.createElement("div");
+  highlightBox.id = "iframe-highlight-box";
+  highlightBox.style.cssText = "\n    position: absolute;\n    border: 2px dashed #007AFF;\n    background: rgba(0, 122, 255, 0.08);\n    pointer-events: none;\n    display: none;\n    transition: all 0.1s ease;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);\n    border-radius: 2px;\n  ";
+
+  // 创建选中节点的常驻高亮框（实线边框）
+  var selectedBox = document.createElement("div");
+  selectedBox.id = "iframe-selected-box";
+  selectedBox.style.cssText = "\n    position: absolute;\n    border: 2px solid #007AFF;\n    pointer-events: none;\n    display: none;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 107, 53, 0.4);\n    border-radius: 2px;\n    z-index: 1000000;\n  ";
+
+  // 创建悬停标签显示
+  var tagLabel = document.createElement("div");
+  tagLabel.id = "iframe-tag-label";
+  tagLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 2px 6px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 2px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000001;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n    font-weight: 500;\n  ";
+
+  // 创建选中节点标签
+  var selectedLabel = document.createElement("div");
+  selectedLabel.id = "iframe-selected-label";
+  selectedLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 3px 8px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 3px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000002;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n    font-weight: 600;\n  ";
+  overlay.appendChild(highlightBox);
+  overlay.appendChild(selectedBox);
+  overlay.appendChild(tagLabel);
+  overlay.appendChild(selectedLabel);
+  document.body.appendChild(overlay);
+
+  // 存储当前选中的元素
+  var selectedElement = null;
+  var highlightEnabled = false;
+
+  // 更新选中元素的高亮显示
+  function updateSelectedHighlight(element) {
+    console.log("updateSelectedHighlight called with:", element);
+    if (!element) {
+      selectedBox.style.display = "none";
+      selectedLabel.style.display = "none";
+      selectedElement = null;
+      console.log("Cleared selected highlight");
+      return;
+    }
+    selectedElement = element;
+    var rect = element.getBoundingClientRect();
+    console.log("Selected element rect:", rect);
+
+    // 更新选中高亮框位置
+    selectedBox.style.display = "block";
+    selectedBox.style.left = "".concat(rect.left - 2, "px");
+    selectedBox.style.top = "".concat(rect.top - 2, "px");
+    selectedBox.style.width = "".concat(rect.width + 4, "px");
+    selectedBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新选中标签位置和内容
+    selectedLabel.style.display = "block";
+    selectedLabel.textContent = "\u2713 <".concat(element.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 28;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 5) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    var labelWidth = selectedLabel.offsetWidth || 100; // 预估宽度
+    if (labelLeft + labelWidth > window.innerWidth - 10) {
+      labelLeft = window.innerWidth - labelWidth - 10;
+    }
+    selectedLabel.style.left = "".concat(Math.max(5, labelLeft), "px");
+    selectedLabel.style.top = "".concat(labelTop, "px");
+    console.log("Selected highlight positioned at:", {
+      left: selectedBox.style.left,
+      top: selectedBox.style.top,
+      width: selectedBox.style.width,
+      height: selectedBox.style.height
+    });
+  }
+  function getElementSelector(element) {
+    if (!(element instanceof Element)) throw new Error('Argument must be a DOM element');
+    var segments = [];
+    var current = element;
+    while (current !== document.documentElement) {
+      var selector = '';
+      // 优先检查唯一ID
+      if (current.id && document.querySelectorAll("#".concat(current.id)).length === 1) {
+        segments.unshift("#".concat(current.id));
+        break; // ID唯一，无需继续向上
+      }
+
+      // 生成类名选择器（取第一个有效类名）
+      var classes = Array.from(current.classList).filter(function (c) {
+        return !c.startsWith('js-');
+      });
+      var className = classes.length > 0 ? ".".concat(classes[0]) : '';
+
+      // 生成位置索引（nth-child）
+      var tag = current.tagName.toLowerCase();
+      if (!className) {
+        var siblings = Array.from(current.parentNode.children);
+        var index = siblings.findIndex(function (el) {
+          return el === current;
+        }) + 1;
+        selector = "".concat(tag, ":nth-child(").concat(index, ")");
+      } else {
+        selector = className;
+      }
+      segments.unshift(selector);
+      current = current.parentElement;
+    }
+
+    // 处理根元素
+    if (current === document.documentElement) {
+      segments.unshift('html');
+    }
+    return segments.join(' > ');
+  }
+
+  // 获取元素文本内容
+  function getElementText(element) {
+    var _element$textContent;
+    if (element.tagName === "INPUT") {
+      return element.value || element.placeholder || "";
+    }
+    if (element.tagName === "TEXTAREA") {
+      return element.value || element.placeholder || "";
+    }
+    var text = ((_element$textContent = element.textContent) === null || _element$textContent === void 0 ? void 0 : _element$textContent.trim()) || "";
+    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+  }
+
+  // 获取元素属性信息
+  function getElementAttributes(element) {
+    var attrs = {};
+    for (var i = 0; i < element.attributes.length; i++) {
+      var attr = element.attributes[i];
+      attrs[attr.name] = attr.value;
+    }
+    return attrs;
+  }
+
+  // 鼠标悬停事件处理
+  function handleMouseOver(e) {
+    if (!highlightEnabled) return;
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免高亮 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 如果是已选中的元素，不显示悬停高亮
+    if (target === selectedElement) {
+      highlightBox.style.display = "none";
+      tagLabel.style.display = "none";
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+
+    // 更新悬停高亮框位置
+    highlightBox.style.display = "block";
+    highlightBox.style.left = "".concat(rect.left - 2, "px");
+    highlightBox.style.top = "".concat(rect.top - 2, "px");
+    highlightBox.style.width = "".concat(rect.width + 4, "px");
+    highlightBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新标签位置和内容
+    tagLabel.style.display = "block";
+    tagLabel.textContent = "<".concat(target.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 22;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 0) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    if (labelLeft + tagLabel.offsetWidth > window.innerWidth) {
+      labelLeft = window.innerWidth - tagLabel.offsetWidth - 5;
+    }
+    tagLabel.style.left = "".concat(Math.max(0, labelLeft), "px");
+    tagLabel.style.top = "".concat(labelTop, "px");
+
+    // 发送消息到父窗口
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 鼠标离开事件处理
+  function handleMouseOut(e) {
+    if (!highlightEnabled) return;
+    var relatedTarget = e.relatedTarget;
+
+    // 如果鼠标移动到高亮相关元素上，不隐藏高亮
+    if (relatedTarget && (relatedTarget === highlightBox || relatedTarget === tagLabel || relatedTarget === overlay || relatedTarget === selectedBox || relatedTarget === selectedLabel)) {
+      return;
+    }
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: null,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 点击事件处理
+  function handleClick(e) {
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免处理 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 检查是否是交互元素，这些元素需要保留默认行为
+    var isInteractiveElement = ['input', 'textarea', 'select', 'button', 'a'].includes(target.tagName.toLowerCase());
+
+    // 如果高亮功能启用，对于非交互元素阻止默认行为和事件传播
+    if (highlightEnabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+    console.log("Element clicked:", {
+      tagName: target.tagName,
+      selector: selector,
+      rect: rect
+    });
+
+    // 立即更新选中高亮
+    updateSelectedHighlight(target);
+
+    // 隐藏悬停高亮，因为现在是选中状态
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-click",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 监听来自父窗口的消息
+  function handleParentMessage(event) {
+    console.log("Received message from parent:", event.data);
+    if (event.data.type === "iframe-highlight-toggle") {
+      var enabled = event.data.enabled;
+      console.log("Highlight toggle:", enabled);
+      if (enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "enable-iframe-highlight") {
+      console.log("Enable iframe highlight");
+      enableHighlight();
+    } else if (event.data.type === "disable-iframe-highlight") {
+      console.log("Disable iframe highlight");
+      disableHighlight();
+    } else if (event.data.type === "toggle-iframe-highlight") {
+      var _enabled = event.data.enabled !== undefined ? event.data.enabled : !highlightEnabled;
+      console.log("Toggle iframe highlight to:", _enabled);
+      if (_enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "update-selected-element") {
+      var selector = event.data.selector;
+      console.log("Update selected element with selector:", selector);
+      if (selector) {
+        try {
+          var element = document.querySelector(selector);
+          console.log("Found element by selector:", element);
+          updateSelectedHighlight(element);
+        } catch (error) {
+          console.warn("Failed to select element:", error);
+          updateSelectedHighlight(null);
+        }
+      } else {
+        updateSelectedHighlight(null);
+      }
+    } else if (event.data.type === "clear-selected-element") {
+      console.log("Clear selected element");
+      updateSelectedHighlight(null);
+    }
+  }
+
+  // 启用高亮功能
+  function enableHighlight() {
+    console.log("Enabling highlight");
+    document.addEventListener("mouseover", handleMouseOver, true);
+    document.addEventListener("mouseout", handleMouseOut, true);
+    document.addEventListener("click", handleClick, true);
+    highlightEnabled = true;
+    overlay.style.display = "block";
+  }
+
+  // 禁用高亮功能
+  function disableHighlight() {
+    console.log("Disabling highlight");
+    highlightEnabled = false;
+    // 保持事件监听器，但通过 highlightEnabled 变量控制行为
+    // 这样可以保留选中状态的显示
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    // 不隐藏 selectedBox 和 selectedLabel，保留选中状态
+  }
+
+  // 完全禁用高亮功能（移除所有监听器）
+  function fullyDisableHighlight() {
+    console.log("Fully disabling highlight");
+    highlightEnabled = false;
+    document.removeEventListener("mouseover", handleMouseOver, true);
+    document.removeEventListener("mouseout", handleMouseOut, true);
+    document.removeEventListener("click", handleClick, true);
+    overlay.style.display = "none";
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    selectedBox.style.display = "none";
+    selectedLabel.style.display = "none";
+  }
+
+  // 添加事件监听
+  enableHighlight();
+  window.addEventListener("message", handleParentMessage);
+
+  // 暴露全局函数供外部调用
+  window.__iframeHighlightControl = {
+    enable: enableHighlight,
+    disable: disableHighlight,
+    fullyDisable: fullyDisableHighlight,
+    isEnabled: function isEnabled() {
+      return highlightEnabled;
+    },
+    getSelectedElement: function getSelectedElement() {
+      return selectedElement;
+    },
+    updateSelected: updateSelectedHighlight,
+    // 通过消息发送开关控制
+    sendToggleMessage: function sendToggleMessage(enabled) {
+      window.parent.postMessage({
+        type: 'iframe-highlight-status',
+        enabled: enabled || highlightEnabled,
+        source: 'iframe-highlight-injector'
+      }, '*');
+    }
+  };
+
+  // 通知父窗口脚本已加载
+  try {
+    window.parent.postMessage({
+      type: "iframe-highlight-ready",
+      data: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: Date.now()
+      },
+      source: "iframe-highlight-injector"
+    }, "*");
+  } catch (error) {
+    console.warn("无法发送就绪消息到父窗口:", error);
+  }
+
+  // 清理函数
+  window.__iframeHighlightCleanup = function () {
+    fullyDisableHighlight();
+    window.removeEventListener("message", handleParentMessage);
+    if (overlay.parentElement) {
+      overlay.parentElement.removeChild(overlay);
+    }
+    delete window.__iframeHighlightInitialized;
+    delete window.__iframeHighlightCleanup;
+  };
+})();
+
+</script>
+
+<script>
+/**
+ * Iframe 元素高亮注入脚本
+ * 需要在目标网站中引入此脚本来支持跨域 iframe 高亮功能
+ *
+ * 使用方法：
+ * 1. 将此脚本添加到目标网站的 HTML 中
+ * 2. 或通过浏览器扩展、用户脚本等方式注入
+ */
+
+(function () {
+  "use strict";
+
+  // 检查是否在 iframe 中
+  if (window.self === window.top) {
+    return; // 不在 iframe 中，不执行
+  }
+
+  // 检查是否已经初始化过
+  if (window.__iframeHighlightInitialized) {
+    return;
+  }
+  window.__iframeHighlightInitialized = true;
+  console.log("Iframe 高亮脚本已加载");
+
+  // 创建高亮覆盖层
+  var overlay = document.createElement("div");
+  overlay.id = "iframe-highlight-overlay";
+  overlay.style.cssText = "\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    pointer-events: none;\n    z-index: 999999;\n    overflow: hidden;\n  ";
+
+  // 创建悬停高亮框（虚线边框）
+  var highlightBox = document.createElement("div");
+  highlightBox.id = "iframe-highlight-box";
+  highlightBox.style.cssText = "\n    position: absolute;\n    border: 2px dashed #007AFF;\n    background: rgba(0, 122, 255, 0.08);\n    pointer-events: none;\n    display: none;\n    transition: all 0.1s ease;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);\n    border-radius: 2px;\n  ";
+
+  // 创建选中节点的常驻高亮框（实线边框）
+  var selectedBox = document.createElement("div");
+  selectedBox.id = "iframe-selected-box";
+  selectedBox.style.cssText = "\n    position: absolute;\n    border: 2px solid #007AFF;\n    pointer-events: none;\n    display: none;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 107, 53, 0.4);\n    border-radius: 2px;\n    z-index: 1000000;\n  ";
+
+  // 创建悬停标签显示
+  var tagLabel = document.createElement("div");
+  tagLabel.id = "iframe-tag-label";
+  tagLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 2px 6px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 2px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000001;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n    font-weight: 500;\n  ";
+
+  // 创建选中节点标签
+  var selectedLabel = document.createElement("div");
+  selectedLabel.id = "iframe-selected-label";
+  selectedLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 3px 8px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 3px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000002;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n    font-weight: 600;\n  ";
+  overlay.appendChild(highlightBox);
+  overlay.appendChild(selectedBox);
+  overlay.appendChild(tagLabel);
+  overlay.appendChild(selectedLabel);
+  document.body.appendChild(overlay);
+
+  // 存储当前选中的元素
+  var selectedElement = null;
+  var highlightEnabled = false;
+
+  // 更新选中元素的高亮显示
+  function updateSelectedHighlight(element) {
+    console.log("updateSelectedHighlight called with:", element);
+    if (!element) {
+      selectedBox.style.display = "none";
+      selectedLabel.style.display = "none";
+      selectedElement = null;
+      console.log("Cleared selected highlight");
+      return;
+    }
+    selectedElement = element;
+    var rect = element.getBoundingClientRect();
+    console.log("Selected element rect:", rect);
+
+    // 更新选中高亮框位置
+    selectedBox.style.display = "block";
+    selectedBox.style.left = "".concat(rect.left - 2, "px");
+    selectedBox.style.top = "".concat(rect.top - 2, "px");
+    selectedBox.style.width = "".concat(rect.width + 4, "px");
+    selectedBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新选中标签位置和内容
+    selectedLabel.style.display = "block";
+    selectedLabel.textContent = "\u2713 <".concat(element.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 28;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 5) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    var labelWidth = selectedLabel.offsetWidth || 100; // 预估宽度
+    if (labelLeft + labelWidth > window.innerWidth - 10) {
+      labelLeft = window.innerWidth - labelWidth - 10;
+    }
+    selectedLabel.style.left = "".concat(Math.max(5, labelLeft), "px");
+    selectedLabel.style.top = "".concat(labelTop, "px");
+    console.log("Selected highlight positioned at:", {
+      left: selectedBox.style.left,
+      top: selectedBox.style.top,
+      width: selectedBox.style.width,
+      height: selectedBox.style.height
+    });
+  }
+  function getElementSelector(element) {
+    if (!(element instanceof Element)) throw new Error('Argument must be a DOM element');
+    var segments = [];
+    var current = element;
+    while (current !== document.documentElement) {
+      var selector = '';
+      // 优先检查唯一ID
+      if (current.id && document.querySelectorAll("#".concat(current.id)).length === 1) {
+        segments.unshift("#".concat(current.id));
+        break; // ID唯一，无需继续向上
+      }
+
+      // 生成类名选择器（取第一个有效类名）
+      var classes = Array.from(current.classList).filter(function (c) {
+        return !c.startsWith('js-');
+      });
+      var className = classes.length > 0 ? ".".concat(classes[0]) : '';
+
+      // 生成位置索引（nth-child）
+      var tag = current.tagName.toLowerCase();
+      if (!className) {
+        var siblings = Array.from(current.parentNode.children);
+        var index = siblings.findIndex(function (el) {
+          return el === current;
+        }) + 1;
+        selector = "".concat(tag, ":nth-child(").concat(index, ")");
+      } else {
+        selector = className;
+      }
+      segments.unshift(selector);
+      current = current.parentElement;
+    }
+
+    // 处理根元素
+    if (current === document.documentElement) {
+      segments.unshift('html');
+    }
+    return segments.join(' > ');
+  }
+
+  // 获取元素文本内容
+  function getElementText(element) {
+    var _element$textContent;
+    if (element.tagName === "INPUT") {
+      return element.value || element.placeholder || "";
+    }
+    if (element.tagName === "TEXTAREA") {
+      return element.value || element.placeholder || "";
+    }
+    var text = ((_element$textContent = element.textContent) === null || _element$textContent === void 0 ? void 0 : _element$textContent.trim()) || "";
+    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+  }
+
+  // 获取元素属性信息
+  function getElementAttributes(element) {
+    var attrs = {};
+    for (var i = 0; i < element.attributes.length; i++) {
+      var attr = element.attributes[i];
+      attrs[attr.name] = attr.value;
+    }
+    return attrs;
+  }
+
+  // 鼠标悬停事件处理
+  function handleMouseOver(e) {
+    if (!highlightEnabled) return;
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免高亮 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 如果是已选中的元素，不显示悬停高亮
+    if (target === selectedElement) {
+      highlightBox.style.display = "none";
+      tagLabel.style.display = "none";
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+
+    // 更新悬停高亮框位置
+    highlightBox.style.display = "block";
+    highlightBox.style.left = "".concat(rect.left - 2, "px");
+    highlightBox.style.top = "".concat(rect.top - 2, "px");
+    highlightBox.style.width = "".concat(rect.width + 4, "px");
+    highlightBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新标签位置和内容
+    tagLabel.style.display = "block";
+    tagLabel.textContent = "<".concat(target.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 22;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 0) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    if (labelLeft + tagLabel.offsetWidth > window.innerWidth) {
+      labelLeft = window.innerWidth - tagLabel.offsetWidth - 5;
+    }
+    tagLabel.style.left = "".concat(Math.max(0, labelLeft), "px");
+    tagLabel.style.top = "".concat(labelTop, "px");
+
+    // 发送消息到父窗口
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 鼠标离开事件处理
+  function handleMouseOut(e) {
+    if (!highlightEnabled) return;
+    var relatedTarget = e.relatedTarget;
+
+    // 如果鼠标移动到高亮相关元素上，不隐藏高亮
+    if (relatedTarget && (relatedTarget === highlightBox || relatedTarget === tagLabel || relatedTarget === overlay || relatedTarget === selectedBox || relatedTarget === selectedLabel)) {
+      return;
+    }
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: null,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 点击事件处理
+  function handleClick(e) {
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免处理 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 检查是否是交互元素，这些元素需要保留默认行为
+    var isInteractiveElement = ['input', 'textarea', 'select', 'button', 'a'].includes(target.tagName.toLowerCase());
+
+    // 如果高亮功能启用，对于非交互元素阻止默认行为和事件传播
+    if (highlightEnabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+    console.log("Element clicked:", {
+      tagName: target.tagName,
+      selector: selector,
+      rect: rect
+    });
+
+    // 立即更新选中高亮
+    updateSelectedHighlight(target);
+
+    // 隐藏悬停高亮，因为现在是选中状态
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-click",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 监听来自父窗口的消息
+  function handleParentMessage(event) {
+    console.log("Received message from parent:", event.data);
+    if (event.data.type === "iframe-highlight-toggle") {
+      var enabled = event.data.enabled;
+      console.log("Highlight toggle:", enabled);
+      if (enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "enable-iframe-highlight") {
+      console.log("Enable iframe highlight");
+      enableHighlight();
+    } else if (event.data.type === "disable-iframe-highlight") {
+      console.log("Disable iframe highlight");
+      disableHighlight();
+    } else if (event.data.type === "toggle-iframe-highlight") {
+      var _enabled = event.data.enabled !== undefined ? event.data.enabled : !highlightEnabled;
+      console.log("Toggle iframe highlight to:", _enabled);
+      if (_enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "update-selected-element") {
+      var selector = event.data.selector;
+      console.log("Update selected element with selector:", selector);
+      if (selector) {
+        try {
+          var element = document.querySelector(selector);
+          console.log("Found element by selector:", element);
+          updateSelectedHighlight(element);
+        } catch (error) {
+          console.warn("Failed to select element:", error);
+          updateSelectedHighlight(null);
+        }
+      } else {
+        updateSelectedHighlight(null);
+      }
+    } else if (event.data.type === "clear-selected-element") {
+      console.log("Clear selected element");
+      updateSelectedHighlight(null);
+    }
+  }
+
+  // 启用高亮功能
+  function enableHighlight() {
+    console.log("Enabling highlight");
+    document.addEventListener("mouseover", handleMouseOver, true);
+    document.addEventListener("mouseout", handleMouseOut, true);
+    document.addEventListener("click", handleClick, true);
+    highlightEnabled = true;
+    overlay.style.display = "block";
+  }
+
+  // 禁用高亮功能
+  function disableHighlight() {
+    console.log("Disabling highlight");
+    highlightEnabled = false;
+    // 保持事件监听器，但通过 highlightEnabled 变量控制行为
+    // 这样可以保留选中状态的显示
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    // 不隐藏 selectedBox 和 selectedLabel，保留选中状态
+  }
+
+  // 完全禁用高亮功能（移除所有监听器）
+  function fullyDisableHighlight() {
+    console.log("Fully disabling highlight");
+    highlightEnabled = false;
+    document.removeEventListener("mouseover", handleMouseOver, true);
+    document.removeEventListener("mouseout", handleMouseOut, true);
+    document.removeEventListener("click", handleClick, true);
+    overlay.style.display = "none";
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    selectedBox.style.display = "none";
+    selectedLabel.style.display = "none";
+  }
+
+  // 添加事件监听
+  enableHighlight();
+  window.addEventListener("message", handleParentMessage);
+
+  // 暴露全局函数供外部调用
+  window.__iframeHighlightControl = {
+    enable: enableHighlight,
+    disable: disableHighlight,
+    fullyDisable: fullyDisableHighlight,
+    isEnabled: function isEnabled() {
+      return highlightEnabled;
+    },
+    getSelectedElement: function getSelectedElement() {
+      return selectedElement;
+    },
+    updateSelected: updateSelectedHighlight,
+    // 通过消息发送开关控制
+    sendToggleMessage: function sendToggleMessage(enabled) {
+      window.parent.postMessage({
+        type: 'iframe-highlight-status',
+        enabled: enabled || highlightEnabled,
+        source: 'iframe-highlight-injector'
+      }, '*');
+    }
+  };
+
+  // 通知父窗口脚本已加载
+  try {
+    window.parent.postMessage({
+      type: "iframe-highlight-ready",
+      data: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: Date.now()
+      },
+      source: "iframe-highlight-injector"
+    }, "*");
+  } catch (error) {
+    console.warn("无法发送就绪消息到父窗口:", error);
+  }
+
+  // 清理函数
+  window.__iframeHighlightCleanup = function () {
+    fullyDisableHighlight();
+    window.removeEventListener("message", handleParentMessage);
+    if (overlay.parentElement) {
+      overlay.parentElement.removeChild(overlay);
+    }
+    delete window.__iframeHighlightInitialized;
+    delete window.__iframeHighlightCleanup;
+  };
+})();
+
+</script>
+
+<script>
+/**
+ * Iframe 元素高亮注入脚本
+ * 需要在目标网站中引入此脚本来支持跨域 iframe 高亮功能
+ *
+ * 使用方法：
+ * 1. 将此脚本添加到目标网站的 HTML 中
+ * 2. 或通过浏览器扩展、用户脚本等方式注入
+ */
+
+(function () {
+  "use strict";
+
+  // 检查是否在 iframe 中
+  if (window.self === window.top) {
+    return; // 不在 iframe 中，不执行
+  }
+
+  // 检查是否已经初始化过
+  if (window.__iframeHighlightInitialized) {
+    return;
+  }
+  window.__iframeHighlightInitialized = true;
+  console.log("Iframe 高亮脚本已加载");
+
+  // 创建高亮覆盖层
+  var overlay = document.createElement("div");
+  overlay.id = "iframe-highlight-overlay";
+  overlay.style.cssText = "\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    pointer-events: none;\n    z-index: 999999;\n    overflow: hidden;\n  ";
+
+  // 创建悬停高亮框（虚线边框）
+  var highlightBox = document.createElement("div");
+  highlightBox.id = "iframe-highlight-box";
+  highlightBox.style.cssText = "\n    position: absolute;\n    border: 2px dashed #007AFF;\n    background: rgba(0, 122, 255, 0.08);\n    pointer-events: none;\n    display: none;\n    transition: all 0.1s ease;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);\n    border-radius: 2px;\n  ";
+
+  // 创建选中节点的常驻高亮框（实线边框）
+  var selectedBox = document.createElement("div");
+  selectedBox.id = "iframe-selected-box";
+  selectedBox.style.cssText = "\n    position: absolute;\n    border: 2px solid #007AFF;\n    pointer-events: none;\n    display: none;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 107, 53, 0.4);\n    border-radius: 2px;\n    z-index: 1000000;\n  ";
+
+  // 创建悬停标签显示
+  var tagLabel = document.createElement("div");
+  tagLabel.id = "iframe-tag-label";
+  tagLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 2px 6px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 2px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000001;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n    font-weight: 500;\n  ";
+
+  // 创建选中节点标签
+  var selectedLabel = document.createElement("div");
+  selectedLabel.id = "iframe-selected-label";
+  selectedLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 3px 8px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 3px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000002;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n    font-weight: 600;\n  ";
+  overlay.appendChild(highlightBox);
+  overlay.appendChild(selectedBox);
+  overlay.appendChild(tagLabel);
+  overlay.appendChild(selectedLabel);
+  document.body.appendChild(overlay);
+
+  // 存储当前选中的元素
+  var selectedElement = null;
+  var highlightEnabled = false;
+
+  // 更新选中元素的高亮显示
+  function updateSelectedHighlight(element) {
+    console.log("updateSelectedHighlight called with:", element);
+    if (!element) {
+      selectedBox.style.display = "none";
+      selectedLabel.style.display = "none";
+      selectedElement = null;
+      console.log("Cleared selected highlight");
+      return;
+    }
+    selectedElement = element;
+    var rect = element.getBoundingClientRect();
+    console.log("Selected element rect:", rect);
+
+    // 更新选中高亮框位置
+    selectedBox.style.display = "block";
+    selectedBox.style.left = "".concat(rect.left - 2, "px");
+    selectedBox.style.top = "".concat(rect.top - 2, "px");
+    selectedBox.style.width = "".concat(rect.width + 4, "px");
+    selectedBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新选中标签位置和内容
+    selectedLabel.style.display = "block";
+    selectedLabel.textContent = "\u2713 <".concat(element.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 28;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 5) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    var labelWidth = selectedLabel.offsetWidth || 100; // 预估宽度
+    if (labelLeft + labelWidth > window.innerWidth - 10) {
+      labelLeft = window.innerWidth - labelWidth - 10;
+    }
+    selectedLabel.style.left = "".concat(Math.max(5, labelLeft), "px");
+    selectedLabel.style.top = "".concat(labelTop, "px");
+    console.log("Selected highlight positioned at:", {
+      left: selectedBox.style.left,
+      top: selectedBox.style.top,
+      width: selectedBox.style.width,
+      height: selectedBox.style.height
+    });
+  }
+  function getElementSelector(element) {
+    if (!(element instanceof Element)) throw new Error('Argument must be a DOM element');
+    var segments = [];
+    var current = element;
+    while (current !== document.documentElement) {
+      var selector = '';
+      // 优先检查唯一ID
+      if (current.id && document.querySelectorAll("#".concat(current.id)).length === 1) {
+        segments.unshift("#".concat(current.id));
+        break; // ID唯一，无需继续向上
+      }
+
+      // 生成类名选择器（取第一个有效类名）
+      var classes = Array.from(current.classList).filter(function (c) {
+        return !c.startsWith('js-');
+      });
+      var className = classes.length > 0 ? ".".concat(classes[0]) : '';
+
+      // 生成位置索引（nth-child）
+      var tag = current.tagName.toLowerCase();
+      if (!className) {
+        var siblings = Array.from(current.parentNode.children);
+        var index = siblings.findIndex(function (el) {
+          return el === current;
+        }) + 1;
+        selector = "".concat(tag, ":nth-child(").concat(index, ")");
+      } else {
+        selector = className;
+      }
+      segments.unshift(selector);
+      current = current.parentElement;
+    }
+
+    // 处理根元素
+    if (current === document.documentElement) {
+      segments.unshift('html');
+    }
+    return segments.join(' > ');
+  }
+
+  // 获取元素文本内容
+  function getElementText(element) {
+    var _element$textContent;
+    if (element.tagName === "INPUT") {
+      return element.value || element.placeholder || "";
+    }
+    if (element.tagName === "TEXTAREA") {
+      return element.value || element.placeholder || "";
+    }
+    var text = ((_element$textContent = element.textContent) === null || _element$textContent === void 0 ? void 0 : _element$textContent.trim()) || "";
+    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+  }
+
+  // 获取元素属性信息
+  function getElementAttributes(element) {
+    var attrs = {};
+    for (var i = 0; i < element.attributes.length; i++) {
+      var attr = element.attributes[i];
+      attrs[attr.name] = attr.value;
+    }
+    return attrs;
+  }
+
+  // 鼠标悬停事件处理
+  function handleMouseOver(e) {
+    if (!highlightEnabled) return;
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免高亮 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 如果是已选中的元素，不显示悬停高亮
+    if (target === selectedElement) {
+      highlightBox.style.display = "none";
+      tagLabel.style.display = "none";
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+
+    // 更新悬停高亮框位置
+    highlightBox.style.display = "block";
+    highlightBox.style.left = "".concat(rect.left - 2, "px");
+    highlightBox.style.top = "".concat(rect.top - 2, "px");
+    highlightBox.style.width = "".concat(rect.width + 4, "px");
+    highlightBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新标签位置和内容
+    tagLabel.style.display = "block";
+    tagLabel.textContent = "<".concat(target.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 22;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 0) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    if (labelLeft + tagLabel.offsetWidth > window.innerWidth) {
+      labelLeft = window.innerWidth - tagLabel.offsetWidth - 5;
+    }
+    tagLabel.style.left = "".concat(Math.max(0, labelLeft), "px");
+    tagLabel.style.top = "".concat(labelTop, "px");
+
+    // 发送消息到父窗口
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 鼠标离开事件处理
+  function handleMouseOut(e) {
+    if (!highlightEnabled) return;
+    var relatedTarget = e.relatedTarget;
+
+    // 如果鼠标移动到高亮相关元素上，不隐藏高亮
+    if (relatedTarget && (relatedTarget === highlightBox || relatedTarget === tagLabel || relatedTarget === overlay || relatedTarget === selectedBox || relatedTarget === selectedLabel)) {
+      return;
+    }
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: null,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 点击事件处理
+  function handleClick(e) {
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免处理 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 检查是否是交互元素，这些元素需要保留默认行为
+    var isInteractiveElement = ['input', 'textarea', 'select', 'button', 'a'].includes(target.tagName.toLowerCase());
+
+    // 如果高亮功能启用，对于非交互元素阻止默认行为和事件传播
+    if (highlightEnabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+    console.log("Element clicked:", {
+      tagName: target.tagName,
+      selector: selector,
+      rect: rect
+    });
+
+    // 立即更新选中高亮
+    updateSelectedHighlight(target);
+
+    // 隐藏悬停高亮，因为现在是选中状态
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-click",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 监听来自父窗口的消息
+  function handleParentMessage(event) {
+    console.log("Received message from parent:", event.data);
+    if (event.data.type === "iframe-highlight-toggle") {
+      var enabled = event.data.enabled;
+      console.log("Highlight toggle:", enabled);
+      if (enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "enable-iframe-highlight") {
+      console.log("Enable iframe highlight");
+      enableHighlight();
+    } else if (event.data.type === "disable-iframe-highlight") {
+      console.log("Disable iframe highlight");
+      disableHighlight();
+    } else if (event.data.type === "toggle-iframe-highlight") {
+      var _enabled = event.data.enabled !== undefined ? event.data.enabled : !highlightEnabled;
+      console.log("Toggle iframe highlight to:", _enabled);
+      if (_enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "update-selected-element") {
+      var selector = event.data.selector;
+      console.log("Update selected element with selector:", selector);
+      if (selector) {
+        try {
+          var element = document.querySelector(selector);
+          console.log("Found element by selector:", element);
+          updateSelectedHighlight(element);
+        } catch (error) {
+          console.warn("Failed to select element:", error);
+          updateSelectedHighlight(null);
+        }
+      } else {
+        updateSelectedHighlight(null);
+      }
+    } else if (event.data.type === "clear-selected-element") {
+      console.log("Clear selected element");
+      updateSelectedHighlight(null);
+    }
+  }
+
+  // 启用高亮功能
+  function enableHighlight() {
+    console.log("Enabling highlight");
+    document.addEventListener("mouseover", handleMouseOver, true);
+    document.addEventListener("mouseout", handleMouseOut, true);
+    document.addEventListener("click", handleClick, true);
+    highlightEnabled = true;
+    overlay.style.display = "block";
+  }
+
+  // 禁用高亮功能
+  function disableHighlight() {
+    console.log("Disabling highlight");
+    highlightEnabled = false;
+    // 保持事件监听器，但通过 highlightEnabled 变量控制行为
+    // 这样可以保留选中状态的显示
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    // 不隐藏 selectedBox 和 selectedLabel，保留选中状态
+  }
+
+  // 完全禁用高亮功能（移除所有监听器）
+  function fullyDisableHighlight() {
+    console.log("Fully disabling highlight");
+    highlightEnabled = false;
+    document.removeEventListener("mouseover", handleMouseOver, true);
+    document.removeEventListener("mouseout", handleMouseOut, true);
+    document.removeEventListener("click", handleClick, true);
+    overlay.style.display = "none";
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    selectedBox.style.display = "none";
+    selectedLabel.style.display = "none";
+  }
+
+  // 添加事件监听
+  enableHighlight();
+  window.addEventListener("message", handleParentMessage);
+
+  // 暴露全局函数供外部调用
+  window.__iframeHighlightControl = {
+    enable: enableHighlight,
+    disable: disableHighlight,
+    fullyDisable: fullyDisableHighlight,
+    isEnabled: function isEnabled() {
+      return highlightEnabled;
+    },
+    getSelectedElement: function getSelectedElement() {
+      return selectedElement;
+    },
+    updateSelected: updateSelectedHighlight,
+    // 通过消息发送开关控制
+    sendToggleMessage: function sendToggleMessage(enabled) {
+      window.parent.postMessage({
+        type: 'iframe-highlight-status',
+        enabled: enabled || highlightEnabled,
+        source: 'iframe-highlight-injector'
+      }, '*');
+    }
+  };
+
+  // 通知父窗口脚本已加载
+  try {
+    window.parent.postMessage({
+      type: "iframe-highlight-ready",
+      data: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: Date.now()
+      },
+      source: "iframe-highlight-injector"
+    }, "*");
+  } catch (error) {
+    console.warn("无法发送就绪消息到父窗口:", error);
+  }
+
+  // 清理函数
+  window.__iframeHighlightCleanup = function () {
+    fullyDisableHighlight();
+    window.removeEventListener("message", handleParentMessage);
+    if (overlay.parentElement) {
+      overlay.parentElement.removeChild(overlay);
+    }
+    delete window.__iframeHighlightInitialized;
+    delete window.__iframeHighlightCleanup;
+  };
+})();
+
+</script>
+</body>
+</html>

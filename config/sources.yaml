@@ -1,0 +1,49 @@
+news_sources:
+  - name: 新浪财经
+    url: https://finance.sina.com.cn
+    rss: https://finance.sina.com.cn/rss/finance.xml
+    keywords: ["迪卡侬", "安踏", "李宁", "特步", "361度", "运动品牌"]
+
+  - name: 财经头条
+    url: https://www.cjtt.com.cn
+    rss: https://www.cjtt.com.cn/rss
+
+  - name: 界面新闻
+    url: https://www.jiemian.com
+    rss: https://www.jiemian.com/main_rss.xml
+
+  - name: 36氪
+    url: https://36kr.com
+    rss: https://36kr.com/feed
+
+  - name: 虎嗅
+    url: https://www.huxiu.com
+    rss: https://www.huxiu.com/rss/0.xml
+
+  - name: 体育产业生态圈
+    url: https://www.ecosports.cn
+    rss: https://www.ecosports.cn/feed
+
+  - name: 懒熊体育
+    url: https://www.lanxiongsports.com
+    rss: https://www.lanxiongsports.com/feed
+
+  - name: 中国体育报
+    url: http://www.sport.gov.cn
+    rss: http://www.sport.gov.cn/rss
+
+search_keywords:
+  企业经营: ["业绩", "财报", "营收", "利润", "净利润", "亏损", "盈利", "财报", "财务报告", "投资者关系"]
+  新品发布: ["新品", "发布", "上市", "新品上市", "产品发布", "新系列", "联名款", "限量版"]
+  市场推广: ["营销", "广告", "赞助", "合作", "活动", "赛事", "代言人", "品牌活动"]
+  渠道策略: ["门店", "开店", "关店", "电商", "线上", "线下", "渠道", "新零售", "旗舰店"]
+
+content_tags:
+  - 企业经营
+  - 新品发布
+  - 市场推广
+  - 渠道策略
+  - 高管变动
+  - 战略合作
+  - 财务数据
+  - 行业动态

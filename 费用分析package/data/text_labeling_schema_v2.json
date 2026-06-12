@@ -1,0 +1,317 @@
+{
+  "version": "3.1",
+  "description": "财报费用文本标注schema - 增强版（双重验证规则v3.1）",
+  "update_date": "2026-06-07",
+  "validation_rules": {
+    "expense_type": {
+      "description": "费用类型标注 - 双重验证规则",
+      "rule": "段落必须同时满足：(1)包含费用类型关键词 AND (2)包含费用/成本/支出/投入相关词汇",
+      "cost_keywords": ["cost", "expense", "spending", "expenditure", "fee", "charge", "budget", "allocation", "投入", "投资", "支出", "费用", "开支", "成本", "耗费", "花费", "消耗", "加大", "加强", "强化", "深化", "建设", "配置"],
+      "example_invalid": "AI设计大模型显著提升效率 → 只有技术词，无费用词 → 标注无效",
+      "example_valid": "持续加大技术研发投入 → 有技术词 + 有'投入' → 标注有效"
+    }
+  },
+  "annotation_types": {
+    "expense_type": {
+      "description": "费用类型标注",
+      "values": {
+        "sga": {
+          "name": "SG&A费用",
+          "keywords_cn": ["销售及管理费用", "销售和管理费用", "SG&A", "分销费用", "一般及行政"],
+          "keywords_en": ["selling", "general", "administrative", "SGA", "sales and marketing", "distribution", "G&A"]
+        },
+        "rd": {
+          "name": "研发费用",
+          "keywords_cn": ["研发费用", "研发支出", "研究开发费用", "技术创新投入", "研发投入"],
+          "keywords_en": ["research", "development", "R&D", "R&D spending", "R&D expense", "R&D investment"]
+        },
+        "marketing": {
+          "name": "营销费用",
+          "keywords_cn": ["营销费用", "广告费用", "宣传费用", "推广费用", "促销费用", "市场推广费用", "品牌投入", "品牌费用"],
+          "keywords_en": ["marketing expense", "advertising expense", "promotion expense", "marketing cost", "advertising cost", "marketing spending", "advertising and promotion expense", "brand investment"]
+        },
+        "operating_expense": {
+          "name": "运营费用",
+          "keywords_cn": ["运营费用", "经营费用", "运营成本", "经营成本", "营业费用"],
+          "keywords_en": ["operating", "operations", "operational", "facilities", "operations expense"]
+        },
+        "personnel": {
+          "name": "人力成本",
+          "keywords_cn": ["人力成本", "员工成本", "人员费用", "工资", "薪酬", "员工福利", "人力费用"],
+          "keywords_en": ["employee", "compensation", "headcount", "personnel", "workforce", "salary", "benefits", "labor cost"]
+        },
+        "technology": {
+          "name": "技术成本",
+          "keywords_cn": ["技术成本", "IT成本", "信息技术成本", "数字化投入", "技术投入", "IT费用", "技术服务费"],
+          "keywords_en": ["technology cost", "IT cost", "technology expense", "IT expense", "technology spending", "IT spending", "infrastructure cost"]
+        },
+        "logistics": {
+          "name": "物流成本",
+          "keywords_cn": ["物流成本", "仓储成本", "配送成本", "运输成本", "供应链成本", "履约成本", "物流费用"],
+          "keywords_en": ["logistics cost", "fulfillment cost", "shipping cost", "warehousing cost", "distribution cost", "supply chain cost"]
+        },
+        "marketing_digital": {
+          "name": "数字营销",
+          "keywords_cn": ["数字营销费用", "电商费用", "在线营销费用", "直播费用", "社交媒体费用", "数字推广费用"],
+          "keywords_en": ["digital marketing expense", "e-commerce expense", "online marketing expense", "DTC expense", "digital marketing cost"]
+        },
+        "real_estate": {
+          "name": "门店成本",
+          "keywords_cn": ["门店成本", "店铺租金", "店面费用", "零售租金", "商业地产费用", "专柜费用", "租赁费用"],
+          "keywords_en": ["store cost", "retail rent", "lease expense", "store rent", "real estate cost", "store expense"]
+        },
+        "legal": {
+          "name": "法律合规",
+          "keywords_cn": ["法律", "合规", "诉讼", "监管", "律师"],
+          "keywords_en": ["legal", "compliance", "regulatory", "litigation", "settlement"]
+        },
+        "other": {
+          "name": "其他费用",
+          "keywords_cn": ["其他", "杂项", "一般费用"],
+          "keywords_en": ["other", "miscellaneous", "general"]
+        }
+      },
+      "required": true
+    },
+    "trend": {
+      "description": "趋势标注",
+      "values": {
+        "increase": {
+          "name": "上升",
+          "indicators_cn": ["增加", "增长", "上升", "提高", "扩大", "加大", "增强"],
+          "indicators_en": ["increase", "grew", "growth", "higher", "increased", "rose", "up", "higher"]
+        },
+        "decrease": {
+          "name": "下降",
+          "indicators_cn": ["减少", "下降", "降低", "缩减", "削减", "优化"],
+          "indicators_en": ["decrease", "declined", "lower", "reduced", "decline", "fell", "down", "improved"]
+        },
+        "stable": {
+          "name": "持平",
+          "indicators_cn": ["持平", "稳定", "持平", "保持", "维持"],
+          "indicators_en": ["stable", "consistent", "unchanged", "flat", "similar", "maintained"]
+        },
+        "volatile": {
+          "name": "波动",
+          "indicators_cn": ["波动", "起伏", "不稳定"],
+          "indicators_en": ["volatile", "fluctuate", "fluctuation", "variable", "unstable"]
+        },
+        "new": {
+          "name": "新增",
+          "indicators_cn": ["新增", "新设", "首次", "新增加"],
+          "indicators_en": ["new", "added", "additional", "first time", "newly", "launched"]
+        },
+        "reduction": {
+          "name": "削减",
+          "indicators_cn": ["削减", "压缩", "精简", "优化", "重组"],
+          "indicators_en": ["reduction", "cut", "restructuring", "streamline", "optimization", "right-sizing"]
+        }
+      },
+      "required": true
+    },
+    "driver": {
+      "description": "驱动因素标注",
+      "values": {
+        "business_expansion": {
+          "name": "业务扩张",
+          "indicators_cn": ["业务增长", "市场扩张", "规模扩大", "销量增加", "新市场", "国际化"],
+          "indicators_en": ["growth", "expansion", "scale", "volume", "business growth", "new markets", "international"]
+        },
+        "investment": {
+          "name": "投资驱动",
+          "indicators_cn": ["投资", "战略投入", "项目", "转型", "扩张计划"],
+          "indicators_en": ["investment", "initiative", "strategic", "transformation", "venture", "project", "investment in"]
+        },
+        "efficiency": {
+          "name": "效率提升",
+          "indicators_cn": ["效率提升", "成本优化", "自动化", "流程优化", "规模效应", "降本"],
+          "indicators_en": ["efficiency", "optimization", "automation", "productivity", "cost saving", "improved", "economies of scale", "cost discipline"]
+        },
+        "dtc_transformation": {
+          "name": "DTC转型",
+          "indicators_cn": ["DTC", "直销", "直面消费者", "电商渠道", "数字渠道", "自营渠道"],
+          "indicators_en": ["DTC", "direct-to-consumer", "e-commerce", "digital channel", "owned channel", "online sales"]
+        },
+        "brand_building": {
+          "name": "品牌建设",
+          "indicators_cn": ["品牌建设", "品牌投入", "品牌投资", "品牌推广", "品牌激活"],
+          "indicators_en": ["brand building", "brand investment", "brand building initiatives", "brand activation", "brand equity"]
+        },
+        "product_innovation": {
+          "name": "产品创新",
+          "indicators_cn": ["产品创新", "研发", "新产品", "技术创新", "材料创新"],
+          "indicators_en": ["product innovation", "new product", "innovation", "R&D", "product development", "technology innovation"]
+        },
+        "supply_chain": {
+          "name": "供应链",
+          "indicators_cn": ["供应链", "物流", "仓储", "配送网络", "采购", "供应商"],
+          "indicators_en": ["supply chain", "logistics", "sourcing", "supplier", "procurement", "inventory", "fulfillment"]
+        },
+        "external": {
+          "name": "外部因素",
+          "indicators_cn": ["汇率", "通胀", "监管", "宏观经济", "疫情", "地缘政治", "关税"],
+          "indicators_en": ["currency", "inflation", "regulatory", "macroeconomic", "pandemic", "economic", "geopolitical", "tariff"]
+        },
+        "restructuring": {
+          "name": "重组整合",
+          "indicators_cn": ["重组", "整合", "并购", "收购", "业务调整", "组织优化"],
+          "indicators_en": ["restructuring", "reorganization", "integration", "acquisition", "merger", "consolidation"]
+        },
+        "one_time": {
+          "name": "一次性",
+          "indicators_cn": ["一次性", "特殊项目", "减值", "诉讼费用", "重组费用"],
+          "indicators_en": ["one-time", "special", "impairment", "restructuring charge", "legal settlement", "settlement", "one-off"]
+        }
+      },
+      "required": false
+    },
+    "brand_type": {
+      "description": "品牌类型标注",
+      "values": {
+        "premium": {
+          "name": "高端品牌",
+          "indicators_cn": ["高端", "奢侈品", "高溢价", " premium"],
+          "indicators_en": ["premium", "luxury", "high-end", "prestige"]
+        },
+        "mass": {
+          "name": "大众品牌",
+          "indicators_cn": ["大众", "主流", "性价比", " mass"],
+          "indicators_en": ["mass", "mainstream", "value", "affordable", "masstige"]
+        },
+        "emerging": {
+          "name": "新兴品牌",
+          "indicators_cn": ["新兴", "新品牌", "增长型", " emerging"],
+          "indicators_en": ["new", "emerging", "disruptive", "startup", "high-growth"]
+        },
+        "conglomerate": {
+          "name": "综合集团",
+          "indicators_cn": ["集团", "多品牌", "综合", "多元化"],
+          "indicators_en": ["group", "portfolio", "multiple brands", "diversified"]
+        },
+        "sports_tech": {
+          "name": "运动科技",
+          "indicators_cn": ["科技", "创新", "技术驱动"],
+          "indicators_en": ["tech", "technology", "innovation", "performance"]
+        }
+      },
+      "required": false
+    },
+    "efficiency_indicator": {
+      "description": "效率指标标注",
+      "values": {
+        "high_efficiency": {
+          "name": "高效",
+          "indicators_cn": ["效率提升", "降本增效", "规模效应", "优化", "改善"],
+          "indicators_en": ["efficiency", "improved", "optimization", "cost reduction", "productivity", "leverage", "scale"]
+        },
+        "low_efficiency": {
+          "name": "低效",
+          "indicators_cn": ["效率低下", "成本上升", "费用高企", "侵蚀利润"],
+          "indicators_en": ["inefficiency", "cost increase", "margin pressure", "headwind"]
+        },
+        "investment_mode": {
+          "name": "投资型",
+          "indicators_cn": ["战略性投入", "长期投资", "前置投入", "投资阶段"],
+          "indicators_en": ["investment mode", "strategic investment", "building", "investing in growth"]
+        }
+      },
+      "required": false
+    },
+    "sentiment": {
+      "description": "情感倾向标注",
+      "values": {
+        "positive": {
+          "name": "正面",
+          "indicators_cn": ["改善", "提升", "增长", "乐观", "积极", "强劲"],
+          "indicators_en": ["improved", "increased", "growth", "optimistic", "strong", "positive", "confident"]
+        },
+        "negative": {
+          "name": "负面",
+          "indicators_cn": ["下降", "挑战", "困难", "压力", "担忧", "疲软"],
+          "indicators_en": ["declined", "decrease", "challenge", "difficult", "negative", "weak", "concern", "headwind"]
+        },
+        "neutral": {
+          "name": "中性",
+          "indicators_cn": ["稳定", "持平", "保持", "维持"],
+          "indicators_en": ["stable", "consistent", "unchanged", "maintained", "in line"]
+        }
+      },
+      "required": false
+    }
+  },
+  "analysis_dimensions": {
+    "expense_trend": {
+      "description": "费用趋势分析",
+      "metrics": ["amount_change", "ratio_change", "cagr", "growth_rate"],
+      "visualization": ["line_chart", "stacked_area", "heatmap"]
+    },
+    "brand_comparison": {
+      "description": "品牌对比分析",
+      "metrics": ["expense_ratio", "expense_per_revenue", "per_capita_expense", "expense_efficiency"],
+      "visualization": ["radar_chart", "bar_chart", "box_plot"]
+    },
+    "keyword_analysis": {
+      "description": "关键词分析",
+      "metrics": ["frequency", "cooccurrence", "sentiment_distribution"],
+      "visualization": ["wordcloud", "bar_chart", "network_graph"]
+    },
+    "driver_attribution": {
+      "description": "驱动因素归因",
+      "metrics": ["driver_frequency", "driver_by_brand", "driver_by_trend"],
+      "visualization": ["pie_chart", "stacked_bar", "treemap"]
+    }
+  },
+  "example_annotations": [
+    {
+      "text": "SG&A expenses increased by 12% year-over-year, driven by continued investment in marketing and brand building initiatives across our premium segment.",
+      "language": "en",
+      "annotations": {
+        "expense_type": "sga",
+        "trend": "increase",
+        "driver": "brand_building",
+        "brand_type": "premium",
+        "efficiency_indicator": "investment_mode",
+        "sentiment": "positive",
+        "growth_rate": 12.0
+      }
+    },
+    {
+      "text": "营销费用率从15%下降到12%，主要得益于DTC渠道效率提升和数字营销ROI改善",
+      "language": "cn",
+      "annotations": {
+        "expense_type": "marketing",
+        "trend": "decrease",
+        "driver": "dtc_transformation",
+        "brand_type": null,
+        "efficiency_indicator": "high_efficiency",
+        "sentiment": "positive",
+        "ratio_change": -3.0
+      }
+    },
+    {
+      "text": "物流成本上升主要是由于供应链中断和运费上涨，我们通过仓储优化和路线规划来缓解压力",
+      "language": "cn",
+      "annotations": {
+        "expense_type": "logistics",
+        "trend": "increase",
+        "driver": "external",
+        "brand_type": null,
+        "efficiency_indicator": "low_efficiency",
+        "sentiment": "neutral"
+      }
+    },
+    {
+      "text": "研发费用率保持在4.5%左右，持续投入产品创新和技术升级",
+      "language": "cn",
+      "annotations": {
+        "expense_type": "rd",
+        "trend": "stable",
+        "driver": "product_innovation",
+        "brand_type": null,
+        "efficiency_indicator": "investment_mode",
+        "sentiment": "positive",
+        "ratio": 4.5
+      }
+    }
+  ]
+}

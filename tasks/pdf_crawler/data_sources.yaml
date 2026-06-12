@@ -1,0 +1,150 @@
+# 财报PDF数据源配置
+# 支持多种数据源：官方IR、财经平台、搜索引擎等
+
+data_sources:
+  # ========== 官方投资者关系页面 ==========
+  official_ir:
+    - name: Decathlon迪卡侬
+      url: https://www.decathlon-group.com/en/investors
+      type: official
+      priority: 1
+
+    - name: 安踏体育
+      url: https://ir.anta.com
+      type: official
+      priority: 1
+
+    - name: 李宁
+      url: https://ir.lining.com.hk
+      type: official
+      priority: 1
+
+    - name: 特步国际
+      url: https://ir.xtep.com
+      type: official
+      priority: 1
+
+    - name: 361度
+      url: https://ir.361sport.com
+      type: official
+      priority: 1
+
+    - name: 滔搏国际
+      url: https://ir.topsports.com.hk
+      type: official
+      priority: 1
+
+    - name: 宝胜国际
+      url: https://ir.pou-sheng.com
+      type: official
+      priority: 1
+
+    - name: NIKE耐克
+      url: https://investor.nike.com
+      type: official
+      priority: 1
+
+    - name: Adidas阿迪达斯
+      url: https://www.adidas-group.com/en/investors
+      type: official
+      priority: 1
+
+    - name: Lululemon
+      url: https://investor.lululemon.com
+      type: official
+      priority: 1
+
+    - name: PUMA彪马
+      url: https://www.pumagroup.com/investor-relations
+      type: official
+      priority: 1
+
+  # ========== 财经平台 ==========
+  financial_platforms:
+    - name: 雪球
+      search_url: https://xueqiu.com/query/type=stock&q={brand_name}+年报
+      report_list_url: https://xueqiu.com/{stock_code}/finance
+      type: financial_platform
+      priority: 2
+
+    - name: 东方财富
+      search_url: https://so.eastmoney.com/StockSearch?searchtype=annualreport&query={brand_name}
+      report_list_url: https://data.eastmoney.com/report/{stock_code}.html
+      type: financial_platform
+      priority: 2
+
+    - name: 巨潮资讯
+      search_url: http://www.cninfo.com.cn/new/fulltextSearch?searchkey={brand_name}&sdate=&edate=&isfulltext=false&sortName=nothing&sortType=desc&pageNum=1
+      type: financial_platform
+      priority: 2
+
+    - name: 新浪财经
+      search_url: https://finance.sina.com.cn/roll/index.d.html?cid=56590&page=1
+      stock_page_url: https://finance.sina.com.cn/realstock/company/{stock_code}/nc.shtml
+      type: financial_platform
+      priority: 2
+
+    - name: 同花顺
+      search_url: https://search.10jqka.com.cn/?query={brand_name}&type=report&f=1&fields=f1,f2
+      type: financial_platform
+      priority: 2
+
+    - name: 网易财经
+      search_url: https://quotes.money.163.com/trade/lsjysj_{stock_code}.html
+      type: financial_platform
+      priority: 2
+
+  # ========== 搜索爬虫 ==========
+  search_engines:
+    - name: 百度搜索
+      search_url: https://www.baidu.com/s?wd={brand_name}+年报+PDF+filetype:pdf
+      type: search_engine
+      priority: 3
+
+    - name: 必应搜索
+      search_url: https://cn.bing.com/search?q={brand_name}+annual+report+PDF
+      type: search_engine
+      priority: 3
+
+# 财报文件存储配置
+storage:
+  root_dir: "竞品财务PDF库"
+  brand_subdir: true  # 按品牌分子文件夹
+
+  # 文件命名规则
+  filename_template: "{brand_name}_{year}_{period_type}_{report_nature}.pdf"
+
+  # 报告类型映射
+  period_types:
+    annual: "年报"
+    quarterly: "季报"
+    q1: "Q1季报"
+    q2: "Q2季报"
+    q3: "Q3季报"
+    q4: "Q4季报"
+    half_year: "半年报"
+
+  # 报告性质
+  report_natures:
+    - "财务报告"
+    - "投资者简报"
+    - "业绩公告"
+    - "英文版"
+
+# 爬虫配置
+crawler:
+  max_retries: 3
+  timeout: 30
+  delay: 2  # 请求间隔（秒）
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  verify_ssl: false  # 禁用SSL验证（解决某些网站证书问题）
+
+  # 下载配置
+  download:
+    chunk_size: 8192
+    max_file_size: 52428800  # 50MB
+
+  # 质量控制
+  quality:
+    min_file_size: 10240  # 10KB
+    verify_pdf_header: true

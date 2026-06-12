@@ -1,0 +1,16 @@
+
+{
+    "pdf_directory": "C:\\Users\\CICI\\Documents\\trae_projects\\competitor_finance_info\\竞品财务PDF库",
+    "template_path": "C:\\Users\\CICI\\Projects\\Competitor Finance Info\\Finance data template.xlsx",
+    "output_directory": "C:\\Users\\CICI\\Documents\\trae_projects\\competitor_finance_info\\finance_workflow\\output",
+    "raw_text_directory": "C:\\Users\\CICI\\Documents\\trae_projects\\competitor_finance_info\\finance_workflow\\output\\raw_text_extracts",
+    "report_directory": "C:\\Users\\CICI\\Documents\\trae_projects\\competitor_finance_info\\finance_workflow\\output\\reports",
+    "currency_rates": {
+        "USD": 7.24,
+        "EUR": 7.86,
+        "GBP": 9.12,
+        "JPY": 0.048
+    },
+    "target_unit": "千元",
+    "priority_files": ["2026Q1", "2025年报", "2025年年度", "2025中期", "2025年中期", "2025Q4", "2025Q3"]
+}

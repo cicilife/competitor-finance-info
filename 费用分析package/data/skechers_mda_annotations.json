@@ -1,0 +1,3034 @@
+{
+  "version": "2.0",
+  "company": "Skechers",
+  "report_type": "2024 Annual Report",
+  "total_pages": 42,
+  "total_paragraphs": 181,
+  "annotation_summary": {
+    "expense_types": {
+      "研发费用": 8,
+      "营销费用": 40,
+      "运营费用": 69,
+      "技术成本": 160,
+      "数字营销": 20,
+      "门店成本": 67,
+      "物流成本": 7,
+      "人力成本": 26,
+      "SG&A费用": 3
+    },
+    "trends": {
+      "上升": 87,
+      "持平": 10,
+      "新增": 32,
+      "下降": 32
+    },
+    "drivers": {
+      "业务扩张": 27,
+      "外部因素": 19,
+      "DTC转型": 20,
+      "投资驱动": 22,
+      "供应链": 8,
+      "产品创新": 1
+    },
+    "sentiments": {
+      "正面": 46,
+      "中性": 105,
+      "负面": 30
+    }
+  },
+  "annotated_paragraphs": [
+    {
+      "id": "skechers_mda_001",
+      "page": 3,
+      "original_text": "WhenwefoundedSkechersoverthreedecadesago,ourvisionwastocreatealifestylebrandfocusedon comfort,style,innovation,andqualityatareasonableprice.Aswecelebrateour25thyearasapubliclytraded companyandthethird-largestfootwearbrandintheworldwiththrivingPerformanceandLifestyledivisions, we'reproudtosaythatthesecoreprinciplescontinuetodriveoursuccessandgrowth. In2024,Skechersachievedanotheryearofexceptionalperformance:fourrecordsalesquarters,leading toannualsalesof$9billionanddilutedearningspershareof$4.40o",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "业务扩张",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_002",
+      "page": 3,
+      "original_text": "Given the breadth of product offering, Direct-to-Consumer $7.4 continuestobeakeyindicatorofconsumersentimentandafocus $6.3 forSkechers.OurDirect-to-Consumerbusinessachievedgrowthof 11percentfortheyear,underscoringthesuccessofouromnichannel strategyandourloyalcustomers’appetiteforSkechers.Weended theyearwith1,787Company-ownedSkechersstores,ofwhich1,177 areinternationallocations.Intotal,consumerscouldshopat5,296 Skechers-brandedstoresworldwide,with4,686outsidetheUnited",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_003",
+      "page": 3,
+      "original_text": "Looking ahead, we plan to open an additional 180 to 200 Company-owned stores in 2025, further strengtheningourretailpresenceglobally.Thisexpansionwillincludeamixofretailstoreformatstoshowcase the full range of our product line, and, in key markets, offer an immersive brand experience such as our first interactive store in Canada. This location at one of the largest malls in North America features indoor courts forbasketballandpickleball,providingshopperswithauniqueopportunitytotestourproducts. I",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_004",
+      "page": 4,
+      "original_text": "Brand recognition remains paramount to our success, and our marketing efforts have continued to be diverseandfar-reaching.Weengagedcustomersthroughtraditionalanddigitalmedia,aswellasunconventional placementssuchasstadiumperimeterboardsandairportsecurityareas.Ourcampaignsfeaturedatalented rosterofcelebritiesandinfluencers,ensuringbroadappealacrossdifferentmarketsanddemographics. Inproductdevelopment,weagainfocusedonfurtherinnovationsinourcomforttechnologies,including extensions of our popular Ske",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_005",
+      "page": 5,
+      "original_text": "2024 was a year of significant accomplishments for Skechers, and we enter 2025 with momentum and optimism. While we anticipate potential macroeconomic headwinds, we are a resilient global brand with a diverseproductportfolio,establishednetworkofretailstores,robustonlinepresence,vastmarketreachand stable infrastructure and operations, all of which position us well to navigate these challenges and continue our growth trajectory. Looking ahead, we believe our strategic product development, innovati",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_006",
+      "page": 5,
+      "original_text": "Thisannualreportcontainsforward-lookingstatementsthataremadepursuanttothesafeharborprovisionsofSection27AoftheSecuritiesActof1933,asamended,andSection21EoftheSecurities ExchangeActof1934,asamended.Theseforward-lookingstatementsinclude,withoutlimitation,ourfuturedomesticandinternationalgrowth,financialresultsandoperationsincludingexpected netsales,margins,cashflowandearnings,liquidityandcapitalresources,inventorylevelsandorders,ourdevelopmentofnewproducts,futuredemandforourproducts,ourplanneddome",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_007",
+      "page": 9,
+      "original_text": "SpecialNoteonForward-LookingStatements ThisannualreportonForm10-Kcontainsforward-lookingstatementsthataremadepursuanttothesafeharborprovisionsofthe Private Securities Litigation Reform Act of 1995, including statements with regards to future revenue, projected operating results, earnings,spending,margins,cashflow,orders,expectedtimingofshipmentofproducts,inventorylevels,futuregrowthorsuccessin specificcountries,categoriesormarketsectors,continuedorexpecteddistributiontospecificretailers,liquidit",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_008",
+      "page": 9,
+      "original_text": "• global economic, political and market conditions including the effects of inflation and foreign currency exchange rate fluctuationsaroundtheworld,thechallengingconsumerretailmarketintheUnitedStates(“U.S.”)andtheimpactofwar andotherconflictsaroundtheworld; • thelossofanysignificantcustomers,decreaseddemandbyindustryretailersandthecancellationofordercommitments; • ourabilitytocontinuetomanufactureandshipourproductsthataresourcedinChinaandVietnam,whichcouldbeadversely affectedbyvariouseconomic,po",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_009",
+      "page": 10,
+      "original_text": "Skechers U.S.A., Inc.,designs, develops and markets a diverse range of footwear, apparel, and accessories. Our company was incorporatedinCaliforniain1992andreincorporatedinDelawarein1999.Forover30years,wehaveexpandedourproductoffering andgrownoursaleswhilesubstantiallyincreasingthebreadthofourconsumerandcustomerbase.Ourobjectiveistoprofitablygrow ouroperationsworldwidebydeliveringstylish,comfortable,innovativeandhigh-qualityproductsatareasonableprice. Skechersisthethirdlargestathleticfootwearcom",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_010",
+      "page": 10,
+      "original_text": "Wehavetworeportablesegments:WholesaleandDirect-to-Consumer. Wholesale.OurWholesalesegmentiscomprisedofsalestoanetworkofpartnersincluding: • Skechers-brandedstoresoperatedbythird-partyfranchiseesandlicensees; • Familyshoestores,specialtyathleticandsportinggoodsretailers,departmentstoresandbigboxclubstores;",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_011",
+      "page": 10,
+      "original_text": "• Distributorsinselectinternationalmarkets. GrowthintheWholesalesegmentisexpectedtoderivefromaddingnewpartners,morethird-partySkechers-brandedstores,as wellasexpandingourexistingshelfspacewithcurrentpartnersfromtheintroductionofnewproducts. Direct-to-Consumer. Our Direct-to-Consumer segment comprises sales by us directly to consumers through a combination of",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_012",
+      "page": 10,
+      "original_text": "• Company-ownedSkechers-brandedstores; • Company-ownede-commercesites;and • Leadingthird-partymarketplacesanddigitalplatforms. Growth in the Direct-to-Consumer segment is expected to derive from expanding our footprint, leveraging third-party digital marketplacesandplatformsandintroducingnewproducts.",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_013",
+      "page": 10,
+      "original_text": "Skechers is aproduct-driven company with comfort and innovation at the core of our design process. We offer footwear and accessories for men, women and kids, as well as apparel for men and women. We market our products at multiple price points and provideconsumerswithwhatwebelieveisanofferingwithsuperiorcomforttechnology. Productdesignanddevelopmentisessentialtooursuccessandisdrivenbyourabilitytorecognizetrendsandtodesignproducts that anticipate and accommodate consumers’ evolving preferences. L",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_014",
+      "page": 11,
+      "original_text": "• Performance – Winner of numerous awards, the Skechers Performance collection offers elite athletes and enthusiasts innovativetechnologiesforsoccer/football,basketball,golf,pickleball,runningandwalking,aswellascricketinIndiain 2024.TheSkechersPerformancedivisiondevelopsfootwearutilizingthelatestadvancementsinmaterialsandworkswith its athletes to develop superior designs. Signature technologies include Skechers Hyper Burst®, Goodyear® Resagrip Technology, Skechers Hands Free Slip-ins® and Skeche",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_015",
+      "page": 11,
+      "original_text": "• Work–AleadingworkbrandintheUnitedStatesandotherinternationalmarkets,SkechersWorkismadetolast–offering serviceandoccupationalemployeesstyle,comfortandindustry-certifiedqualityforall-dayprotection.Availableformen and women, the Skechers Work line includes slip-resistant and safety-toe shoes and boots for professionals who use protectivefootwearintheirworkenvironmentswithsafetyanddurabilityfeaturessuchassteel,compositeandlightweight safetytoes,high-abrasionsoles,punctureresistance,waterproofingan",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_016",
+      "page": 11,
+      "original_text": "Brandrecognitionisanimportantelementforsuccessinthefootwearbusiness.Seniormanagementisdirectlyinvolvedinshaping our image and the conception, development and implementation of our advertising and marketing activities.We aggressively market ourbrandsthroughcomprehensivemarketingcampaigns.TheSkechersbrandissupportedbytelevision,digital,print,radio,outdoor, andpresscampaigns.Tofurtherdriverecognition,weenlistnumerouscelebrities,athletes,andinfluencerstoappearinourcampaigns. We strategically select ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_017",
+      "page": 12,
+      "original_text": "Our suppliers are integral partners in delivering stylish, high-quality footwear and apparel to our consumers worldwide. Our productsareproducedbyindependentcontractmanufacturerslocatedprimarilyinAsia.Wedonotownoroperateanymanufacturing facilities. We believe that the use of independent manufacturers substantially increases our production flexibility and capacity, while reducingcapitalexpendituresandavoidingthecostsofmanagingalargeproductionworkforce.Tominimizedisruptionofourproduct supplyduetop",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_018",
+      "page": 12,
+      "original_text": "We believe quality control is an important and effective means of maintaining the quality and reputation of our products and brand.Ourqualitycontrolprogramisdesignedtoensurefinishedgoodsmeetourestablisheddesignspecificationsandgoodsbearing ourtrademarksmeetourstandardsforquality.OurqualitycontrolpersonnellocatedinChinaandVietnamperformanarrayofinspection procedures at various stages of the production process, including examination and testing of prototypes of key raw materials prior to manufactu",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_019",
+      "page": 12,
+      "original_text": "Ourcollectionsareavailableinapproximately180countriesandterritoriesandcanbeaccessedindigitalorphysicalstores.We arecontinuallyexpandingandenhancingourdistributionandlogisticsfacilitiesandsystemstosupportouromni-channelcapabilities andprovidegreateraccesstomerchandiseselectionandfasterdelivery.Ourcompany-ownede-commercebusinessenablesconsumers to shop, browse, find store locations, socially interact, post reviews, and immerse themselves in our brands. Additionally, the e- commercebusinessprovides",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "物流成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_020",
+      "page": 12,
+      "original_text": "The global footwear industry is acompet itive business. Although we believe that we do not compete directly with any single companywithrespecttoourentirerangeofproducts,ourproductscompetewithotherbrandedproductswithintheirproductcategory aswellaswithprivatelabelproductssoldbyretailers,includingsomeofourcustomers.Wealsocompetewithnumerousmanufacturers, importers,anddistributorsoffootwearforthelimitedshelfspaceavailablefordisplayingsuchproductstotheconsumer.Moreover,the generalavailabilityofcontra",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_021",
+      "page": 12,
+      "original_text": "Skechersemployeesarecentraltooursuccess.Weareafamily brandatthecore,andourcommitmenttofamilyextendstoour diverseteamofglobalemployees.Webelieveouruniquebackgroundsandexperienceshavemadeusstronger,inspirednewideas,and drivenourinnovativespirit.Fromourcorporateofficestoourretailstoresandourdistributioncenters,weaimtobuildaworkplacethat supports each employee’s well-being and encourages everyone to grow in their careers and give back to their community. We are focusedoncreatingapositive, supportive",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_022",
+      "page": 13,
+      "original_text": "Workplace Culture. Skechers was founded on inclusivity, diversity, respect, and entrepreneurial spirit with the philosophy of putting people first. In conjunction with our corporate policy against discrimination, Skechers emphasizes that every employee, applicant,contractor,andcustomerisentitledtobetreatedwithdignityandrespect.Humanrightsareacorevalueattheheartofhow weconductourbusiness,ateveryleveloftheCompany–includingourfactoriesandsuppliers.OurCodeofEthics,CorporateCodeof ConductandSupplierC",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_023",
+      "page": 13,
+      "original_text": "Despitethedynamicgrowthwehaveseenovertheyears,weremainfirmlyrootedinthesamecommunitywherewebeganwhile dedicatedtoservingthepeoplearoundtheworld.Insodoing,wetakeseriouslyourpositionasastewardofthemanycommunitiesand stakeholdersweimpactinourdailybusinessactivities.Thisincreasinglyinvolvesconsideringmultiplewayswecanevolveourbusiness practicesandprocessestoimprovethehealthofourplanet,thelivesofourpeopleandourcommunities.Corporateresponsibilityisa toppriorityforourleadership,whoareinvestinginplansto",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_024",
+      "page": 13,
+      "original_text": "ForadditionalinformationonSkechersvaluecreationandglobalimpact,refertoourImpactReportwhichcanbefoundonour websiteatabout.skechers.com/social-responsibility.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_025",
+      "page": 13,
+      "original_text": "We file annual, quarterly, and current reports, proxy statements and other documents with the Securities and Exchange Commission(“SEC”).TheSECmaintainsaninternetsiteatsec.govthatcontainsreports,proxyandinformationstatements,andother information regarding issuers that file electronically. Our internet address is www.skechers.com. Our annual report on Form 10-K, quarterlyreportsonForm10-Q,currentreportsonForm8-K,proxystatementsandotherinformationarealsomadeavailable,freeof charge, on our investor ",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_026",
+      "page": 14,
+      "original_text": "In addition to the other information in this annual report, the following factors should be considered in evaluating us and our",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_027",
+      "page": 14,
+      "original_text": "RISKSRELATEDTOOURBUSINESSANDINDUSTRY OurFutureSuccessDependsOnOurAbilityToMaintainOurBrandNameAndImageWithConsumers. OursuccesstodatehaslargelybeenduetothestrengthoftheSkechersbrand.Maintaining,promoting,andgrowingourbrand depends on our ability to develop high-quality, innovative, and fashion forward products, as well as our ability to create fresh and relevantmarketingandadvertisingcampaigns.Theinabilitytoexecuteoradversedevelopmentsintheseareascouldnegativelyimpact ourbrand.Ourbrandcouldalsob",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_028",
+      "page": 14,
+      "original_text": "Our Future Success Depends On Our Ability To Respond To Changing Consumer Preferences, Identify And Interpret ConsumerTrends,AndSuccessfullyMarketNewProducts. Thefootwearindustryissubjecttorapidlychangingconsumerpreferences.Thecontinuedpopularityofourfootwearrequiresus toaccuratelyidentifychangingconsumerpreferencesandeffectivelyrespondinatimelymanner.Demandforandmarketacceptance ofexistingandnewproductsareuncertainanddependonthefollowingfactors: • substantialinvestmentinproductinnovation,design",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "产品创新"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_029",
+      "page": 14,
+      "original_text": "Wefaceintensecompetitionfromotherestablishedcompaniesinthefootwearindustryintheareasofproductofferings,pricing, costsofproduction,andadvertisingandmarketingexpenditures.Consumerdemandforourproductsmaydeclinesignificantlyifwedo not adequately and timely anticipate and respond to our competitors. Some of our competitors have significantly greater financial, technological, engineering, manufacturing, marketing and distribution resources than we do. Their greater capabilities in these areas mayenabl",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_030",
+      "page": 15,
+      "original_text": "Our Global Retail Business Has Required, And Will Continue To Require, A Substantial Investment And Commitment Of ResourcesAndIsSubjectToNumerousRisksAndUncertainties. Our global retail business has required substantial investments in leasehold improvements, inventory, and personnel. We have alsomadesignificantoperatingleasecommitmentsforretailspaceworldwide.Duetothehighfixed-coststructureassociatedwithour global retail business, the poor performance or closure of stores could result in signific",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_031",
+      "page": 15,
+      "original_text": "OurBusinessCouldBeHarmedIfWeFailToMaintainAppropriateInventoryLevels. We place orders with our manufacturers for some of our products prior to the time we receive customer orders. We do this to minimizepurchasingcosts,thetimenecessarytofillcustomerorders,andtheriskofnon-delivery.Wealsomaintainaninventoryof certain products that we anticipate will be in greater demand. Unanticipated declines in the popularity of Skechers footwear or other unforeseencircumstancesmaymakeitdifficultforusandourcustom",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_032",
+      "page": 16,
+      "original_text": "OurInternationalSalesAndManufacturingOperationsAreSubjectToTheRisksOfDoingBusinessAbroad,ParticularlyIn China and Vietnam, WhichCouldAffect Our Ability To Manufacture Or SellOur Products,Obtain Products From Foreign SuppliersOrControlTheCostsOfOurProducts. SubstantiallyalloursalesduringtheyearendedDecember31,2024werederivedfromsalesoffootwearmanufacturedinforeign countries, with most manufactured in China and Vietnam. We also sell our footwear in foreign countries and plan to increase our intern",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_033",
+      "page": 16,
+      "original_text": "Inparticular,becausemostofourproductsaremanufacturedinChinaandVietnam,thepossibilityofadversechangesintrade or political relations with China or Vietnam, political instability in China or Vietnam, increases in labor costs, the occurrence of prolongedadverseweatherconditionsoranaturaldisastersuchasanearthquakeortyphooninChinaorVietnam,ortheoutbreakofa pandemicdiseaseinChinaorVietnamcouldseverelyinterferewiththemanufacturingand/orshipmentofourproductsandwouldhave a material adverse effect on our o",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "供应链",
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_034",
+      "page": 16,
+      "original_text": "We rely on owned or independently operated distribution facilities to transport, warehouse and ship products to our customers. Ourlogisticsanddistributionsystemsincludecomputer-controlledandautomatedequipment,whichmaybesubjecttorisksrelatedto securityorcomputerviruses,theproperoperationofsoftwareandhardware,powerinterruptionsorothersystemfailures.Substantially allourproductsaredistributedfromafewlocations.Therefore,ouroperationscouldbeinterruptedbytravelrestrictions,earthquakes, floods,firesorot",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_035",
+      "page": 17,
+      "original_text": "RISKSRELATEDTOECONOMICANDPOLITICALCONDITIONS,ANDOTHEREXTERNALFACTORS TheUncertaintyOfGlobalMarketConditions. Theuncertainstateofglobaleconomicandpoliticalconditions,includingtheimpactofinflationandchallengingconsumerretail market, may negatively impact our business, which depends on the general economic environment and levels of consumers’ discretionaryspending.Iftheeconomicsituationweakens,wemaynotbeabletomaintainorincreaseoursalestoexistingcustomers, makesalestonewcustomers,openandoperatenewre",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_036",
+      "page": 17,
+      "original_text": "Theimpactofwars,actsofwarandotherconflictsaroundtheworldmayresultinsubsequenteconomicsanctionsimposedbythe U.S.,NATOandothercountries.Conflictsmayimpactglobaleconomicconditionsorourabilitytosellproductstocustomersinthe affectedregions.Conflictscouldalsohavebroaderimplicationsoneconomicsoutsidethedirectlyimpactedregions,suchastheglobal inflationary impact of a potential boycott of Russian oil and gas by other countries. Furthermore, any unfavorable developments in globalpolitical,socialandregulat",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_037",
+      "page": 17,
+      "original_text": "A global financial crisis could affect the banking system and financial markets and result in a tightening in the credit markets, morestringentlendingstandardsandterms,higherinflation,andhighervolatilityinfixedincome,credit,currencyandequitymarkets. In addition, our business could be adversely affected by other economic conditions, such as the insolvency of certain of our key distributors,whichcouldimpairourdistributionchannels,orthediminishedliquidityoraninabilitytoobtaincredittofinancepurchase",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "下降",
+          "持平"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_038",
+      "page": 17,
+      "original_text": "Consumerconfidenceandspendingondiscretionaryitemsgenerallydeclinesduringperiodsofeconomicuncertaintyorrecession. Our wholesale customers anticipate and respond to adverse changes in economic conditions and uncertainty by reducing inventories and/orincreasingpromotionalactivity.Ourretailstoresarealsoaffectedbytheseconditionsandmayexperiencedeclinesinconsumer trafficandspending.Asaresult,factorsthatdiminishconsumerconfidenceandspending,particularlydeteriorationingeneraleconomic conditions,consumer",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "持平"
+        ],
+        "drivers": [
+          "投资驱动",
+          "DTC转型",
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_039",
+      "page": 18,
+      "original_text": "AdverseConditionsOrChangesInCaliforniaCouldIncreaseOurOperatingExpensesOrAdverselyAffectOurSales. AsubstantialportionofouroperationsareinCalifornia,including106ofourretailstores,ourheadquartersinManhattanBeach and our North America distribution center in Rancho Belago. A decline in the economic conditions, or increase in regulations or the cost of doing business in California could have a material adverse impact on our business. Furthermore, a natural disaster or other catastrophiceventinCalifor",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_040",
+      "page": 18,
+      "original_text": "ForeignCurrencyExchangeRateFluctuations. Foreign currency fluctuations affect our sales and profitability. Changes in currency exchange rates may impact our financial resultspositivelyornegativelyinoneperiodandnotanother,whichmaymakeitdifficulttocompareouroperatingresultsfromdifferent periods. Currency exchange rate fluctuations may also adversely impact third parties that manufacture our products by making their costs of raw materials or other production costs more expensive and more difficult ",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_041",
+      "page": 18,
+      "original_text": "Inaddition,ourforeignsubsidiariespurchaseproductsinU.S.dollars,whichcausesthecostofthoseproductstovarydepending ontheforeigncurrencyexchangeratesandimpactsthepricechargedtocustomers.Ourforeigndistributorsalsopurchaseproductsin U.S.dollarsandsellinlocalcurrencies,whichimpactsthepricetoforeignconsumers.AstheU.S.dollarstrengthensrelativetoforeign currencies, our sales and profits are reduced when translated into U.S. dollars and our margins may be negatively impacted by the increaseinproductcostsdu",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_042",
+      "page": 18,
+      "original_text": "OurbrandandreputationareassociatedwithourpubliccommitmentstovariouscorporateESGinitiatives,includingourgoals relatingtosustainabilityandouremployees.Ourdisclosuresonthesemattersandanyfailureorperceivedfailuretoachieveoraccurately report on our commitments, could harm our reputation and adversely affect our client relationships or our recruitment and retention efforts,aswellasexposeustopotentiallegalliability.IncreasingfocusonESGmattershasresultedin,andisexpectedtocontinueto resultin,theadoptiono",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "供应链",
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_043",
+      "page": 19,
+      "original_text": "ChangesToU.S.OrOtherCountries’TradePoliciesAndImport/ExportRegulationsOrOurFailureToComplyWithSuch",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_044",
+      "page": 19,
+      "original_text": "Changesinlawsandpoliciesgoverningforeigntrade,manufacturing,developmentandinvestmentintheterritoriesorcountries wherewecurrentlysellourproductsorconductourbusinesscouldadverselyaffectourbusiness.U.S.presidentialadministrationshave institutedorproposedchangesintradepoliciesthatincludethenegotiationorterminationoftradeagreements,theimpositionofhigher tariffsonimportsintotheU.S.,economicsanctionsonindividuals,corporationsorcountries,andothergovernmentregulationsaffecting tradebetweentheU.S.andother",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_045",
+      "page": 19,
+      "original_text": "OurBusinessCouldBeHarmedIfOurContractManufacturers,SuppliersOrLicenseesViolateLabor,TradeOrOtherLaws. We require our independent contract manufacturers, suppliers and licensees to operate in compliance with applicable laws and regulations.Manufacturersarerequiredtocertifythatneitherconvicted,forcedorindenturedlabor(asdefinedunderU.S.law)norchild labor(asdefinedbylawinthemanufacturer’scountry)isusedintheproductionprocess,thatcompensationispaidinaccordancewith locallawandthattheirfactoriesareincom",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_046",
+      "page": 19,
+      "original_text": "In addition, if we, or our foreign manufacturers, violate U.S. or foreign trade laws or regulations, we may be subject to extra duties,significantmonetarypenalties,theseizureandtheforfeitureoftheproductsweareattemptingtoimport,orthelossofourimport privileges.PossibleviolationsofU.S.orforeignlawsorregulationscouldincludeinadequaterecord-keepingofourimportedproducts, misstatementsorerrorsastotheorigin,quotacategory,classification,marketingorvaluationofourimportedproducts,fraudulentvisas, orlaborvi",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_047",
+      "page": 20,
+      "original_text": "Our AbilityTo Compete Could Be JeopardizedIf We Are Unable ToProtect Our Intellectual PropertyRights Or If We Are SuedForIntellectualPropertyInfringement. We believe that our trademarks, design patents and other proprietary rights are important to our success and our competitive position. We use trademarks on nearly all our products and believe that having distinctive marks that are readily identifiable is an important factor in creating a market for our goods, in identifying us and in distingui",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_048",
+      "page": 20,
+      "original_text": "Inaddition,thelawsofforeigncountrieswherewesourceanddistributeourproductsmaynotprotectintellectualpropertyrights tothesameextentasdothelawsoftheU.S.Wecannotbeassuredthattheactionswehavetakentoestablishandprotectourtrademarks andotherintellectualpropertyrightsoutsidetheU.S.willbeadequatetopreventimitationofourproductsbyothersor,ifnecessary, successfullychallengeanotherparty’scounterfeitproductsorproductsthatotherwiseinfringeonourintellectualpropertyrightsonthe basisoftrademarkorpatentinfringement",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_049",
+      "page": 20,
+      "original_text": "RISKSRELATEDTOINFORMATIONSYSTEMSANDDATASECUITY BreachesOrCompromisesOfOurInformationSecuritySystems,InformationTechnologySystemsAndOurInfrastructureTo SupportOurBusinessCouldResultInDisruptionOfOurBusinessAndDamageToOurReputation. Asaroutinepartofourbusiness,weutilizeinformationsecurityandITsystemsandwebsitesthatallowforthesecurestorage and transmission of proprietary or private information regarding our customers, employees, vendors and others. A security breach of ournetwork,hostedserviceprovi",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_050",
+      "page": 21,
+      "original_text": "Privacy Breaches And Other Cyber Security Risks Related To Our Business Could Negatively Affect Our Reputation,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_051",
+      "page": 21,
+      "original_text": "WearedependentonITsystemsandnetworksforasignificantportionofourdirect-to-consumersales,includingoure-commerce sitesandretailbusinesscreditcardtransactionauthorizationandprocessing.Weareresponsibleforstoringdatarelatingtoourcustomers andemployeesandalsorelyonthird-partyvendorsforthestorage,processingandtransmissionofpersonalandCompanyinformation. Consumers,lawmakersandconsumeradvocatesalikeareincreasinglyconcernedoverthesecurityofpersonalinformationtransmitted over the Internet, consumer identity",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_052",
+      "page": 21,
+      "original_text": "Increasedscrutinybyfederalregulators,suchastheFederalTradeCommission,andstateattorneygeneralsfocusedontheretail industrymayleadtoincreasedprivacyandcybersecuritycostssuchasorganizationalchanges,deployingadditionalpersonnel,acquiring and implementing enhanced privacy and security technologies on e-commerce sites, mandatory employee training for those handling customer and employee personal data, and engaging third-party experts and consultants, and the unauthorized use of proprietary informationm",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "物流成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "DTC转型",
+          "供应链"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_053",
+      "page": 22,
+      "original_text": "RISKSRELATEDTOOURSTOCKANDSTOCKPRICE OurQuarterlySalesAndOperatingResultsFluctuateAsAResultOfAVarietyOfFactors,IncludingFluctuationsInDemand For Footwear, Delivery Delays And Potential Fluctuations In Our Estimated Annualized Tax Rate, Which May Result In",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_054",
+      "page": 22,
+      "original_text": "Ourquarterlysalesandoperatingresultshavevariedsignificantlyinthepastandcanbeexpectedtofluctuateinthefuturedueto anumberoffactors,manyofwhicharebeyondourcontrol.Ourmajorcustomershavenoobligationtopurchaseforecastedamounts andfromtimetotimecancelorders,changedeliveryschedules,orchangethemixofproductsorderedwithminimalnoticeandwithout penalty.Asaresult,wemaynotbeabletoaccuratelypredictourquarterlysales.Furthermore,ourexpensesarepartiallybasedonour expectationsoffuturesales,andwemaybeunabletoadjusts",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_055",
+      "page": 22,
+      "original_text": "Ourannualizedtaxrateisbasedonprojectionsofourdomesticandinternationaloperatingresultsfortheyear,whichwereview andreviseasnecessaryattheendofeachquarter.Anyquarterlyfluctuationsinourannualizedtaxratecouldhaveamaterialimpacton ourquarterlyoperatingresultsandtheresultsforanyonequartermaynotbeindicativeofresultsforthefullyear.Anyshortfallinsales or net earnings from levels expected by securities analysts and investors could cause a decrease in the trading price of our Class A",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_056",
+      "page": 22,
+      "original_text": "One Principal Stockholder Is Able To Control Substantially All Matters Requiring Approval By Our Stockholders And His InterestsMayDifferFromTheInterestsOfOurOtherStockholders. AsofDecember31,2024,ChairmanoftheBoardandChiefExecutiveOfficer,RobertGreenberg,beneficiallyowned92.6%of ouroutstandingClassBCommonStock,andmembersofMr.Greenberg’simmediatefamilybeneficiallyownedanadditional7.4%of our outstanding Class B Common Stock. The holders of Class A Common Stock and Class B Common Stock have identic",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_057",
+      "page": 22,
+      "original_text": "OurCharterDocumentsAndDelawareLawMayInhibitATakeover,WhichMayAdverselyAffectTheValueOfOurStock. ProvisionsofDelawarelaw,ourcertificateofincorporationorourbylawscouldmakeitmoredifficultforathirdpartytoacquire us,evenifclosingsuchatransactionwouldbebeneficialtoourstockholders.Mr.Greenberg’ssubstantialbeneficialownershipposition, togetherwiththeauthorizationofPreferredStock,thedisparatevotingrightsbetweenourClassACommonStockandClassBCommon Stock,theclassificationofourBoardofDirectorsandthelackofcum",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_058",
+      "page": 22,
+      "original_text": "CYBERSECURITYRISKMANAGEMENTANDSTRATEGY Werecognizethecriticalimportanceofmaintainingthesafetyandsecurityofoursystemsanddataandhaveaholisticprocess foroverseeingandmanagingcybersecurityandrelatedrisks.ThisprocessissupportedbybothmanagementandourBoardofDirectors. WehavedevelopedandimplementedaCybersecurityRiskManagementProgramintendedtoprotecttheconfidentiality,integrity, andavailabilityofourcriticalsystemsandinformation.Ourcybersecurityriskmanagementprogramincludesacybersecurity incident",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_059",
+      "page": 24,
+      "original_text": "Webelievethatstrongdistributioniscriticaltoouroperations.Ourdistributionfacilitiesincludehighlyautomatedsolutionsto supportourfuturegrowthinourCompany.Weregularlyevaluateourdistributioninfrastructureandconsolidateorexpandourcapacity as we believe appropriate for our operations. Our distribution facilities are included within our Wholesale segment. Our principal distributionfacilitiesareasfollows: Americas.OurNorthAmericaDistributionCenteroccupiesapproximately2.6millionsquarefeetonitsmaincampusin",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_060",
+      "page": 24,
+      "original_text": "Europe, Middle East and Africa. Our European Distribution Center occupies approximately 2.2 million square feet in Liege, Belgium. The leases comprising this Distribution Center provide for original terms of 8 to 15 years. The property leases expire on variousdatesthroughDecember2030.WeplantofurtherexpandinEuropewiththeconstructionofalargerdistributioncenterinLiege, withanestimatedrelocationin2028. AsiaPacific.OurChinaDistributionCenteroccupiesapproximately1.6millionsquarefeetinTaicang,China.Wep",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_061",
+      "page": 24,
+      "original_text": "WehaveadditionalCompany-operateddistributioncentersaswellasthird-partydistributioncentersservingregionalmarketsin theAmericas,EuropeandAsiaPacific. COMPANYOWNEDANDTHIRD-PARTYSTORES As of December 31, 2024, we had 5,296 Skechers-branded retail stores in 122 countries. The network of stores includes 1,787 Company-owned and 3,509 third-party locations. These third-party stores are distributor, licensed and franchise owned through our",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_062",
+      "page": 24,
+      "original_text": "Storecount,openingsandclosingsforourdomestic,international,andthird-partystoresareasfollows:",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_063",
+      "page": 24,
+      "original_text": "Domesticstores.................................................................................. 563 62 (15) 610 Internationalstores............................................................................. 1,085 206 (114) 1,177 Distributor,licenseeandfranchisestores.......................................... 3,520 413 (424) 3,509 TotalSkechersstores......................................................................... 5,168 681 (553) 5,296 We pursue our direct-to-consumer strategy through ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_064",
+      "page": 24,
+      "original_text": "BigBoxStores.Ourfree-standingandattachedbigboxstoresprovideopportunitiestosellnewproductwhilealsoallowingusto liquidateexcessmerchandise,discontinuedlinesandodd-sizeinventory. Substantiallyallofourretailstoresareleased,withtermsthatexpireonvariousdatesthroughFebruary2044.Theleasesprovide forrentescalationstiedtoeitherincreasesinthelessor’soperatingexpenses,fluctuationsintheconsumerpriceindexintherelevant geographicalarea,orapercentageofthestore’sgrosssalesinexcessofthebaseannualrent.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_065",
+      "page": 25,
+      "original_text": "MichaelContev.RobertGreenberg,etal.–OnJuly21,2022,SkechersandcertainpastandpresentmembersoftheBoardof DirectorsweresuedbyastockholderonbehalfofourcompanyinaderivativeactionintheChanceryCourtoftheStateofDelaware, Case No. 2022-0633, alleging breach of fiduciary duty, waste of corporate assets, breach of duty of candor and breach of contract in connectionwithcertainexecutiveofficers’personaluseoftwocompany-ownedaircraft.Thecomplaintseeksactualdamagesinfavor ofSkecherssustainedastheallegedresultofd",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_066",
+      "page": 28,
+      "original_text": "Item7.Management’sDiscussionandAnalysisofFinancialConditionandResultsofOperations Thefollowingdiscussionandanalysisofourfinancialconditionandresultsofoperationsshouldbereadinconjunctionwithour consolidatedfinancialstatementsandrelatednotesincludedelsewhereinthisannualreportonForm10-K.Weintendforthisdiscussion toprovidethereaderwithinformationthatwillassistinunderstandingourconsolidatedfinancialstatements,thechangesincertainkey items in those financial statements from period to period, and the pr",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_067",
+      "page": 28,
+      "original_text": "WhenSkecherswasfoundedin1992,ourfocuswasoncreatingalifestylebrandcenteredondeliveringproductswithcomfort, style,innovationandqualityatareasonableprice.Threedecadeslater,withadiverseportfoliothatincludesperformanceproduct,we remain committed to our design principles and meeting the evolving footwear needs of our customers. Through the efforts of our dedicatedteamsglobally,ourstrongpartnerrelationshipsandloyalconsumers,webelievewewillcontinuetoachievewell-managed profitablegrowthandensurethelongev",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_068",
+      "page": 28,
+      "original_text": "• Salesincreased12.1%,to$8.97billion,fortheyearendedDecember31,2024whencomparedtotheprioryear,anewannual",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_069",
+      "page": 28,
+      "original_text": "• Gross margin improved to 53.2% and operating margin improved to 10.1% for the year ended December 31, 2024 when",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_070",
+      "page": 28,
+      "original_text": "• Twenty-fiveyearsasalistedcompanyontheNewYorkStockExchange; • ExpandedperformanceproductofferingstoincludeSkechersCricketandcontinuedtheglobalrolloutofSkechersFootballand",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_071",
+      "page": 28,
+      "original_text": "• OpenedourfirstSkechersPerformancestoreinEdmonton,Canadathatfeatureshalfcourtsforpickleballandbasketball; • Continuedinvestmentsinourdistributioncenters,includingplannedexpansionsinNorthAmerica,ChinaandEurope;and • Repurchased5.2millionsharesofourClassAcommonstock. We believe brand recognition is paramount to continued success. We drive awareness and demand through comprehensive marketingcampaigns.Duringtheyear,weintroducedapartnershipwithJohnDeereforarangeoflifestyleandworkfootwearanda collabo",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_072",
+      "page": 29,
+      "original_text": "Sales.................................................................................................... $ 8,969,351 $ 8,000,342 969,009 12.1 Costofsales........................................................................................ 4,201,912 3,847,938 353,974 9.2 Grossprofit......................................................................................... 4,767,439 4,152,404 615,035 14.8 Grossmargin................................................................................",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_073",
+      "page": 29,
+      "original_text": "Selling............................................................................................. 800,634 676,890 123,744 18.3 Generalandadministrative............................................................. 3,062,548 2,690,728 371,820 13.8 Totaloperatingexpenses.................................................................... 3,863,182 3,367,618 495,564 14.7 Asa%ofsales.................................................................................... 43.1 % 42.1 % 100bps Earningsfr",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_074",
+      "page": 29,
+      "original_text": "Salesincreased$969.0million,or12.1%,to$8.97billionasaresultofa12.1%increaseinbothinternationalanddomesticsales. Wholesale salesincreased13.2%andDirect-to-Consumersalesincreased 10.7%.Salesincreasedoverall duetohighersalesvolume, partiallyoffsetbyloweraveragesellingprices.",
+      "annotations": {
+        "expense_types": [
+          "数字营销"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_075",
+      "page": 29,
+      "original_text": "Grossmarginincreased120basispointsto53.2%primarilyduetolowercostsperunit,drivenbylowerfreight.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_076",
+      "page": 29,
+      "original_text": "Operatingexpensesincreased$495.6million,or14.7%,to$3.9billion,andasapercentageofsalesincreased100basispointsto 43.1%.Sellingexpensesincreased$123.7million,or18.3%,to$800.6million,primarilyduetohigherdemandcreationexpenditures in global marketing and digital advertising. General and administrative expenses increased $371.8 million, or 13.8%, to $3.1 billion. Theincreasedexpensesweredrivenbyincreasesinlaborcostsof$179.8million,facilityrelatedcostsof$79.8million,includingrent anddepreciation,andleg",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_077",
+      "page": 29,
+      "original_text": "Otherexpensewas$26.5millioncomparedtootherincomeof$16.1millionintheprioryear.Thechangeof$42.6millionwas primarilyduetounfavorableforeigncurrencyexchangeratesinEurope,MiddleEast&Africa,partiallyoffsetbyanincreaseininterest",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_078",
+      "page": 29,
+      "original_text": "Incometaxexpense.................................................................................................... $ 148,136 $ 150,949 Effectivetaxrate........................................................................................................ 16.9% 18.8% Incometaxexpensewas$148.1millionascomparedto$150.9millionin2023.Oureffectivetaxratewas16.9%ascomparedto 18.8%intheprioryear.Thedecreaseintaxrateisduetoafavorablemixofearningsinlowertaxjurisdictions,provisionadjustments andtherelea",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_079",
+      "page": 30,
+      "original_text": "TheOECDhasissuedvariousproposalsthatwouldchangelong-standingglobaltaxprinciples,namely,itsPillarTwoframework, whichimposesaglobalminimumcorporatetaxrateof15%forlargemultinationalcompanies.Theadoptionandeffectivedatesofthese rulesmayvarybycountryandcouldincreasetaxcomplexityanduncertaintyandmayadverselyaffectourprovisionforincometaxes andcashtaxpaymentsinfutureperiods.CertaincountriesinwhichweoperatehavealreadyenactedthePillarTwominimumtaxregime. This did not have an impact to the tax provision a",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_080",
+      "page": 30,
+      "original_text": "Sales..................................................................................................... $ 5,100,479 $ 4,504,776 595,703 13.2 Grossprofit.......................................................................................... 2,207,596 1,846,819 360,777 19.5 Grossmargin....................................................................................... 43.3% 41.0% 230bps Wholesalesalesincreased$595.7million,or13.2%,to$5.1billion,duetoincreasesintheAmericasof14.5%,Europe,Mi",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_081",
+      "page": 30,
+      "original_text": "Wholesale gross margin increased 230 basis points to 43.3% driven by lower cost per unit due to lower freight, and favorable",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_082",
+      "page": 30,
+      "original_text": "Sales..................................................................................................... $ 3,868,872 $ 3,495,566 373,306 10.7 Grossprofit.......................................................................................... 2,559,843 2,305,585 254,258 11.0 Grossmargin....................................................................................... 66.2% 66.0% 20bps Direct-to-Consumersalesincreased$373.3million,or10.7%,to$3.9billion,duetoincreasesinEurope,MiddleEast&Af",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_083",
+      "page": 30,
+      "original_text": "Direct-to-Consumergrossmarginincreased20basispointsto66.2%duetofavorablechannelmixandlowercostperunit,partially offsetbyadecreaseinaveragesellingprices.",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_084",
+      "page": 30,
+      "original_text": "We have cash and cash equivalents of $1,116.5 million at December31, 2024. Amounts held outside the U.S. were $1,027.1 million,or92.0%,andapproximately$362.1millionwasavailableforrepatriationtotheU.S.asofDecember31,2024withoutincurring additionalU.S.federalincometaxesandapplicablenon-U.S.incomeandwithholdingtaxes. Wefinanceourproductionactivitiesinpartthroughtheuseofinterest-bearingopenpurchasearrangementswithcertainofour contractmanufacturers.Thesefacilitiescurrentlybearinterestataratebetween0.",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_085",
+      "page": 30,
+      "original_text": "At December31, 2024, we have unused credit capacity of $745.4 million on our corporate revolving credit facility, with an additional$250.0millionavailablethroughanaccordionfeature.Webelievethatanticipatedcashflowsfromoperations,existingcash andinvestmentsbalances,availableborrowingsunderourrevolvingcreditfacility,andcurrentfinancingarrangementswillbesufficient toprovideuswiththeliquiditynecessarytofundouranticipatedworkingcapitalandcapitalrequirementsforthenexttwelvemonths.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_086",
+      "page": 31,
+      "original_text": "Our working capital at December31, 2024 was $2.2 billion, a decrease of $0.1 billion from working capital of $2.3 billion at December31,2023. Our cash and cash equivalents at December31, 2024 were $1,116.5 million compared to $1,189.9 million at December31,2023. Our primary source of operating cash is collections from customers. Our primary uses of cash are inventory purchases,selling,generalandadministrativeexpensesandcapitalexpenditures.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_087",
+      "page": 31,
+      "original_text": "Netcashprovidedbyoperatingactivitieswas$687.4millionfor2024and$1,231.2millionfor2023.The$543.8milliondecrease in cash flows from operating activities in 2024 resulted from working capital, primarily higher inventory levels due to elevated merchandise-in-transit,resultantfromtheRedSeacrisisandgrowthinourbusiness.Thesedecreaseswerepartiallyoffsetbyearnings.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_088",
+      "page": 31,
+      "original_text": "Net cash used in investing activities was $485.4 million for 2024 as compared to $418.0 million for 2023. The $67.3 million increase was due to increased capital expenditures of $93.1 million and net investment activity of $44.6 million, partially offset by acquisitionsof$70.4millionintheprioryear. Ourcapitalinvestmentsremainfocusedonsupportingourstrategicgrowthpriorities,growingourDirect-to-Consumerbusiness, as well as expanding the presence of our brand internationally. Capital expenditures fo",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_089",
+      "page": 31,
+      "original_text": "Net cash used in financing activities was $253.5 million during 2024 compared to $234.7 million in 2023. The increase of $18.8million is the result of increases in repurchases of common stock of $170.0 million, net payments related to equity awards of $28.8million, and distributions to noncontrolling interests of $22.2 million. These increases were partially offset by increased",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_090",
+      "page": 31,
+      "original_text": "OnJuly25,2024,theCompany'sBoardofDirectorsannouncedanewsharerepurchaseprogram,pursuanttowhichtheCompany may purchase up to $1.0 billion in shares of its Class A common stock. This repurchase program expires on July 25, 2027, does not obligate the Company to acquire any particular amount of shares and replaced the prior share repurchase program authorization. Remaining repurchase authorization under the 2022 Share Repurchase Program was terminated upon commencement of the new program.AsofDecember",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_091",
+      "page": 31,
+      "original_text": "AsofDecember31,2024,outstandingshort-termandlong-termborrowingswere$454.9million,ofwhich,$271.0millionrelates toloansforourdomesticandChinadistributioncenters,$150.5millionrelatestoouroperationsinChinaandtheremainderrelatesto ourinternationaloperations.Ourshort-termandlong-termdebtobligationscontainbothfinancialandnon-financialcovenants,including cross-defaultprovisions.Wewereincompliancewithalldebtcovenantsrelatedtoourshort-termandlong-termborrowingsasofthe dateofthisannualreport.SeeNote6–Finan",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_092",
+      "page": 31,
+      "original_text": "OurmaterialcashrequirementsasofDecember31,2024whicharenotreflectedasliabilitiesintheConsolidatedBalanceSheets includeopenpurchasecommitmentswithourforeignmanufacturersofapproximately$1.2billion.Additionally,in2024,wecreateda newjointventuretosupporttheexpansionofourNorthAmericadistributioncenterand,in2025,wewillcontributetheremaining$75.0",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_093",
+      "page": 31,
+      "original_text": "Wearerequiredtoprovidestandbylettersofcredittosupportcertainobligationsthatariseintheordinarycourseofbusinessand maychoosetoprovidelettersofcreditinplaceofpostingcashcollateral.Althoughthelettersofcreditareoff-balancesheet,themajority oftheobligationstowhichtheyrelatearereflectedasliabilitiesintheConsolidatedBalanceSheets.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_094",
+      "page": 32,
+      "original_text": "WereceiveU.S.dollarsforsubstantiallyallofourdomesticandaportionofourinternationalproductsales.Inventorypurchases from offshore contract manufacturers are primarily denominated in U.S. dollars. However, purchase prices for our products may be impactedbyfluctuationsintheexchangeratebetweentheU.S.dollarandthelocalcurrenciesofthecontractmanufacturers,whichmay impactourcostofgoodsinthefuture.During2024and2023,exchangeratefluctuationsdidnothaveamaterialimpactonourinventory costs.Wedonotengageinhedging",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_095",
+      "page": 32,
+      "original_text": "We believe the following critical accounting estimates are affected by significant judgments used in the preparation of our consolidatedfinancialstatements. Reservesforreturnsandchargebacks.Revenueisrecordednetofestimatesforreturnsfromourcustomersandpotentialdisputed amountsorchargebacks.Weaccruealiabilityforproductreturnsatthetimeofsalebasedonourhistoricalexperience.Ourchargeback reserveisbasedonacollectabilitypercentagebasedonfactorssuchashistoricaltrends,currenteconomicconditions,andnatureoft",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_096",
+      "page": 32,
+      "original_text": "Allowance for credit losses. Accounts receivable is recorded net of estimated losses from our customers’ inability to pay. To minimize the likelihood of uncollectibility, customers’ credit-worthiness is reviewed and adjusted periodically in accordance with externalcreditreportingservices,financialstatementsissuedbythecustomerandourexperiencewiththeaccount.Wedeterminethe amount of the reserve by analyzing known uncollectible accounts, aged receivables, historical losses and our customers’ credit-",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_097",
+      "page": 32,
+      "original_text": "Litigationreserves.Estimatedamountsforclaimsthatareprobableandcanbereasonablyestimatedarerecordedasliabilitiesin our consolidated financial statements. The likelihood of a material change in these estimated reserves would depend on additional informationornewclaimsastheymayariseaswellasthefavorableorunfavorableoutcomeofparticularlitigation.Boththelikelihood and amount (or range of loss) on ala rge portion of our remaining pending litigation is uncertain. As such, we are unable to make a reasonab",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_098",
+      "page": 33,
+      "original_text": "acquired and liabilities assumed, whichever comes first, any subsequent adjustments are recorded to our Consolidated Statements of EarningsandComprehensiveIncome. RECENTACCOUNTINGPRONOUNCEMENTS Refer to Note 1— S ummary of Significant Accounting Policies in the accompanying Notes to the Consolidated Financial Statementsforrecentlyadoptedandrecentlyissuedaccountingstandards. Item7A.QuantitativeandQualitativeDisclosureAboutMarketRisk Market risk is the potential loss arising from the adverse chang",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_099",
+      "page": 33,
+      "original_text": "Interestratefluctuations.AsofDecember31,2024,wehave$454.9millionofoutstandingshort-termandlong-termborrowings, subjecttochangesininterestrates.A200-basispointincreaseininterestrateswouldhaveincreasedinterestexpensebyapproximately $9.1millionfortheyearendedDecember31,2024.Wedonotexpectchangesininterestratestohaveamaterialimpactonourfinancial condition,resultsofoperationsorcashflowsduring2025.Interestratesonouroutstandingborrowingsfluctuatebasedonavarietyof base rates, including the following: the",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_100",
+      "page": 33,
+      "original_text": "Wemayenterintoderivativefinancialinstrumentssuchasinterestrateswapsinordertolimitourinterestrateriskonourlong- termdebt.AsofDecember31,2024,wehadonederivativeinstrumentinplacetohedgethecashflowsonour$129.5millionvariable ratedebt,withanotionalamountofthesamevalue.Therateswapagreementutilizedbyuseffectivelymodifiesourexposuretointerest rateriskbyconvertingourfloating-ratedebttoafixedratebasisoverthelifeoftheloan.Ourreceiveratewas30-daySOFRrateand",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_101",
+      "page": 33,
+      "original_text": "Refer to Note 6— F inancial Commitments in the accompanying Notes to the Consolidated Financial Statements for further",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_102",
+      "page": 33,
+      "original_text": "Foreigncurrencyexchangeratefluctuations.Wefacemarketrisktotheextentthatchangesinforeigncurrencyexchangerates affectournon-U.S.dollarfunctionalcurrencyforeignsubsidiaries’sales,expenses,assetsandliabilities.Inaddition,changesinforeign currencyexchangeratesmayaffectthevalueofourinventorycommitments.Also,inventorypurchasesofourproductsmaybeimpacted byfluctuationsintheexchangeratesbetweentheU.S.dollarandthelocalcurrenciesofthecontractmanufacturers,whichcouldhave animpactonthecostofgoodssoldinthefutu",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_103",
+      "page": 33,
+      "original_text": "AssetsandliabilitiesoutsidetheU.S.arelocatedinregionswherewehavesubsidiariesorjointventures:theAmericas,Europe, MiddleEast&AfricaandAsia-Pacific.Ourinvestmentsinforeignsubsidiariesandjointventureswithafunctionalcurrencyotherthan the U.S. dollar are generally considered long-term. The fluctuation of foreign currencies resulted in a cumulative foreign currency translation loss of $97.8 million and gain of $11.5 million, for the years ended December31, 2024 and 2023, that are deferred and recorded ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [
+          "投资驱动",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_105",
+      "page": 35,
+      "original_text": "OpinionontheConsolidatedFinancialStatements We have audited the accompanying consolidated balance sheets of Skechers U.S.A., Inc. (the “Company”) as of December31, 2024 and2023,therelatedconsolidatedstatementsofearnings,comprehensiveincome,stockholders'equityandredeemablenoncontrolling interest,andcashflowsforeachofthethreeyearsintheperiodendedDecember31,2024,andtherelatednotesandfinancialstatement schedule listed in the accompanying index (collectively referred to as the “consolidated financial",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_106",
+      "page": 35,
+      "original_text": "TheseconsolidatedfinancialstatementsaretheresponsibilityoftheCompany’smanagement.Ourresponsibilityistoexpressanopinion ontheCompany’sconsolidatedfinancialstatementsbasedonouraudits.WeareapublicaccountingfirmregisteredwiththePCAOB andarerequiredtobeindependentwithrespecttotheCompanyinaccordancewiththeU.S.federalsecuritieslawsandtheapplicable rulesandregulationsoftheSecuritiesandExchangeCommissionandthePCAOB. WeconductedourauditsinaccordancewiththestandardsofthePCAOB.Thosestandardsrequirethatwepla",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_107",
+      "page": 35,
+      "original_text": "Ourauditsincludedperformingprocedurestoassesstherisksofmaterialmisstatementoftheconsolidatedfinancialstatements,whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the consolidated financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_108",
+      "page": 35,
+      "original_text": "Thecriticalauditmattercommunicatedbelowisamatterarisingfromthecurrentperiodauditoftheconsolidatedfinancialstatements thatwascommunicatedorrequiredtobecommunicatedtotheauditcommitteeandthat:(1)relatestoaccountsordisclosuresthatare material to the consolidated financial statements and (2) involved our especially challenging, subjective, or complex judgments. The communication of the critical audit matter does not alter in any way our opinion on the consolidated financial statements, taken as a who",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_109",
+      "page": 35,
+      "original_text": "The Company is a U.S. based multinational entity subject to taxes in the U.S. and multiple foreign jurisdictions which affect the Company’sprovisionforincometaxes.Theincometaxprovisionisdeterminedbymanagementbasedoncurrentenactedtaxregulations at each jurisdiction with consideration of intercompany transactions across multiple tax jurisdictions. As indicated in Note 10 to the consolidatedfinancialstatements,totalincometaxexpensefortheyearendedDecember31,2024was$148.1million,ofwhich$9.3 million r",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_110",
+      "page": 35,
+      "original_text": "WeidentifiedtheaccountingfortheCompany’sincometaxprovisionasacriticalauditmatterduetothecomplexityinvolvedin:(i) theapplicationofrelevanttaxlawsandregulationsincalculatingtaxableincomeanddeferredtaxbalancesincertainjurisdictions,and (ii) the application of transfer pricing guidelines to various intercompany transactions. Auditing these elements required challenging auditor judgement and an increased extent of audit effort, including the use of income tax professionals, international tax service ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_111",
+      "page": 37,
+      "original_text": "Cashandcashequivalents................................................................................................ $ 1,116,516 $ 1,189,910 Short-terminvestments..................................................................................................... 118,470 72,595 Tradeaccountsreceivable,lessallowancesof$66,616and$57,867............................... 990,558 860,300 Otherreceivables..................................................................................................",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_112",
+      "page": 37,
+      "original_text": "Accountspayable.............................................................................................................. $ 1,241,838 $ 1,008,001 Accruedexpenses............................................................................................................. 330,251 320,105 Operatingleaseliabilities................................................................................................. 297,926 274,296 Currentinstallmentsoflong-termborrowings..............................",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_113",
+      "page": 37,
+      "original_text": "PreferredStock,$0.001parvalue;10,000sharesauthorized;noneissuedand outstanding....................................................................................................................... — — ClassACommonStock,$0.001parvalue;500,000sharesauthorized;129,854and 132,837sharesissuedandoutstanding............................................................................. 130 133 ClassBCommonStock,$0.001parvalue;75,000sharesauthorized;19,379and 20,182sharesissuedandoutstanding.............",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_114",
+      "page": 38,
+      "original_text": "(inthousands,exceptpersharedata) 2024 2023 2022 Sales......................................................................................................................$ 8,969,351 $ 8,000,342 $ 7,444,550 Costofsales.......................................................................................................... 4,201,912 3,847,938 3,929,193 Grossprofit........................................................................................................... 4,767,439 4,152,404 3,515,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_115",
+      "page": 38,
+      "original_text": "Selling............................................................................................................... 800,634 676,890 583,626 Generalandadministrative............................................................................... 3,062,548 2,690,728 2,385,061 Totaloperatingexpenses...................................................................................... 3,863,182 3,367,618 2,968,687 Earningsfromoperations..............................................................",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_117",
+      "page": 42,
+      "original_text": "Skechers U.S.A., Inc. and subsidiaries (the “Company”) designs, develops, markets and distributes footwear, apparel and accessories.TheCompany’sconsolidatedfinancialstatementshavebeenpreparedinaccordancewithaccountingprinciplesgenerally accepted in the United States (“GAAP”) as codified in the Financial Accounting Standards Board’s (“FASB”) Accounting Standards Codification (“ASC”). All significant intercompany balances and transactions have been eliminated in consolidation. Certain reclassifica",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_118",
+      "page": 42,
+      "original_text": "The Company has made a number of estimates and assumptions relating to the reporting of assets, liabilities, revenues and expenses and the disclosure of contingent assets and liabilities to prepare these consolidated financial statements in conformity with GAAP.Significantareasrequiringtheuseofestimatesrelateprimarilytoallowancesforcreditlosses,returnsandcustomerchargebacks, inventoryreserves,litigationreservesandvaluationofdeferredincometaxes.Actualresultscoulddiffermateriallyfromthoseestimates",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_119",
+      "page": 42,
+      "original_text": "TheCompanyderivesincomefromthesaleoffootwear,apparelandaccessoriesandroyaltiesearnedfromlicensingtheSkechers brand. The Company recognizes sales revenue, net of estimated returns and excluding sales and value added taxes. Revenue is recognizedatpointofsaleoruponshipment,thepointintimewherecontroltransferstothecustomer. Wholesalesalesareprimarilyrecognizeduponshipment,andincertaininternationalmarkets,upondelivery.Direct-to-Consumer salesareprimarilyrecognizedatthepointofsalefortransactionswithcus",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_120",
+      "page": 42,
+      "original_text": "Costofsalesconsistsprimarilyofproductcosts,includinginboundfreightcosts,purchasingandreceivingcosts,andthird-party royalties.Expenseassociatedwithsalesreturnandinventoryreservesisrecognizedincostofsales.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_121",
+      "page": 42,
+      "original_text": "TheCompanyprovidesareserveforestimatedlossesthatmayresultfromitscustomers’inabilitytopay.TheCompanydetermines the amount of the reserve by analyzing known uncollectible accounts, aged receivables, historical losses and its customers’ credit- worthiness.Allowancesforcreditlossesarerecordedtogeneralandadministrativeexpenses.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_122",
+      "page": 42,
+      "original_text": "The Company’s distribution network-related costs are included in general and administrative expenses. Distribution expenses, including the functions of purchasing, receiving, inspecting, allocating, surface transportation, warehousing and packaging product totaled$594.0million,$565.1millionand$538.7millionfor2024,2023and2022(whichincludesrentanddepreciation). PRODUCTDESIGNANDDEVELOPMENTCOSTS TheCompanychargesproductdesignanddevelopmentcoststogeneralandadministrativeexpenses.Aggregateproductdesig",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_123",
+      "page": 42,
+      "original_text": "Advertising costs are expensed in the period in which an advertisement first runs, or over the life of an endorsement contract. Advertising expense for the years ended December 31, 2024, 2023 and 2022 was approximately $669.6 million, $562.1 million and $473.7 million. Prepaid advertising costs were $37.0 million at December 31, 2024, consisting of $17.3 million short-term and $19.7million long-term, which is included in other assets, net, in the Company’s Consolidated Balance Sheets. Prepaid am",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_124",
+      "page": 43,
+      "original_text": "TheCompanyrecognizesdeferredtaxliabilitiesfortaxabletemporarydifferencesanddeferredtaxassetsfordeductibletemporary differences and operating loss carry-forwards using enacted tax rates in effect in the years the differences are expected to reverse. Deferred income tax benefit or expense is recognized as a result of changes in net deferred tax assets or deferred tax liabilities. A valuationallowanceisrecordedwhenitismorelikelythannotthatsomeorallofanydeferredtaxassetswillnotberealized.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_125",
+      "page": 43,
+      "original_text": "Cashandcashequivalentsincludeshort-terminvestments,whicharehighlyliquidinvestmentswithmaturitiesofthreemonthsor",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_126",
+      "page": 43,
+      "original_text": "Inventory is stated at the lower of cost or net realizable value. Cost is primarily based on the first-in, first-out method. The weighted-average cost method is used in certain markets and Direct-to-Consumer channels. Cost of product includes shipping and handling fees. The Company estimates losses from obsolete or slow-moving inventory and reserves the cost of inventory at the time suchdeterminationsaremade.TheCompanyhasconsistentlyappliedtheseinventorycostmethodsfromyeartoyear.",
+      "annotations": {
+        "expense_types": [
+          "数字营销"
+        ],
+        "trends": [
+          "下降",
+          "持平"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_127",
+      "page": 43,
+      "original_text": "Property,plantandequipmentarestatedatcost,netofaccumulateddepreciationandamortization.Depreciationandamortization is provided using the straight-line method over the estimated useful lives of the assets. The Company reviews stores for impairment annually or when facts and circumstances indicate that the carrying values may be impaired. The Company did not record material impairmentchargesduringtheyearsendedDecember31,2024,2023or2022.Theprincipalestimatedusefullivesareasfollows:",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_128",
+      "page": 43,
+      "original_text": "Buildingimprovements 10to20years Furniture,fixturesandequipment 5to20years Leaseholdimprovements Shorterofusefullifeorremainingleaseterm",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_129",
+      "page": 43,
+      "original_text": "Businessacquisitionsareaccountedforundertheacquisitionmethodbyassigningthepurchasepricetotangibleandintangible assets acquired and liabilities assumed. Assets acquired and liabilities assumed are recorded at their fair values and the excess of the purchasepriceovertheamountsassignedisrecordedasgoodwill.AsofDecember31,2024and2023,theCompanyhad$94.5million and$101.2millionofgoodwillincludedintheWholesalesegment.Thedecreaseingoodwillrelatestotheeffectofforeigncurrency exchangetranslation.Goodwillis",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_130",
+      "page": 43,
+      "original_text": "Other assets, net, includes amortizable intangible assets consisting of reacquired rights with a gross carrying value of $103.6 million and $108.4 million and accumulated amortization of $53.6 million and $42.2 million as of December 31, 2024 and 2023. Purchasedintangibleassetswithfinitelivesareamortizedusingthestraight-linemethodovertheirestimatedusefullives.Amortization expenserelatedtoamortizableintangibleassetswere$14.7million,$11.4millionand$6.9millionforyearsendedDecember31,2024, 2023and20",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_131",
+      "page": 45,
+      "original_text": "TheCompany’sobjectiveinusinginterestratederivativesistoaddstabilitytointerestexpenseandtomanageexposuretointerest rate movements. To accomplish this objective, the Company uses an interest rate swap as part of its interest rate risk management strategy. The Company’s interest rate swap is designated as acash f low hedge. By utilizing an interest rate swap, the Company is exposedtocredit-relatedlossesintheeventthatthecounterpartyfailstoperformunderthetermsofthederivativecontract.Tomitigate thisri",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_132",
+      "page": 45,
+      "original_text": "(2) Cash,CashEquivalents,Short-termandLong-termInvestments ThefollowingtablesshowtheCompany’scash,cashequivalents,short-termandlong-terminvestmentsbysignificantinvestment",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_133",
+      "page": 45,
+      "original_text": "CashandCash Short-Term Long-Term (inthousands) AdjustedCost FairValue Equivalents Investments Investments Cash.......................................................... $ 1,094,228 $ 1,094,228 $ 1,094,228 $ — $ —",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_134",
+      "page": 45,
+      "original_text": "Moneymarketfunds............................. 15,441 15,441 15,441 — — U.S.Treasurysecurities........................ 26,160 26,160 2,849 14,513 8,798 Mutualfunds......................................... N/A 2,984 — — 2,984 Totallevel1.............................................. 41,601 44,585 18,290 14,513 11,782",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_135",
+      "page": 45,
+      "original_text": "Corporatenotesandbonds................... 129,588 129,588 2,998 85,767 40,823 Asset-backedsecurities......................... 22,073 22,073 — 257 21,816 U.S.Agencysecurities.......................... 20,091 20,091 1,000 17,933 1,158 Totallevel2.............................................. 171,752 171,752 3,998 103,957 63,797 Total.......................................................... $ 1,307,581 $ 1,310,565 $ 1,116,516 $ 118,470 $ 75,579",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_136",
+      "page": 46,
+      "original_text": "CashandCash Short-Term Long-Term (inthousands) AdjustedCost FairValue Equivalents Investments Investments Cash.......................................................... $ 972,278 $ 972,278 $ 972,278 $ — $ —",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_137",
+      "page": 46,
+      "original_text": "Moneymarketfunds............................. 176,317 176,317 176,317 — — U.S.Treasurysecurities........................ 39,769 39,769 29,942 9,827 — Mutualfunds......................................... N/A 8,535 — — 8,535 Totallevel1.............................................. 216,086 224,621 206,259 9,827 8,535",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_138",
+      "page": 46,
+      "original_text": "Corporatenotesandbonds................... 97,795 97,795 9,374 50,949 37,472 Asset-backedsecurities......................... 11,159 11,159 — — 11,159 U.S.Agencysecurities.......................... 27,269 27,269 1,999 11,819 13,451 Totallevel2.............................................. 136,223 136,223 11,373 62,768 62,082 Total.......................................................... $ 1,324,587 $ 1,333,122 $ 1,189,910 $ 72,595 $ 70,617 The Company’s investments consist of U.S. Treasury securi",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_139",
+      "page": 46,
+      "original_text": "Whenevaluatinganinvestmentforitscurrentexpectedcreditlosses,theCompanyreviewsfactorssuchashistoricalexperience with defaults,losses, credit ratings,term andmacroeconomictrends,including current conditionsandforecaststo the extent theyare",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动",
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_140",
+      "page": 46,
+      "original_text": "The Company regularly enters into non-cancellable operating leases for retail stores, distribution facilities, offices, showrooms andautomobiles.Retailstorestypicallyhaveinitialtermsrangingfrom5to 10yearsandotherrealestateorfacilityleasesmayhave initialleasetermsofupto25years.TheCompany’sleasesarerecordedasoperatingleaseright-of-use(“ROU”)assetsandoperating leases liabilities. Operating lease liabilities are recognized based on the present value of the fixed portion of lease payments over the le",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_141",
+      "page": 46,
+      "original_text": "Fixedleasecost.................................................................................... $ 409,936 $ 361,894 $ 307,265 Variableleasecost............................................................................... 11,059 11,424 10,803 Operatingcashflowsusedforleases................................................... 411,617 359,727 303,721 Weighted-averageremainingleaseterm............................................. 6.44years 5.43years 5.52years Weighted-averagediscountrate........",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_142",
+      "page": 47,
+      "original_text": "ThefollowingtablepresentsfutureleasepaymentsasofDecember31,2024: Year(inthousands) OperatingLeases 2025........................................................................................................................................................... $ 356,293 2026........................................................................................................................................................... 303,656 2027...........................................................",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_143",
+      "page": 47,
+      "original_text": "Land............................................................................................................................ $ 285,892 $ 122,433 Buildingsandimprovements...................................................................................... 814,005 720,663 Furniture,fixturesandequipment.............................................................................. 1,070,476 954,482 Leaseholdimprovements............................................................................",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_144",
+      "page": 47,
+      "original_text": "Accruedpayroll,taxes,andother......................................................................... $ 166,487 $ 166,132 Returnreserveliability......................................................................................... 73,088 80,968 Accruedinventorypurchases................................................................................ 90,676 73,005 Accruedexpenses................................................................................................. $ 330,251 $ 320,10",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_145",
+      "page": 47,
+      "original_text": "TheCompanyhad$36.6millionand$32.5millionlettersofcreditatDecember31,2024and2023.Interestexpensewas$21.9 million,$22.4millionand$19.7millionfortheyearsendedDecember31,2024,2023and2022.TheCompanywasincompliancewith allfinancialcovenantsasofDecember31,2024.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_146",
+      "page": 47,
+      "original_text": "(inthousands) ExpirationDate 2024 2023 Revolvingcreditfacility-Corporate............................................ December2026 $ — $ — Revolvingcreditfacilities-India.................................................. Various2025 21,209 6,021 Other-internationalfacilities....................................................... Various2025 12,129 5,873 Short-termborrowings.................................................................. $ 33,338 $ 11,894",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_147",
+      "page": 48,
+      "original_text": "TheCompanymaintainsarevolvingcreditfacilitywithBankofAmerica,N.A.whichallowsforanunsecuredcreditfacilityto $750.0million,whichmaybeincreasedupto$250.0millionundercertainconditionsandprovidesfortheissuanceoflettersofcredit uptoamaximumof$100.0millionandswinglineloansuptoamaximumof$50.0million.TheCompanymayusetheproceedsfor workingcapitalandotherlawfulcorporatepurposes.Borrowingsandlettersofcreditbearinterest,attheCompany’soption,atarate equalto(a)TermSecuredOvernightFinancingRate(\"SOFR\")plusanapp",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_148",
+      "page": 48,
+      "original_text": "TheCompanyisrequiredtomaintainamaximumtotaladjustednetleverageratioof3.75:1,exceptintheeventofanacquisition inwhichcasetheratiomaybeincreasedattheCompany’selectionto4.25:1forthequarterinwhichsuchacquisitionoccursandfor thenextthreequartersthereafter. TheCompany'ssubsidiaryinIndiahadvariouslineofcreditsasofDecember31,2024withunusedcapacityof$37.5millionand aweightedaverageinterestrateof7.80%.Borrowingsonthelineofcreditareduein180days.Additionally,theCompanymaintains variouscreditfacilitieswithini",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_149",
+      "page": 48,
+      "original_text": "(inthousands) MaturityDate 2024 2023 HF-T1DistributionCenterLoan................................................... March2025 $ 129,505 $ 129,505 HF-T2DistributionCenterConstructionLoan............................. April2025 73,017 73,017 ChinaDistributionCenterExpansionConstructionLoan............ December2032 68,450 40,330 ChinaOperationalLoans.............................................................. Various2025 150,517 46,228 Other.........................................................",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_150",
+      "page": 48,
+      "original_text": "To finance construction and improvements to the Company’s North American distribution center, the Company’s joint venture withHFLogisticsI,LLC(“HF”),HFLogistics-SKX,LLC(the“JV”),throughawholly-ownedsubsidiaryoftheJV(“HF-T1”),entered intoa$129.5millionconstructionloanagreementwithinterestofSOFRDailyFloatingRateplusamargin of1.75%perannum. HF-T1alsoenteredintoaninterest rate swapagreement withBankofAmericawithamaturitydateofMarch18,2025,which fixedtheeffectiveinterestrateontheloanat2.55%perannum.D",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_151",
+      "page": 49,
+      "original_text": "ChinaDistributionCenterExpansionConstructionLoan OnOctober18,2022,theCompanyenteredintoaloanagreementfor1.1billionyuanwithBankofChinaCo.,Ltdtofinancethe constructionofitsdistributioncenterexpansioninChina.Interestispaidquarterly.TheinterestrateatDecember31,2024was2.95% andmayincreaseordecreaseoverthelifeoftheloan,andisevaluatedevery12months.Beginningin2026,theprincipaloftheloan will be repaid in semi-annual installments of variable amounts. The obligations of this loan entered through the Compan",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "skechers_mda_152",
+      "page": 49,
+      "original_text": "TheCompanyhascertainsecuredcreditfacilitieswithanaggregatecapacityof1.75billionyuantosupporttheoperationsofits China joint venture. As of December31, 2024 and 2023, interest rates on outstanding borrowings ranged from 2.00% to 2.90% per",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_155",
+      "page": 49,
+      "original_text": "AsofDecember31,2024,theCompanyhadremainingobligationstotaling$75.0millionthatwillbecontributedtothenewly- formedjointventure,HF-T3,duringtheyearendingDecember31,2025. (7) CommitmentsandContingencies",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_156",
+      "page": 49,
+      "original_text": "TheCompanyfinancesproductionactivitiesinpartthroughtheuseofinterest-bearingopenpurchasearrangementswithcertain of its international manufacturers. These arrangements currently bear interest at rates between 0.0% and 0.4% for 30- to 60-day financing.Theamountsincludedinaccountspayableandoutstandingunderthesearrangementswere$273.6millionand$298.9million atDecember31,2024and2023.InterestexpenseincurredbytheCompanyunderthesearrangementstotaled$5.3millionin2024,$6.5 millionin2023and$6.1millionin2022.",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_157",
+      "page": 49,
+      "original_text": "InaccordancewithGAAP,theCompanyrecordsaliabilityinitsconsolidatedfinancialstatementsforlosscontingencieswhena loss is known or considered probable and the amount can be reasonably estimated. When determining the estimated loss or range of loss,significantjudgmentisrequiredtoestimatetheamountandtimingofaloss toberecorded.Estimatesofprobablelossesresulting from litigation and governmental proceedings are inherently difficult to predict, particularly when the matters are in the procedural stages or",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_158",
+      "page": 49,
+      "original_text": "TheauthorizedcapitalstockoftheCompanyconsistsof500.0millionsharesofClassACommonStock,parvalue$0.001per share (“Class A Common Stock”), 75.0 million shares of Class B Common Stock, par value $0.001 per share (“Class B Common Stock”),and10.0millionsharesofPreferredStock,parvalue$0.001pershare.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_159",
+      "page": 50,
+      "original_text": "The Company has two classes of issued and outstanding common stock: Class A Common Stock and Class B Common Stock. Holders of Class A Common Stock and holders of Class BCommo n Stock have substantially identical rights, including rights with respecttoanydeclareddividendsordistributionsofcashorproperty,andtherighttoreceiveproceedsonliquidationordissolutionof the Company after payment of the Company’s indebtedness. The two classes have different voting rights, with holders of Class A CommonStocken",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_160",
+      "page": 50,
+      "original_text": "The Company's Board of Directors authorized a new share repurchase program effective July 25, 2024, pursuant to which the Company may purchase shares of its Class A common stock, for an aggregate repurchase price not to exceed $1.0billion. This repurchaseprogramexpiresonJuly25,2027,doesnotobligatetheCompanytoacquireanyparticularamountofshares,andreplaced thepriorsharerepurchaseprogram.AtDecember31,2024,therewas$789.9millionremainingtorepurchasesharesundertheprogram. Thesharerepurchaseprogramauth",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_162",
+      "page": 50,
+      "original_text": "On April 6, 2023,the Company'sBoardofDirectorsadopted the 2023Incentive Award Plan (the \"2023Plan\"),which became effective upon approval by the Company's stockholders on June 12, 2023. The 2023 Plan superseded prior plans. Awards issued and outstandingunderthepriorplanvestinaccordancewiththeoriginalterms.Atotalof7.5millionsharesofClassACommonStockare reservedforissuanceunderthe2023Plan,whichprovidesforthegrantsofrestrictedstock,restrictedstockunitsandvariousothertypes ofequityawardsasdescribedin",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_164",
+      "page": 51,
+      "original_text": "TheCompanydeterminesthefairvalueofrestrictedstockawardsandanyperformance-relatedcomponentsbasedontheclosing market price of the Company’s common stock on the date of grant. For share-based awards with a performance-based vesting requirement,theCompanyevaluatestheprobabilityofachievingtheperformancecriteriathroughouttheperformanceperiodandwill adjust stock compensation expense up or down based on its estimated probable outcome. Certain performance-based awards contain marketconditioncomponentswhi",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_166",
+      "page": 51,
+      "original_text": "TargetShares PayoutFactor Adjustment December2020EPSGrant.................................................................. 125,000 133% 41,665 December2020TSRGrant................................................................. 125,000 162% 77,250 March2021EPSGrant........................................................................ 108,750 133% 36,250 March2021TSRGrant....................................................................... 108,750 164% 69,644 TotalPerformanceAdjustments....",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_167",
+      "page": 51,
+      "original_text": "AsapprovedbytheCompany’sstockholdersonMay23,2017,the2018EmployeeStockPurchasePlan(the“ESPP”)providesa totalof5.0millionsharesofClassACommonStockforsale.TheESPPprovideseligibleemployeesoftheCompanyanditssubsidiaries theopportunitytopurchasesharesoftheCompany’sClassACommonStockatapurchasepriceequalto85%ofthefairmarketvalue onthefirsttradingdayorlasttradingdayofeachpurchaseperiod,whicheverislower.Eligibleemployeescaninvestupto15%oftheir compensationthroughpayrolldeductionsduringeachpurchaseperiod.T",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_168",
+      "page": 51,
+      "original_text": "FortheyearsendedDecember31,2024,2023and2022,theCompanyrecognized$3.3million,$2.9million,and$2.6million ofESPPstockcompensationexpense.UndertheESPP,theCompanyreceivedcashofapproximately$11.0million,$9.4millionand $8.1million,andissued213,168,242,166and243,166shares,fortheyearsendedDecember31,2024,2023and2022.AsofDecember 31,2024,therewere3,360,412sharesavailableforsaleundertheESPP.",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_170",
+      "page": 53,
+      "original_text": "Expectedincometaxexpense............................................................................. $ 184,327 $ 168,183 $ 109,674 Stateincometax,netoffederalbenefit.............................................................. 2,334 (832) (1,597) Ratedifferentialonforeignincome.................................................................... (48,495) (27,931) (49,175) Changeinunrecognizedtaxbenefits.................................................................. 4,075 3,841 12,310 Intra-e",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_171",
+      "page": 53,
+      "original_text": "Inventoryadjustments............................................................................................ $ 13,047 $ 9,413 Accruedexpenses.................................................................................................. 128,396 109,510 Allowancesforcreditlossesandchargebacks....................................................... 8,635 5,648 Intra-entityIPtransfer............................................................................................ 314,626 330,545 Se",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_172",
+      "page": 53,
+      "original_text": "Prepaidexpenses.................................................................................................... 2,448 3,873 Right-of-useassets................................................................................................. 363,052 338,389 Foreignintangibles................................................................................................ 23,068 16,116 Depreciationonproperty,plantandequipment..................................................... 63,702 63,021 Tot",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_173",
+      "page": 54,
+      "original_text": "U.S.federaltaxcreditcarry-forwardatDecember31,2024was$3.4million.Statetaxcreditandnetoperatinglosscarry-forwards atDecember31,2024were$28.6millionand$52.7million.Thestatetaxcreditcarriesforwardindefinitelyandthenetoperatingloss carry-forwardamountsbegintoexpirein2033.NovaluationallowancehasbeenrecordedontheseamountsastheCompanybelieves",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_174",
+      "page": 54,
+      "original_text": "Areconciliationofthebeginningandendingamountofunrecognizedtaxbenefitsisasfollows:",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_175",
+      "page": 54,
+      "original_text": "Beginningbalance...................................................................................................... $ 43,216 $ 41,247 Additionsforcurrentyeartaxpositions................................................................ 6,168 4,530 Additionsforprioryeartaxpositions.................................................................... — 1,379 Reductionsforprioryeartaxpositions.................................................................. (7,040) — Settlementofuncertaintaxpositi",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_176",
+      "page": 54,
+      "original_text": "As of December 31, 2024, the Company's U.S. federal tax returns are under examination for fiscal years ended December 31, 2015,2018,2019,2020,2021and2022bytheInternalRevenueService.Additionally,theCompanyiscurrentlyunderexaminationin certain foreign jurisdictions. The Company is unable to determine the impact as these examinations have not been completed. As of December31,2024,theCompany’staxfilingsaregenerallysubjecttoexaminationinmostforeignjurisdictionsforyearsendedonor afterDecember31,2019.I",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_177",
+      "page": 54,
+      "original_text": "The Company has a401(k) defined c ontribution plan covering U.S. employees who are 21 years of age. The Company’s contributionisbasedonanon-discretionarymatchasdefinedbytheplanwhichvestsimmediately.TheCompanymadecontributions of$8.2million,$6.5million,and$4.2milliontotheplanfortheyearsendedDecember31,2024,2023,and2022. The Skechers U.S.A., Inc. Deferred Compensation Plan allows eligible employees to defer compensation, up to a maximum amount,toafuture dateonanonqualifiedbasis.ThePlanprovidesfort",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_178",
+      "page": 55,
+      "original_text": "TheSkechersFoundation(the“Foundation”)isa501(c)(3)non-profitentityandnotasubsidiaryorotherwiseaffiliatedwiththe Company. The Company does not have a financial interest in the Foundation. However, two officers and directors of the Company, MichaelGreenberg,theCompany’sPresident,andDavidWeinberg,theCompany’sChiefOperatingOfficer,areofficersanddirectors oftheFoundation.TheCompanymadecashcontributionsof$2.0milliontotheFoundationineachoftheyearsendedDecember31,",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_179",
+      "page": 55,
+      "original_text": "The Company had receivables from officers and employees of $0.7 million and $0.6 million at December 31, 2024 and 2023. These amounts relate to travel advances, incidental personal purchases on Company-issued credit cards and employee loans. These receivablesareshort-termandareexpectedtoberepaidwithinareasonableperiodoftime. (13) SegmentandGeographicInformation The Company has two reportable segments, Wholesale and Direct-to-Consumer. Wholesale includes Skechers-branded stores operatedbythird-pa",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_180",
+      "page": 55,
+      "original_text": "Wholesalesales............................................................................... $ 5,100,479 $ 4,504,776 $ 4,632,429 Costofsales..................................................................................... 2,892,883 2,657,957 2,963,153 Grossprofit...................................................................................... 2,207,596 1,846,819 1,669,276 Grossmargin................................................................................... 43.3% 41.0% 36.0% Di",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_181",
+      "page": 55,
+      "original_text": "Wholesale......................................................................................................... $ 3,915,362 $ 3,607,537 Direct-to-Consumer.......................................................................................... 4,540,396 3,939,814 Total...................................................................................................................... $ 8,455,758 $ 7,547,351",
+      "annotations": {
+        "expense_types": [
+          "数字营销"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_182",
+      "page": 55,
+      "original_text": "Additionstoproperty,plantandequipment Wholesale.................................................................................... $ 236,968 $ 225,217 $ 255,311 Direct-to-Consumer..................................................................... 179,826 98,505 103,681 Total................................................................................................. $ 416,794 $ 323,722 $ 358,992",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_183",
+      "page": 57,
+      "original_text": "Business acquisitions are accounted for under the acquisition method by assigning the purchase consideration to tangible and intangible assets acquired and liabilities assumed. The results of businesses acquired in abusiness c ombination are included in the consolidated financial statements from the date of acquisition. Purchased intangible assets with finite lives are amortized over their estimated useful lives. Fair value determinations require judgment and may involve the use of significant e",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_184",
+      "page": 57,
+      "original_text": "OnMay31,2023,theCompanyacquired100%oftheequityinterestsofSportsConnectionHoldingsApS(“SportsConnection”), a Denmark-based company and a former distributor, to further broaden the Company's reach in Europe. The total consideration was approximately$83.7millionandconsistedofaninitialcashpaymentof$74.8million,thesettlementofpre-existingreceivablesof$1.7 millionandacontingentconsiderationpayableofupto$7.5million,andreducedbyaworkingcapitaladjustmentof$0.3million.On the acquisition date, the Company ",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "skechers_mda_185",
+      "page": 62,
+      "original_text": "Item15.ExhibitandFinancialStatementSchedules 1. Financial Statements. The financial statements as set forth under Item 8of this Annual Report on Form 10-K are",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_186",
+      "page": 62,
+      "original_text": "Balanceat Chargedto and Balanceat (inthousands) BeginningofYear Expenses Write-offs EndofYear",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_187",
+      "page": 62,
+      "original_text": "Allowanceforchargebacks................................ $ 40,134 $ 25,558 $ (29,275) $ 36,417 Allowanceforcreditlosses................................ 22,550 6,804 (6,299) 23,055 Liabilityforsalesreturnsandallowances.......... 68,944 5,444 (13,906) 60,482 Reserveforinventory......................................... 7,511 31,825 (21,606) 17,730",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_188",
+      "page": 62,
+      "original_text": "Allowanceforchargebacks................................ $ 36,417 $ 24,076 $ (27,190) $ 33,303 Allowanceforcreditlosses................................ 23,055 3,665 (2,156) 24,564 Liabilityforsalesreturnsandallowances.......... 60,482 20,798 (312) 80,968 Reserveforinventory......................................... 17,730 29,703 (30,524) 16,909",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "skechers_mda_189",
+      "page": 62,
+      "original_text": "Allowanceforchargebacks................................ $ 33,303 $ 29,496 $ (22,862) $ 39,937 Allowanceforcreditlosses................................ 24,564 5,032 (2,917) 26,679 Liabilityforsalesreturnsandallowances.......... 80,968 19,319 (27,199) 73,088 Reserveforinventory......................................... 16,909 15,236 (17,839) 14,306 Seeaccompanyingreportofindependentregisteredpublicaccountingfirm",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    }
+  ]
+}

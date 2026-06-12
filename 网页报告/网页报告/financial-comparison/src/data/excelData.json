@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "361",
+    "name": "361度",
+    "nameCn": "361度",
+    "region": "中国公司",
+    "color": "#10B981",
+    "years": {
+      "2025": {
+        "revenue": 11145829.0,
+        "revenueYoy": 10.6,
+        "grossMargin": 41.5,
+        "netMargin": 11.7,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 22.3,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4655.0,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 10073510.0,
+        "revenueYoy": 19.6,
+        "grossMargin": 41.5,
+        "netMargin": 11.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 24.7,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4464.0,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 8423257.0,
+        "revenueYoy": null,
+        "grossMargin": 41.1,
+        "netMargin": 11.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 25.6,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4259.0,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "asics",
+    "name": "ASICS",
+    "nameCn": "ASICS",
+    "region": "TOTAL",
+    "color": "#059669",
+    "years": {
+      "2024": {
+        "revenue": 3985248.0,
+        "revenueYoy": 30.5,
+        "grossMargin": 456.3,
+        "netMargin": 63944.0,
+        "operatingProfitMargin": 120.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 41.1,
+        "inventoryTurnoverDays": 110,
+        "salesPerStore": null,
+        "operatingProfit": 4805328.0
+      },
+      "2023": {
+        "revenue": 3053952.0,
+        "revenueYoy": null,
+        "grossMargin": 52.0,
+        "netMargin": 6.2,
+        "operatingProfitMargin": 85.2,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 36.2,
+        "inventoryTurnoverDays": 112,
+        "salesPerStore": null,
+        "operatingProfit": 2602320.0
+      },
+      "2025": {
+        "revenue": 4759248.0,
+        "revenueYoy": 19.4,
+        "grossMargin": 56.8,
+        "netMargin": 12.2,
+        "operatingProfitMargin": 143.7,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 39.2,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 6840912.0
+      }
+    }
+  },
+  {
+    "id": "adidas",
+    "name": "Adidas",
+    "nameCn": "Adidas",
+    "region": "大中华区",
+    "color": "#059669",
+    "years": {
+      "2025": {
+        "revenue": 29599910.0,
+        "revenueYoy": 4.7,
+        "grossMargin": 52.6,
+        "netMargin": null,
+        "operatingProfitMargin": 22.1,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 42.0,
+        "inventoryTurnoverDays": 120,
+        "salesPerStore": null,
+        "operatingProfit": 6552340.0
+      },
+      "2024": {
+        "revenue": 28260030.0,
+        "revenueYoy": 8.4,
+        "grossMargin": 49.6,
+        "netMargin": null,
+        "operatingProfitMargin": 20.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 43.0,
+        "inventoryTurnoverDays": 125,
+        "salesPerStore": null,
+        "operatingProfit": 5833380.0
+      },
+      "2023": {
+        "revenue": 26062300.0,
+        "revenueYoy": null,
+        "grossMargin": 48.7,
+        "netMargin": null,
+        "operatingProfitMargin": 17.3,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 45.0,
+        "inventoryTurnoverDays": 130,
+        "salesPerStore": null,
+        "operatingProfit": 4518010.0
+      }
+    }
+  },
+  {
+    "id": "canada_goose",
+    "name": "Canada Goose",
+    "nameCn": "Canada Goose",
+    "region": "TOTAL",
+    "color": "#6B7280",
+    "years": {
+      "2026": {
+        "revenue": 3267160.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2025": {
+        "revenue": 2796560.0,
+        "revenueYoy": 6.1,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 2635880.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "decathlon",
+    "name": "Decathlon SA",
+    "nameCn": "Decathlon SA",
+    "region": "TOTAL",
+    "color": "#000000",
+    "years": {
+      "2024": {
+        "revenue": 132354000.0,
+        "revenueYoy": 3.8,
+        "grossMargin": null,
+        "netMargin": 4.9,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 127452000.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": 6.0,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2022": {
+        "revenue": 125818000.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": 6.0,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2025": {
+        "revenue": 137256000.0,
+        "revenueYoy": 3.7,
+        "grossMargin": null,
+        "netMargin": 5.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "inditex",
+    "name": "Inditex",
+    "nameCn": "Inditex",
+    "region": "TOTAL",
+    "color": "#000000",
+    "years": {
+      "2025": {
+        "revenue": 315623440.0,
+        "revenueYoy": 7.5,
+        "grossMargin": 57.8,
+        "netMargin": 5877.0,
+        "operatingProfitMargin": 19.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 61716180.0
+      },
+      "2024": {
+        "revenue": 293686990.0,
+        "revenueYoy": null,
+        "grossMargin": 57.8,
+        "netMargin": 5395.0,
+        "operatingProfitMargin": 18.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 55629530.0
+      },
+      "2026": {
+        "revenue": 325688880.0,
+        "revenueYoy": null,
+        "grossMargin": 58.3,
+        "netMargin": 6220.0,
+        "operatingProfitMargin": 20.1,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 65335490.0
+      }
+    }
+  },
+  {
+    "id": "lululemon",
+    "name": "Lululemon",
+    "nameCn": "Lululemon",
+    "region": "TOTAL",
+    "color": "#9333EA",
+    "years": {
+      "2025": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": 59.2,
+        "netMargin": 17.1,
+        "operatingProfitMargin": 23.7,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 35.5,
+        "inventoryTurnoverDays": 85,
+        "salesPerStore": 47059.0,
+        "operatingProfit": 18041018.4
+      },
+      "2024": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": 58.3,
+        "netMargin": 16.1,
+        "operatingProfitMargin": 22.2,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 35.3,
+        "inventoryTurnoverDays": 88,
+        "salesPerStore": 46154.0,
+        "operatingProfit": 15355267.2
+      },
+      "2023": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": 90,
+        "salesPerStore": 45161.0,
+        "operatingProfit": null
+      },
+      "2026": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": 56.6,
+        "netMargin": 14.2,
+        "operatingProfitMargin": 19.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 36.6,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 15916428.0
+      }
+    }
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "nameCn": "Nike",
+    "region": "大中华区",
+    "color": "#EA580C",
+    "years": {
+      "2025": {
+        "revenue": 47419200.0,
+        "revenueYoy": -12.7,
+        "grossMargin": 46.0,
+        "netMargin": 18.2,
+        "operatingProfitMargin": 24.3,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 35.7,
+        "inventoryTurnoverDays": 73,
+        "salesPerStore": null,
+        "operatingProfit": 11534400.0
+      },
+      "2024": {
+        "revenue": 54324000.0,
+        "revenueYoy": 4.1,
+        "grossMargin": 50.2,
+        "netMargin": 23.0,
+        "operatingProfitMargin": 30.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 34.5,
+        "inventoryTurnoverDays": 73,
+        "salesPerStore": null,
+        "operatingProfit": 16624800.0
+      },
+      "2023": {
+        "revenue": 52185600.0,
+        "revenueYoy": null,
+        "grossMargin": 51.0,
+        "netMargin": 23.6,
+        "operatingProfitMargin": 31.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 33.8,
+        "inventoryTurnoverDays": 75,
+        "salesPerStore": null,
+        "operatingProfit": 16437600.0
+      }
+    }
+  },
+  {
+    "id": "uniqlo",
+    "name": "Uniqlo",
+    "nameCn": "Uniqlo",
+    "region": "TOTAL",
+    "color": "#000000",
+    "years": {
+      "2025": {
+        "revenue": 31209600.0,
+        "revenueYoy": -4.0,
+        "grossMargin": null,
+        "netMargin": 433.0,
+        "operatingProfitMargin": 14.2,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 4444800.0
+      },
+      "2024": {
+        "revenue": 32496000.0,
+        "revenueYoy": 9.2,
+        "grossMargin": null,
+        "netMargin": 372.0,
+        "operatingProfitMargin": 15.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 5030400.0
+      },
+      "2023": {
+        "revenue": 29769600.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": 272.9,
+        "operatingProfitMargin": 16.8,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 5006400.0
+      }
+    }
+  },
+  {
+    "id": "amer_sports",
+    "name": "亚玛芬",
+    "nameCn": "亚玛芬",
+    "region": "TOTAL",
+    "color": "#F59E0B",
+    "years": {
+      "2025": {
+        "revenue": 13405680000.0,
+        "revenueYoy": 43.4,
+        "grossMargin": 0.2,
+        "netMargin": 6.7,
+        "operatingProfitMargin": 0.0,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 47.3,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 5052960.0
+      },
+      "2024": {
+        "revenue": 9346320000.0,
+        "revenueYoy": 53.7,
+        "grossMargin": 55.4,
+        "netMargin": 1.5,
+        "operatingProfitMargin": 0.0,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 46.9,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 3389760.0
+      },
+      "2023": {
+        "revenue": 6082560000.0,
+        "revenueYoy": null,
+        "grossMargin": 52.5,
+        "netMargin": -4.7,
+        "operatingProfitMargin": 0.0,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 45.8,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 2177280.0
+      }
+    }
+  },
+  {
+    "id": "columbia",
+    "name": "哥伦比亚",
+    "nameCn": "哥伦比亚",
+    "region": "LAAP",
+    "color": "#F97316",
+    "years": {
+      "2025": {
+        "revenue": 24460927.2,
+        "revenueYoy": 0.9,
+        "grossMargin": 50.2,
+        "netMargin": 3.9,
+        "operatingProfitMargin": 6.1,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1490680.8
+      },
+      "2024": {
+        "revenue": 24253790.4,
+        "revenueYoy": 7.0,
+        "grossMargin": 50.0,
+        "netMargin": 3.6,
+        "operatingProfitMargin": 5.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1368000.0
+      },
+      "2023": {
+        "revenue": 22672720.8,
+        "revenueYoy": null,
+        "grossMargin": 49.5,
+        "netMargin": 3.2,
+        "operatingProfitMargin": 5.4,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1224000.0
+      }
+    }
+  },
+  {
+    "id": "berthi",
+    "name": "奔赴自然(伯希和）",
+    "nameCn": "奔赴自然(伯希和）",
+    "region": "中国公司",
+    "color": "#84CC16",
+    "years": {
+      "2025": {
+        "revenue": 2793000.0,
+        "revenueYoy": 58.1,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 1766100.0,
+        "revenueYoy": 94.5,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 908100.0,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "vf_corp",
+    "name": "威富集团",
+    "nameCn": "威富集团",
+    "region": "APAC",
+    "color": "#6366F1",
+    "years": {
+      "2025": {
+        "revenue": 68433775.2,
+        "revenueYoy": -4.1,
+        "grossMargin": 53.5,
+        "netMargin": -2.0,
+        "operatingProfitMargin": 3.2,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 49.4,
+        "inventoryTurnoverDays": 100,
+        "salesPerStore": null,
+        "operatingProfit": 2187165.6
+      },
+      "2024": {
+        "revenue": 71392881.6,
+        "revenueYoy": null,
+        "grossMargin": 51.6,
+        "netMargin": -9.8,
+        "operatingProfitMargin": -1.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 47.9,
+        "inventoryTurnoverDays": 98,
+        "salesPerStore": null,
+        "operatingProfit": -1036332.0
+      },
+      "2023": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": 95,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2026": {
+        "revenue": 69157490.4,
+        "revenueYoy": null,
+        "grossMargin": 54.8,
+        "netMargin": 2.7,
+        "operatingProfitMargin": 6.0,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 48.5,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 4151296.8
+      }
+    }
+  },
+  {
+    "id": "under_armour",
+    "name": "安德玛",
+    "nameCn": "安德玛",
+    "region": "APAC",
+    "color": "#0EA5E9",
+    "years": {
+      "2025": {
+        "revenue": 5439146.4,
+        "revenueYoy": -13.5,
+        "grossMargin": 47.9,
+        "netMargin": -3.9,
+        "operatingProfitMargin": -24.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 42.0,
+        "inventoryTurnoverDays": 80,
+        "salesPerStore": 18750.0,
+        "operatingProfit": -1333555.2
+      },
+      "2024": {
+        "revenue": 6285736.8,
+        "revenueYoy": 5.8,
+        "grossMargin": 301.3,
+        "netMargin": 4.1,
+        "operatingProfitMargin": 26.3,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 41.5,
+        "inventoryTurnoverDays": 82,
+        "salesPerStore": 18718.0,
+        "operatingProfit": 1654207.2
+      },
+      "2023": {
+        "revenue": 5942433.6,
+        "revenueYoy": null,
+        "grossMargin": 45.5,
+        "netMargin": 3.8,
+        "operatingProfitMargin": 4.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 40.8,
+        "inventoryTurnoverDays": 85,
+        "salesPerStore": 18684.0,
+        "operatingProfit": 0.0
+      }
+    }
+  },
+  {
+    "id": "anta",
+    "name": "安踏",
+    "nameCn": "安踏",
+    "region": "中国公司",
+    "color": "#DC2626",
+    "years": {
+      "2025": {
+        "revenue": 80219000.0,
+        "revenueYoy": 13.3,
+        "grossMargin": 62.0,
+        "netMargin": 19.5,
+        "operatingProfitMargin": 23.8,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 24.7,
+        "inventoryTurnoverDays": 85,
+        "salesPerStore": 6685.0,
+        "operatingProfit": 19091000.0
+      },
+      "2024": {
+        "revenue": 70826000.0,
+        "revenueYoy": 13.6,
+        "grossMargin": 62.2,
+        "netMargin": 24.0,
+        "operatingProfitMargin": 23.4,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 24.0,
+        "inventoryTurnoverDays": 82,
+        "salesPerStore": 6439.0,
+        "operatingProfit": 16595000.0
+      },
+      "2023": {
+        "revenue": 62356000.0,
+        "revenueYoy": null,
+        "grossMargin": 62.6,
+        "netMargin": 16.4,
+        "operatingProfitMargin": 24.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 23.4,
+        "inventoryTurnoverDays": 88,
+        "salesPerStore": 5939.0,
+        "operatingProfit": 15367000.0
+      }
+    }
+  },
+  {
+    "id": "puma",
+    "name": "彪马",
+    "nameCn": "彪马",
+    "region": "TOTAL",
+    "color": "#0891B2",
+    "years": {
+      "2025": {
+        "revenue": 3990228.0,
+        "revenueYoy": -19.1,
+        "grossMargin": 45.0,
+        "netMargin": null,
+        "operatingProfitMargin": 134.3,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 5360337.0
+      },
+      "2024": {
+        "revenue": 4934680.0,
+        "revenueYoy": 3.7,
+        "grossMargin": 47.6,
+        "netMargin": null,
+        "operatingProfitMargin": 225.0,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 11103847.0
+      },
+      "2023": {
+        "revenue": 4756574.0,
+        "revenueYoy": null,
+        "grossMargin": 47.0,
+        "netMargin": null,
+        "operatingProfitMargin": 135.8,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 6458385.0
+      }
+    }
+  },
+  {
+    "id": "giant",
+    "name": "捷安特",
+    "nameCn": "捷安特",
+    "region": "亚洲",
+    "color": "#14B8A6",
+    "years": {
+      "2025": {
+        "revenue": 13255871.86,
+        "revenueYoy": -15.5,
+        "grossMargin": 19.8,
+        "netMargin": 1.4,
+        "operatingProfitMargin": 1.8,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 18.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 237853.88
+      },
+      "2024": {
+        "revenue": 15681329.84,
+        "revenueYoy": -7.4,
+        "grossMargin": 19.0,
+        "netMargin": 2.1,
+        "operatingProfitMargin": 2.6,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 16.4,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 408866.7
+      },
+      "2023": {
+        "revenue": 16929780.12,
+        "revenueYoy": null,
+        "grossMargin": 22.1,
+        "netMargin": 4.6,
+        "operatingProfitMargin": 6.1,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 15.9,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1036050.4
+      }
+    }
+  },
+  {
+    "id": "tanzhe",
+    "name": "探路者",
+    "nameCn": "探路者",
+    "region": "中国公司",
+    "color": "#4F46E5",
+    "years": {
+      "2025": {
+        "revenue": 1380713.1,
+        "revenueYoy": -13.2,
+        "grossMargin": 47.6,
+        "netMargin": 5.7,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 30.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 1591589.61,
+        "revenueYoy": 14.4,
+        "grossMargin": 44.7,
+        "netMargin": 6.7,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 29.5,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 1390710.92,
+        "revenueYoy": null,
+        "grossMargin": 44.1,
+        "netMargin": 5.2,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 29.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "skechers",
+    "name": "斯凯奇",
+    "nameCn": "斯凯奇",
+    "region": "TOTAL",
+    "color": "#7C3AED",
+    "years": {
+      "2024": {
+        "revenue": 8770939.2,
+        "revenueYoy": -0.9,
+        "grossMargin": 53.2,
+        "netMargin": 8.1,
+        "operatingProfitMargin": 74.2,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 43.1,
+        "inventoryTurnoverDays": 72,
+        "salesPerStore": 2294.0,
+        "operatingProfit": 6510650.4
+      },
+      "2023": {
+        "revenue": 8846136.0,
+        "revenueYoy": null,
+        "grossMargin": 338.0,
+        "netMargin": 6.8,
+        "operatingProfitMargin": 63.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 42.1,
+        "inventoryTurnoverDays": 75,
+        "salesPerStore": 2344.0,
+        "operatingProfit": 5650459.2
+      },
+      "2025": {
+        "revenue": null,
+        "revenueYoy": null,
+        "grossMargin": null,
+        "netMargin": null,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": 70,
+        "salesPerStore": 2286.0,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "on_holding",
+    "name": "昂跑",
+    "nameCn": "昂跑",
+    "region": "APAC",
+    "color": "#8B5CF6",
+    "years": {
+      "2025": {
+        "revenue": 24714800.0,
+        "revenueYoy": 30.0,
+        "grossMargin": 62.8,
+        "netMargin": 6.8,
+        "operatingProfitMargin": 2.8,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 50.3,
+        "inventoryTurnoverDays": 65,
+        "salesPerStore": null,
+        "operatingProfit": 697000.0
+      },
+      "2024": {
+        "revenue": 19010060.0,
+        "revenueYoy": 29.4,
+        "grossMargin": 60.6,
+        "netMargin": 10.4,
+        "operatingProfitMargin": 1.7,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 51.5,
+        "inventoryTurnoverDays": 70,
+        "salesPerStore": null,
+        "operatingProfit": 318980.0
+      },
+      "2023": {
+        "revenue": 14695220.0,
+        "revenueYoy": null,
+        "grossMargin": 59.6,
+        "netMargin": 4.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 49.5,
+        "inventoryTurnoverDays": 75,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "lining",
+    "name": "李宁",
+    "nameCn": "李宁",
+    "region": "中国公司",
+    "color": "#2563EB",
+    "years": {
+      "2025": {
+        "revenue": 29598000.0,
+        "revenueYoy": 3.2,
+        "grossMargin": 49.0,
+        "netMargin": 9.9,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 38.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4444.0,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 28676000.0,
+        "revenueYoy": 3.9,
+        "grossMargin": 49.4,
+        "netMargin": 8.8,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 37.5,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4194.0,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 27598000.0,
+        "revenueYoy": null,
+        "grossMargin": 48.4,
+        "netMargin": 8.6,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 37.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": 4000.0,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "biyorn",
+    "name": "比音勒芬",
+    "nameCn": "比音勒芬",
+    "region": "中国公司",
+    "color": "#F472B6",
+    "years": {
+      "2025": {
+        "revenue": 4313910.95,
+        "revenueYoy": 7.7,
+        "grossMargin": 75.3,
+        "netMargin": 12.8,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 35.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 4004463.32,
+        "revenueYoy": 13.2,
+        "grossMargin": 76.3,
+        "netMargin": 19.5,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 34.5,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 3536132.71,
+        "revenueYoy": null,
+        "grossMargin": 77.5,
+        "netMargin": 25.8,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 34.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "topgolf",
+    "name": "滔搏",
+    "nameCn": "滔搏",
+    "region": "亚太",
+    "color": "#EC4899",
+    "years": {
+      "2025": {
+        "revenue": 2614320.0,
+        "revenueYoy": -25.5,
+        "grossMargin": 38.4,
+        "netMargin": 4.8,
+        "operatingProfitMargin": 60.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 33.1,
+        "inventoryTurnoverDays": 134,
+        "salesPerStore": 4502.0,
+        "operatingProfit": 1592700.0
+      },
+      "2024": {
+        "revenue": 3510720.0,
+        "revenueYoy": -8.3,
+        "grossMargin": 41.8,
+        "netMargin": 7.6,
+        "operatingProfitMargin": 79.4,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 32.8,
+        "inventoryTurnoverDays": 136,
+        "salesPerStore": 4743.0,
+        "operatingProfit": 2786500.0
+      },
+      "2023": {
+        "revenue": 3829680.0,
+        "revenueYoy": null,
+        "grossMargin": 294.7,
+        "netMargin": 6.8,
+        "operatingProfitMargin": 63.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 33.8,
+        "inventoryTurnoverDays": 149,
+        "salesPerStore": 4367.0,
+        "operatingProfit": 2430900.0
+      }
+    }
+  },
+  {
+    "id": "mobigadi",
+    "name": "牧高笛",
+    "nameCn": "牧高笛",
+    "region": "中国公司",
+    "color": "#22D3EE",
+    "years": {
+      "2025": {
+        "revenue": 448120.0,
+        "revenueYoy": -17.4,
+        "grossMargin": 26.6,
+        "netMargin": -3.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 25.7,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2024": {
+        "revenue": 542269.0,
+        "revenueYoy": -62.8,
+        "grossMargin": 68.5,
+        "netMargin": 6.4,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 20.3,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      },
+      "2023": {
+        "revenue": 1455870.0,
+        "revenueYoy": null,
+        "grossMargin": 28.3,
+        "netMargin": 7.3,
+        "operatingProfitMargin": null,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": 24.0,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": null
+      }
+    }
+  },
+  {
+    "id": "xtep",
+    "name": "特步",
+    "nameCn": "特步",
+    "region": "中国公司",
+    "color": "#EF4444",
+    "years": {
+      "2025": {
+        "revenue": 14151100.0,
+        "revenueYoy": 4.2,
+        "grossMargin": 42.8,
+        "netMargin": 9.7,
+        "operatingProfitMargin": 14.3,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 2018800.0
+      },
+      "2024": {
+        "revenue": 13577200.0,
+        "revenueYoy": 6.5,
+        "grossMargin": 43.2,
+        "netMargin": 9.1,
+        "operatingProfitMargin": 14.5,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1965500.0
+      },
+      "2023": {
+        "revenue": 12742900.0,
+        "revenueYoy": null,
+        "grossMargin": 41.8,
+        "netMargin": 8.1,
+        "operatingProfitMargin": 14.1,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1798000.0
+      }
+    }
+  },
+  {
+    "id": "mizuno",
+    "name": "美津浓",
+    "nameCn": "美津浓",
+    "region": "TOTAL",
+    "color": "#84CC16",
+    "years": {
+      "2026": {
+        "revenue": 1696848.0,
+        "revenueYoy": null,
+        "grossMargin": 41.9,
+        "netMargin": null,
+        "operatingProfitMargin": 63.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 1084944.0
+      },
+      "2025": {
+        "revenue": 1599072.0,
+        "revenueYoy": 15.5,
+        "grossMargin": 41.0,
+        "netMargin": null,
+        "operatingProfitMargin": 62.4,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 997296.0
+      },
+      "2024": {
+        "revenue": 1384560.0,
+        "revenueYoy": null,
+        "grossMargin": 315.3,
+        "netMargin": null,
+        "operatingProfitMargin": 59.9,
+        "sameStoreSalesGrowth": null,
+        "operatingExpenseRatio": null,
+        "inventoryTurnoverDays": null,
+        "salesPerStore": null,
+        "operatingProfit": 829392.0
+      }
+    }
+  }
+]

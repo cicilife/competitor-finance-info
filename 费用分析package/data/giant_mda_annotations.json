@@ -1,0 +1,2703 @@
+{
+  "version": "2.0",
+  "company": "捷安特",
+  "report_type": "2025 Annual Report",
+  "total_pages": 32,
+  "total_paragraphs": 163,
+  "annotation_summary": {
+    "expense_types": {
+      "营销费用": 32,
+      "运营费用": 28,
+      "技术成本": 137,
+      "研发费用": 18,
+      "物流成本": 8,
+      "门店成本": 36,
+      "数字营销": 2,
+      "人力成本": 42
+    },
+    "trends": {
+      "上升": 105,
+      "下降": 8,
+      "新增": 33,
+      "持平": 11
+    },
+    "drivers": {
+      "业务扩张": 23,
+      "投资驱动": 29,
+      "效率提升": 12,
+      "产品创新": 5,
+      "供应链": 8,
+      "外部因素": 9,
+      "DTC转型": 2
+    },
+    "sentiments": {
+      "中性": 120,
+      "正面": 28,
+      "负面": 15
+    }
+  },
+  "annotated_paragraphs": [
+    {
+      "id": "giant_mda_001",
+      "page": 4,
+      "original_text": "In 2025, the global bicycle industry remained in a phase of inventory adjustment and subdued demand. In addition, external factors, including changes in U.S. tariff policies, heightened geopolitical risks, and exchange rate fluctuations, collectively constrained the pace of market recovery and increased overall operating uncertainty, significantly intensifying operational challenges to the business environment. As the surge in demand during the pandemic gradually subsided, inventory destocking a",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_002",
+      "page": 4,
+      "original_text": "The Group continues to focus on shortening product development cycles and accelerating time to market, while re-engaging with core market segments to better respond to rapidly evolving market conditions. At the same time, through manufacturing and supply chain initiatives, the Group is advancing a new operating model in Europe, improving operational efficiency by reducing component holding costs and accounts payable. Looking ahead, bicycles represent both an environmentally sustainable mode of t",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "效率提升",
+          "产品创新",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_003",
+      "page": 4,
+      "original_text": "In 2025, Giant Group reported consolidated revenue of NT$60.25 billion, representing a year-on-year decrease of 15.5%. Gross margin rate improved to 19.8%, compared to 19.0% in 2024, primarily driven by the launch of higher-margin new products, which offset the impact of discounting to clear aging inventory. Operating expenses were primarily attributable to investments in research and development and digital capability enhancements. As a result of the decline in revenue, the operating expense ra",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "产品创新"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_004",
+      "page": 4,
+      "original_text": "The Group continues to place innovative technology at the core of its product development, as demonstrated by the design and engineering advancements in its flagship products. In 2025, the Group launched the Anthem XC mountain bike series, co-developed with world champion Alan Hatherly. The new model features an all-new 002 Giant Group 2025 Annual Report",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_005",
+      "page": 5,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 frame design and manufacturing process, together with an upgraded FlexPoint Pro suspension system, which significantly reduces deformation in the rear triangle under load. This advancement results in the lightest cross- country race bike in the Group’s history. Beyond elite racing technologies, the Group has also extended its research and development capabilities to the youth segment with the launch of the groundbreaking Seek ",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_006",
+      "page": 5,
+      "original_text": "Amid the rapid growth in urban micro-mobility demand, the Vida E+ project continues to serve as a key technological foundation for the Group’s next-generation mobility platform. By integrating bicycle structural engineering, electric system integration, and safety compliance capabilities, the platform delivers efficient, safe, and practical urban electric mobility solutions. The latest generation of Vida E+ introduces a throttle-assist function to enhance convenience and riding comfort in urban ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_007",
+      "page": 5,
+      "original_text": "The Group continues to actively support pro teams and elite athletes through its Giant, Liv, and CADEX brands, achieving strong results in international competitions in 2025. In the men’s Tour de France, Team Jayco AlUla, sponsored by the Group, delivered an outstanding performance. Ben O’Connor, riding a Giant Propel equipped with CADEX wheels, won Stage 18, also known as the Queen Stage of the 2025 Tour. In the women’s race, Mavi García of Team Liv AlUla Jayco, riding the Langma, secured the t",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升",
+          "产品创新",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_008",
+      "page": 6,
+      "original_text": "2. 2026 Business Plan, Future Development Strategies, and the Impact of External Competition, Regulatory Changes, and the Macro Business Environment Macro Business Environment and Market Trends The European Cyclists’ Federation (ECF) forecasts that bicycle sales in Europe will increase from 22 million units in 2020 to 30 million units by 2030, with electric bicycles expected to account for 50% of total sales. This expansion in market size is expected to drive more diverse developments, including",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_009",
+      "page": 6,
+      "original_text": "To further expand its presence in the sports and lifestyle markets, the Group will introduce new products targeting core segments. The product portfolio will include drop-bar and flat-bar road bikes, electric mountain bikes, and urban electric bicycles for the European market. In addition, the Group will focus on optimizing and strengthening the strategic application of the E+ System to enhance market responsiveness and overall operational efficiency. High-end product development will focus on h",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升",
+          "产品创新"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_010",
+      "page": 6,
+      "original_text": "Since 2022, the Group has adopted“ Cycling for a Better Future” as the core theme of its ESG strategy, advancing three key pillars:“ Innovating a Clean Future,”“ Transforming for Circularity,” and“ Mobilizing for Diversity, Equity, and Inclusion.” Through these initiatives, the Group integrates climate action, material innovation, and diversity and inclusion into its global operations and value chain. In 2026, the Group will continue to strengthen carbon reduction governance and energy resilienc",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_011",
+      "page": 6,
+      "original_text": "At the same time, the Group has fully implemented sustainable product design guidelines and green procurement strategies, accelerating the development of components incorporating recycled materials, including saddles, tires, recycled aluminum alloys, and reclaimed carbon fiber, thereby building a more sustainable and competitive product portfolio. In packaging management, the Group continues to advance plastic reduction initiatives for both complete bicycles and cycling gear packaging, steadily ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_012",
+      "page": 7,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 In promoting green mobility, YouBike continues to expand its shared system and network coverage, supporting the transition of urban transportation toward low-carbon models and reflecting the Group’s forward-looking approach to sustainable mobility. “Our commitment to sustainability goes beyond product innovation—it’s about building a resilient future through responsible governance and global collaboration.” said Chairperson Yo",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动",
+          "产品创新"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_013",
+      "page": 7,
+      "original_text": "The Group is committed to building a customer-centric digital ecosystem, delivering a seamless brand experience across every consumer touchpoint, including brand marketing, social media engagement, official websites, physical retail stores, and customer service. In addition to leveraging a wide range of digital tools to deepen customer engagement, the Group places strong emphasis on internal talent development and process optimization to ensure the effective execution of its digital transformati",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_014",
+      "page": 7,
+      "original_text": "The Group plans to launch a bicycle customization platform to meet consumers’ demand for personalized",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_015",
+      "page": 7,
+      "original_text": "Enhanced Mobile Experience: The newly upgraded RideLife cycling app enhances user experience and strengthens interaction between consumers and retail stores.",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_016",
+      "page": 7,
+      "original_text": "Partner Empowerment: The Group continues to develop a dedicated dealer management platform to enable channel partners to better anticipate market changes and respond more efficiently.",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_017",
+      "page": 7,
+      "original_text": "Information Integration: The Group is implementing a Product Information Management (PIM) system to ensure consistency of product information across all sales channels. Through these initiatives, the Group aims to create a fully integrated O+O (Online and Offline) experience, ensuring that consumers receive consistent and high-quality brand services across all touchpoints. Manufacturing, Supply, and Sales Strategy The Group has established production bases across Taiwan, China, Vietnam, and Euro",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_019",
+      "page": 13,
+      "original_text": "Name of corporate shareholder (Note 1) Major shareholders of corporate shareholder (Note 2) Kinabalu Holding Company THO, TU HSIU-CHEN (Bonnie Tu) Yuan Hsin Investment THO, TU HSIU-CHEN (Bonnie Tu) Note 1: For representatives of corporate shareholders, the names of the corporate shareholders and their shareholders with more than 10% ownership or their top-10 shareholders shall be specified. Note 2: If the corporate shareholder’s major shareholder is also a representative of another corporate sha",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_020",
+      "page": 13,
+      "original_text": "Joined the Giant Group in 1989. Once served as the COO of the Group (and president of the China region), he has experience in product planning, brand marketing and channel establishment. As the pioneer to set up factories and manage our market in China, he led a team to explore new territory, not only setting up factories but also making Giant the No. 1 bicycle brand in China. In 2017, he became CEO of the Giant Group. Although the Company has experienced various challenges such as the shared bi",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_022",
+      "page": 13,
+      "original_text": "Outstanding Mainland Taiwanese Business Award from the Taipei Management Research Institute. He won the National Outstanding CEO Award in 2019, and the 16th National Distinguished Accomplishment Award from the Chinese Professional Management Association in 2022. Recently, he established the Bicycle Alliance of Sustainability (BAS), sparing no effort to advance and promote ESG initiatives within the global bicycle industry. He became chairperson of the Giant Group in 2025. In 2025, he was honored",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_023",
+      "page": 13,
+      "original_text": "Initially serving as Export Sales Manager at the Kunshan Factory in China. From 2010, Phoebe served as Executive Assistant to then-Great China President Young Liu, facilitating the internal affairs of Great Chinese. In 2015, Phoebe went back to Giant Group’s global headquarters to oversee the worldwide Point of Sale (POS) operations. Since 2017, she has held the dual role of Chief Branding Officer and Head",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_024",
+      "page": 13,
+      "original_text": "of Global Gear Business. Having dedicated twenty years to Giant Group and having ─",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_025",
+      "page": 13,
+      "original_text": "served in various positions, Phoebe has laid a solid foundation of practical industry experience and expertise. Through her close collaboration with Young for more than a decade, they have built up a very strong working synergy. Phoebe is observant about the industry and extremely quick in response to the changes. She will assume the position of CEO of Giant Group effective January 2025. Joined the Giant Group in 1978, served as the head of finance and procurement and successfully executed the I",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_026",
+      "page": 13,
+      "original_text": "THO, TU HSIU- cycling brand, Liv, she is committed to the evolution of female cycling. In 2020,",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_027",
+      "page": 13,
+      "original_text": "CHEN (Bonnie Tu) she ranked 28th in the 50 most influential people in cycling of UK’s Cycling News.",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_028",
+      "page": 13,
+      "original_text": "Bonnie was awarded by the UN“ Special Lifetime Achievement Award” on the International Bicycle Day 2023, also awarded by New York magazine Adweek one of the“ Champions of Change: 24 Women Who Are Transforming the Sports World“ in 2023. She was awarded the“ 2024 Women of the Year Awards” in the“ Embracing Change” category by BAZAAR Taiwan",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_029",
+      "page": 13,
+      "original_text": "Representative of Meet (1)(5)(6) Once the founder of a wheelset brand company and a director of other investment Kinabalu Holding (7)(8)(9)(11) ─ companies, he has expertise in operation management.",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_030",
+      "page": 14,
+      "original_text": "Once the head of product technology division and director of general affairs Meet (1)(3)(4) CHIU, TA-PENG department. He has 20 years of experience in internal audit, specializing in internal (5)(6)(7)(8) ─ management. After 40 years in the cycling industry, he has vast industry experience. (9)(10)(11)(12)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_031",
+      "page": 14,
+      "original_text": "With years of experience as a CPA, he has engaged with numerous industries and Meet (1)(3)(4)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_033",
+      "page": 14,
+      "original_text": "Being function head of Giant Global Team Merchandising Marcel integrates the bicycle research and development innovation, manufacturing supply, marketing, and sales teams to create a growth pattern benefits to revenue and profit. He used to serve as integrated business senior manager of TransPerfect New York Head quarter,",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_034",
+      "page": 14,
+      "original_text": "manager there Marcel led his team to achieve a growth of revenue twenty-five times",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_035",
+      "page": 14,
+      "original_text": "than before. He is experienced in Product and Service Management, International Operations, Marketing Strategy Formulation, Risk Management, Project Execution. He got Yale University MBA degree and selected as represented of newly graduate in",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_036",
+      "page": 14,
+      "original_text": "Being a co-founder of Advantech Co., Ltd., he has long been dedicated to global marketing, brand and operation management of Advantech and initiated plans HO, CHUN-SHENG for realizing the corporate vision of Enabling an Intelligent Planet to accelerate Meet (1)(3)(4) (Independent Advantech’s progress in IoT. These actions have driven Advantech to ranked among (5)(6)(7)(8) 0 Director) the top five global brands for consecutive years since 2004. He has comprehensive (9)(10)(11)(12) experience in m",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_037",
+      "page": 14,
+      "original_text": "expertise in setting corporate vision, formulating key business and organizational (Independent (5)(6)(7)(8)(9) 0 strategies, optimizing operations, and driving mid- to long-term growth, she also",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_038",
+      "page": 14,
+      "original_text": "ensures a balanced approach to the short-term interests of shareholders, employees, and customers. As a strong advocator of ESG principles, she has successfully led corporate transformations that have generated significant value. No circumstances prescribed in Article 30 Company Act. Note 1: Professional qualifications and experiences: Describe the professional qualifications and experiences of individual director and supervisor. For Audit Committee members with accounting or finance expertise, ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_040",
+      "page": 17,
+      "original_text": "Date degree or closer acting as Title shareholding and underage by proxy Main career (academic) achievements Concurrent positions in Remarks Nation Name Gender elected/ managers (Note 1) children (Note 2) other companies (note3)",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_041",
+      "page": 17,
+      "original_text": "Shares % Shares % Shares % Title Name Relationship Department of Architecture and Urban Design,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_042",
+      "page": 17,
+      "original_text": "LIU, SU-CHUAN Services, D. Mag CEO Taiwan Female 2025.01 5,685,724 1.45 607,959 0.16 - - Global Sales Manager of Giant Group - - - - (Phoebe Liu) Technology, Giant Japan, Special Assistant of the President of Giant Group",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_043",
+      "page": 17,
+      "original_text": "Technology R&D Center - Manager Note 1: Includes background information of the President, Vice Presidents, Assistant Vice Presidents, heads of various departments Note 3: Where the Company’s President or personnel with equivalent position (chief manager) and Chairperson are the same and branches, and anyone of equivalent authority to the above, regardless of their job titles. person, spouses or relatives within one degree of kinship, please state the reasons, reasonability, necessity and measure",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_044",
+      "page": 17,
+      "original_text": "Directors’ remuneration Compensation as company employee The sum of A, The sum of A, B, C, B, C, and D as a D, E, F, and G as a percentage of net percentage of net",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_045",
+      "page": 17,
+      "original_text": "Compensation (A) Pension (B) bonuses, special Employee remuneration (G) remuneration (C) rendered (D) Pension (F) (Note 2) (Note 2) allowances etc. (E) (Note 6)",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_049",
+      "page": 17,
+      "original_text": "Kinabalu Holding 3,991 3,991 3,991 3,991 Director 1,800 1,800 0 0 2,141 2,141 50 50 0 0 0 0 0 0 0 0 None Company 0.55% 0.55% 0.55% 0.55% Yuan Hsin 3,991 3,991 3,991 3,991 Director 1,800 1,800 0 0 2,141 2,141 50 50 0 0 0 0 0 0 0 0 None Investment 0.55% 0.55% 0.55% 0.55%",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_051",
+      "page": 18,
+      "original_text": "Directors’ remuneration Compensation as company employee The sum of A, The sum of A, B, C, B, C, and D as a D, E, F, and G as a percentage of net percentage of net",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_052",
+      "page": 18,
+      "original_text": "Compensation (A) Pension (B) bonuses, special Employee remuneration (G) remuneration (C) rendered (D) Pension (F) (Note 2) (Note 2) allowances etc. (E) (Note 6)",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_053",
+      "page": 18,
+      "original_text": "Independent 3,050 3,050 3,050 3,050 HO, CHUN-SHENG 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director 0.42% 0.42% 0.42% 0.42% Independent 3,050 3,050 3,050 3,050 TSOU, KAI-LIEN 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director 0.42% 0.42% 0.42% 0.42% Independent CHANG, CHI-WEN 3,050 3,050 3,050 3,050 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director (Dora Chang) 0.42% 0.42% 0.42% 0.42% 1. Please state the policy, system, standard and structure of remuneration to Independent Dire",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_054",
+      "page": 18,
+      "original_text": "Note 3: Compensation to directors approved by the Board in the most recent year. Note 4: Expenses and perquisites of directors (including travel allowance, special disbursement, various allowances, and payment in kind such as accommodations or vehicles, etc.) in the most recent year. For provision of housing, cars or other transportation means or specific personal expenses, the nature and cost of the assets provided as well as rents, fuel expense and other payments calculated based on the actual",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_055",
+      "page": 18,
+      "original_text": "Note 5: Remuneration received by directors for concurrently serving as an employee (including serving as a President, Vice President, other managerial officer, or employee) of the Company in the most recent year, such as salaries, differential pay, severance pay, various bonuses, incentive pays, travel allowance, special disbursement, various allowances, and payment in kind such as accommodations or vehicles, etc. For provision of housing, cars or other transportation means or specific personal ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_056",
+      "page": 19,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 Directors’ remuneration Compensation as company employee The sum of A, The sum of A, B, C, B, C, and D as a D, E, F, and G as a percentage of net percentage of net",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_057",
+      "page": 19,
+      "original_text": "Compensation (A) Pension (B) bonuses, special Employee remuneration (G) remuneration (C) rendered (D) Pension (F) (Note 2) (Note 2) allowances etc. (E) (Note 6)",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_058",
+      "page": 19,
+      "original_text": "Independent 3,050 3,050 3,050 3,050 HO, CHUN-SHENG 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director 0.42% 0.42% 0.42% 0.42% Independent 3,050 3,050 3,050 3,050 TSOU, KAI-LIEN 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director 0.42% 0.42% 0.42% 0.42% Independent CHANG, CHI-WEN 3,050 3,050 3,050 3,050 3,000 3,000 0 0 0 0 50 50 0 0 0 0 0 0 0 0 None Director (Dora Chang) 0.42% 0.42% 0.42% 0.42% 1. Please state the policy, system, standard and structure of remuneration to Independent Dire",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_059",
+      "page": 19,
+      "original_text": "Note 4: Expenses and perquisites of directors (including travel allowance, special disbursement, various allowances, and Bonuses and B, C, and D as a Salary (A) allowances Employee remuneration (D) payment in kind such as accommodations or vehicles, etc.) in the most recent year. For provision of housing, cars or Pension (B) percentage of net",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_060",
+      "page": 19,
+      "original_text": "other transportation means or specific personal expenses, the nature and cost of the assets provided as well as rents, fuel income (%) (Note (Note 3) expense and other payments calculated based on the actual or fair market prices shall be disclosed. If a driver is assigned, 8) please indicate payments made by the Company to the driver in the note section. However, this part is excluded from the",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_061",
+      "page": 19,
+      "original_text": "Note 5: Remuneration received by directors for concurrently serving as an employee (including serving as a President, Vice Title",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_062",
+      "page": 19,
+      "original_text": "President, other managerial officer, or employee) of the Company in the most recent year, such as salaries, differential pay, severance pay, various bonuses, incentive pays, travel allowance, special disbursement, various allowances, and payment in kind such as accommodations or vehicles, etc. For provision of housing, cars or other transportation means or specific personal expenses, the nature and cost of the assets provided as well as rents, fuel expense and other payments calculated based on ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_063",
+      "page": 19,
+      "original_text": "* Disclosure is mandatory for persons who hold positions equivalent to a President or Vice President (e.g., group president, CEO,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_066",
+      "page": 20,
+      "original_text": "Note 1: The names of President and Vice Presidents are presented separately; the amount of payment is presented in aggregate sums. Any directors who co-headed the President or Vice President positions are disclosed in this table and the previous",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_067",
+      "page": 20,
+      "original_text": "Note 2: Refers to salaries, allowances, and severance pay made to the President and Vice Presidents in the last year. Note 3: Refers to other compensations such as bonuses, incentives, travel allowances, special allowances, subsidies, accommodation, corporate vehicle or other in-kind benefits made to the President and Vice Presidents. Where housing, cars, vehicles, or personal allowances were granted, the nature and cost of assets, the rental rates (calculated based on actual or fair value), cos",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_068",
+      "page": 20,
+      "original_text": "Note 4: Represents the amount of employee compensation provided for the President and Vice Presidents (in cash or in shares), which the board of directors has proposed as part of the most recent earnings appropriation (where the amount could not be estimated, a calculation was made based on last year’s payout ratio). Table 1-3 has been prepared in addition to the above details. Net income refers to that in the most recent year. If IFRSs have been adopted, net income shall refer to the amount of ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_069",
+      "page": 20,
+      "original_text": "Note 7: The disclosure includes the sum of amounts paid by the consolidated entity (including the Company) to the Company’s President/Vice Presidents; the names of President/Vice Presidents have been disclosed separately in ranges. Note 8: Net income refers to that in the most recent year. If IFRSs have been adopted, net income shall refer to the amount of after-tax profit shown in the latest financial reports of the consolidated/standalone entity. Note 9: a. This field includes all forms of rem",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_070",
+      "page": 21,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 Managers receiving compensation of employees and details of remuneration received",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_071",
+      "page": 21,
+      "original_text": "CFO and Chief Accounting Officer PAN, CHIAO-LI Corporate Governance Officer LIU, CHIA-CHIEH Note 1: Names and titles have been disclosed separately, whereas the amount of remuneration has been disclosed in aggregate. Note 2: Refers to the amount of employee compensation provided for managers (in cash or in shares), which the board of directors has proposed as part of the most recent earnings appropriation (where the amount could not be estimated, a calculation was made based on last year’s payou",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_073",
+      "page": 21,
+      "original_text": "(1) President or other position of equivalent grade (2) Vice President or other position of equivalent grade (3) Assistant Vice President or other position of equivalent grade",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_074",
+      "page": 21,
+      "original_text": "(6) Any other signatories involved in the Company’s administrative affairs (3) Amount of remuneration paid in the last 2 years by the Company and all companies included in the consolidated financial statements to the Company’s directors, supervisors, President, and Vice Presidents, and their respective proportions to standalone and consolidated net income, as well as the policies, standards, and packages by which they were paid, the procedures through which remunerations were determined, and the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_075",
+      "page": 21,
+      "original_text": "1. The Company’s directors and supervisors are paid travel allowances for meetings actually attended. The travel allowance amounted to NT$10,000 per person, per session. 2. According to Article 27 of the Articles of Incorporation. The actual amount depends on operating performance. 3. The board of directors is in constant discussion about changes in the business environment and monitors the latest industry trends. Response measures will be taken if necessary to avoid risks that may adversely aff",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_076",
+      "page": 21,
+      "original_text": "4. Remuneration is paid following the Company policy, considering the annual contribution performance of the employee and the influence to his/her potential future development, as well as overall internal fairness and external competitiveness, the retaining of skilled staff and long-term incentives. 5. For those who only get fixed remuneration such as travel expenses or attendance fees without variable ones, the remuneration and performance are irrelevant. Giant Group 2025 Annual Report 019",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_077",
+      "page": 40,
+      "original_text": "1. In the event where the Remuneration Committee’s recommendation is rejected or amended in a Board meeting, please specify the date and session of the Board meeting, content of motions, resolutions of the Board, and actions taken by the Company regarding the Committee’s opinions (e.g., describe the differences and reasons shall the Board approve a package that is more favorable than the one proposed by the Remuneration Committee): None. 2. Where Committee members express objection or reservatio",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_078",
+      "page": 40,
+      "original_text": "3. Major resolutions of the Remuneration Committee: Date Session Content of Motions Committee Resolutions 1. 2024 remuneration to directors Approved 2. 2024 remuneration to employees Approved",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_079",
+      "page": 40,
+      "original_text": "(1) The date of resignation shall be specified in the remarks column for Committee members who had resigned prior to the end of the financial year. The percentage of actual attendance (%) would be calculated based on the number of Committee meetings held and the number of actual attendances during the period of employment. (2) If a re-election of Committee members had taken place prior to the end of the financial year, both the current and former Committee members shall be listed and identified ",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_080",
+      "page": 52,
+      "original_text": "Safety and Health Facilities Rules, the Occupational Safety and Health Education No material deviation and Training Rules, the Regulations for Implementing Maternity Health is found in comparison Protection at Workplace, and the Standards for Defining Dangerous or Harmful with the Sustainable Work Prohibited for Female Employees During Pregnancy or Postpartum and for Development Best Practice Workers Under the Age of Eighteen Principles for TWSE/TPEx- (2) A summary of Giant Group’s Human Rights ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_081",
+      "page": 52,
+      "original_text": "1.Prohibition of forced labor. Forced Labor 2.Transparency of employment agreements. 3.Autonomy over personal identification documents. Giant Group shall comply with local laws and regulations regarding the minimum employment age and prohibit the illegal employment of child labor. Employers shall not hire any person under the age of 15, under the age for completing compulsory education, or Child Labor under the minimum employment age of the country/region. Young workers under the age of 18 shall",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_082",
+      "page": 52,
+      "original_text": "the Group shall provide workers with timely and concise pay stubs containing sufficient information to verify that the compensation",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_083",
+      "page": 52,
+      "original_text": "Safe workplace and risk prevention and control. Occupational Emergency response plans, communication, and training. Health and Safety Occupational injury management and follow-up improvement. Environmental hygiene and quality of accommodation. (2) Has the Company formulated and executed reasonable employee welfare measures (including ✓ (2) Protection of employees’ legal rights and execution of non-discrimination No material deviation compensation, leaves and other benefits), and had the operatin",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_085",
+      "page": 53,
+      "original_text": "Safety and Health Facilities Rules, the Occupational Safety and Health Education No material deviation and Training Rules, the Regulations for Implementing Maternity Health is found in comparison Protection at Workplace, and the Standards for Defining Dangerous or Harmful with the Sustainable Work Prohibited for Female Employees During Pregnancy or Postpartum and for Development Best Practice Workers Under the Age of Eighteen Principles for TWSE/TPEx- (2) A summary of Giant Group’s Human Rights ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_086",
+      "page": 53,
+      "original_text": "1.Prohibition of forced labor. Forced Labor 2.Transparency of employment agreements. 3.Autonomy over personal identification documents. Giant Group shall comply with local laws and regulations regarding the minimum employment age and prohibit the illegal employment of child labor. Employers shall not hire any person under the age of 15, under the age for completing compulsory education, or Child Labor under the minimum employment age of the country/region. Young workers under the age of 18 shall",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_087",
+      "page": 53,
+      "original_text": "the Group shall provide workers with timely and concise pay stubs containing sufficient information to verify that the compensation",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_088",
+      "page": 53,
+      "original_text": "Safe workplace and risk prevention and control. Occupational Emergency response plans, communication, and training. Health and Safety Occupational injury management and follow-up improvement. Environmental hygiene and quality of accommodation. (2) Has the Company formulated and executed reasonable employee welfare measures (including ✓ (2) Protection of employees’ legal rights and execution of non-discrimination No material deviation compensation, leaves and other benefits), and had the operatin",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_089",
+      "page": 71,
+      "original_text": "6. The Company’s Chairperson, President, or any managers involved in financial or accounting affairs being employed by the accounting firm or any of its affiliated company in the last",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_090",
+      "page": 71,
+      "original_text": "7. Details of shares transferred or pledged by directors, supervisors, managers and shareholders with more than 10% ownership interest in the last year, up till the publication",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_091",
+      "page": 71,
+      "original_text": "(1) Transfer and pledge of shares by directors, supervisors, managers and major shareholders",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_092",
+      "page": 71,
+      "original_text": "(decrease) (decrease) (decrease) (decrease) in shares in shares in shares in shares",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_093",
+      "page": 71,
+      "original_text": "Corporate Governance Officer LIU, CHIA-CHIEH - - - - Note 1: Shareholders with more than 10% ownership interest are highlighted as major shareholders and listed separately. A. Transfer of shares where the counterparty is a related party: None B. Pledge of shares where the counterparty is a related party: None Giant Group 2025 Annual Report 069",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_094",
+      "page": 76,
+      "original_text": "(3) Dividend policy and execution A. The Company’s dividend policy: Annual surpluses concluded by the Company are first subject to taxation and reimbursement of previous losses, followed by a 10% provision for legal reserve; however, no further provision is needed when legal reserve have accumulated to the same amount as the Company’s paid-in capital. Any surpluses remaining shall then be subject to provision or reversal of special reserves, as the laws may require. The residual balance can then",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_095",
+      "page": 76,
+      "original_text": "C. Expected change in dividend policy: None (4) Impacts of proposed stock dividends on the Company’s business performance and earnings per share: None (5) Employee/director/supervisor remuneration: A. Percentage or range of employee/director/supervisor remuneration stated in the Articles of Incorporation: * Pursuant to the Articles of Incorporation: profits concluded by the Company in a financial year are subject to compensation of employees of 6% ~ 12%, and director remuneration of no more than",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_096",
+      "page": 76,
+      "original_text": "B. Basis for estimating the amount of employee and director remuneration for the current period, the basis for calculating the number of shares for stock-based remuneration, and the accounting treatment for any discrepancies between the actual distributed amounts and the estimated amounts: * Compensation of employees was determined at 7.1% and director remuneration at 2% of distributable earnings. The amounts resolved by the board were consistent with the amounts estimated in the latest",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_097",
+      "page": 76,
+      "original_text": "C. Compensation of employees approved by the board of directors: a. Employee/director remuneration, in cash or in shares: * Cash payment of compensation of employees amounted to NT$66,473,092, which is no different from the amount previously recognized as expense in the year incurred. * Payment of director remuneration amounted to NT$18,733,930, which is consistent with the amount previously recognized as expense in the year incurred. b. Amount of employees’ remuneration paid in shares, and perc",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_098",
+      "page": 82,
+      "original_text": "Business Model Upgrade and Market Strategy In response to the rapid evolution of global consumer behavior and the sports technology industry, Stages is actively advancing the upgrade of its business model. In addition to its traditional distribution channels, the Company is progressively establishing a direct-to-consumer (DTC) model and has already established a home-use product sales presence across the United Kingdom, Europe, and North America. Through its official platform, stagescycling.com,",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_099",
+      "page": 82,
+      "original_text": "The Role of Stages in the Group’s Future Strategy Looking ahead, Stages will not be limited to the indoor fitness equipment segment, but will progressively transform into a global sports technology platform that integrates cycling equipment, performance data,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_100",
+      "page": 82,
+      "original_text": "Through synergies with the Group’s global bicycle product portfolio and R&D capabilities, Stages will continue to advance the integration of indoor and outdoor cycling experiences, while exploring innovative business models based on data and sports services. Amid the continued growth of the global sports and wellness industry, the transformation and development of Stages are expected to generate new growth momentum for the Group and further strengthen its leadership position in the global bicycl",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_101",
+      "page": 82,
+      "original_text": "Taiwan’s bicycle industry began after the Japanese colonial period. In the beginning, bikes were imported from abroad to meet domestic demands. It was not until the 1970s when cycling emerged as a popular sport in the United States, that Taiwan’s bicycle industry began to prosper for more than 40 years. Due to lack of domestic demand, manufacturers first began by providing OEM service for European and American brands, which made bikes a typical export-driven industry. Through OEM service, manufa",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_102",
+      "page": 82,
+      "original_text": "The Company has built its presence in the bicycle markets all over the world. The Group’s businesses can be divided into production and marketing. The former covers proprietary brands and OEM services while the latter serves proprietary brands exclusively. Our brands were founded in Taiwan and later ventured into global markets in 1986. At present, the major markets were Europe, USA and China. After the previous cycling frenzy in 2007, Taiwanese manufacturers started to adjust their domestic sal",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_103",
+      "page": 86,
+      "original_text": "e. Long and short-term business plans Being the modern Cycling Service brand, which communicates with end users, we use E-comm, Giant ID and Digital Marketing to connect us with consumers, build the cycling ecosystem, and focus on the R&D of one and only products. Business models other than manufacturing are also emerging. By tying in digital transformation with highly efficient matrix organization, strengthening inventory and cash flow risk management, we enhance the Group’s resilience for sust",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_104",
+      "page": 86,
+      "original_text": "In addition, the Group has initiated the Bicycling Alliance for Sustainability (BAS), bringing together industry partners to jointly reduce carbon emissions across both production and consumption stages of the bicycle value chain, establish a sustainable supply model, and promote bicycles as truly green products. Through this alliance, the Group aims to lead Taiwan’s bicycle industry toward global sustainability benchmarks, capture emerging low-carbon business opportunities, develop comprehensiv",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_105",
+      "page": 86,
+      "original_text": "The industry expects to see continuous growth in the global bicycle market with a size of US$147.2 billion by 2027. Asia Pacific region is deemed as the most promising segment among all while E-bike will be a crucial driver for the sustainable growth. Differentiated by market and channel, products can be segmented into“ Specialty market” which focuses on recreation and competition models, the“ Mass market” which addresses the commuting and transportation models, and the“ Sports market” which con",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_106",
+      "page": 86,
+      "original_text": "a. The Company has long maintained its leading position in Taiwan. It specializes in the recreational/sports variety, owns 300 exclusive distribution stores, and has the best brand image and awareness in the",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_107",
+      "page": 86,
+      "original_text": "b. The Company has dedicated 20 years in the Chinese market and was the first brand to introduce recreational/sports series. It currently owns around 3,000 distribution stores, and with the Tri-brand strategy of GIANT, Liv, Momentum the Group has secured its place as the No. 1 bicycle brand in China. 084 Giant Group 2025 Annual Report",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_108",
+      "page": 87,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 c. Europe, especially Western Europe, is an important market to the Company. Group’s proprietary brands has already established good brand image here, and its European plants have played an important role. d. North America leads the cycling trends with mainstream being the mountain bikes. As E-bike regulations have gradually matured in the last two years, the market has flourished. Giant has had more than 20 years of experienc",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_109",
+      "page": 87,
+      "original_text": "The Company has built the GIANT Cycling World through its Performance, Sports, Innovative Lifestyle (PSI) product lines with the concept of indoor cycling to satisfy consumers’ cycling requirements worldwide. Regardless of the environment or purpose of the rides, consumers can find a bike that meet and satisfy their needs through the unique“ GIANT Cycling World”. The Company has always stressed the importance of product research and development as well as innovation. It invests substantial resou",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_110",
+      "page": 87,
+      "original_text": "The Company was founded as a manufacturer. It started with the Toyota Production System (TPS) and gradually developed its own Giant Production System. Over time, the Company has accumulated abundant manufacturing experience and competence. Giant currently operates eight bicycle factories around the world. Thus, it has access to production resources in various parts of the world, and the competitive advantages of each factory can be optimized via job specialization on a global scale. Together wit",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_111",
+      "page": 87,
+      "original_text": "The Giant Group has devised the strategy of equal importance on OEM/ODM and proprietary brands more than a decade ago. It designs and manufactures for reputable global brands as well as operates a global distribution network for its proprietary brands. At present, the Group has four major brands, i.e., GIANT, Liv, Momentum and CADEX, to meet demand from different consumer groups. Furthermore, it actively expands the online and offline sales channels through Online + Offline for consumers’ conven",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_112",
+      "page": 87,
+      "original_text": "The Company’s sales network reaches far corners of the world. Out of confidence for our brands and commitment to consumers, we offer the most comprehensive and thoughtful services through our service network at each region. From 2012 onwards, all bike frames are covered by lifetime warranty while non-consumable parts have one-year warranty. The Company has also built a comprehensive after-sale service system through its global marketing network and customers. Consumers can enjoy Giant Group 2025",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_113",
+      "page": 88,
+      "original_text": "the fastest and most convenient services at nearly 10,000 retail outlets worldwide. Meanwhile, Giant has product liability insurance coverage of US$10 million each year which provides global consumers with the best product assurance available. In an attempt to improve consumers’ bike shopping experience, Giant has initiated the Right Ride system in Taiwan over the past few years, helping consumers with choosing the right model. We now take one step further and introduce the high-precision cyclin",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_114",
+      "page": 88,
+      "original_text": "(a) The rise in the global awareness of energy saving, greenhouse gas (GHG) reduction and environmental protection benefits product sale Given the rise in the awareness of energy conservation, GHG reduction and environmental protection worldwide, nations have set targets on annual reduction of GHG emissions and the primary source of GHG happens to be motor vehicles. Cycling is a clean form of transportation that produces neither air nor noise pollution, making it an ideal solution for moving at ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_115",
+      "page": 88,
+      "original_text": "Giant continues to organize Cycling Day events and promote the eco-friendly features of bikes through industry association, Cycling Lifestyle Foundation and the media. We encourage consumers to choose bikes over cars and motorcycles to maintain the quality of our environment. In the meantime, we continue to develop eco-friendly products, such as E-bikes that run on electricity without creating any pollution, to generate new demands. (b) Upraise of health awareness worldwide benefits product sale",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_116",
+      "page": 88,
+      "original_text": "In recent years, the trend of exercise is emerging and cycling is perceived as the best outdoor exercise as well as an ideal means for commuting and maintaining social distance. As it greatly benefits the physical and mental health of body and mind, it has become a fashionable health product well- received during the pandemic, which is favorable to the industry development.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_117",
+      "page": 88,
+      "original_text": "The Company continues to invest significant resources into the recreational and sporting segments, and develop fitness products that are attractive and fun to ride. We will persistently promote the cycling sport through marketing and distribution channels. (c) Well-perceived global competitiveness of Taiwan’s cycling industry facilitates the promotion of",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_118",
+      "page": 88,
+      "original_text": "Bicycle is a comprehensive industry. There is still enormous potential for innovative and high value- adding products to complete the peripheral industries in Taiwan. Moreover, Taiwan has long been a major exporting country in the world with strong global competitiveness in terms of assembled bikes and parts. Tying in these factors with Taiwanese companies’ presence in the cycling industry of China and Southeast Asia, Taiwan is well-positioned to maintain its competitive advantage in global prod",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_119",
+      "page": 89,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 In recent years, Taiwan’s cycling industry has moved towards creating innovative values and high- end applications. These efforts have made Taiwan a critical part in the world’s supply of premium bikes. The gap between us and the runner-up countries is evidenced by the annual increase in the average unit price of bikes exported from Taiwan.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_120",
+      "page": 89,
+      "original_text": "The Group will continue to rely on the competitive advantages of Taiwan and integrate the G-Star Team and satellite systems assembled by suppliers to fully realize the competitive advantages of the industry. We stay committed to develop innovative and high value-added products while maximizing our production and marketing capacities. The Group and key leaders in the cycling industry jointly propose ESG initiatives for the industry and found the BAS, an exclusive platform for the industry chain. ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_121",
+      "page": 89,
+      "original_text": "(a) Intensifying competition in the cycling market The rise of environmental protection, sport and health awareness in recent years has made cycling a popular exercise throughout the world, contributing the robust development in the cycling industry. However, given the low entry barrier of the industry, non-bicycle manufacturers are joining the competition. In search of growth opportunities, existing cycling companies are actively investing into product development, marketing and distribution. M",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_122",
+      "page": 89,
+      "original_text": "The Group has nearly 30 years of global experience. Our products and brands are well-recognized and loved by the market. The Group has 100%-owned marketing subsidiaries in all major markets around the world and their presence ensures the most immediate response plus the strongest connection with local consumers. In the future, we will continue investing into the development of innovative products and technologies, enhancing resource integration and efficiency, and strengthening product and brand",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "效率提升"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_123",
+      "page": 89,
+      "original_text": "Giant has transnational production base and will set short supply chain as the strategic goal to diminish the impact of trade protectionism. (2) Main product applications and production processes A. The Company manufactures bikes for recreational, sporting and commuting uses. B. Below is a description of the production process: Summarized production process for Giant bikes: frame cutting and drawing → frame processing and welding of accessories → pre-welding treatment → frame assembly and weldin",
+      "annotations": {
+        "expense_types": [
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_124",
+      "page": 91,
+      "original_text": "Employee information in the last 2 years up till the publication date of this annual report",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_125",
+      "page": 91,
+      "original_text": "Average years of service 6.69 7.90 7.96 Doctoral Degree 0.06 0.04 0.04 Master’s Degree 2.06 2.27 2.30 Academic background (%) Bachelor’s Degree 27.7 30.32 30.29 Senior High School 38.13 39.85 40.06 Below senior high school 32.06 27.53 27.32 Note: This workforce is primarily based in Taiwan and China, with a coverage rate of 88.4%. For human resources data, please refer to Giant Group’s 2025 Sustainability Report. 4. Expenditure related to environmental protection: (1) The Company did not incur a",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_127",
+      "page": 91,
+      "original_text": "This includes ISO certifications (e.g., occupational health and safety and energy management systems), greenhouse gas verification, and product carbon footprint verification. Government regulatory expenditures, including carbon fees, carbon taxes, emissions trading units (ETUs), Carbon Border Adjustment",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_128",
+      "page": 91,
+      "original_text": "Mechanism (CBAM) tariffs, and carbon credit trading costs (including environmental penalties, if any). Costs associated with climate change impacts, including disaster prevention equipment and facilities for extreme weather events (e.g.,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_129",
+      "page": 91,
+      "original_text": "typhoons, snow, and storms), as well as factory maintenance and production losses resulting from such events. Investments in low-carbon initiatives, including energy storage",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_131",
+      "page": 91,
+      "original_text": "solar power systems, and green electricity procurement. Waste reduction costs, including expenditures related to waste reduction and the proper disposal of corporate waste, or other waste-",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_132",
+      "page": 91,
+      "original_text": "related expenses (e.g., wooden pallet recycling, battery recycling, hazardous waste disposal, etc.) Giant Group 2025 Annual Report 089",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_133",
+      "page": 92,
+      "original_text": "Costs associated with air pollution prevention and control, including equipment and related measures targeting pollutants such as volatile",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_134",
+      "page": 92,
+      "original_text": "Investments in energy-saving measures, including equipment upgrades Energy Conservation 8.62% or replacements (e.g., motors, chillers, and boilers) to improve energy",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_135",
+      "page": 92,
+      "original_text": "Costs related to water resource protection policies and associated equipment, including water monitoring systems, water-saving Water Resource Management 30.93% equipment, and wastewater treatment facilities (e.g., expenditures on",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_136",
+      "page": 92,
+      "original_text": "Note: The environmental protection expenditure excludes Giant Vietnam Manufacturing Co., Ltd. 5. Labor-management relations: Giant Group has established the Human Rights Code of Conduct to declare its respect and support for internationally recognized human rights standards and principles. These include the United Nations Universal Declaration of Human Rights, the UN Global Compact, and the ILO Declaration on Fundamental Principles and Rights at Work. We comply with the laws and regulations of a",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_137",
+      "page": 92,
+      "original_text": "respective country/region. Young workers under the age of 18 shall not engage in work that may jeopardize their health or safety, including night shifts or overtime The Group must implement proper and lawful mechanisms to verify the age of their workers. The Group shall clearly stipulate regulations for working hours and overtime, regularly monitor and manage workers’ attendance, and respect national statutory holidays or religious holidays.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_139",
+      "page": 92,
+      "original_text": "extended working hours or holiday work, as recognized by local laws, such extensions must comply with local legal procedures. Workers must be allowed at least one day off every seven days 090 Giant Group 2025 Annual Report",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_140",
+      "page": 95,
+      "original_text": "The Group has established a profit-sharing mechanism linked to operating performance, thereby fostering a foundation of mutual trust. In accordance with the Group’s Articles of Incorporation, where annual profits are generated, 6% to 12% of such profits shall be appropriated as employee compensation. For 2025, employee compensation was accrued at 7.1%, amounting to NT$66,473,092, to be distributed in cash. Occupational Safety and Health (OSH) To enhance employees’ awareness of occupational safet",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_141",
+      "page": 95,
+      "original_text": "All designated personnel at each site have completed the required training, demonstrating the Group’s strong commitment to occupational safety education and its rigorous implementation. The Group has also placed a strategic focus on enhancing occupational safety awareness among senior management by implementing a comprehensive and systematic training program. This program aims to strengthen leadership capabilities in occupational safety, ensuring that senior executives are equipped with forward-",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_142",
+      "page": 95,
+      "original_text": "(2) Loss incurred due to industrial disputes in 2025 and up to the publication date of this annual report: In September 2025, the U.S. Customs and Border Protection (CBP) issued a Withhold Release Order (WRO) against the Group’s Taiwan manufacturing facilities. The Group has always upheld our commitment to human rights protection and regulatory compliance. Regarding the five concerns raised, we have responded to each one individually and outlined the specific measures that have been implemented ",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_143",
+      "page": 98,
+      "original_text": "D. Information security management measures a. Establish an information security task force to formulate relevant management policies and implementation plans to ensure information security. b. Handle personal information prudently in accordance with the Personal Data Protection Act. c. Passwords and anti-virus software are required for both personal computers and servers. Passwords and virus patterns shall be updated regularly. d. Comply with regulations pertaining to intellectual property righ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_144",
+      "page": 98,
+      "original_text": "h. Passed the third-party inspection in 2025 and met the ISO/IEC 27001:2013 verification. Based on this foundation, we have established a comprehensive management system. Through ISO standardized operating procedures, we implement network management, server room management, and the development, operation, and maintenance of network financial systems to comprehensively create a secure and stable operating environment. (2) Loss, impacts and action plans due to major cyber security incidents in 202",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_146",
+      "page": 100,
+      "original_text": "Net sales revenue 71,278,772 60,253,963 (11,024,809) -15% Cost of goods sold 57,744,734 48,316,713 (9,428,021) -16% Gross profit 13,534,038 11,937,250 (1,596,788) -12% Operating expenses 11,675,553 10,856,096 (819,457) -7% Profit from operations 1,858,485 1,081,154 (777,331) -42%",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_147",
+      "page": 100,
+      "original_text": "Profit before income tax 2,357,022 1,384,448 (972,574) -41% Income tax expense 876,918 518,046 (358,872) -41% Net profit 1,480,104 866,402 (613,702) -41% Net profit attributable to owners of 1,264,013 723,329 (540,684) -43%",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_148",
+      "page": 100,
+      "original_text": "1. Explanation to major variations: (1) The decline in operating profit is mainly due to the decrease in gross profit and the increase in the operating expense ratio caused by the reduction in revenue scale, resulting in a decline in operating profit. (2) The changes in non-operating income and expenses are mainly due to the decrease of interest expense. (3) The decrease in income tax is primarily due to the reduction in pre-tax profit. (4) The changes in pre-tax profit and net profit after tax ",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_149",
+      "page": 100,
+      "original_text": "The China domestic E-bike task force is actively developing a product lineup compliant with the updated regulations, positioning the Group to capitalize on emerging opportunities arising from China’s regulatory changes. The European market has begun to show a moderate recovery; the Group will re-enter the mainstream market with healthy inventory levels and innovative product offerings. The Company remains committed to shortening development cycles and accelerating time-to-market in order to resp",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升",
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_150",
+      "page": 100,
+      "original_text": "Cash flow ratio (%) 35 45.18 29% Cash flow adequacy ratio (%) 84.23 117.07 39% Cash reinvestment ratio (%) 17.23 16.68 -3% Explanation to major variations: The increase of cash flow-related ratios was mainly due to the decrease of current liabilities, lower inventory levels and lower cash dividends. 098 Giant Group 2025 Annual Report",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_151",
+      "page": 101,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 (2) Liquidity analysis for the next year",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_152",
+      "page": 101,
+      "original_text": "12,298,072 1,933,374 3,695,717 10,535,729 - - 1. Analysis of cash flow variation for the next year: (1) Operating activities: The cash inflow is mainly due to the expected operating profit in 2026. (2) Investing activities: The cash outflow is mainly due to the expected capital expenditures in 2026. (3) Financing activities: The cash outflow is mainly due to the expected payment of cash dividends in",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_153",
+      "page": 101,
+      "original_text": "2. Responsive measures and liquidity analysis for cash flow deficits: None. 4. Material capital expenditures in the last year and impact on business performance (1) Review and analysis of major capital expenditures and sources of capital",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_154",
+      "page": 101,
+      "original_text": "A. Replacement and renewal of office buildings, factories, automated production equipment and occupational safety/environmental protection equipment: In response to market demand and insufficient capacities, capital investments were directed toward the construction of D. Mag Vietnam facility, China Headquarters, production lines, and automated intelligent equipment, with the aim of enhancing production efficiency and elevating product quality. In parallel, investments were made to improve workpl",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "效率提升"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_155",
+      "page": 101,
+      "original_text": "C. Investments in distribution channel: Enhance the professionalism of Giant’s retail and distribution partners, bring the best cycling lifestyle and joy to all consumers with boundless enthusiasm. Giant Group 2025 Annual Report 099",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_156",
+      "page": 102,
+      "original_text": "5. Causes of profit or loss incurred on investments in the last year, and any improvements or investments planned for the next year The Company’s long-term investments are primarily based on strategic planning to meet future operational requirements. For detailed information regarding our recent investments, please refer to table 7 and 8 of the 2025 Consolidated Financial Statements. The profit incurred on investments were mainly due to the market recovery and demand restoration. While the loss ",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_157",
+      "page": 102,
+      "original_text": "Giant Light Metal The production was Gradually improve the Technology (Haian) Co., (11,631) unable to achieve the production process and None Ltd. economic scale. increase the capacity.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_158",
+      "page": 102,
+      "original_text": "Bicycle demand in China through active expansion Giant (Tianjin) Co., Ltd. (61,777) declined and revenue into new overseas markets, None shrank expecting turn profitable with",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_159",
+      "page": 102,
+      "original_text": "The franchise agreement Liquidation procedures will be Putian YouBike Co., Ltd. (53,797) None is coming to the end. carried out after maturity.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_160",
+      "page": 102,
+      "original_text": "Giant Vietnam Utilize the production capacity (40,549) unable to achieve the None Manufacturing Co., Ltd. with the increase of orders.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_161",
+      "page": 102,
+      "original_text": "capacity utilization is low. orders increase. At the beginning Profit is promising upon the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_162",
+      "page": 102,
+      "original_text": "of establishment, complete of establishment Technology Vietnam Co., (USD 217) None production has not yet and the subsequent expansion",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_163",
+      "page": 102,
+      "original_text": "Giant Bicycle Mexico S. de Affected by slow recovery (EUR 794) with dealers and brand None",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_165",
+      "page": 102,
+      "original_text": "Affected by slow recovery strengthen the partnerships Giant France S.A.R.L. (EUR 1,548) None of the market. with dealers and brand",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_166",
+      "page": 102,
+      "original_text": "Giant Bicycle (Thailand) with dealers, expand (1,230) establishment, has yet to None Co., Ltd. distribution channels to",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_167",
+      "page": 103,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 6. Evaluation of risk management issues in the last year up till the publication date of this",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_168",
+      "page": 103,
+      "original_text": "(1) Impact of Interest Rate, Exchange Rate, and Inflation on the Company’s Earnings and Action Plans: A. In 2025, the Federal Reserve (FED) implemented preemptive interest rate cuts in response to moderating inflation and rising downside risks to employment, with cumulative cuts totaling 75 basis points (0.75%). The European Central Bank (ECB) initiated its rate-cutting cycle in June 2024, with cumulative reductions reaching 200 basis points (2.0%). Given the Company’s presence across Europe, th",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "下降",
+          "持平"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_169",
+      "page": 103,
+      "original_text": "B. The Company engages in foreign-currency-denominated sales and procurement transactions, which expose it to exchange rate fluctuation risk. Exchange rate risk is managed within the bounds of Company policy through the use of forward foreign exchange contracts. Agreed-upon principles have been established with key customers whereby exchange rate movements beyond a defined threshold are promptly reflected in pricing, supported by an exchange rate subsidy mechanism, so as to mitigate the impact o",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "投资驱动",
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_170",
+      "page": 103,
+      "original_text": "A. The Company never engages in high-risk or highly leveraged investments, and does not transact derivatives for arbitrage purpose. The board of directors has specifically prohibited these types of transaction. B. The Company extends loan, endorsement and guarantee only to subsidiaries in which it exercises control. These transactions are conducted strictly in accordance with the rules approved at annual general",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_172",
+      "page": 103,
+      "original_text": "A. Due to rising trade protectionism, the impact of issues concerning changes in product tariffs were evaluated and handled by the legal affair unit along with the finance and business units. B. Amendments in countries’ tax laws and regulations and OECD’s anti-avoidance rules against international tax planning would affect the Company’s global tax planning. The impact was evaluated and handled by",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_173",
+      "page": 104,
+      "original_text": "(5) Impacts of Changes in Technology (including Information Security Risk) and Industry on Company’s Finance and Business and Action Plans: Research and development are a cornerstone of Giant Group’s sustained growth. In the area of core bicycle engineering, the Company continues to deepen its foundational research in lightweight structures, vibration damping technology, internal cable routing design, carbon fiber lamination techniques, carbon fiber aerodynamic spokes, and hookless rim systems, ",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_174",
+      "page": 104,
+      "original_text": "In the domain of electric and smart systems, the Company has progressively advanced from E-Cycling technology toward Smart Cycling applications. Through its Hybrid Cycling Technology power-amplification system, electric and human power outputs are seamlessly integrated, and by combining physiological data, vehicle status, and environmental information, the Company is developing an intelligent control system capable of automatically adjusting assisted output—delivering a more intuitive riding exp",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升",
+          "外部因素"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_175",
+      "page": 104,
+      "original_text": "(6) Impacts of Changes in Corporate Image on Corporate Risk Management and Action Plans: The Company has long maintained a sound corporate and brand image. In the 2025 Taiwan Global Brand Survey, the Company ranked Ninth with brand value of US$614 million, and has continued to be the number one bicycle brand. The increasing stringent environmental regulations on carbon dioxide emission reduction and circular economy have brought challenges to enterprises. The Giant Group has built its own solar ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_176",
+      "page": 105,
+      "original_text": "Chapter 1 Chapter 2 Chapter 3 Chapter 4 Chapter 5 Chapter 6 Chapter 7 (7) Expected Benefits and Risks Relating to Merger and Acquisition and Action Plans: The Company had no merger and acquisition cases in 2025. (8) Expected Benefits and Risks Relating to Plant Expansion and Action Plans: Under the wave of energy conservation and carbon reduction, the cycling industry is now at the growth stage of a new cycle. Due to rising international trade protectionism, we decided to set up a second factory",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_177",
+      "page": 105,
+      "original_text": "(12) Litigation and non-contentious cases: A. Ongoing litigations, non-contentious cases or administrative litigations that are deemed material: In September 2025, U.S. Customs and Border Protection (CBP) issued a Withhold Release Order (WRO) against Giant Group’s Taiwan manufacturing facilities. Giant Group remains firmly committed to the protection of human rights and regulatory compliance. In response to the five areas of concern raised, the Company has addressed each item individually, provi",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "giant_mda_178",
+      "page": 105,
+      "original_text": "B. Major litigations, non-contentious cases, or administrative litigations involving the Company’s directors, supervisors, President, person-in-charge, or any shareholder with more than 10% ownership interest, whether concluded or pending judgment, which may present significant impacts on shareholders’ interests or securities prices: None. Giant Group 2025 Annual Report 103",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_179",
+      "page": 106,
+      "original_text": "(13) Other significant risks and countermeasures: A. Intellectual Property Risks and Response Measures Giant Group’s headquarters formally adopted an Intellectual Property Management System in 2023, which has been maintained and operated for a number of years since. The Group successfully passed TIPS certification and re-certification in 2023 and 2024 respectively. Throughout 2025 and looking ahead, the Group continues to optimize its IP management system in a pragmatic and progressive manner, i",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "giant_mda_180",
+      "page": 106,
+      "original_text": "b. On December 19, the 10th meeting of the 18th Board of Directors received a report on the IP management plan and annual implementation progress. c. TIPS system maintenance activities completed during the year included: 2 management review meetings; 3 training sessions (with 100% of participants passing the assessments); IP risk control and potential proposal evaluations; refresher training for internal self-assessors; and 11 internal self- assessment checks related to system implementation com",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "giant_mda_181",
+      "page": 106,
+      "original_text": "b. Trademarks: To continuously enhance brand value and strengthen market presence, the Group’s total global trademark count has grown for three consecutive years, reaching over 2,000 trademarks—an increase of approximately 7.3% compared to the end of 2024—covering more than 100 countries. B. Other significant risk included the rising costs of raw materials which had a negative impact on gross margin. Besides internal measures to reduce waste and costs, we also adjusted selling prices moderately",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    }
+  ]
+}

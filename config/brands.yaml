@@ -1,0 +1,100 @@
+brands:
+  - name: Decathlon迪卡侬
+    english_name: Decathlon
+    category: core
+    focus: 全品类运动零售
+    sources:
+      - type: ir
+        url: https://www.decathlon-group.com/en/investors
+      - type: news
+        url: https://www.decathlon.com.cn/help-center/news
+      - type: wechat
+        account: decathlonchina
+
+  - name: 安踏体育
+    english_name: ANTA
+    category: competitor
+    focus: 多品牌矩阵、电商渠道
+    sources:
+      - type: ir
+        url: https://ir.anta.com
+      - type: news
+        url: https://www.anta.com/news
+
+  - name: 李宁
+    english_name: Li-Ning
+    category: competitor
+    focus: 品牌升级、国潮营销
+    sources:
+      - type: ir
+        url: https://ir.lining.com.hk
+      - type: news
+        url: https://www.lining.com/news
+
+  - name: 特步国际
+    english_name: Xtep
+    category: competitor
+    focus: 跑步赛道、国际化
+    sources:
+      - type: ir
+        url: https://ir.xtep.com
+      - type: news
+        url: https://www.xtep.com/news
+
+  - name: 361度
+    english_name: 361 Degrees
+    category: competitor
+    focus: 大众市场、性价比
+    sources:
+      - type: ir
+        url: https://ir.361sport.com
+      - type: news
+        url: https://www.361sport.com/news
+
+  - name: 滔搏国际
+    english_name: Topsports
+    category: channel
+    focus: 零售网络、多品牌代理
+    sources:
+      - type: ir
+        url: https://ir.topsports.com.hk
+
+  - name: 宝胜国际
+    english_name: Pou Sheng
+    category: channel
+    focus: 线下渠道布局
+    sources:
+      - type: ir
+        url: https://ir.pou-sheng.com
+
+  - name: NIKE耐克
+    english_name: Nike
+    category: reference
+    focus: 全球运动品牌龙头
+    sources:
+      - type: ir
+        url: https://investor.nike.com
+
+  - name: Adidas阿迪达斯
+    english_name: Adidas
+    category: reference
+    focus: 全球运动品牌
+    sources:
+      - type: ir
+        url: https://www.adidas-group.com/en/investors
+
+  - name: Lululemon
+    english_name: Lululemon
+    category: reference
+    focus: 瑜伽品类领导品牌
+    sources:
+      - type: ir
+        url: https://investor.lululemon.com
+
+  - name: PUMA彪马
+    english_name: PUMA
+    category: reference
+    focus: 运动时尚品牌
+    sources:
+      - type: ir
+        url: https://www.pumagroup.com/investor-relations

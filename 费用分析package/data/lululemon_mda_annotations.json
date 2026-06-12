@@ -1,0 +1,96 @@
+{
+  "version": "2.0",
+  "company": "Lululemon",
+  "report_type": "Annual Report FY2025",
+  "total_pages": 1,
+  "total_paragraphs": 4,
+  "annotation_summary": {
+    "expense_types": {
+      "营销费用": 2,
+      "运营费用": 1,
+      "技术成本": 4,
+      "门店成本": 1,
+      "物流成本": 1
+    },
+    "trends": {
+      "上升": 2
+    },
+    "drivers": {
+      "业务扩张": 1,
+      "投资驱动": 1,
+      "供应链": 1
+    },
+    "sentiments": {
+      "正面": 1,
+      "中性": 3
+    }
+  },
+  "annotated_paragraphs": [
+    {
+      "id": "lulu_mda_001",
+      "page": 91,
+      "original_text": "Martha (Marti) Morfitt Executive Chair River Rock Partners Inc., Principal, Partner, and Chief Executive Officer David Mussafer Lead Director of the Board Advent International, Chairman and Managing Partner Charles (Chip) Bergh Levi, Strauss & Co., Former President and Chief Executive Officer Esi Eggleston Bracey Unilever PLC, Former Chief Growth and Marketing Officer Shane Grant Colgate-Palmolive, Chief Operating Officer, Americas Kathryn Henry LightBrite, Former Chief Executive Officer, Co-Fou",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "lulu_mda_002",
+      "page": 91,
+      "original_text": "Meghan Frank Interim Co-Chief Executive Officer and Chief Financial Officer André Maestrini Interim Co-Chief Executive Officer, President, and Chief Commercial Officer Nicole (Nikki) Neuburger Chief Brand & Product Activation Officer Edward (Ted) Dagnese Chief Supply Chain Officer Ranju Das Chief AI & Technology Officer Annual Meeting Investor inquiries should be directed to: Please refer to the Notice of Annual Meeting of Stockholders By email: investors@lululemon.com",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "lulu_mda_003",
+      "page": 91,
+      "original_text": "By mail: lululemon athletica Investor Relations 1818 Cornwall Avenue, Vancouver, British Columbia Investor Information Canada V6J 1C7 Shareholders are advised to review financial information and other disclosures about lululemon contained in its 2025 Independent Auditors Annual Report on Form 10-K, Quarterly Reports on Form",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "lulu_mda_004",
+      "page": 91,
+      "original_text": "10-Q, Proxy Statement and other SEC filings, as well as press releases and earnings announcements by accessing the Company’s website at https://corporate.lululemon.com/ Transfer Agent",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    }
+  ]
+}

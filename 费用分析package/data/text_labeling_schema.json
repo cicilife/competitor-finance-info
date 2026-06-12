@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "description": "财报费用文本标注schema",
+  "annotation_types": {
+    "expense_type": {
+      "description": "费用类型标注",
+      "values": {
+        "sga": {
+          "name": "SG&A费用",
+          "keywords": ["selling", "general", "administrative", "SGA", "sales and marketing", "distribution"]
+        },
+        "rd": {
+          "name": "研发费用",
+          "keywords": ["research", "development", "R&D", "innovation", "product development"]
+        },
+        "marketing": {
+          "name": "营销费用",
+          "keywords": ["marketing", "advertising", "promotion", "brand", "customer acquisition"]
+        },
+        "operating_expense": {
+          "name": "运营费用",
+          "keywords": ["operating", "operations", "operational", "facilities", "logistics"]
+        },
+        "personnel": {
+          "name": "人力成本",
+          "keywords": ["employee", "compensation", "headcount", "personnel", "workforce", "salary"]
+        },
+        "technology": {
+          "name": "技术成本",
+          "keywords": ["technology", "cloud", "software", "IT", "infrastructure", "data"]
+        },
+        "legal": {
+          "name": "法律合规",
+          "keywords": ["legal", "compliance", "regulatory", "litigation", "settlement"]
+        },
+        "other": {
+          "name": "其他费用",
+          "keywords": ["other", "miscellaneous", "general"]
+        }
+      },
+      "required": true
+    },
+    "trend": {
+      "description": "趋势标注",
+      "values": {
+        "increase": {
+          "name": "上升",
+          "indicators": ["increase", "grew", "growth", "higher", "increased", "rose", "up"]
+        },
+        "decrease": {
+          "name": "下降",
+          "indicators": ["decrease", "declined", "lower", "reduced", "decline", "fell", "down"]
+        },
+        "stable": {
+          "name": "持平",
+          "indicators": ["stable", "consistent", "unchanged", "flat", "similar"]
+        },
+        "volatile": {
+          "name": "波动",
+          "indicators": ["volatile", "fluctuate", "fluctuation", "variable", "unstable"]
+        },
+        "new": {
+          "name": "新增",
+          "indicators": ["new", "added", "additional", "first time", "newly"]
+        },
+        "reduction": {
+          "name": "削减",
+          "indicators": ["reduction", "cut", "restructuring", "streamline", "optimization"]
+        }
+      },
+      "required": true
+    },
+    "driver": {
+      "description": "驱动因素标注",
+      "values": {
+        "business_expansion": {
+          "name": "业务扩张",
+          "indicators": ["growth", "expansion", "scale", "volume", "business growth", "new markets"]
+        },
+        "investment": {
+          "name": "投资驱动",
+          "indicators": ["investment", "initiative", "strategic", "transformation", "venture", "project"]
+        },
+        "efficiency": {
+          "name": "效率提升",
+          "indicators": ["efficiency", "optimization", "automation", "productivity", "cost saving", "improved"]
+        },
+        "external": {
+          "name": "外部因素",
+          "indicators": ["currency", "inflation", "regulatory", "macroeconomic", "pandemic", "economic"]
+        },
+        "restructuring": {
+          "name": "重组整合",
+          "indicators": ["restructuring", "reorganization", "integration", "acquisition", "merger", "consolidation"]
+        },
+        "one_time": {
+          "name": "一次性",
+          "indicators": ["one-time", "special", "impairment", "restructuring charge", "legal settlement", "settlement"]
+        }
+      },
+      "required": false
+    },
+    "brand_type": {
+      "description": "品牌类型标注",
+      "values": {
+        "premium": {
+          "name": "高端品牌",
+          "indicators": ["premium", "luxury", "high-end", "prestige"]
+        },
+        "mass": {
+          "name": "大众品牌",
+          "indicators": ["mass", "mainstream", "value", "affordable"]
+        },
+        "emerging": {
+          "name": "新兴品牌",
+          "indicators": ["new", "emerging", "disruptive", "startup"]
+        },
+        "conglomerate": {
+          "name": "综合集团",
+          "indicators": ["group", "portfolio", "multiple brands", "diversified"]
+        }
+      },
+      "required": false
+    },
+    "sentiment": {
+      "description": "情感倾向标注",
+      "values": {
+        "positive": {
+          "name": "正面",
+          "indicators": ["improved", "increased", "growth", "optimistic", "strong", "positive"]
+        },
+        "negative": {
+          "name": "负面",
+          "indicators": ["declined", "decrease", "challenge", "difficult", "negative", "weak"]
+        },
+        "neutral": {
+          "name": "中性",
+          "indicators": ["stable", "consistent", "unchanged", "maintained"]
+        }
+      },
+      "required": false
+    }
+  },
+  "example_annotations": [
+    {
+      "text": "SG&A expenses increased due to continued investment in marketing and brand building initiatives",
+      "annotations": {
+        "expense_type": "sga",
+        "trend": "increase",
+        "driver": "investment",
+        "sentiment": "positive"
+      }
+    },
+    {
+      "text": "Research and development spending grew as we focused on product innovation and technology upgrades",
+      "annotations": {
+        "expense_type": "rd",
+        "trend": "increase",
+        "driver": "business_expansion",
+        "sentiment": "positive"
+      }
+    },
+    {
+      "text": "Operating expenses decreased through efficiency improvements and cost optimization programs",
+      "annotations": {
+        "expense_type": "operating_expense",
+        "trend": "decrease",
+        "driver": "efficiency",
+        "sentiment": "positive"
+      }
+    }
+  ]
+}

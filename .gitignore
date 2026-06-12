@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Tooling
+.trae/
+.frontend-slides/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs and runtime
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Output / build artifacts
+output/
+coverage_stats_output.xlsx
+*.bak
+*.tmp
+*.temp
+presentation.html
+__pycache__/
+
+# Large data / binary files (track code, not data)
+*.xlsx
+*.xls
+*.csv
+!data/**/*.csv
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.cache
+coverage.xml
+*.cover
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+secrets/
+*.pem
+*.key

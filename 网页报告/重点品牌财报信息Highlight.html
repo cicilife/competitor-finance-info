@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2024-2025 国际品牌财报大盘点（中国市场）· 可编辑信息图</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans SC", "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    color: #1a2233;
+    background: #f7f9fc;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  [contenteditable="true"]:focus {
+    outline: 2px dashed #1f6feb;
+    outline-offset: 3px;
+    background: rgba(31, 111, 235, 0.06);
+    border-radius: 4px;
+  }
+
+  /* ========= 工具条 ========= */
+  .toolbar {
+    position: fixed; top: 16px; right: 16px;
+    z-index: 1000;
+    display: flex; gap: 8px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 6px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(15, 30, 60, 0.08);
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid #d8dee9; background: #fff; color: #1a2233;
+    padding: 7px 14px; border-radius: 7px; cursor: pointer;
+    font-size: 13px; transition: all .2s;
+  }
+  .btn:hover { background: #f1f5fb; }
+  .btn.primary { background: #0E2A4A; color: #fff; border-color: #0E2A4A; font-weight: 600; }
+  .btn.primary:hover { background: #143a6b; }
+  .btn svg { width: 13px; height: 13px; }
+  .btn .dot { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; }
+
+  /* ========= 整体海报 ========= */
+  .poster {
+    position: relative;
+    max-width: 1400px;
+    margin: 24px auto 60px;
+    padding: 56px 64px 48px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 16px 48px rgba(15, 30, 60, 0.10);
+    overflow: hidden;
+  }
+  .deco {
+    position: absolute; width: 110px; height: 110px;
+    pointer-events: none;
+  }
+  .deco-tl { top: 0; left: 0;
+    background:
+      linear-gradient(135deg, #F5B400 50%, transparent 50%) 0 0/55px 55px no-repeat,
+      linear-gradient(135deg, transparent 50%, #1F6FEB 50%) 55px 55px/55px 55px no-repeat,
+      linear-gradient(135deg, #FF7A29 50%, transparent 50%) 0 55px/55px 55px no-repeat,
+      linear-gradient(135deg, transparent 50%, #16A34A 50%) 55px 0/55px 55px no-repeat;
+  }
+  .deco-tr { top: 0; right: 0;
+    background:
+      linear-gradient(225deg, #1F6FEB 50%, transparent 50%) 0 0/55px 55px no-repeat,
+      linear-gradient(225deg, transparent 50%, #E11D48 50%) 55px 55px/55px 55px no-repeat,
+      linear-gradient(225deg, #F5B400 50%, transparent 50%) 0 55px/55px 55px no-repeat,
+      linear-gradient(225deg, transparent 50%, #FF7A29 50%) 55px 0/55px 55px no-repeat;
+  }
+  .deco-bl { bottom: 0; left: 0;
+    background:
+      linear-gradient(45deg, #16A34A 50%, transparent 50%) 0 0/55px 55px no-repeat,
+      linear-gradient(45deg, transparent 50%, #F5B400 50%) 55px 55px/55px 55px no-repeat,
+      linear-gradient(45deg, #1F6FEB 50%, transparent 50%) 0 55px/55px 55px no-repeat,
+      linear-gradient(45deg, transparent 50%, #E11D48 50%) 55px 0/55px 55px no-repeat;
+  }
+  .deco-br { bottom: 0; right: 0;
+    background:
+      linear-gradient(315deg, #E11D48 50%, transparent 50%) 0 0/55px 55px no-repeat,
+      linear-gradient(315deg, transparent 50%, #1F6FEB 50%) 55px 55px/55px 55px no-repeat,
+      linear-gradient(315deg, #FF7A29 50%, transparent 50%) 0 55px/55px 55px no-repeat,
+      linear-gradient(315deg, transparent 50%, #16A34A 50%) 55px 0/55px 55px no-repeat;
+  }
+
+  /* ========= 顶部标题 ========= */
+  .title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .title h1 {
+    font-family: "Noto Serif SC", "Source Han Serif", serif;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 1.35;
+    margin: 0 0 14px;
+    color: #0E2A4A;
+    letter-spacing: 0.5px;
+  }
+  .title h1 .q { color: #0E2A4A; }
+  .title h1 .accent-red { color: #E11D48; }
+  .title .sub {
+    font-size: 14.5px;
+    color: #4b5563;
+    max-width: 880px;
+    margin: 0 auto 4px;
+    line-height: 1.7;
+  }
+  .title .sub b { color: #E11D48; font-weight: 700; }
+  .title .sub.gray { color: #6b7280; font-size: 14px; }
+  .title .bar {
+    display: inline-block;
+    width: 60px; height: 4px;
+    background: linear-gradient(90deg, #E11D48, #F5B400, #16A34A, #1F6FEB);
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+
+  /* ========= 两栏 + 流动曲线 ========= */
+  .board { position: relative; margin-top: 18px; }
+  .flow-svg {
+    position: absolute;
+    top: 40px; bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .columns {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    z-index: 2;
+  }
+  .col { display: flex; flex-direction: column; gap: 18px; }
+
+  /* ========= 卡片 ========= */
+  .card {
+    background: #ffffff;
+    border: 1px solid #e5ebf5;
+    border-radius: 16px;
+    padding: 16px 20px 16px;
+    box-shadow: 0 4px 14px rgba(15, 30, 60, 0.05);
+  }
+  .card-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    flex: 0 0 auto;
+    letter-spacing: 0.2px;
+  }
+  .badge.b-blue   { background: #1F6FEB; }
+  .badge.b-orange { background: #FF7A29; }
+  .badge.b-red    { background: #E11D48; }
+  .badge.b-green  { background: #16A34A; }
+  .badge.b-gold   { background: #F5B400; color: #0E2A4A; }
+  .badge.b-purple { background: #8B5CF6; }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 16.5px;
+    color: #0E2A4A;
+    line-height: 1.4;
+  }
+  .card-title .delta {
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+  }
+  .card-title .delta.up   { background: rgba(22,163,74,0.12); color: #15803d; }
+  .card-title .delta.down { background: rgba(225,29,72,0.12); color: #be123c; }
+
+  .bullets {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 0;
+  }
+  .bullets li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: #374151;
+    margin-bottom: 4px;
+    line-height: 1.65;
+  }
+  .bullets li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 8px;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--tone, #1F6FEB);
+  }
+  .card.tone-blue   { --tone: #1F6FEB; }
+  .card.tone-orange { --tone: #FF7A29; }
+  .card.tone-red    { --tone: #E11D48; }
+  .card.tone-green  { --tone: #16A34A; }
+  .card.tone-gold   { --tone: #F5B400; }
+  .card.tone-purple { --tone: #8B5CF6; }
+
+  /* ========= 来源链接 ========= */
+  .src {
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px dashed #e5ebf5;
+    font-size: 11.5px;
+    color: #6b7280;
+    line-height: 1.85;
+    word-break: break-all;
+  }
+  .src-label {
+    font-weight: 700;
+    color: #0E2A4A;
+    margin-right: 6px;
+  }
+  .src a {
+    color: #1F6FEB;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    border-bottom: 1px dotted #93c5fd;
+    transition: color .15s, border-color .15s;
+  }
+  .src a:hover { color: #E11D48; border-bottom-color: #E11D48; }
+  .src a::after {
+    content: " ↗";
+    font-size: 10px;
+    opacity: 0.6;
+  }
+
+  /* ========= 底部角标 ========= */
+  .source-mark {
+    position: absolute;
+    right: 24px; bottom: 18px;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; color: #94a3b8;
+  }
+  .source-mark::before {
+    content: "";
+    width: 14px; height: 14px;
+    background: #0E2A4A;
+    mask: radial-gradient(circle, #000 35%, transparent 36%) 0 0/7px 7px,
+          radial-gradient(circle, #000 35%, transparent 36%) 7px 7px/7px 7px;
+    -webkit-mask: radial-gradient(circle, #000 35%, transparent 36%) 0 0/7px 7px,
+          radial-gradient(circle, #000 35%, transparent 36%) 7px 7px/7px 7px;
+  }
+
+  /* ========= 响应式 ========= */
+  @media (max-width: 1100px) {
+    .poster { padding: 40px 28px; }
+    .columns { gap: 40px; }
+    .flow-svg { width: 220px; }
+  }
+  @media (max-width: 860px) {
+    .poster { padding: 24px 16px; border-radius: 12px; }
+    .deco { width: 60px; height: 60px; }
+    .deco-tl, .deco-tr, .deco-bl, .deco-br { background-size: 30px 30px !important; }
+    .title h1 { font-size: 24px; }
+    .columns { grid-template-columns: 1fr; gap: 16px; }
+    .flow-svg { display: none; }
+    .toolbar { top: 8px; right: 8px; }
+  }
+  .editing .card { box-shadow: 0 0 0 2px #1f6feb, 0 4px 14px rgba(31,111,235,0.10); }
+</style>
+</head>
+<body>
+
+  <!-- 工具条 -->
+  <div class="toolbar">
+    <button class="btn" onclick="resetData()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+      重置
+    </button>
+    <button class="btn primary" id="editBtn" onclick="toggleEdit()">
+      <span class="dot"></span>
+      <span id="editBtnLabel">进入编辑</span>
+    </button>
+  </div>
+
+  <!-- 海报 -->
+  <main class="poster">
+    <div class="deco deco-tl"></div>
+    <div class="deco deco-tr"></div>
+    <div class="deco deco-bl"></div>
+    <div class="deco deco-br"></div>
+
+    <!-- 标题 -->
+    <header class="title">
+      <span class="bar"></span>
+      <h1 contenteditable="true">2024-2025 国际品牌财报大盘点 · <span class="accent-red">中国市场</span>：<span class="q">增长分化，谁在突围？</span></h1>
+      <p class="sub" contenteditable="true">
+        2024年国际品牌在中国市场增速呈现明显分化：<b>Lululemon、昂跑、伯希和</b>实现高增长，而<b>Nike、Puma</b>则陷入阶段性阵痛。
+      </p>
+      <p class="sub gray" contenteditable="true">
+        本土品牌安踏、361度凭借多品牌矩阵与渠道下沉持续受益；亚玛芬、ASICS 则通过 DTC 与本土化研发寻找新增量。
+      </p>
+    </header>
+
+    <!-- 主体两栏 + 中间连接线 -->
+    <section class="board">
+      <svg class="flow-svg" viewBox="0 0 360 1400" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#1F6FEB" stop-opacity="0.0"/>
+            <stop offset="12%" stop-color="#1F6FEB" stop-opacity="0.95"/>
+            <stop offset="88%" stop-color="#1F6FEB" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0.0"/>
+          </linearGradient>
+          <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#FF7A29" stop-opacity="0.0"/>
+            <stop offset="12%" stop-color="#FF7A29" stop-opacity="0.95"/>
+            <stop offset="88%" stop-color="#FF7A29" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#FF7A29" stop-opacity="0.0"/>
+          </linearGradient>
+          <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#16A34A" stop-opacity="0.0"/>
+            <stop offset="12%" stop-color="#16A34A" stop-opacity="0.95"/>
+            <stop offset="88%" stop-color="#16A34A" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#16A34A" stop-opacity="0.0"/>
+          </linearGradient>
+          <linearGradient id="grad4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#E11D48" stop-opacity="0.0"/>
+            <stop offset="12%" stop-color="#E11D48" stop-opacity="0.95"/>
+            <stop offset="88%" stop-color="#E11D48" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#E11D48" stop-opacity="0.0"/>
+          </linearGradient>
+          <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path d="M 30 80 C 280 240, 60 460, 280 620 S 80 880, 240 1080 S 60 1280, 200 1380"
+              fill="none" stroke="url(#grad1)" stroke-width="22" stroke-linecap="round" filter="url(#glow)"/>
+        <path d="M 60 100 C 320 300, 80 520, 300 700 S 60 920, 220 1140 S 100 1320, 260 1400"
+              fill="none" stroke="url(#grad2)" stroke-width="18" stroke-linecap="round" filter="url(#glow)" opacity="0.85"/>
+        <path d="M 40 220 C 300 380, 80 600, 280 780 S 60 1000, 220 1220 S 100 1380, 200 1400"
+              fill="none" stroke="url(#grad3)" stroke-width="18" stroke-linecap="round" filter="url(#glow)" opacity="0.85"/>
+        <path d="M 80 140 C 320 340, 100 540, 300 720 S 80 940, 240 1160 S 100 1400, 280 1400"
+              fill="none" stroke="url(#grad4)" stroke-width="18" stroke-linecap="round" filter="url(#glow)" opacity="0.85"/>
+      </svg>
+
+      <div class="columns">
+        <!-- ================== 左栏 · 业绩红黑榜 ================== -->
+        <div class="col">
+
+          <!-- 1. Lululemon -->
+          <div class="card tone-red">
+            <div class="card-head">
+              <span class="badge b-red" contenteditable="true">业绩红黑榜</span>
+              <div class="card-title" contenteditable="true">领跑者：Lululemon <span class="delta up" contenteditable="true">FY24-25 +28.9%</span></div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">中国市场 Q4 营收增长 <b>28%</b>，同店可比增长 26%</li>
+              <li contenteditable="true">社区驱动策略持续奏效，DTC 模式深度运营</li>
+              <li contenteditable="true">男装与鞋履品类成为下一增长引擎</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://corporate.lululemon.com/media/press-releases/2026/03-17-2026-200620717" target="_blank" rel="noopener">corporate.lululemon.com</a>
+            </div>
+          </div>
+
+          <!-- 2. 安踏 -->
+          <div class="card tone-red">
+            <div class="card-head">
+              <span class="badge b-red" contenteditable="true">业绩红黑榜</span>
+              <div class="card-title" contenteditable="true">稳健派：安踏 ANTA <span class="delta up" contenteditable="true">FY24-25 +13.3%</span></div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">多品牌战略稳定，FILA 持续贡献核心收入</li>
+              <li contenteditable="true">2025 全年 FILA 收入 <b>284.69 亿元</b>，同比 +6.9%</li>
+              <li contenteditable="true">FILA 保持高端时尚运动定位，毛利率领先</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://ir.anta.com/en/news_detail.php?id=126812" target="_blank" rel="noopener">ir.anta.com</a>
+            </div>
+          </div>
+
+          <!-- 3. 361度 -->
+          <div class="card tone-gold">
+            <div class="card-head">
+              <span class="badge b-gold" contenteditable="true">业绩红黑榜</span>
+              <div class="card-title" contenteditable="true">持续增长：361度 <span class="delta up" contenteditable="true">FY24-25 +10.6%</span></div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">渠道下沉策略持续见效，三四线市场渗透率提升</li>
+              <li contenteditable="true">专业运动定位赢得大众跑者口碑</li>
+              <li contenteditable="true">赞助专业赛事与国家队强化品牌专业度</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              361度国际 2025 年报
+            </div>
+          </div>
+
+          <!-- 4. Nike -->
+          <div class="card tone-blue">
+            <div class="card-head">
+              <span class="badge b-blue" contenteditable="true">业绩红黑榜</span>
+              <div class="card-title" contenteditable="true">阵痛者：Nike 耐克 <span class="delta down" contenteditable="true">DTC -14%</span></div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">FY2025 DTC 渠道营收下降 14%（10-K 年报）</li>
+              <li contenteditable="true">经典款销量与电商客流双双下滑</li>
+              <li contenteditable="true">管理层正处于 CEO 交替期</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://s1.q4cdn.com/806093406/files/doc_financials/2025/ar/Nike-Inc-2025_10K.pdf" target="_blank" rel="noopener">Nike FY2025 10-K 年报 PDF</a>
+            </div>
+          </div>
+
+          <!-- 5. Puma -->
+          <div class="card tone-purple">
+            <div class="card-head">
+              <span class="badge b-purple" contenteditable="true">业绩红黑榜</span>
+              <div class="card-title" contenteditable="true">阵痛者：Puma 彪马 <span class="delta down" contenteditable="true">FY24-25 -16.1%</span></div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">战略重组期间销售质量下降</li>
+              <li contenteditable="true">品牌热度低，产品组合未切中市场需求</li>
+              <li contenteditable="true">2025 年报指出"low brand heat, poor sales quality"</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://about.puma.com/sites/default/files/financial-report/2025/puma-gb-2025-gesamt-en-final.pdf" target="_blank" rel="noopener">Puma 2025 Annual Report PDF</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================== 右栏 · 市场挑战&驱动力 ================== -->
+        <div class="col">
+
+          <!-- 6. 昂跑 On -->
+          <div class="card tone-orange">
+            <div class="card-head">
+              <span class="badge b-orange" contenteditable="true">市场挑战&驱动力</span>
+              <div class="card-title" contenteditable="true">昂跑 On：China First 战略落地</div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">服装品类突破：2025 Q1 中国服装 <b>+93.1%</b>、配饰 <b>+99.2%</b>，服饰成第二大支柱</li>
+              <li contenteditable="true">线下加速：2023 新开 10 家直营店，2024 再开 17 家</li>
+              <li contenteditable="true">"中国优先"：从"增长引擎"升级为"创新试验场"</li>
+              <li contenteditable="true">直营门店服装销售占比目标提升至 25-30%</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://m.winshang.com/news732599.html" target="_blank" rel="noopener">winshang.com</a>
+              <a href="https://www.news.cn/fashion/20250815/3557967b451949f99b9f39de7deae0c4/c.html" target="_blank" rel="noopener">news.cn</a>
+            </div>
+          </div>
+
+          <!-- 7. 亚玛芬 -->
+          <div class="card tone-green">
+            <div class="card-head">
+              <span class="badge b-green" contenteditable="true">市场挑战&驱动力</span>
+              <div class="card-title" contenteditable="true">亚玛芬 Amer：DTC 与拓店双轮驱动</div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">高速拓店拉动营收持续增长</li>
+              <li contenteditable="true">直面消费者（DTC）业务成为核心驱动力</li>
+              <li contenteditable="true">多品牌矩阵协同：始祖鸟、Salomon、Wilson 三大引擎</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://www.stcn.com/article/detail/3652192.html" target="_blank" rel="noopener">stcn.com</a>
+            </div>
+          </div>
+
+          <!-- 8. 伯希和 -->
+          <div class="card tone-orange">
+            <div class="card-head">
+              <span class="badge b-orange" contenteditable="true">市场挑战&驱动力</span>
+              <div class="card-title" contenteditable="true">伯希和：冲锋衣狂飙背后的高营销依赖</div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">冲锋衣裤为绝对主力：2023-2025 年收入 4.81 → 10.02 → <b>14.54 亿元</b></li>
+              <li contenteditable="true">占总收入比重均过半（50%+）</li>
+              <li contenteditable="true">销售及分销费用激增：2.77 → <b>10.59 亿元</b>，营销驱动增长</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://www.jwview.com/jingwei/html/m/05-14/670650.shtml" target="_blank" rel="noopener">jwview.com</a>
+            </div>
+          </div>
+
+          <!-- 9. ASICS -->
+          <div class="card tone-blue">
+            <div class="card-head">
+              <span class="badge b-blue" contenteditable="true">市场挑战&驱动力</span>
+              <div class="card-title" contenteditable="true">ASICS 亚瑟士：技术回归 + 本土化</div>
+            </div>
+            <ul class="bullets">
+              <li contenteditable="true">跑鞋技术驱动，产品力重返第一梯队</li>
+              <li contenteditable="true">拥抱运动时尚潮流，鬼塚虎等复古时尚线贡献增量</li>
+              <li contenteditable="true">DTC 渠道加速，数字化全渠道营销提升会员粘性</li>
+              <li contenteditable="true">2024 年成立中国研发中心，推进"在中国，为中国，惠全球"</li>
+            </ul>
+            <div class="src">
+              <span class="src-label">来源</span>
+              <a href="https://finance.eastmoney.com/a/202508253493557771.html" target="_blank" rel="noopener">finance.eastmoney.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 来源角标 -->
+    <div class="source-mark">
+      <span contenteditable="true">信息整理：运动品牌财报 · NotebookLM</span>
+    </div>
+  </main>
+
+<script>
+  const STORAGE_KEY = "china-market-brand-board-v3";
+
+  function loadData() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) { return null; }
+  }
+  function saveData() {
+    const data = {};
+    document.querySelectorAll("[contenteditable]").forEach((el, i) => {
+      data[i] = el.innerHTML;
+    });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e){}
+  }
+  function applyData(data) {
+    if (!data) return;
+    document.querySelectorAll("[contenteditable]").forEach((el, i) => {
+      if (data[i] != null) el.innerHTML = data[i];
+    });
+  }
+  let editing = false;
+  function toggleEdit() {
+    editing = !editing;
+    document.body.classList.toggle("editing", editing);
+    document.getElementById("editBtnLabel").innerText = editing ? "完成编辑" : "进入编辑";
+    document.querySelectorAll("[contenteditable]").forEach(el => {
+      el.contentEditable = editing ? "true" : "false";
+    });
+    if (editing) {
+      document.querySelectorAll("[contenteditable]").forEach(el => {
+        el.oninput = () => { clearTimeout(window._t); window._t = setTimeout(saveData, 400); };
+      });
+    }
+  }
+  function resetData() {
+    if (!confirm("确认重置所有文字为初始状态？")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    applyData(loadData());
+  });
+</script>
+</body>
+</html>

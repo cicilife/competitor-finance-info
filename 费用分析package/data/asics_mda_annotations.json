@@ -1,0 +1,4967 @@
+{
+  "version": "2.0",
+  "company": "Asics",
+  "report_type": "2024 Integrated Report",
+  "total_pages": 46,
+  "total_paragraphs": 311,
+  "annotation_summary": {
+    "expense_types": {
+      "技术成本": 284,
+      "营销费用": 78,
+      "运营费用": 47,
+      "人力成本": 31,
+      "门店成本": 32,
+      "物流成本": 13,
+      "数字营销": 10,
+      "SG&A费用": 7,
+      "研发费用": 22
+    },
+    "trends": {
+      "上升": 153,
+      "新增": 47,
+      "下降": 16,
+      "持平": 13
+    },
+    "drivers": {
+      "业务扩张": 78,
+      "投资驱动": 47,
+      "效率提升": 8,
+      "DTC转型": 10,
+      "供应链": 11,
+      "产品创新": 3,
+      "外部因素": 1
+    },
+    "sentiments": {
+      "中性": 212,
+      "正面": 90,
+      "负面": 9
+    }
+  },
+  "annotated_paragraphs": [
+    {
+      "id": "asics_mda_001",
+      "page": 5,
+      "original_text": "Guided by its founding philosophy, “Anima Sana In Corpore Sano” (a sound mind in a sound body),",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_002",
+      "page": 5,
+      "original_text": "ASICS has developed into a sports brand that has established a solid position in the global sports market",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_003",
+      "page": 5,
+      "original_text": "We believe ASICS has entered a new stage of growth, as demonstrated by recording an operating profit of ¥100 billion for the first time in 2024 alongside achieving an industry-leading operating margin. That said, we are by no means satisfied with what we have achieved so far. ASICS will keep on running as it works to accelerate its growth and deliver value to people all around the world.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_004",
+      "page": 10,
+      "original_text": "Assessment of 2024, the First Year of Mid-Term Plan 2026 ASICS was founded after World War II with only two employees and ¥300,000 in capital. While living in Kobe City, Japan after serving in the war, the Company’s founder, Kihachiro Onitsuka, wit- Section 01",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_005",
+      "page": 10,
+      "original_text": "2024 marked the first year of Mid-Term Plan 2026, and we hit the ground running. Since we have nessed the tragic reality of the youth with his own eyes. Listless, lost, and with nowhere to go, they already hit all the original 2026 targets announced in November 2023, we updated the plan with new turned to delinquency to fill the void. As he thought of ways to help solve this problem, he concluded numerical targets in November 2024. For me, the standout achievement of 2024 is reaching the that sp",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_006",
+      "page": 10,
+      "original_text": "¥100.0 billion milestone in operating profit for the first time, as it confirms what I have been saying all lives on as ASICS’ founding philosophy to this very day. In that same spirit, we conduct business with along: that ASICS has reached an entirely new level. the goal of creating a world where any one of us can continue to exercise, play sports, and remain in Following the same path as our Performance Running category, ASICS’ net sales base, the SportStyle good mental and physical health thr",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_007",
+      "page": 10,
+      "original_text": "of current president and COO Mr. Tominaga. I feel that it was also a year of major change from global face social or economic hardships. In addition to Japan, the foundation will primarily target its efforts",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_008",
+      "page": 10,
+      "original_text": "and digital perspectives. in regions where ASICS operates production sites, such as Vietnam, Indonesia, India, and Cambodia. On the global front, we expanded communication more than ever by having the CEOs of each As part of our never-ending commitment to improving corporate value, we have decided to work",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_009",
+      "page": 10,
+      "original_text": "regional operating company report directly to Mr. Tominaga at our global headquarters. In addition, through the ASICS Foundation to address social issues related to sports and exercise. I believe this Data Section Executive Board Meetings, which were previously limited to Japanese members of the executive will enable us to bring better mental and physical health to more people than ever before. body, are now attended by non-Japanese members when topics with a global impact are on the agenda. Dis",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_010",
+      "page": 10,
+      "original_text": "On the digital front, we are making progress with the introduction of globally-unified, mission- critical systems, an effort Mr. Tominaga has been involved with since joining ASICS in his previous role as the senior general manager of the IT Division. As a result, we are gaining a granular, real-time understanding of the state of business in each region, down to each store and product. We have already begun using these systems for demand forecasting and production planning. I believe they will h",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_012",
+      "page": 11,
+      "original_text": "As part of the consideration process, we engaged in earnest engagement with shareholders and maintained close communication to ensure that they had a clear understanding of the significance of Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_013",
+      "page": 11,
+      "original_text": "establishing the foundation as well as its objectives. I believe that we were able to have in-depth discussions on the matter, particularly regarding the method of establishment, ultimately bringing shareholders who were initially lukewarm around to the idea. In the end, several shareholders showed their support for the Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_014",
+      "page": 11,
+      "original_text": "plan at the General Meeting of Shareholders held in March 2025, and establishment of the foundation was given the go-ahead. My hope is to make this foundation a new means to create value for ASICS, working hand in hand with our stakeholders. We are investigating ways to provide readers and Section 03 stakeholders with regular updates on ASICS Foundation activities as we move forward. Our Strategy Facing of the Global Capital Market Section 04",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_015",
+      "page": 11,
+      "original_text": "This past year also served as a strong reminder that ASICS is a part of the global market. I had many investor relations (IR) meetings overseas, and the interactions I had with investors brought one par-",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_016",
+      "page": 11,
+      "original_text": "ticular issue to my attention. The question that came up time and time again was “Why does ASICS Data Section continue to hold cross-shareholdings?” Since ASICS is a global brand, I believe that our capital and financial standing should meet global standards, and so we have decided to eliminate all cross- shareholdings held by the ASICS Group. At the same time, we approached financial institutions and other shareholders who held ASICS shares as cross-shareholdings about the prospect of selling, ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_018",
+      "page": 11,
+      "original_text": "vidual shareholders. I would like to engage in active communication with even more individuals, turn phy remains the unchanging foundation of all ASICS' business activities. The environment surround- them into ASICS fans, and eventually have them become individual investors who purchase shares. In ing ASICS may be undergoing major changes—shifts in the global situation, geopolitical risks, and",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_019",
+      "page": 11,
+      "original_text": "March 2025, we held our first IR meeting for individual investors in Okinawa City. We also held these otherwise—but amid all of it ASICS will keep on running! Information meetings in Fukuoka City in May and in Hokkaido City in June. I joined the meetings in Okinawa City As the 2025 slogan says, “Run past your potential.” We will do the same.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_020",
+      "page": 13,
+      "original_text": "Reflection on My First Year as President and COO have achieved in order to prepare for further growth while confidently everyday lifestyles, showed particularly strong growth, while Performance Major Milestones in 2024 communicating positive messages about our next steps. Running and Core Performance Sports, which offer excellent functionality, Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_021",
+      "page": 13,
+      "original_text": "also achieved favorable results, giving rise to a positive trend in growth. As a result of the management reforms spearheaded by current Chairman Progress Made in Mid-Term Plan 2026 That said, I acknowledge that we still have a long way to go to achieve and CEO Yasuhito Hirota, ASICS made steady progress in Mid-Term Plan the global growth set forth in MTP 2026, as well as improved branding Section 02",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_022",
+      "page": 13,
+      "original_text": "2023, and in 2023, achieved record-high sales and operating profit. In 2024, the first year of MTP 2026, we achieved our target operating and operational excellence centered on OneASICS management. Having taken over this position on the back of such great achievements, profit two years ahead of schedule and upwardly revised our numerical I have been working tirelessly on implementing Mid-Term Plan 2026 (MTP targets for 2026. I highly commend these efforts. Gross margin improved Clear Identificat",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_023",
+      "page": 13,
+      "original_text": "my experience over the past year, I am focusing on taking stock of what we category, SportStyle and Onitsuka Tiger, sports brands that cater to 2025 and beyond, but we need to keep a particularly close eye on U.S. Value Creation tariff policy. As soon as the tariffs were announced, I established a committee, headed by me, to look into countermeasures. Every week,",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_024",
+      "page": 13,
+      "original_text": "members from both our U.S. office and head office in Japan convene to Data Section gain a grasp of the current situation and discuss how best to move forward. Being a global company enables ASICS to address such matters on a bilateral basis, and one of its strengths is the speed at which it tackles",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_025",
+      "page": 13,
+      "original_text": "Shaping the ASICS' Future with OneASICS Management Linking of Data with Management Through OneASICS OneASICS management is an initiative that aims to further expand the scale of our business by positioning OneASICS, our global membership program, at the core of our management. A key focus of this initiative is to establish direct touchpoints with customers and communicate with",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_027",
+      "page": 13,
+      "original_text": "and all touchpoints with customers used to be within the realm of whole- Information sale. Therefore, we have since placed greater emphasis on direct sales,",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_029",
+      "page": 14,
+      "original_text": "players recognize the great functionality of our products. In addition, the ASICS Tennis Academy is an extremely important vehicle for increasing the popularity of tennis among players of all ages. We aim to be the overall Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_031",
+      "page": 14,
+      "original_text": "and catch up with and surpass its competitors, further promotion of its Data Section Global × Digital approach is essential and a top priority. To strongly drive forward this initiative, we will make major changes to our management with approximately 40% of sales being direct-to-consumer, including Future Pillar for Accelerating Growth structure, place the CEOs of regional operating companies directly under through both physical stores and e-commerce. This has enabled us to Our T-Project Strateg",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "物流成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "效率提升",
+          "DTC转型",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_032",
+      "page": 14,
+      "original_text": "attributes of OneASICS members, when they purchase products, geted tennis because it is a sport in which we can greatly increase brand Naturally, it is essential that we nurture human resources that can p erform",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_033",
+      "page": 14,
+      "original_text": "whether they no longer use products, and why they have chosen not to value due to top tennis players having a very high level of recognition on the global stage to drive forward our transformation to a GIE. The ASICS buy certain products. This will lead to operational and product develop- and many top sports brands appearing in Grand Slam tournaments held Academy, which is a selective training program, aims to strategically and",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_034",
+      "page": 14,
+      "original_text": "ment and enable us to offer new value. around the world. Becoming the world leader in this field is extremely quickly develop human resources capable of being global business leaders. Information important for our brand. Our competitive advantage in tennis lies in our This program enables us to identify the kinds of opportunities to give each",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_035",
+      "page": 15,
+      "original_text": "individual and carry out training accordingly. From the perspective of that sports could give them hope. This spirit is reflected not only in the diversity, including with regard to global employees, we are working to development of our sports brands but also in our activities based on our Section 01",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_036",
+      "page": 15,
+      "original_text": "strengthen ASICS as a whole and expand employees’ career paths by brand philosophy, “Sound Mind, Sound Body,” through which we con- adding people with different opinions and professional skills to the tribute to the health and well-being of society. It is essential that new workforce. From here, it will also be possible to showcase ASICS to exter- employees and overseas staff share and internalize this philosophy. Section 02",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_037",
+      "page": 15,
+      "original_text": "nal parties through personnel exchanges with other companies and the Activities based on our “Sound Mind, Sound Body” philosophy are our dispatch of personnel to university start-ups, and I am personally very glad most important asset. that the Company now has the right environment in place to move up to Section 03 the next stage. An Eye to the Next Ten Years as We Keep On Running Our Strategy Anticipation for the World Athletics Championships We set forth our aim to become a GIE with an eye to ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_039",
+      "page": 15,
+      "original_text": "Starting with the Tokyo : Speed : Race event in May 2025, we are preparing a medium- to long-term perspective. The theme for ASICS Integrated Data Section to offer a variety of hands-on experiences at the ASICS booth. World Expo Report 2024 is “ASICS Keeps On Running,” and our goal is to become the 2025 is also currently taking place in Osaka City, where we are offering leader in the industry. Our aim is to be the leading brand in both perfor- various sports-related experiences at larger stores.",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_040",
+      "page": 15,
+      "original_text": "Our founding philosophy, “Anima Sana In Corpore Sano,” expresses the integrate our businesses and systems while pursuing improved productivity",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_041",
+      "page": 15,
+      "original_text": "spirit of our founder, Kihachiro Onitsuka, who witnessed young people across the Company. I would like to ask for the continued support of our losing their spirits and turning to delinquency after World War II and felt stakeholders as ASICS keeps on running.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_042",
+      "page": 16,
+      "original_text": "Facing the Global Market Head-On Through the From my standpoint as CFO, I regret that we underesti- mated our growth potential in these categories. Section 01 Restructuring of Our Shareholder Structure and the Our Message There are three factors that contributed to the Elimination of Cross-Shareholdings marked improvement in our operating margin. The first was improved quality of sales centered on premium Section 02",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_043",
+      "page": 16,
+      "original_text": "was an improved sales channel mix of both wholesale Managing Executive Officer and Chief Financial Officer (CFO) and direct-to-consumer sales, such as company-owned Section 03 retail stores and e-commerce. Third, operating margins Our Strategy Progress Made in the First Year of Mid-Term Achieving our targets is of the utmost importance in were high in regions with particularly high growth rates, Plan 2026 gaining the trust of the capital markets, so I sincerely such as Greater China and Southeas",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_044",
+      "page": 16,
+      "original_text": "praise the Company for accomplishing its numerical We are also engaged in ongoing efforts to control SG&A",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_045",
+      "page": 16,
+      "original_text": "In 2024, we achieved significant growth in business targets ahead of schedule. One reason we significantly expenses. For example, we manage profit margins for performance and met the initial targets of Mid-Term exceeded initial targets was the high level of sales each region and sales channel, such as by targeting",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_046",
+      "page": 16,
+      "original_text": "Plan 2026 (MTP 2026) two years ahead of schedule. growth in the SportStyle and Onitsuka Tiger categories. personnel expenses of 13% and advertising and Data Section Consolidated Operating Profit by Category",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_048",
+      "page": 16,
+      "original_text": "C (B a i t ll e io g 2 n o 0 s r 2 y o 3 f P y ro e f n it ) C (B a i t ll e io g n o s r y o f P y ro e f n it ) 2 024 Catego ( r % y ) Margin",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_049",
+      "page": 17,
+      "original_text": "will continue to improve asset efficiency while control- In this way, we have once again chosen to operate",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "效率提升"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_050",
+      "page": 17,
+      "original_text": "ling total assets to achieve an increase in ROA. in a business environment that demands a sense of Section 01",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_052",
+      "page": 17,
+      "original_text": "Secondary Offering of Shares management.” While further solidifying its position Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_053",
+      "page": 17,
+      "original_text": "Cost of sales as a global brand, ASICS will continue to face the What is ASICS? ¥273.5 billion ¥299.6 billion 2023 2024 Strengthen",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_054",
+      "page": 17,
+      "original_text": "In July 2024, we also undertook the major endeavor capital markets head-on in its capital policy, striving 2023 2024 Personnel of eliminating all cross-shareholdings held by the to remain a front-runner in the future. Section 03 ¥74.8 billion ¥86.3 billion expenses ASICS Group and conducting a secondary offering of Our Strategy shares. We began discussing these matters in earnest Upward Revision of MTP 2026’s Targets and",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_055",
+      "page": 17,
+      "original_text": "¥43.6 billion ¥52.0 billion expenses SG&A to sales ratio ROA in late 2023 amid growing calls from shareholders, Future Strategies Foun Se d c a tio t n io 0 n 4 for including overseas institutional investors, to sell our",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_056",
+      "page": 17,
+      "original_text": "2023 2024 Rent, depreciation and 2023 2024 2023 2024 cross-shareholdings. Our industry counterparts In response to our performance in 2024, we revised the ¥29.3 billion ¥33.5 billion amortization expenses 42.5% 41.0% 7.9% 13.0% overseas do not have cross-shareholdings. As such, financial indicators of MTP 2026. We have upwardly",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_057",
+      "page": 17,
+      "original_text": "we held internal discussions on the need to eliminate revised our operating profit target to ¥130 billion, Data Section",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_058",
+      "page": 17,
+      "original_text": "¥94.9 billion ¥106.9 billion this Japan-specific practice, and upon receiving the an increase of ¥50 billion; our operating margin target full approval of outside directors, decided to sell all to 17%, an increase of 5 percentage points; and our 2023 2024 Working capital turnover ratio*2 cross-shareholdings. While there are many cases of ROA target to around 15%, an increase of 5 percent- 4 times 4.5 times Improve asset companies gradually reducing their cross-sharehold- age points. We will cont",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_059",
+      "page": 17,
+      "original_text": "4.1 times 4.5 times to eliminate cross-shareholdings in such a short space potential, profitability, and asset efficiency in order to of time has been met with high praise from the market. remain the industry leader in profitability. There is still *2 Since we have set an internal target for working capital, we have stated the working capital turnover ratio above rather than the current asset turnover ratio. In conjunction with our efforts to eliminate our own potential for ASICS to achieve grow",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张",
+          "效率提升"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_060",
+      "page": 17,
+      "original_text": "1.5 percentage points year on year, to 41.0%. for an increase in assets. That said, since we have a standing by the majority of financial institutions and Middle East. Above all, of course, it is important to aim",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_061",
+      "page": 17,
+      "original_text": "In addition, return on assets (ROA) improved by 5.1 large amount of working capital, including inventory, we other shareholders. As a result, ASICS was able to for growth through profitability, not just expansion. percentage points year on year, to 13.0%. Since we are set days inventory outstanding (DIO) as a key perfor- simultaneously sell all of its cross-shareholdings and In addition, we can optimize the supply chain by",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_062",
+      "page": 17,
+      "original_text": "an asset-light company, rather than owning our own mance indicator for the first time in 2024. We have conduct a secondary offering of shares, which was shortening DIO to increase profitability. Furthermore, Information production facilities, we control our production capacity explicitly set ROA as a key management indicator and highly significant for the Company. we would like to make use of digital technology to",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_063",
+      "page": 18,
+      "original_text": "immediately grasp sales trends in each region and members increases, we will be able to provide custom-",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_064",
+      "page": 18,
+      "original_text": "thoroughly implement efficient inventory control ers with information about products and services Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_066",
+      "page": 18,
+      "original_text": "further opportunities to improve profitability. increase in the number of individual shareholders. Meanwhile, we are also preparing risk response Currently, individual shareholders account for less than 20.00 Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_067",
+      "page": 18,
+      "original_text": "measures for our global operations so that we can 10% of all our shareholders, but according to the Tokyo prepare effective alternatives for our logistics network Stock Exchange, the average proportion of individual 10.00 in the event of an emergency caused by geopolitical shareholders is 17%, which we will use as a benchmark 10 6.00 6.00 Section 03 factors. We also place great importance on visualizing in our efforts to increase our own number. We believe Our Strategy logistics and aim to build",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_069",
+      "page": 18,
+      "original_text": "In October 2024, our IR team began sending emails established the ASICS Foundation in 2025 to help Enhancement of Corporate Value to individual investors. These emails contain not only enhance its corporate value. We have initially planned for",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_070",
+      "page": 18,
+      "original_text": "financial results but also behind-the-scenes information an annual budget of ¥150 million, which will be allocated Data Section In 2024, we held meetings with a total of more than about various events. Videos are also attached to the from dividends on ASICS shares through the sale of 1,800 institutional investors. Thanks in part to the emails with the aim of raising awareness of ASICS’ treasury shares with the aim of continuing to ensure secondary offering of shares, many institutional inves- in",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_071",
+      "page": 18,
+      "original_text": "new group of shareholders who are passionate about dividends, with the aim of returning 50% of profits in and as a professional. As CFO, I will continue striving to",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_072",
+      "page": 18,
+      "original_text": "supporting ASICS. each fiscal year. We also plan to adopt a progressive enhance corporate value in a sustainable manner while We believe that increasing the number of individual dividend policy, with dividends in 2025 expected to embodying ASICS’ brand philosophy of “Sound Mind,",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_075",
+      "page": 20,
+      "original_text": "In April 2025, the Company established the ASICS Foundation for addressing social issues related to physical activity and sports and contributing to the physical and mental well-being of even more people.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_076",
+      "page": 20,
+      "original_text": "Realizing Our Founding Philosophy by Contributing to Society Establishing a Scheme Based on Dialogues with Shareholders ASICS was founded with the desire to contribute to society by supporting physical and mental growth through sports.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_077",
+      "page": 20,
+      "original_text": "This desire, upon which all of our business activities are based, has been passed down through our founding philoso- • Allocation of treasury shares to the foundation through a trust agreement: Equivalent to approximately Foundation for phy, “Anima Sana In Corpore Sano,” which means “a sound mind in a sound body.” For the Company, the establishment 0.98% of voting rights Value Creation • Repurchase of treasury shares: Conducted in February and August of 2024 (totaling 2.4%*1) and in of the ASICS",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "下降",
+          "持平"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_078",
+      "page": 20,
+      "original_text": "Vietnam, Indonesia, India, and Cambodia. Through such activities, we aim to realize a society in which more people can 3. Cancellation of treasury shares 5. Beneficial interest dividend enjoy exercise and sports, thereby improving both physical and mental well-being and contributing to the enhancement 4. Share dividends Process at the time of founding of the ASICS Group’s corporate value. Process during operation Information for",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_079",
+      "page": 20,
+      "original_text": "Disruption to the foundation’s activities due to changes in the opinions of management, economic conditions, geopolitical risks, and other factors can be prevented, thereby enabling stable and ongoing activities. Sustainability",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_080",
+      "page": 21,
+      "original_text": "Value Generated by the ASICS Foundation The ASICS Foundation’s Trustees Chairperson Chieko Kibe (Professor, Toin University of Yokohama) Section 01 Tomoko Koda (Managing Executive Officer, ASICS Corporation) Iyoko Jin (Representative Director, Para SC Esperanza) Our Message Councilors Terumi Hanagata (Director, Foundation and Arts Center Promotion Eriko Izumi (Executive Officer, General Manager of Legal Department at Recruit Holdings Co., Ltd.)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_081",
+      "page": 21,
+      "original_text": "Department at ASICS Corporation) Auditors What is ASICS? Nami Kishida (Author) Yoko Kudo (Outside Audit & Supervisory Board Member at Akemi Masuda (Sports Journalist, Professor at Osaka University SoftBank Corp., Auditor for JOC/Tokyo 2025 World of Arts) Athletics Foundation)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_082",
+      "page": 21,
+      "original_text": "Directors Megumi Suzuki (Accounting Department at ASICS Corporation) Our Strategy Kasumi Ishikawa (Former pro table tennis player) Secretary General Mei Ichinose (Paralympian swimmer, model, speaker) Masayo Hasegawa (ASICS employee designated to the foundation)",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_083",
+      "page": 21,
+      "original_text": "Seiko Inoue (General Manager of Sustainability Department Foundation for Contributing to the Enhancement of Corporate Value at ASICS Corporation)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_084",
+      "page": 21,
+      "original_text": "ASICS has been implementing various measures to improve access to sports. In addition, through the activities of the foundation, we aim to increase opportunities to participate in sports for people facing economic and social hardship",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_085",
+      "page": 21,
+      "original_text": "who we have hitherto been unable to reach. We believe that communicating these activities to our customers and Messages from Trustees of the Foundation Data Section stakeholders will further enhance ASICS’ corporate value. Contributing to the Mental and Physical Well-Being of All People Through the Foundation’s Activities Increasing Corporate Value The establishment of the ASICS Foundation is an important step forward in further expanding ASICS’ philosophy of contributing to society through spor",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_086",
+      "page": 21,
+      "original_text": "• Realization of growth of the sports market (creation of future markets) by fostering a culture of Market growth sports in areas in which the foundation is active Removing Barriers to Participating in Sports and Bringing the Value of Sports to All I am truly grateful to be able to work with the ASICS Foundation’s sports-driven activities. While I",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_087",
+      "page": 21,
+      "original_text": "have encountered various obstacles in my athletic career, what I value most about sports are how Investors they connect me to myself and to society. Having experienced the power of sports firsthand, I am passionate about breaking down the barriers that prevent others from accessing them. I believe • Achievement of enhanced talent acquisition, retention, and engagement through alignment with Sustainability Human capital the foundation’s values. the ASICS Foundation has the potential to change cou",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_088",
+      "page": 22,
+      "original_text": "Engaging in Dialogue with Shareholders Regarding the Scheme for Establishing the Foundation Contains excerpts from ASICS’ full statement: Response to the Recommendation of the ISS Since announcing in July 2024 that we were exploring the idea of establishing a foundation, ASICS has engaged in more than 100 one-on-one conversations with shareholders and to V ote Against the Establishment of a General Incorporated Foundation Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_089",
+      "page": 22,
+      "original_text": "other stakeholders. These sincere discussions have allowed us to communicate our vision for the foundation to our shareholders. In the spirit of transparency, we also publicly dis-",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_090",
+      "page": 22,
+      "original_text": "closed the recommendation from proxy advisory firm Institutional Shareholders Services, Inc. to oppose the proposal, exemplifying our head-on approach to management. The expected funding of JPY 150 million per year (dividends from 7 million shares) appears marginal (less than 0.1 percent of SG&A). Generally speaking, dividends are paid from net profit after expenses and taxed are deducted, so Section 02 Key Points from Our Conversations with Shareholders and Other Stakeholders relying on dividen",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_091",
+      "page": 22,
+      "original_text": "Comments from shareholders ASICS’ response As ISS points out, the Foundation's operating funds of approximately 150 million yen per year, is marginal within ASICS' SG&A. However, in order for ASICS to operate as an organization that \"pursues profitability,\" ASICS believes Section 03 it is crucial to establish a system that enables the Foundation to continue its activities as an organization engaged in Shouldn’t ASICS to just make direct donations instead of setting up Our Strategy social contrib",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_092",
+      "page": 22,
+      "original_text": "ASICS is a company focused on profitability and long-term value Furthermore, ASICS recognizes the return of profits to shareholders as one of its top priorities and has established a creation. To ensure that social contribution activities are carried out in policy in the Mid-Term Plan 2026 to implement a profit distribution plan based on a consolidated total return ratio of over 50% and the continuation of progressive dividends. a stable and sustainable manner, we believe it is important to esta",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_093",
+      "page": 22,
+      "original_text": "Could the foundation be regarded as a stable shareholder or part of To minimize the impact of share dilution as much as possible, we’ve a takeover defense strategy? limited the allocation of treasury shares to the foundation to less than 1% of total voting rights. When we carried out the secondary share offering in July 2024, we shared and explained our plans to establish the foundation using treasury shares. Since then, we’ve taken further Not at all. The treasury shares allocated to the founda",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_094",
+      "page": 23,
+      "original_text": "Special Feature: Initiatives for Enhancing Corporate Value Sale of All Cross-Shareholdings and Secondary Offering of Shares Capital Policies Aimed at Becoming a Front-Runner in the Capital Markets",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_095",
+      "page": 23,
+      "original_text": "Since beginning to implement successful management reforms in 2018, ASICS has been steadily solidifying its position as a global brand. We are pushing forward with forward-thinking efforts to raise the bar in terms of capital policies and financial strategy, with the aim of becoming a front-runner in the capital markets.",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_096",
+      "page": 23,
+      "original_text": "Key Challenges in Implementing Capital Policies Section 03 ASICS’ Shareholder Composition (as of December 31, 2023) (%) Our Strategy",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_097",
+      "page": 23,
+      "original_text": "Overseas Individual Treasury shares/ Financial institutions Operating companies institutional investors investors other The challenge we faced in terms of capital policies and financial strategy were accountability for cross-shareholdings in",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_098",
+      "page": 23,
+      "original_text": "the capital markets, ASICS’ shareholder composition, and high capital costs. Aiming to become a front-runner in the 41.1 Cross-shareholdings 3.9 40.7 9.6 4.7 Foundation for capital markets, ASICS sincerely addressed these issues took appropriate responses. 17.3 (app 2 r 9 o , x 0 i 0 m 0 a ) tely Value Creation Aiming to increase the average percentage of individual investors in companies listed on the Tokyo Stock Exchange from 17% to 20%",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_099",
+      "page": 23,
+      "original_text": "Accountability for cross-shareholdings in the capital markets ASICS’ Stock Price Data Section We are seeing institutional investors, proxy advisory firms, and listed companies, including financial institu- tions, begin to sell their cross-shareholdings. In light of this fact, during a meeting with an investor, we were Limit up Challenge 1 questioned about our stance on cross-shareholdings. Upon responding, the investor remarked that there was 350 May 10: ¥1,812 May13: ¥2,187 no justification for",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_100",
+      "page": 23,
+      "original_text": "February 9: ¥1,195 February 13: ¥1,370 ASICS’ shareholder composition Limit up We analyzed the shareholder compositions of our industry peers and decided that, to keep up with global 250 August 8: ¥1,077 August 9: ¥1,213 corporate governance standards, we needed to move away from our reliance on our base of silent and stable",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_101",
+      "page": 23,
+      "original_text": "major shareholders who had long held the Company’s shares. We need to increase the liquidity of our shares May 10: Results announcement for FY24 Q1 and attract shareholders who understand and support the ASICS brand and our medium- to long-term 200 Announcement of stock split growth strategy. Stock price: ¥1,812 Announcement of strong progress in achieving 150 fiscal 2024 full-year performance forecast Information for",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_102",
+      "page": 23,
+      "original_text": "Until now, ASICS’ stock price has tended to surge following financial results announcements, resulting in high August 8: Results announcement for FY23 Q2 February 9: Results announcement for FY23 Q4 stock price volatility. Amid calls from the Tokyo Stock Exchange for companies to be more conscious of capital Announcement of upwardly revised targets Significant achievement of MTP 2026 targets Challenge 3 costs, we believe that optimizing our shareholder composition and improving the accuracy of o",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_103",
+      "page": 24,
+      "original_text": "Special Feature: Initiatives for Enhancing Corporate Value Sale of All Cross-Shareholdings and Secondary Offering of Shares Sale of All Cross-Shareholdings and Secondary Offering of Shares Secondary Share Offering Timeline Reorganization of Shareholder Composition Contributing to the Enhancement of Corporate Value Through Secondary Share Offering Section 01 Hold discussions with shareholders regarding Our Message ASICS has been working to eliminate cross-shareholdings while engaging in discussio",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_104",
+      "page": 24,
+      "original_text": "understanding. In 2024, ASICS sold all of its cross-shareholdings and began proactively encouraging financial institu- 2024 Proactively encourage financial institutional tions and other shareholders holding the Company’s shares as cross-shareholdings to sell. investors to sell their shares Shares bought by 15,210 individual investors Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_105",
+      "page": 24,
+      "original_text": "Through its capital policies, ASICS has shifted its shareholder composition from one of silent and stable major share-",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_106",
+      "page": 24,
+      "original_text": "(Total as of December 31, 2023: 33,855) holders to one of individual and institutional investors, exposing itself to pressure from the capital markets. ASICS has thus chosen to take a head-on management approach that requires greater urgency and transparency. Make announcements regarding the secondary Institutional investors Section 03 offering of shares, our plan to sell all cross- Our Strategy shareholdings by the end of the year, discussions July 12 to establish a general incorporated foundat",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "效率提升"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_107",
+      "page": 24,
+      "original_text": "Engage more comprehensively We will move away from our traditional shareholder composition and engage more with capital markets comprehensively with the capital markets with urgency and transparency. Feedback from Investors in Japan and Overseas on the Sale of All Cross-Shareholdings and Secondary Offering of Shares On the Sale of Cross-Shareholdings On the Secondary Offering of Shares To strengthen our shareholder base and thereby heighten our competitiveness, • With this offering, ASICS has ne",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_108",
+      "page": 24,
+      "original_text": "• I am pleased to see ASICS actively working to eliminate • This is an impressive initiative on the whole. ASICS is Investors In response to calls from the Tokyo Stock Exchange to practice management that is cross-shareholdings. ahead of the curve in enhancing corporate governance, conscious of stock price and capital costs, we will reorganize our shareholder • I highly praise ASICS’ approach of reinvesting the and the structured approach to selling shares held by",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_109",
+      "page": 24,
+      "original_text": "composition and increase the number of individual shareholders in order to control proceeds from the sale of cross-shareholdings into cross-shareholders is both impactful and unique. Sustainability the volatility of stock price fluctuations and reduce the cost of capital. growth and shareholder returns. Information",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_110",
+      "page": 25,
+      "original_text": "Increasing of Shareholder Returns Enhancement of Our Investor Relations Activities Implementing Strategies to Increase the Number of Individual Investors Closely Communicating with the Capital Markets Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_111",
+      "page": 25,
+      "original_text": "With the stock split and secondary offering of shares, ASICS has shifted its shareholder composition to one that comprises ASICS is actively increasing opportunities for dialogue with the capital markets. At the same time, the number of investor a higher proportion of individual investors. Here, we will explain our strategy for expanding our base of individual investors, relations interviews is steadily increasing, with a total of more than 1,800 investor interviews conducted in 2024. with the a",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_112",
+      "page": 25,
+      "original_text": "IR Meetings One-on-one Small meetings Repurchase of Treasury Shares, Stock Split, and Dividend Increase 2024 475 1385 With June 30, 2024 as the record date, ASICS implemented a stock split (four shares for each common stock), 2023 353 553 Ou S r e S ct t io r n a 0 te 3 gy making it easier for individual investors to hold shares in the Company. 2022 354 156 2021 355 Conducted meetings with 26.00 (yen) 2020 418 more than 1,800 investors Section 04",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_113",
+      "page": 25,
+      "original_text": "(Note) Investor participation figures up to 2021 also include attendees of small meetings. 6 3 3 . . . 0 0 0 0 0 0 7 3 3 1 . . . . 5 0 0 5 0 0 0 0 6 6 . . 0 00 0 6 3 3 . . . 0 0 0 0 0 0 10 4 6 . . . 0 0 0 0 0 0 1 6 0 .2 .0 5 0 10.00 12.00 E D x is p c a l n o s s i u o r n e of Opportunities for Information O Fi v n e a r n s c e i a a s l I B n u st s i i t n u e t s io s n S R it e e p V r i e s s it e s n f t o a r t i A ve n s alysts and Dat S a ec S tio e n c 0 t 5 ion 2018 2019 2020 2021 2",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_115",
+      "page": 25,
+      "original_text": "n a s l i b nv ri e e s fi t n o g rs in for E d lig is i c b o le u c n h t a c n o n u e p l o s n s ASICS ASICS Walking Onitsuka Tiger ASICS Trading Co., Ltd. E-newsletter for individual investors Our visit to China Info In rm ve a s t t i o o r n s for Itinerary for the Visit to China",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_116",
+      "page": 25,
+      "original_text": "Directly managed stores Individual investors can sign up to our mailing list via • Store visit (ASICS and Onitsuka Tiger) E-commerce sites —* the QR code • Factory tour Sustainability",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_117",
+      "page": 25,
+      "original_text": "* We are currently determining the best timing to introduce a special discount on the Onitsuka Tiger online store. • Interview with key members of ASICS China Trading Co., Ltd.",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_118",
+      "page": 27,
+      "original_text": "2018 2019 2020 2021 2022 2023 2024 2025 2026 (Plan) (MTP 2026 Target) Sustainability",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_119",
+      "page": 28,
+      "original_text": "ASICS has developed into a sports brand that has established a solid position in the global sports market by manufacturing and marketing sports-related products for all sports lovers. By taking the performance of highly functional shoes created in conjunction with performance athletes and optimizing them for lifelong athletes, we provide products Section 01",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_120",
+      "page": 28,
+      "original_text": "and services that cater to the needs of even more people while co-creating value with stakeholders, spreading the ASICS brand around the world in the process.",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_121",
+      "page": 28,
+      "original_text": "ASICS’ business results and assets (fiscal 2024) Net sales Operating profit Operating margin Return on assets Stock price Price-to-book ratio Section 03",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_124",
+      "page": 28,
+      "original_text": "registered for races using ASICS services business operators in the Group of the running app at our business sites (compared with 2015) in shoes and sportswear",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_125",
+      "page": 28,
+      "original_text": "Going all-in on digital strategy (fiscal 2024) E-commerce net sales Digital human resources OneASICS members",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_126",
+      "page": 29,
+      "original_text": "ASICS offers products in the categories of Performance Running, Core Performance Sports, and Apparel and Equipment for those seeking high performance; SportStyle for those looking for shoes and apparel that suit their lifestyles; and Onitsuka Tiger, a luxury fashion brand. Section 01",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_127",
+      "page": 29,
+      "original_text": "FY2024 total net sales ¥ 678 5 billion ■Performance Running (P.Run) ■Core Performance Sports (CPS) ■Apparel and Equipment (APEQ) ■SportStyle (SPS) ■Onitsuka Tiger (OT) ■Others What is ASICS? P.Run 48.2% CPS 11.6% APEQ 5.6% SPS 14.5% OT 14.1% Others 6.0%",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_128",
+      "page": 29,
+      "original_text": "Performance Running Core Performance Sports Apparel and Equipment SportStyle Onitsuka Tiger (P.Run) (CPS) (APEQ) (SPS) (OT) Develops high-value-added running shoes Develops shoes for tennis, volleyball, basketball, Sportswear and equipment Develops shoes and apparel for everyday use that A luxury lifestyle brand through research and development based on the soccer, and other competitive sports offering refine the sports technology cultivated by ASICS ASICS Design Philosophy to provide a premium ",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_129",
+      "page": 29,
+      "original_text": "¥326 9 billion ¥78 6 billion ¥38 0 billion ¥98 4 billion ¥95 4 billion 14.3% increase year on year 9.0% increase year on year 5.2% increase year on year 66.1% increase year on year 58.3% increase year on year",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_131",
+      "page": 30,
+      "original_text": "ASICS is expanding its business globally through 65 Group companies. In the ASICS Japan (AJP)* and North America regions, we aim to enhance brand position and profitability by expanding Performance Running and focusing on strategic business selection. In Europe and Oceania, we aim to expand our market share while maintaining a strong brand position. Section 01",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_132",
+      "page": 30,
+      "original_text": "We regard Greater China along with Southeast and South Asia as key regions with high growth potential and are taking steps aimed at brand expansion. ■Performance Running (P.Run) ■Core Performance Sports (CPS) ■Apparel and Equipment (APEQ) ■SportStyle (SPS) Section 02",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_133",
+      "page": 30,
+      "original_text": "South Asia ¥44.8 billion 14.7% A A S JP ICS Japan Total net sales ¥94.5 billion Operating profit ¥22.1 billion Operating margin 23.5% (Year-on-year increase of 12.7 percentage points) 0.6% Section 03 5.8% ¥94.5 billion 15.1% 25.8% 10.0% 5.3% 43.2% Our Strategy",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_134",
+      "page": 30,
+      "original_text": "O 6 ce . a 7 nia % N 北 o 米 rth America Total net sales ¥135.0 billion Operating profit ¥11.2 billion Operating margin 8.3% (Year-on-year of 7.0 percentage points) F V o a u lu n S e e d c C a tio t r n i e o 0 a n 4 t i f o o n r",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_135",
+      "page": 30,
+      "original_text": "E 欧 u 州 rope Total net sales ¥179.3 billion Operating profit ¥25.2 billion Operating margin 14.1% (Year-on-year increase of 4.5 percentage points) 0.1% Dat",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_136",
+      "page": 30,
+      "original_text": "G 中 r 華 ea 圏 ter China Total net sales ¥100.4 billion Operating profit ¥19.3 billion Operating margin 19.3% (Year-on-year increase of 2.4 percentage points) 0.7%",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_137",
+      "page": 30,
+      "original_text": "O オ c セ e ア an ニ ia ア Total net sales ¥42.9 billion Operating profit ¥7.6 billion Operating margin 17.8% (Year-on-year increase of 1.6 percentage points)",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_138",
+      "page": 30,
+      "original_text": "S東ou南th・eas東t aアndジ Soアuth Asia Total net sales ¥37.3 billion Operating profit ¥7.4 billion Operating margin 20.0% (Year-on-year increase of 1.7 percentage points)",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_139",
+      "page": 30,
+      "original_text": "* The Japan region includes sales from companies that deal with product categories outside the main five, which are not applicable to other regions. Accordingly, this report uses the term “ASICS Japan” to maintain regional comparability. Investors",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_140",
+      "page": 33,
+      "original_text": "Material Topics and Risks and Opportunities We are fully aware that materiality has an impact on ASICS’ medium- to long-term corporate value. To appropriately deal with the topics that impact sustainability in the medium to long term, ASICS has identified risks and opportunities for co-creation with stakeholders and stepped up related initiatives. Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_141",
+      "page": 33,
+      "original_text": "Materiality (Material Topics) Risks of not taking action Opportunities for co-creation with stakeholders Related KPIs Customers Research and development of innovative products and services Section 02",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_142",
+      "page": 33,
+      "original_text": "Reduced competitive advantage and deterioration of reputation by based on customer data Mental and Physical Number of OneASICS members: ❶ Well-Being not realizing the founding philosophy of “Sound Mind, Sound Body” Business partners Joint research and development of products and services At least 30 million in 2026 (at least 3 times more than in 2019)",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_143",
+      "page": 33,
+      "original_text": "Communities Solving of local issues and increased trust in the ASICS brand as Section 03 a result of deepening ties with local communities Our Strategy Customers Creation of innovative products and services based on expecta- Loss of competitive advantage from failure to respond to market ❷ Innovation needs and tackle social issues tions and needs — Foun Se d c a tio t n io 0 n 4 for Employees Acceleration of innovation by utilizing diverse human resources",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_144",
+      "page": 33,
+      "original_text": "Monetary damages and deterioration of corporate and brand image ❸ Q Se u r a v l i i c ty e s of Products and d ha u z e a t r o d o th u e s a o n c d c u re rr s e t n ri c c e te o d f c s h af e e m ty ic is a s l u re e g s u a la n t d io n n o s n-compliance with Emp b lo u y si e n e e s s s / p cu ar s t t n o e m rs e rs / C fu r n e c a t t i i o o n n a o li f t y innovation by simultaneously pursuing safety and — Section 05",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_145",
+      "page": 33,
+      "original_text": "Human Rights and Impact on management sustainability and finances due to non- Business partners Strengthening of ties and enhancement of value chain Percentage of Tier 1 supplier factories above ASICS’ standards: ❹ Transparency in the compliance with labor standards in the supply chain or violations of sustainability 100% Supply Chain laws, regulations, or compliance requirements Reduced sales from a decline in time spent playing sports due to rising temperatures, loss of sales opportunities due",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "投资驱动",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_146",
+      "page": 33,
+      "original_text": "❼ D an iv d e I r n s c it l y u , s E io q n uity, R em ed p u lo c y e e d e p m er o f t o iv rm at a io n n c , e i m or p j a o c b t t o u n r n t o h v e e h r ir d in u g e o to f n d e e x te t- r g io e r n a e ti r n a g ti on Employees A cr c e c a e ti l o e n ra o ti f o a n r o e f s i i n lie n n o t v a o t r i g o a n n t i h za ro ti u o g n h w d it i h ve h rs ig e h v j a o l b u e s s a , t isfaction P Em er p c l e o n y t e a e g e e n o g f a fe g m em al e e n m t a sc",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_148",
+      "page": 34,
+      "original_text": "AGP* 2020 (2016–2020) Revised AGP 2020 (2018–2020) Mid-Term Plan 2023 (2021–2023) Contributing to society through the realization of Transitioning to a focus on profitability and putting ASICS Focusing on profit to build a strong financial foundation for sustainable growth our vision to combine sports and lifestyles on a path of sustainable growth",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_149",
+      "page": 34,
+      "original_text": "Net sales ¥399.1 billion ¥400.1 billion ¥750.0 billion or more Net sales ¥386.6 billion ¥378.0 billion ¥328.7 billion ¥500.0 billion or more Operating profit ¥21.9 billion ¥34.0 billion ¥54.2 billion ¥25.0 billion",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_150",
+      "page": 34,
+      "original_text": "ting 2.7% 2.8% (1.2%) 7% or more Operating margin 5.4% 7.0% 9.5% 6.0% or more ROE 7.8% 6.5% 15% or more ROE (11.2%) 4.5% (11.6%) 10% or more ROA 2.8% 5.2% 7.9% 4.0% Summary Challenges Summary Challenges Summary Challenges Sales continued to expand until 2015, Challenges included the need to focus Introduced a category-based management Challenges included the need to respond In Mid-Term Plan 2023, we shifted to a growth Ongoing initiatives are the further strengthening of when we were targeting c",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动",
+          "效率提升",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_151",
+      "page": 34,
+      "original_text": "our inability to control selling, general and administrative expenses caused profit-",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_152",
+      "page": 35,
+      "original_text": "Transformation to a Global Integrated Enterprise Revising Financial Indicators In November 2024, we upwardly revised our financial indicators, as our full-year results for 2024 exceeded the initial Section 01 One of the guiding policies of Mid-Term Plan 2026 (MTP 2026) is to pursue a transformation to a Global Integrated Our Message targets set out in MTP 2026, leading us to expect that we would achieve them two years ahead of schedule. Our Enterprise (GIE) driven by three core strategies: globa",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_153",
+      "page": 35,
+      "original_text": "or more (initially around 12%) and return on assets (ROA) of around 15% (initially around 10%). We will continue to aim Section 02",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_154",
+      "page": 35,
+      "original_text": "for further growth while achieving industry-leading levels of profitability. Reflecting on the First Year of MTP 2026 As part of our efforts to achieve a transformation to a GIE, we invited the Company’s non-Japanese executive officers Revision of MTP 2026 Financial Indicators Section 03",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_155",
+      "page": 35,
+      "original_text": "to help make decisions on key management issues from a global perspective. We also launched new initiatives such our Global Summit, where leaders from each division and region gather to discuss how to achieve sustainable growth. In terms of global growth, the Performance Running category, which is a pillar of profitability for ASICS, 120.0 130.0 or more Foun Se d c a tio t n io 0 n 4 for performed well, and the SportStyle and Onitsuka Tiger categories made strong progress, contributing to increa",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_157",
+      "page": 35,
+      "original_text": "2023 Result 2024 Result 2025 Plan MTP 2026 Target Sound Mind, Sound Body Net sales Net sales compound annual growth rate: Around 10%",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_158",
+      "page": 35,
+      "original_text": "(billions of yen) 7%–10% (initial target) Management Direction: Transformation to a Global Integrated Enterprise 17% or more Operating margin 9.5% 14.8% 15.4%",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_159",
+      "page": 35,
+      "original_text": "Global Growth P. 41 Enh E a x n p c e e ri m en e c n e t o V f a B lu r e a nd P. 43–44 Operational Excellence P. 48 ROA 7.9% 13.0% Around 10% (initial target) • Growth in each category • Strengthening data governance • Sustainable growth in existing revenue base • Optimal channel mix • Improvement of demand forecast accuracy Further Strengthening of Innovation regions • Expansion of the Ecosystem and strengthening of PSI management Information for • Establishment of a footprint in high-growth ",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_160",
+      "page": 37,
+      "original_text": "P.Run Message from the Category Head Performance Running Key Focus Areas for Achieving the Goals of Mid-Term Plan 2026 Main Initiatives in 2024 Our S e M cti e on s s 01 age In 2024, we focused on high-value-added products, To achieve its vision “to be the No. 1 premium performance running footwear brand,” the strengthened collaboration with running specialty Performance Running (P.Run) category will continue to accelerate the strong momentum it stores, narrowed down our low tier products, and",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_161",
+      "page": 37,
+      "original_text": "has built to date. In 2025, we aim to achieve the No. 1 share in the core running markets curbed discounts, and we believe these initiatives What is ASICS? of Japan, U.S., and Europe, and in 2026 and beyond, we will further solidify our brand have begun to show results, as reflected in the position and accelerate growth in Greater China and other high-growth regions. improvement of our gross profit margin. In addition to NOVABLAST 5 SUPERBLAST 2 PARIS our flagship products GEL-NIMBUS and GEL-KAY",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_162",
+      "page": 37,
+      "original_text": "our BOUNCE line, including NOVABLAST, also achieved remarkable growth. In North America, we strengthened partner- the ASICS Creation Center in Boston, United States, strengthening our system to con- ships with running specialty stores, which resulted in the near doubling of our market share at running specialty stores as tinuously develop innovative products. We are also focused on developing high-value- of March 2025 when compared with that of March 2023. In Europe, we continue to maintain our ",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_163",
+      "page": 37,
+      "original_text": "rience, we will continue to develop strong relationships with customers. Furthermore, we Section 05 Challenges to Address Data Section will proactively work to reduce CO emissions and realize a circular economy through the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_164",
+      "page": 37,
+      "original_text": "To further grow as a premium brand, it is essential that development of innovative products, expand consumer touchpoints and promote busi- we continue to introduce innovative products to the nesses that drive sustainable growth in both profitability and brand value. market and enhance our product strength. In line with the World Athletics Championships Tokyo 25, we will launch innovative new products featuring high bounce, aiming to be the No. 1 market share in Japan, GEL-KAYANO 32 METASPEED TOK",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "产品创新"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_165",
+      "page": 37,
+      "original_text": "80.0 tively, and establish an agile supply framework that ensures appropriate inventory levels. Additionally, we will enhance our 400 326.9 358.0 1,200 80 17.8 70.7 20 membership programs to deepen engagement with OneASICS members.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_166",
+      "page": 38,
+      "original_text": "Category Growth Strategy P.Run CPS APEQ SPS OT CPS Message from the Category Head Core Performance Sports Key Focus Areas for Achieving the Goals of Mid-Term Plan 2026 Main Initiatives in 2024 Our S e M cti e on s s 01 age In 2024, CPS products were worn by many top athletes in The Core Performance Sports (CPS) category consists of 13 sports subcategories and basketball, volleyball, soccer, wrestling, and other sports. handles a large number of competitive sport shoes. In this category, the key ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_167",
+      "page": 38,
+      "original_text": "the goals of Mid-Term Plan 2026 (MTP 2026) is to implement both global and regional bright yellow shoes for various categories, which received a What is ASICS? strategies. Specifically, in tennis, we are rolling out products worldwide and conducting lot of attention from both customers and the media, making marketing activities through co-creation with top athletes who have a global influence, for a great opportunity to promote the ASICS brand. Moreover, in conjunction with the French Open tenni",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_168",
+      "page": 38,
+      "original_text": "ment, the event “Rally for the Mind” was held, in which we product sales strategies in line with the sports trends of each region. All of these strategies established a pop-up tennis court in the heart of Paris at are essential to the further growth of the CPS category. Place de la République for people to experience the joy of Rally for the Mind Section 04 Akira Usuki We will strengthen both profitability and brand value by implementing subcategory playing tennis. These and other marketing acti",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_170",
+      "page": 38,
+      "original_text": "as a team to promote the business in order to provide the best brand experience to all",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_171",
+      "page": 38,
+      "original_text": "DS LIGHT X-FLY PRO 2 PARIS UNPRE ARS LOW 2 PARIS SKY ELITE FF MT 3 PARIS SPLIT ELITE PARIS SOLUTION SPEED FF 3 PARIS (soccer) (basketball) (volleyball) (wrestling) (tennis)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_172",
+      "page": 38,
+      "original_text": "We believe our expansion in North America will only contribute to the further growth of our business. We see significant Net Sales Category Profit / Category Margin potential particularly in tennis and volleyball, and in order to realize this, we must accurately identify customer demo- (Billions of yen) (Billions of yen) (%) graphics and purchasing behavior and develop products and sales strategies that further increase customer satisfaction. 100 1,200 20 17.5 17.9 17.9 20 84.0 While the wholesa",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_174",
+      "page": 38,
+      "original_text": "possible worldwide. Furthermore, the sustainable growth of CPS entails the creation of subcategories that will become",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_175",
+      "page": 38,
+      "original_text": "40 1,200 8 8 pillars of revenue alongside tennis and indoor sports. Accordingly, we will move forward with our subcategory strategies Investors while comprehensively considering the sports trends of each region.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_176",
+      "page": 39,
+      "original_text": "Category Growth Strategy P.Run CPS APEQ SPS OT APEQ Message from the Category Head Apparel and Equipment Key Focus Areas for Achieving the Goals of Mid-Term Plan 2026 Main Initiatives in 2024 Our S e M cti e on s s 01 age At the Olympic and Paralympic Games Paris 2024, ASICS provided the TEAM JAPAN and Australian national teams with In the Apparel and Equipment (APEQ) category, our MTP 2026 mission is to enhance official sportswear that were designed with high performance and sustainability in m",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_177",
+      "page": 39,
+      "original_text": "business in Japan and North America, we have increased sales and profits in Europe, brand, we began selling METASPEED Apparel in connection with our METASPEED line of footwear for top runners, includ- What is ASICS? Greater China, Oceania, and other regions, with category profits increasing significantly ing marathon runners. from the previous year to ¥4.3 billion in 2024 and category profit margin rising from 2.8% From a management perspective, we enhanced profitability by reviewing sport categ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_178",
+      "page": 39,
+      "original_text": "discounts. We have achieved steady results through these measures, establishing a foundation for sustainable growth Running, we are working together with the footwear category, which already has and enhancing our brand value. a large market share, to launch apparel with improved design, functionality, and comfort",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_181",
+      "page": 39,
+      "original_text": "customers, and expand business by enhancing the product lineup. In addition to continu- ously growing our business in core sales regions, such as Europe, Greater China, and Oceania, we will leverage the Japanese market and increase sales volume in India, Southeast Asia, and other emerging markets to build a balanced regional portfolio. Official sportswear of TEAM JAPAN Official sportswear of the Australian national team",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_182",
+      "page": 39,
+      "original_text": "Net Sales Category Profit / Category Margin To achieve further growth in the APEQ category, we will begin developing products in the Performance Life cat- (Billions of yen) (Billions of yen) (%) egory that can be worn comfortably in everyday situations while continuing to concentrate on products worn during",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_183",
+      "page": 39,
+      "original_text": "4.3 4.3 exercise, particularly in our focus category of Performance Running. Meanwhile, in the tennis category, we will 40 36.1 38.0 38.0 4 12 develop apparel products for top athletes in connection with our category of footwear. In other CPS categories, we",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_186",
+      "page": 39,
+      "original_text": "20 2 6 Paralympic Games Paris 2024, we used recycled materials, utilized renewable energy, and implemented other measures to Investors 1.0 reduce greenhouse gas emissions. Utilizing this knowledge, we will expand our development of environmentally friendly 10 1 2.8 3 products going forward.",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_187",
+      "page": 39,
+      "original_text": "2023年 2024年 2025年 Cate2g0o2r3y p年rofit (left 2ax0is2)4 年 2025年 ASICS is TEAM JAPAN Gold Partner (sporting goods)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_188",
+      "page": 40,
+      "original_text": "Category Growth Strategy P.Run CPS APEQ SPS OT SPS Message from the Category Head SportStyle Key Focus Areas for Achieving the Goals of Mid-Term Plan 2026 Main Initiatives in 2024 Our S e M cti e on s s 01 age In 2024, we successfully transitioned into a phase of business Examples of Collaborations in 2024 The mission of the SportStyle (SPS) category in MTP 2026 is to further accelerate global expansion, thanks to the growing number of customers who trust and growth in the enormous SPS market an",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_189",
+      "page": 40,
+      "original_text": "Having gone through the phase of building its brand foundation, the SPS category is now the category in 2019 began to yield tangible results. What is ASICS? entering a new stage of growth. Going forward, we will need to take strategic expansion Our main initiatives prioritized deepening our understanding of",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_190",
+      "page": 40,
+      "original_text": "measures to pursue growth while further improving the quality of all our activities. target consumers by capitalizing on SPS’ unique value proposition GT-2160 GEL-STYRAX and strengths, developing a tailored product lineup aligned with Section 03 To achieve the goals of MTP 2026, we will implement three key strategies. First, we will",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_191",
+      "page": 40,
+      "original_text": "customer profiles, and advancing the shift toward high-value-added focus on global growth acceleration. This involves driving growth through a regional products. On the distribution front, we strengthened partnerships portfolio strategy, while maintaining Europe, North America, and Greater China as the core with retailers that can co-express the SPS worldview, helping us HIDDEN NY Cecilie Bahnsen Section 04 Go Suzuki pillars of revenue. Second, we will pursue product portfolio expansion. The goa",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_192",
+      "page": 40,
+      "original_text": "more direct and premium brand experiences that go beyond products to deepen market trends. Section 05",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_193",
+      "page": 40,
+      "original_text": "We have also been strengthening SPS’ branding activities through strategic marketing collaborations to convey our emotional connections with our customers. vision more broadly and profoundly. We will continue striving to be a lifestyle category that provides profound and lasting support for our customers’ daily lives and helps them embody our “Sound Mind, Sound",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_194",
+      "page": 40,
+      "original_text": "Body” philosophy. We must persist in enhancing initiatives to establish deeper connections between the brand and its customers. We are focusing on improving the customer experience at various touchpoints, mainly e-commerce and directly operated stores, Net Sales Category Profit / Category Margin and providing a brand experience that further deepens our emotional connection with customers through SPS’ unique (Billions of yen) (Billions of yen) (%) 200 50 27.3 28.0 30 membership program, which is ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动",
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_195",
+      "page": 40,
+      "original_text": "80 59.2 20 12 hensively express the SPS worldview, which includes apparel, as we work toward creating new value. Investors",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_197",
+      "page": 40,
+      "original_text": "for our brand by enhancing customer experience, product lineups, and brand communication.",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_198",
+      "page": 41,
+      "original_text": "Category Growth Strategy P.Run CPS APEQ SPS OT OT Message from the Category Head Onitsuka Tiger Key Focus Areas for Achieving the Goals of Mid-Term Plan 2026 Main Initiatives in 2024 Photographs from the events can be viewed using the QR codes below. Our S e M cti e on s s 01 age The Onitsuka Tiger (OT) category celebrated its 75th anniversary in 2024, marking the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_199",
+      "page": 41,
+      "original_text": "To commemorate the 75th anniversary of Onitsuka Tiger, we held events in Paris’ Champs-Élysées and Tokyo’s occasion with events in Paris’ Champs-Élysées and Tokyo’s Omotesando district. Onitsuka Omotesando district. We invited guests to experience the brand’s worldview, which encapsulates the 75-year Tiger also reinforced its global presence by opening directly operated stores that repre- history of Onitsuka Tiger and its aspirations for the future as it looks ahead to its 100th anniversary. Wha",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_200",
+      "page": 41,
+      "original_text": "a global scale. Net sales in 2024 increased by around 60% year-on-year, to ¥95.4 billion, Our Strategy achieving double digit growth in all regions. Profit for the category also reached",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_201",
+      "page": 41,
+      "original_text": "a record high of ¥32.4 billion, representing a profit margin of 34%. We held a fashion show during Milan Fashion Week. Conveying the unique worldview of Onitsuka Tiger, Section 04",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_202",
+      "page": 41,
+      "original_text": "n took on the theme of “urban beat,” while the Autumn/Winter collection featured Foundation for Vice President, Executive Officer stores in prime locations in major cities and are also looking to roll out unprecedented Value Creation Head of Onitsuka Tiger Company new products and services. Spring/Summer collection: Autumn/Winter collection: Onitsuka Tiger will continue to evolve while envisioning the future based on its “Discover Urban beat Urban duality Section 05",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [
+          "产品创新"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_203",
+      "page": 41,
+      "original_text": "the Difference” brand philosophy and will make great strides as a luxury lifestyle brand that transcends the boundaries of fashion.",
+      "annotations": {
+        "expense_types": [
+          "营销费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_204",
+      "page": 41,
+      "original_text": "We will accelerate global growth by opening new stores and relocating existing stores to premium locations around the world. We will also promote our omnichannel strategy to integrate online and offline channels and enhance customer experience. In addition, we will leverage global e-commerce to strengthen our presence in countries where we do not yet operate. Through these efforts, we will expand our global brand presence. 603 We are also strengthening our branding efforts, particularly in Europ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "数字营销",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_205",
+      "page": 41,
+      "original_text": "2023年 2024年 2025年 Cate2g0o2r3y p年rofit (left 2ax0is2)4 年 2025年 DENIM SHIRT DOUBLE TEE OVERSIZED WASHED TEE Category margin (right axis) MEXICO 66 DERBY DENIM PANTS WS DENIM SKIRT",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_206",
+      "page": 42,
+      "original_text": "We are building a portfolio between regions with an existing revenue base and regions anticipated for high growth in the future. While we will aim for sustainable growth for operating profit in regions with an existing revenue base, in Increased profitability through business selection and concentration high-growth regions we will balance sales growth with profitability improvements. • Further focus on growth in selected CPS categories (tennis, soccer, basketball, and working) Japan and Performa",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升",
+          "持平",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "DTC转型"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_207",
+      "page": 42,
+      "original_text": "• Expand market share in specialty running channels In addition, in North America and Japan, where profitability improved in 2024, we will continue to focus on enhancing North America • Optimize our retail store portfolio and a revitalize Apparel and Equipment business. brand position and profitability. In North America, we aim to become the market leader in specialty running channels, • Improve gross profit margin across all channels through a more premium product mix, fewer promo- tions, and i",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_208",
+      "page": 42,
+      "original_text": "market share with a focus on Performance Running and driving brand penetration, we project growth in Onitsuka Tiger. • Achieve further penetration of the Onitsuka Tiger brand Strengthening and expansion of brand awareness across wider regions Business Portfolios by Region • Expand sales channels and strengthen marketing in the midwest region Greater China • Open more Onitsuka Tiger stores in prime locations Sustainable growth in profitable regions High-growth regions • Achieve stronger customer ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_209",
+      "page": 42,
+      "original_text": "Further share expansion based on our strong brand position 20 India Oceania • Consolidate our leadership position in the Performance Running category • Enhance brand experience for runners through a Running Ecosystem Australia Greater Southeast China Asia",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_210",
+      "page": 42,
+      "original_text": "Strengthening and expansion of brand recognition across wider regions North Southeast and • Center growth on ASICS and Onitsuka Tiger America Net sales Net sales South Asia • Develop strategies in accordance with foreign investment regulations in each country 0 1,000 (billion yen) 0 100 200 300 400 (billion yen) —Increase number of retail stores and strengthen initiatives with wholesale partners— (Notes) *1 Includes the Onitsuka Tiger category *2 “Southeast Asia” refers to Singapore, Malaysia, T",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_211",
+      "page": 45,
+      "original_text": "Focus: Co-Creating with Athletes Boosting Brand Equity Through Co-Creation with Top Tennis Players Co-Creation of Tennis Shoes with Top Athletes Our S e M cti e on s s 01 age ASICS has positioned tennis as its next pillar of profitability after running and is actively promoting growth strategies aimed at gaining the top global market share. Here, we will introduce some examples of our co-creation activities with Data Collection Section 02",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_212",
+      "page": 45,
+      "original_text": "top tennis players as part of our efforts to further boost our brand equity. As part of our data collection efforts, we invite top players visiting Japan to come to the ASICS Institute of Sport Science in Kobe City, where we perform user testing such as motion analyses using cutting-edge technology. These efforts are guided by ASICS’ proprietary design guideline: the ASICS Design Philosophy. Section 03 Branding Activities in Tennis In this way, we work closely with top athletes, who serve as rep",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_213",
+      "page": 45,
+      "original_text": "With Novak Djokovic, one of our sponsored players, at the forefront, top-level tennis players boast worldwide fame, Research and Development which gives the sport strong branding potential. Therefore, with the aim of further improving its brand image, ASICS is We offer three product lines tailored to different playing styles, each represented by a signature player who serves",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_214",
+      "page": 45,
+      "original_text": "promoting branding measures featuring top tennis players from around the world. as a co-creation partner in product development. Data Section When selecting athletes to become co-creation partners, we place importance not only on their sporting achieve- We have established a system for close communication with our partner players from the early stages of product develop- ments but also on whether they firmly share the values of ASICS’ philosophy and can embody it. By forming partner- ment. This ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_215",
+      "page": 45,
+      "original_text": "Baseline Best of Both All-Court In May 2024, we set up a pop-up tennis court on Place de la République in the center of Paris and held a one-day open tennis event, “Rally for the Mind,” which was open for all to participate. Alex de Minaur and Ons Jabeur, who are Provides reliable Balances quick dashes Supports the mobility sponsored by ASICS, also attended the event and shared with the participants the fulfillment that comes from engaging stability that supports with swift directional needed to",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_216",
+      "page": 46,
+      "original_text": "Digital Strategy Brand Strategy Digital Strategy Research and Development Intellectual Property Human Resource Strategy",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_217",
+      "page": 46,
+      "original_text": "Transformation to a Global Integrated Enterprise the CDO Our Message Our digital strategy plays a very important role in the Mid-Term Plan 2026 (MTP 2026) as we transform to a Global Aiming to Enhance Brand Experience Value by Making Full Use of OneASICS Integrated Enterprise implementing data-driven management. The CDO division promotes the enhancement of brand experience value through digital touch- Section 02 points with customers. In 2025, we will continue to increase the number of ASICS ent",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_218",
+      "page": 46,
+      "original_text": "Co-CDO Race Roster Oceania Digital business (Global) Pursuing Operational Excellence as We Aim to Transform to a Global Integrated Enterprise",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_219",
+      "page": 46,
+      "original_text": "The CIO division is driving ASICS’ growth through technology by globally implemented initiatives for operational excellence. Centered around the global systems we have built so far, we are making",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_220",
+      "page": 46,
+      "original_text": "our operations more sophisticated through proactive data utilization and the application of",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_221",
+      "page": 46,
+      "original_text": "Business development ASICS Ventures Corporation As one of our key initiatives, we integrate and centrally manage the vast amount of data accumulated in our global systems. This enables us to standardize data and utilize it broadly",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_222",
+      "page": 46,
+      "original_text": "CIO*2 Head office and corporate IT Supply chain management*3, data analytics, digital and cross-functionally across the value chain—from supply chain transformation to enhancing Hirofumi Ohshima literacy training, security, and infrastructure Managing Executive Officer the brand experience for customers. We will continue to work to further accelerate data utiliza- and CIO Information for ASICS Digital E-commerce, digital marketing, and data analytics tion and contribute to strengthening our busi",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本",
+          "物流成本",
+          "数字营销"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "DTC转型",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_223",
+      "page": 46,
+      "original_text": "SAP Fashion Management system, omnichannel, security, In addition, we will proactively adopt cutting-edge technologies such as data science and AI to",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_224",
+      "page": 46,
+      "original_text": "and infrastructure further accelerate the development of more sophisticated IT. To this end, we will maximize Sustainability",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_225",
+      "page": 46,
+      "original_text": "*1 Chief digital officer business value in terms of both technology and personnel by implementing Companywide *2 Chief information officer initiatives to develop technologically savvy human resources. *3 Managing the flow of related products, data, and finances from raw material procurement to delivery and to the point of consumption",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_226",
+      "page": 48,
+      "original_text": "Focus: Putting Our Running Ecosystem into Practice Promoting Our Running Ecosystem in Areas That Have Achieved Strong Growth",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_227",
+      "page": 48,
+      "original_text": "ASICS is developing a global running ecosystem, providing runners with running experiences tailored to the characteristics of each area. Our Message Below are some examples of how we utilize our running ecosystem in Greater China, Oceania, and Indonesia—areas that have achieved strong growth.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_228",
+      "page": 48,
+      "original_text": "Building Our Brand in Greater China with a Focus on Running Events Driving Strategic Growth with a Focus on the TCS Sydney Marathon Tailoring Running Initiatives to a Diverse Range of Runners",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_229",
+      "page": 48,
+      "original_text": "In Greater China, we Despite a sluggish market, ASICS Oceania Pty Ltd. achieved net sales of Since its establishment in 2020, PT. ASICS Indonesia Trading has rapidly Foundation for achieved strong growth in ¥42.9 billion in 2024, an increase of 11.8% year on year. This growth was expanded its business with a focus on running, achieving double-digit Value Creation 2024, with net sales up driven by partnerships with sports medicine institutions such as Sports year-on-year growth in net sales in 20",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_230",
+      "page": 48,
+      "original_text": "up 47.5% year on year. This and Sports & Exercise Podiatry Australia (SEPA). We will maintain our high runners in Indonesia, we are also engaging in initiatives such as supporting was supported by our inte- market share and achieve further growth by obtaining certification and corporate wellness programs and engaging in educational activities to grated local manufacturing endorsement from these specialized organizations. improve exercise habits at selected schools. Additionally, in a project aim",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_231",
+      "page": 51,
+      "original_text": "Research and Development (R&D) Strategy Brand Strategy Digital Strategy Research and Development Intellectual Property Human Resource Strategy",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_232",
+      "page": 51,
+      "original_text": "The ASICS Institute of Sport Science’s R&D Strategy Strengthening of Our R&D System Driving of Product Innovations with Science and Technology In our pursuit of globalizing our research system, we are collaborating with the ASICS Creation Center, which was estab- Section 01",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "产品创新"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_233",
+      "page": 51,
+      "original_text": "We are driving forward our R&D efforts in line with the Companywide vision to “Create Quality Lifestyle through lished in Boston, United States in 2024, to build a system for collecting and discussing more diverse insights from Intelligent Sport Technology.” ASICS’ strengths lie in its science-based product design and evaluation technology overseas regions. In addition, we will further strengthen the development of globally competitive professionals by based on the vast amount of data it has gat",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_234",
+      "page": 51,
+      "original_text": "data. In 2025, we will put in place a new structure with Shuhei Takemura, leader of the C-Project, as head of the ISS, and conferences. further intensify medium- to long-term fundamental research to maximize athlete performance. Through these structural reforms of our research system, we will engage in R&D that aims to achieve victories Based on the following three core competencies, the ISS engages in research guided by its primary mission of devel- together with athletes by jointly creating ne",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_235",
+      "page": 51,
+      "original_text": "Through research on human characteristics such as body shape, movement, and physiological Overview of Research Strategy Foundation for responses, we aim to create new functional value based on unique insights and data by scientifi- Human-Centric Science Value Creation cally identifying the characteristics and performance of athletes and target users through precise measurement and analysis from a wide range of perspectives. ISS’ Mission Maximize the performance of athletes",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_236",
+      "page": 51,
+      "original_text": "We will develop industry-leading materials not only by constantly evolving existing materials but Materials and Sustainability a g c b l o i a s e l n o a s t . n b r I i c n b y e u i a n t e d e t n d r o v t i o t i d r i o o u re n n c d , m i n u w e g c e n i c n t w u a g i t l l l t l g y i p n r c e u g o e r - s n n e u s h d e c o g i h o u e s i u g m e s h a g d t f a e u e s s r n i i e a c g l m t n s io i w a s n n s i a t i d h o li t n a s y s d u , i v p n a a e i t n m r h c ",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "效率提升"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_237",
+      "page": 51,
+      "original_text": "We will actively promote research and the introduction of technologies based on these core competencies and take Support for the development and evaluation of products of the upcoming season that contribute to the ongoing",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_238",
+      "page": 51,
+      "original_text": "evolution of mainstay products on the challenge of generating new value that goes beyond existing frameworks. Category strategy In addition, we will strengthen our intellectual property strategy and data management to further improve the efficiency of our research activities and speed up the processes of securing rights and their practical implementation.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "效率提升"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_239",
+      "page": 51,
+      "original_text": "In particular, we will expand the use of digital technologies, including generative AI and data science. We will actively Investors employ these technologies to strengthen communication with athletes, create new insights through data analysis, and",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_240",
+      "page": 52,
+      "original_text": "Intellectual Property (IP) Strategy Incorporating IP into Business Management Establishment of an IP Portfolio To protect our technologies, we have continued to focus on patent applications related to shoes, digital technologies, ASICS strategically leverages IP to enhance corporate value, practicing an integrated approach that aligns IP with and sustainable technologies. As a result, the indicators*2 for evaluating the competitiveness of our overall patent",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_241",
+      "page": 52,
+      "original_text": "portfolio have been steadily improving since 2019. In the past, our portfolio was overly focused on patents, but in our efforts to ramp up applications to register designs, the proportion of registered designs has increased, especially",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_242",
+      "page": 52,
+      "original_text": "overseas. We will continue to protect technologies designed for athletes. We have a well-balanced portfolio of trade- Enhancement of Corporate Value by Incorporating IP into Business Management marks both in Japan and overseas, and we will continue to maintain and build on this going forward. Since its founding, ASICS has continued to uphold the commitment to craftsmanship instilled by its founder, Kihachiro *2 The Patent Asset Index provided by LexisNexis is used as an indicator of the competit",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_243",
+      "page": 52,
+      "original_text": "tion, enhancement of brand value, and ultimately to the growth of corporate value, we will continue to strengthen our 1,000 689 921 200 142 165 3,000 IP strategy and brand protection initiatives. To this end, we are conducting research on the unique legal systems of 500 100 1,500 the countries in which we operate and focusing on protecting our rights in alignment with our business areas and 0 2020 2021 2022 2023 2024 0 2020 2021 2022 2023 2024 0 2020 2021 2022 2023 2024 R&D strategies. Japan Ove",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_245",
+      "page": 52,
+      "original_text": "Brand Strategy Digital Strategy Research and Development Intellectual Property Human Resource Strategy",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_246",
+      "page": 54,
+      "original_text": "Human Resource Strategy Brand Strategy Digital Strategy Research and Development Intellectual Property Human Resource Strategy",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_247",
+      "page": 54,
+      "original_text": "Putting “Sound Mind, Sound Body” into Practice Through Our Employees Realization of “Sound Mind, Sound Body” by Employees Our S e M cti e on s s 01 age ASICS’ human resource strategy is based on its brand philosophy “Sound Mind, Sound Body” and takes an approach that emphasizes employee growth and diversity to strengthen global competitiveness. Initiatives to Improve Engagement and Well-Being Section 02",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_248",
+      "page": 54,
+      "original_text": "Based on the idea that creating an environment where each employee can find joy in their work will improve productiv- Strategy Overview ity and help to secure and retain talented human resources, we are taking measures to improve employee engagement ASICS places great importance on each of its employees embodying its “Sound Mind, Sound Body” philosophy and well-being. The Well-Being Promotion Department, which was established in 2025 as a dedicated body for improv- Section 03 when carrying out t",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_249",
+      "page": 54,
+      "original_text": "Under Mid-Term Plan 2026 (MTP 2026), we aim to transform to a Global Integrated Enterprise by reinforcing our Employee engagement • Create an environment that encourages employees to Value Creation business foundation through three strategic initiatives that aim to foster an environment where diverse talent can survey response rate 79% 89% 92% voice their opinions frankly through measures such as distributing video messages from executive officers",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_250",
+      "page": 54,
+      "original_text": "• Conduct activities to drive engagement led by regional Data Section Employees engagement personnel and leaders",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_251",
+      "page": 54,
+      "original_text": "Key Strategies score • Formulate and implement action plans to effectively • Create a highly engaged workplace by promoting employee address issues",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_252",
+      "page": 54,
+      "original_text": "“Sound Mind, Sound Body” • Develop an industry-leading compensation system by Employees by returning a share of profits to employees • Provide diverse workstyles and growth opportunities Implementation of the Industry’s Most Competitive Compensation System",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_253",
+      "page": 54,
+      "original_text": "We are working to revise our compensation system to become the industry leader in terms of compensation levels. Starting in 2024, we introduced profit-sharing bonuses and a restricted share incentive scheme, aiming to return Key Strategies profits to employees while promoting greater value-sharing with shareholders and investors to further enhance Utilization of Human Resources • Manage global talent by assigning the right person in the corporate value.",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_254",
+      "page": 54,
+      "original_text": "• Payment of profit-sharing bonuses for all employees worldwide of approximately ¥500,000 on March 31, 2025 Secure and retain",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_255",
+      "page": 54,
+      "original_text": "• Introduction of restricted share incentive scheme for Information for employees Further enhance Investors Key Strategies corporate value • Improve the percentage of female managers • Lump-sum payment for all employees worldwide of Return profits to employees Diversity, Equity, and Inclusion • Promote the employment of people with disabilities approximately ¥100,000 on March 31, 2024 while promoting greater value-sharing and improve their work environment • Increase of new graduate starting sal",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_256",
+      "page": 61,
+      "original_text": "People Material Topic 1 Material Topic 4 Mental and Physical Human Rights and Transparency Well-Being in the Supply Chain Respecting Human Rights Throughout the Supply Chain Conducting Business Operations with an Awareness of Social Responsibility ASICS strives to ensure that labor practices and downsizing or withdrawal from production in its supply chain We view respecting human rights as an important corporate responsibility in our engagement in activities are properly managed legally and ethi",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_257",
+      "page": 61,
+      "original_text": "Case of a Supplier Factory in Cambodia Since 2004, ASICS has conducted factory audits across its outsourced production facilities. Beginning in 2022, to In 2024, employees at a footwear supplier factory in Cambodia who attempted to establish a factory labor strengthen responsible procurement and enhance traceability and transparency, we expanded our efforts beyond union were charged with criminal case. Through holding dialogues with factory management, ASICS ensured audits of new and high-priori",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_258",
+      "page": 61,
+      "original_text": "ASICS conducts audits of Tier 1 supplier factories against requirements outlined in supplier CSR standards. In 2024, ASICS improved the method for accurately scoring evaluations through the most recent status of CSR Case of a Supplier Factory in Vietnam management at supplier factories. Enhancing our audit protocol and scoring system enables more granular and accu- There has been a case of closure at a footwear supplier factory in Vietnam. At that time, ASICS requested rate risk assessments. In ",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_259",
+      "page": 61,
+      "original_text": "Since 2017, ASICS has disclosed and continually updated a list of its main Tier 1 and Tier 2 supplier factories. Starting in 2023, we digitized our supply chain management system spanning raw material procurement to product manufactur- ing, and have made progress operating a new system that offers improved traceability. In addition, to further enhance transparency, we registered Tier 1 factories information and their audit results on a digital system. This enables us to understand human rights a",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_260",
+      "page": 62,
+      "original_text": "Planet Material Topic 5 Material Topic 6 B M i a o t d e i r v ia e l r T s o it p y i c a n 9 d",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_261",
+      "page": 62,
+      "original_text": "Conducting Corporate Activities for a Sound Earth Designing Products for a Sound Earth Sports are closely related to climate change. To achieve a sound mind in a sound body, we need a sound earth on which Launch of NIMBUS MIRAI, Recyclable Running Shoes to exercise and play sports. To achieve a sound earth, ASICS regards climate action as high priority topic and is actively NIMBUS MIRAI’s distinctive feature is that each",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_262",
+      "page": 62,
+      "original_text": "material has become recyclable through initiatives such as using a single material for the upper. At the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_263",
+      "page": 62,
+      "original_text": "same time, the product maintains the same level of We are working to transform our entire value chain into a circular business model with the aim of achieving net-zero quality and function as ASICS’ flagship model, the greenhouse gas emissions by 2050. high-functioning GEL-NIMBUS. To raise awareness ASICS’ business is supported by a global supply chain that includes outsourced production factories, and collabora- of the environment together with runners, we are tion with each partner is essentia",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_264",
+      "page": 62,
+      "original_text": "gic Tier 1 footwear suppliers have concrete plans for renewable energy sourcing. In 2024, we updated the ASICS Green Procurement Policy to commit to 100% renewable energy sourcing by 2030 and expanded the scope to include more suppliers. We also introduced our new ASICS Footwear Material Sourcing Policy, which places importance on awareness of geopolitical risks and sustainability in addition to costs, quality, and delivery in raw material procurement. The policy Initiative to Provide Official S",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "投资驱动",
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_265",
+      "page": 62,
+      "original_text": "emissions, and the submission of data for calculating CO emissions. We understand the current status and challenges ASICS created and provided official sportswear, shoes, and bags to be",
+      "annotations": {
+        "expense_types": [
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_266",
+      "page": 62,
+      "original_text": "of our suppliers and support them by sharing information related to environmental technology. We are working with our worn by TEAM JAPAN at the Olympic and Paralympic Games Paris suppliers to transition to a circular business model across the entire value chain. 2024 under the concept of balancing performance and sustainability. We incorporated recycled materials into items such as podium jackets, Biodiversity podium pants, and shoes, resulting in an approximately 34% reduction ASICS recognizes ",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_267",
+      "page": 62,
+      "original_text": "*1 An international nonprofit organization promoting sustainable leather manufacturing techniques. *2 Scope of calculation: All items of sportswear for the Japanese Olympic Committee and the Japanese Paralympics Committee; podium jackets, podium pants, and shoes for the Australian Olympic Committee",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_268",
+      "page": 63,
+      "original_text": "ASICS is the world’s first sporting goods company to support the Financial Stability Board’s Task Force on Climate-related Financial Disclosures (TCFD), and we are actively promoting the disclosure of information based on the TCFD recommendations. Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_269",
+      "page": 63,
+      "original_text": "We have identified risks and opportunities based on scenario analysis and have analyzed their impacts and determined response measures. These are then reflected in our business strategy.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_270",
+      "page": 63,
+      "original_text": "Risk Business Impacts Financial Impacts*/Year Response Measures Details Rise in procurement costs for 4.3 billion yen • Establish targets and road maps of material with controlled Expansion of the consumer base Section 03 Fluctuations in raw material prices financial impact • Increasing engagement of new consumer segments through active Our Strategy petroleum-derived materials (2050, 4 ̊C) • Strengthen partnerships with suppliers climate initiatives",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_271",
+      "page": 63,
+      "original_text": "Transition Risks Creation of innovation through development and expansion of Foundation for decarbonized products and services Value Creation Increase in system implementation • Creating innovation through the pursuit of sustainability and Introduction of product labeling • Understand regulations early and secure the necessary resources and personnel expenses in response 1.3 billion yen functionality regulations to regulations • Start carbon footprint labeling • Developing products and materials",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_272",
+      "page": 63,
+      "original_text": "• Identifying and formulating value creation (new business domains) Opportunities with low CO2 emissions Decrease in sales as frequency of Rollout of products and services that respond to rising temperatures • Expansion of products that can adapt to rising temperatures Reduction in time for sports through product replacement decreases 2.4 billion yen • Applying knowledge of ergonomic research and digitalization and • Rollout of adaptable services even if there is a reduction in rising temperatur",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "下降",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_273",
+      "page": 63,
+      "original_text": "Utilization of sustainable finance Loss of sales opportunities • A sourcing strategy that recognizes outsourced Supply chain shutdown through • Implementing efficient fundraising through actively utilizing due to a shutdown from flooding of 0.7 billion yen manufacturing plants in regions with a high risk intensified typhoons and floods green bonds etc. by increasing the performance and transparency outsourced manufacturing plants of natural disasters",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "物流成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "供应链"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_274",
+      "page": 64,
+      "original_text": "outside director Mitsuru Murai sat down with three institutional investors from three different companies",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_275",
+      "page": 64,
+      "original_text": "Team Leader, Sustainable Investment Factors Driving Performance from an Outside Strategy Department and Team Leader,",
+      "annotations": {
+        "expense_types": [],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_276",
+      "page": 64,
+      "original_text": "targets laid out in its mid-term plan in the first year. Mr. T. Rowe Price Japan, Inc. Murai, to open the discussion, from an outside direc- Yuki Hisada tor’s perspective, what is your perception of the Senior Analyst, Corporate Research Unit, Research Department, Sumitomo Mitsui Company’s performance? Trust Asset Management Co., Ltd. Murai After becoming an outside director in 2023, I helped develop the original Mid-Term Plan 2026 (MTP From bottom left:",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_277",
+      "page": 64,
+      "original_text": "2026), before the targets were revised upward. During Outside Director, ASICS Corporation this process I got the distinct impression that ASICS is Information for very meticulous when it comes vetting its plans. Since Yoshiko Sato (Facilitator) Investors Executive Managing Director, Chief that time, profits and profit margins have catapulted to Researcher, Japan Investor Relations new highs in every category in every region, so the Association Sustainability topic of discussion has turned to how",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_278",
+      "page": 65,
+      "original_text": "Roundtable Discussion with an Outside Director and Investors sum up my answer in the word “granularity.” I believe Jacobs In addition, my understanding is that the The ASICS Foundation as a Conduit for head-on. Normally, this degree of opposition would that ASICS has achieved this success by breaking series of management reforms that started in 2018 Realizing Our Founding Principles breed doubt internally, but ASICS is powered by Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_279",
+      "page": 65,
+      "original_text": "down its business to its most basic elements, from were all about reviving the original strengths of the a strong brand philosophy of “Sound Mind, Sound category to value chain, and going over each of them Company. What is your view on this, Mr. Murai? Sato In July 2024, ASICS announced plans to estab- Body,” coupled with an awareness that customers are with a fine-tooth comb, verifying the details, select- Murai The process of selection and focus that I men- lish the ASICS Foundation, a general",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_280",
+      "page": 65,
+      "original_text": "ing and focusing on the items that matter, and work- tioned earlier is essentially a surface-level strategy; foundation to link accessibility to sports and corporate Thanks to its process of selection and focus, ASICS has ing on them until any issues are resolved. however, at the root of ASICS, right down to a DNA value. Personally, I think that this is a welcome develop- fine-tuned its profit structure, but for ASICS to increase Hisada ASICS has a high beta value, a variable used to level, is a",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_281",
+      "page": 65,
+      "original_text": "considers the capital market. However, even though its very beginning. how it approached dialogue on the matter. project to make this range as wide as possible.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_282",
+      "page": 65,
+      "original_text": "the targets for the latest mid-term plan were shifted Kou It is reassuring to know that ASICS’ current success Hayashi We decided to establish the foundation Jacobs While profit growth is important for any com- upward, the fact that the initial targets were too low is not simply the result of hit products but also the result because we wanted to do something to help people pany, at the same time purpose, rooted in founding",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_283",
+      "page": 65,
+      "original_text": "means that the beta value did not go down. I would of the entire organization working together to make this who are socially disadvantaged, but naturally some principles, as well as culture are key as well. I think it is Data Section therefore like to ask whether there was any discussion success possible. I would like you and the other outside investors were opposed to the idea. We took the time wonderful that ASICS is working to carry out its founding during Board meetings as to whether these t",
+      "annotations": {
+        "expense_types": [
+          "SG&A费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "下降"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_285",
+      "page": 65,
+      "original_text": "developing over time. Another factor is the boost in they permeate the entire organization. I believe that positive and negative sides to the proposal. What did ASICS decided not to have a controlling shareholder brand equity from supporting TEAM JAPAN on the this remarkable culture has the most significant impact the outside directors think about it? out of consideration for the capital market. As inves-",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_286",
+      "page": 65,
+      "original_text": "grand stage of the Olympic and Paralympic Games on the Company’s performance. Murai From the very beginning, ASICS has been tors, we are not able to control the foundation Information Paris 2024.* consistently determined to face the capital markets * ASICS is TEAM JAPAN Gold Partner (sporting goods)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_287",
+      "page": 66,
+      "original_text": "Roundtable Discussion with an Outside Director and Investors post-establishment, so it would be reassuring if, as an Hisada As you use this head-on management to take someone who is willing to take the first dive into to manage the business in partnership with these outside director, you could check that it is being man- the Company to the next level, what is the internal view uncharted waters, opening themselves up to the customers, as they give us their support. Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_288",
+      "page": 66,
+      "original_text": "aged properly. If ASICS can achieve results through of what ASICS needs? greatest risks but charting a course for others to follow. We need to rethink what ASICS needs to become pioneering initiatives such as this one, it will change Murai Let me frame it this way: I think the Japanese I think ASICS excels in that role. As it makes these the No. 1 global sports brand. ASICS is involved in capital market standards. I look forward to seeing ASICS national soccer team is such a force because its pl",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_289",
+      "page": 66,
+      "original_text": "working as a front-runner in the capital market to go to Europe and hone their skills in highly competitive forward should not be treated as an endeavor sepa- sound minds and sound bodies. That means there is produce these results. conditions. Similarly, a manager without courage will rate from management of OneASICS on the business every reason to believe that ASICS can extend its Hayashi We promise to maintain disclosure following feel the urge to blend into the crowd, but if they are side. In",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_290",
+      "page": 66,
+      "original_text": "as Mr. Murai mentioned, and create new connections establishing a board of directors that consists mostly Company will be able to track customers’ brand experi- its “range of motion” through the activities of the",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_291",
+      "page": 66,
+      "original_text": "with people. of outside directors. It is highly reassuring to see a ence in vivid detail. The fact that some of these cus- foundation, ASICS will truly become the world’s No. 1 Japanese company like ASICS venture out into the tomers have become shareholders and that the brand, with the ability to appeal to all people. With this",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_292",
+      "page": 66,
+      "original_text": "Transformation into Truly Global Brand world courageously and compete on equal terms with number of individual investors has increased is not perspective in mind, I hope to see support and encour- Data Section global companies despite the harsh scrutiny that a risk; instead, we should treat this as an opportunity agement from the capital market. Sato In 2024, ASICS also implemented capital policies comes with it. that include selling all its cross-shareholdings and Jacobs All too often, Japanese",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_293",
+      "page": 66,
+      "original_text": "to plunge into a tough environment and use the cate what makes it distinct, and to do so clearly. I hope to",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_294",
+      "page": 66,
+      "original_text": "challenge as our driving force. We hope to keep see ASICS determine what message it needs to convey growing in this environment as we engage in head-on and who to convey it to so that it can monetize the",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "负面"
+      }
+    },
+    {
+      "id": "asics_mda_295",
+      "page": 66,
+      "original_text": "management and open ourselves to the strict scru- “virtuous cycle” in the running ecosystem it has created. Information tiny of all those watching. Murai In Japan, we refer to the “First Penguin” as",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_296",
+      "page": 67,
+      "original_text": "Please refer to our corporate governance report for more details. A Corporate Governance System That Underpins Sustainable Growth The executive body deliberates over important matters concerning the management of the ASICS Group and regu- Based on its adoption of a company with audit and supervisory committee organizational structure, ASICS has clearly larly convenes Executive Board Meetings to carry out flexible decision-making. Under a new management structure Section 01",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升",
+          "新增"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_297",
+      "page": 67,
+      "original_text": "separated the supervisory and execution functions of management to speed up decision-making and has worked to adopted in January 2024, officers from head office and the CEOs of all regional operating companies take part in Global strengthen the supervisory function of the Board of Directors by making a majority of Board members outside directors. Summits that serve as opportunities to thoroughly discuss management issues and the organization’s future direction. The Board of Directors comprises d",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_298",
+      "page": 67,
+      "original_text": "ment, global operations, and digital technology. In addition to resolving matters as required by law, the Board makes with management issues and other global issues will help ASICS transform to a Global Integrated Enterprise. In addition, decisions regarding key management policies of the ASICS Group and certain important matters related to business we will continue working to further strengthen worldwide internal controls, ensure thorough compliance, and engage in execution while supervising th",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_300",
+      "page": 67,
+      "original_text": "• Formulation of Basic Policy on Corporate • Abolished takeover defense cross-shareholdings Basic policies Governance (2016) measures • Conducted secondary Section 05 offering of shares for stable Data Section",
+      "annotations": {
+        "expense_types": [],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_301",
+      "page": 67,
+      "original_text": "• Introduction of outside director system (2011) • Formulated policy making • Formulated policy making • Establishment of standards for independent at least one-third of the majority of directors",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_302",
+      "page": 67,
+      "original_text": "outside directors and independent outside directors independent independent outside corporate auditors (2014) outside directors directors",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_304",
+      "page": 67,
+      "original_text": "• Revised the compensation • Introduced restricted share • Revised restricted stock • Revised director",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [
+          "新增"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_305",
+      "page": 67,
+      "original_text": "Officer compensation • Revision of director compensation (2013) system compensation compensation remuneration • Introduction of share remuneration-type share",
+      "annotations": {
+        "expense_types": [
+          "人力成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_307",
+      "page": 71,
+      "original_text": "Director Specializations and Experience Regarding the reasons for selecting the types of expertise and experience required and for brief career summaries of the directors, please refer to the Notice of the 71st Ordinary Meeting of Shareholders. ASICS’ Directors and Executive Officers Through the Global × Digital approach set forth in Mid-Term Plan 2026 (MTP 2026), we aim to achieve global sustainable growth and improve corporate value while responding to the rapid changes in and increasing diver",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_308",
+      "page": 71,
+      "original_text": "Director Skills Matrix (as of March 28, 2025) Number of Company Board of Directors’ Corporate International Digital Finance and Position Name shares owned*1 meeting attendance management affairs technology accounting Legal affairs Sports business Important concurrent positions outside the Company Section 03 Chairperson and CEO, Our Strategy",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_309",
+      "page": 71,
+      "original_text": "Yasuhito Hirota 328,696 14/14 (100%) Outside Director of CASIO COMPUTER CO., LTD.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_310",
+      "page": 71,
+      "original_text": "Outside Director of PIA Corporation / Board Director (Audit & Supervisory Committee Member) of WOWOW Inc. / Outside director Mitsuru Murai 5,779 14/14 (100%) Chairperson of the Badminton Association of Japan / Executive Board Member of the Japanese Olympic Committee Value Creation Representative Director of Planet Plan Co., Ltd. / Senior Vice President of the Japan Volleyball Association / Outside Director, KATITAS Co., Ltd. / Outside director Miwa Suto 3,377 10/10 (100%) Executive Board Member ",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_311",
+      "page": 71,
+      "original_text": "Manabu Kuramoto 78,916 10/10 (100%) — Outside director (Audit & Certified Public Accountant (Yasushi Yokoi Certified Public Accountant Office)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_312",
+      "page": 71,
+      "original_text": "Supervisory Committee member) Mariko Eto 0 10/10 (100%) Attorney at Law (TMI Associates) / Outside Director, Starzen Co., Ltd. / Outside Director, Nitto Denko Corporation *1 Figures include restricted shares allocated on April 16, 2025 *2 Appointed on March 28, 2025 Executive Officer Skills Matrix (as of March 28, 2025)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_313",
+      "page": 71,
+      "original_text": "Position Name Products Marketing and sales Digital technology Legal affairs Major responsibilities",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_314",
+      "page": 71,
+      "original_text": "Chairperson and CEO, representative director Yasuhito Hirota ���������������2025�3�28���� Information for President and COO, representative director Mitsuyuki Tominaga Investors Special Assignment from the President, Crisis Management, Investment Committee, HR Committee, ASICS Trading Co., Ltd., Executive vice president Shinji Senda NISHI Athletic Goods Co., Ltd., SANIN ASICS Industry Corporation Sustainability",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [
+          "投资驱动"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_315",
+      "page": 74,
+      "original_text": "Basic Policy on the Compensation, of Executive Directors and Executive Officers Revision of Restricted Share Compensation Plan The compensation system for executive directors and executive officers has been designed based on the following principles. Effective from fiscal 2024, we have revised the existing restricted stock compensation plan to better achieve its aims of Section 01",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_316",
+      "page": 74,
+      "original_text": "• Compensation is set at a level that can attract top global talent who can drive ASICS’ Global × Digital initiatives aligning the interests of directors with those of shareholders and providing incentives for realizing sustainable growth • The structure is designed to provide strong incentives for both short-term and medium- to long-term corporate value enhancement and increased corporate value. The revision is as follows. while ensuring alignment of interests between the Company and its shareh",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张",
+          "投资驱动"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_317",
+      "page": 74,
+      "original_text": "Dividends None During the share unit period: None / After allotment of shares: Paid Section 04 Compensation System for Executive Directors and Executive Officers (Fiscal 2025) Timing of lifting of transfer After meeting performance conditions and being a",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_318",
+      "page": 74,
+      "original_text": "restrictions member for a certain period of time Upon retirement Value Creation Basic compensation Performance-linked bonuses Restricted share compensation * Share unit: The right to receive transferred shares of ASICS after the results of each fiscal year are finalized Chairperson and CEO 38% 31% 31% Section 05 Nomination and Compensation Committee Composition and Activity Status Data Section",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_319",
+      "page": 74,
+      "original_text": "ASICS has established the Nomination and Compensation Committee to ensure fairness and transparency in decisions",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_320",
+      "page": 74,
+      "original_text": "presidents 34% 34% 32% made related to the nomination and compensation of directors and executive officers. The Nomination and M of a fi n c a e g rs ing executive 37% 33% 30% Compensation Committee comprises a majority of outside directors, and the Board of Directors respects the opinions of Executive officers 53% 26% 21% committee members when making decisions on the nomination and compensation of directors and executive officers. (Note) The above compensation percentages represent cases when ",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "持平"
+        ],
+        "drivers": [
+          "外部因素"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_321",
+      "page": 74,
+      "original_text": "Mitsuyuki Tominaga • Director and executive officer candidate nominations Restricted share compensation (medium to long term) • Director (Full-time Audit & • Review of the compensation system for directors and Investors • Medium- to long-term incentive to improve willingness to contribute to the growth of the Company and improve corporate value. Supervisory Committee member) executive officers • To be paid according to the achievement rate of performance targets (operating profit, days inventory",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "正面"
+      }
+    },
+    {
+      "id": "asics_mda_324",
+      "page": 76,
+      "original_text": "Performance Running (P.Run) — — — — 170,765 170,150 159,033 208,268 258,272 285,929 326,936 Core Performance Sports (CPS) — — — — 41,175 41,737 33,540 41,332 54,155 72,154 78,620 Section 02 Apparel and Equipment (APEQ) — — — — 45,234 39,227 29,790 34,115 35,278 36,185 38,065 What is ASICS? SportStyle (SPS) — — — — 39,006 34,272 29,570 33,252 43,466 59,257 98,425 Onitsuka Tiger (OT) — — — — 42,882 45,597 33,935 38,545 43,011 60,304 95,439",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_326",
+      "page": 76,
+      "original_text": "Southeast and South Asia — — — — — 11,304 8,553 10,903 18,448 27,123 37,321 Other Regions — — — — — 36,306 28,260 35,133 43,630 49,844 44,840 Overseas Net Sales Ratio 80.5% 76.4% 74.6% 74.7% 74.0% 73.5% 76.7% 78.7% 81.8% 80.5% 80.3% Section 05 Operating Profit*3 30,466 27,448 25,472 19,571 10,515 10,634 (3,953) 21,945 34,002 54,215 100,111 Data Section",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_327",
+      "page": 76,
+      "original_text": "Performance Running (P.Run) — — — — 8,568 3,964 24,903 42,634 49,181 50,018 70,726 Core Performance Sports (CPS) — — — — (1,123) (1,336) 1,388 5,004 9,489 12,810 14,104 Apparel and Equipment (APEQ) — — — — Deficit Deficit (5,381) (175) (1,645) 1,001 4,340 SportStyle (SPS) — — — — 192 (405) 2,051 4,310 6,425 12,047 26,876 Onitsuka Tiger (OT) — — — — 7,486 8,303 3,616 4,868 7,399 15,360 32,435",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_328",
+      "page": 76,
+      "original_text": "Japan (714) 2,291 6,281 5,886 4,035 4,895 (3,791) 1,193 6,046 12,796 27,673 North America — — — — — (5,969) (4,548) 848 26 1,440 11,274 Europe (EMEA) 8,652 10,939 11,309 8,297 5,099 2,866 4,572 10,889 11,254 14,189 25,290 Greater China — — — — — 5,398 4,305 9,147 10,067 13,107 19,335 Oceania — — — — — 1,944 2,707 3,347 5,211 6,241 7,634 Southeast and South Asia — — — — — 789 152 964 2,984 4,971 7,414 Other Regions — — — — — 810 467 1,797 3,646 4,400 6,541 Ordinary Profit 34,302 22,533 23,408 21,",
+      "annotations": {
+        "expense_types": [
+          "技术成本",
+          "门店成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_329",
+      "page": 76,
+      "original_text": "Depreciation (after excluding R&D Expenses from 2018 onward) 6,288 7,819 8,354 9,362 9,589 12,582 12,568 13,201 15,499 16,186 20,315 R&D Expenses 2,120 3,194 3,676 4,430 4,501 4,529 4,641 4,911 6,085 6,607 6,901 *1 The fiscal period ended December 31, 2014 was a transitional year. This period was nine months (April to December 2014) for ASICS Corporation and its consolidated subsidiaries in Japan and 12 months (January to December 2014) for consolidated subsidiaries overseas. Sustainability *2 F",
+      "annotations": {
+        "expense_types": [
+          "研发费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_330",
+      "page": 76,
+      "original_text": "“Americas” were categorized under “other regions.” Also note that the segment information for the fiscal year ended December 31, 2018 shows data produced using the changed classification method. *3 Operating profit and operating margin figures for the fiscal years ended December 31, 2018 and December 31, 2019 include out-of-category costs.",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_332",
+      "page": 77,
+      "original_text": "Cash Flows from Operating Activities 10,720 18,301 37,971 37,136 11,049 14,792 19,330 49,146 (21,427) 90,095 104,614 Our Message Cash Flows from Investing Activities (9,845) (8,706) (14,046) (13,788) (5,467) (12,185) (9,634) (10,167) (14,481) (4,640) (7,558) Free Cash Flow 875 9,594 23,925 23,348 5,582 2,606 9,697 38,978 (35,909) 85,455 97,056 Total Dividends 4,460 4,460 4,460 4,460 4,528 5,555 4,393 4,392 7,326 11,910 14,390 Net Assets 201,940 199,883 201,207 201,302 166,829 152,323 126,763 146",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_334",
+      "page": 77,
+      "original_text": "Net Profit per Share*3 (yen) 29.35 13.48 20.50 17.08 (26.89) 9.47 (22.04) 12.84 27.15 48.13 88.30 Section 03 Net Assets per Share*3 (yen) 264.73 261.25 263.32 262.86 218.35 207.60 172.39 199.52 232.86 279.43 325.59 Our Strategy Dividend per Share*3 (yen) 5.87 5.87 5.87 5.87 6.00 7.50 6.00 6.00 10.00 16.25 20.00",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_335",
+      "page": 77,
+      "original_text": "Operating Margin*4 8.6% 6.4% 6.4% 4.9% 2.7% 2.8% (1.2%) 5.4% 7.0% 9.5% 14.8% Section 04",
+      "annotations": {
+        "expense_types": [
+          "运营费用"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_336",
+      "page": 77,
+      "original_text": "Performance Running (P.Run) — — — — 5.0% 2.3% 15.7% 20.5% 19.0% 17.5% 21.6% Value Creation Core Performance Sports (CPS) — — — — (2.7%) (3.2%) 4.1% 12.1% 17.5% 17.8% 17.9% Apparel and Equipment (APEQ) — — — — — — (18.1%) (0.5%) (4.7%) 2.8% 11.4% SportStyle (SPS) — — — — 0.5% (1.2%) 6.9% 13.0% 14.8% 20.3% 27.3% Section 05 Onitsuka Tiger (OT) — — — — 17.5% 18.2% 10.7% 12.6% 17.2% 25.5% 34.0% Data Section",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_337",
+      "page": 77,
+      "original_text": "Japan (0.9%) 1.9% 5.2% 4.9% 3.4% 4.0% (4.0%) 1.1% 4.9% 9.4% 16.6% North America — — — — (5.2%) (7.6%) (7.0%) 1.0% 0.0% 1.3% 8.3% Europe (EMEA) 8.3% 9.4% 10.5% 7.8% 4.8% 3.0% 5.2% 10.2% 8.7% 9.6% 14.1% Greater China — — — — 15.8% 13.7% 10.5% 17.4% 16.1% 16.9% 19.2% Oceania — — — — 15.3% 10.5% 13.6% 13.5% 15.7% 16.2% 17.8% Southeast and South Asia — — — — 10.4% 7.0% 1.8% 8.8% 16.2% 18.3% 19.9% Other Regions — — — — (3.5%) 2.2% 1.7% 5.1% 8.4% 8.8% 14.6% Return on Equity 12.4% 5.1% 7.8% 6.5% (11.2%)",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_338",
+      "page": 77,
+      "original_text": "Number of Subsidiaries 51 49 54 57 54 59 62 66 74 65 65 Investors P roportion of Consolidated Sales Accounted for by E-Commerce — — 2.2% 2.4% 4.1% 7.4% 15.7% 15.8% 17.8% 18.8% 42.1% *1 The fiscal period ended December 31, 2014 was a transitional year. This period was nine months (April to December 2014) for ASICS Corporation and its consolidated subsidiaries in Japan. The period was 12 months (January to December 2014) for consolidated subsidiaries overseas. Sustainability *2 From the fiscal yea",
+      "annotations": {
+        "expense_types": [
+          "运营费用",
+          "技术成本",
+          "数字营销"
+        ],
+        "trends": [],
+        "drivers": [
+          "DTC转型"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_339",
+      "page": 80,
+      "original_text": "Company Name ASICS Corporation For our fifth integrated report, we have comprehensively compiled essential information on ASICS’ Our Message medium- to long-term value creation and edited it to be clear, concise, and accessible for all readers.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_340",
+      "page": 80,
+      "original_text": "ASICS is steadily implementing the value creation process outlined in this report and striving for Head Office Daiwa Kobe Building, 2-4, Sannomiya 1-chome, Chuo-ku, Kobe 650-0021, Japan growth by further driving forward its Global × Digital approach. While challenges remain, we view",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [
+          "上升"
+        ],
+        "drivers": [
+          "业务扩张"
+        ],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_341",
+      "page": 80,
+      "original_text": "TEL: +81-(0)50-1745-2248 them as opportunities for improvement and strive to embody our “Sound Mind, Sound Body” phi- What is ASICS? losophy together with all our stakeholders. ASICS Institute of Sport Science 2-1, Takatsukadai 6-chome, Nishi-ku, This report has been compiled under the leadership of the investor relations team with the coop-",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_342",
+      "page": 80,
+      "original_text": "eration of relevant departments across our global organization through thorough discussions on Section 03 Representatives Yasuhito Hirota editorial direction and content. As the person overseeing the production, I proudly affirm the integ- Koji Hayashi Our Strategy Chairman and CEO, Representative Director rity of the process and the accuracy of the information provided.",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_343",
+      "page": 80,
+      "original_text": "Mitsuyuki Tominaga We will continue to focus on engaging with our stakeholders to further enhance our disclosure of and CFO President and COO, Representative Director information. Section 04",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_344",
+      "page": 80,
+      "original_text": "Principal Business Manufacture and sales of sporting goods Value Creation Paid-in Capital ¥23,972 million Employees 8,987 (consolidated) A",
+      "annotations": {
+        "expense_types": [
+          "人力成本",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_345",
+      "page": 80,
+      "original_text": "Affiliated Companies Overseas: 52 companies Footwear Division Go Suzuki Tomoya Koshimura of Sport Science Department Japan: 13 companies Kenta Moriyasu Kazuyoshi Kigaki Tomoko Horiuchi Shuhei Takemura Koji Shimomura Total: 65 companies Hirotaka Soeno Ryosuke Saito Kiri Chiba Hiroto Mori Shingo Ogawa Kaoru Kishibuchi Kazumichi Arima Ryota Sakiyama Yu Mukuda Fumiya Murai Marketing Division Yasuha Ishikawa Mika Nakai Major Consolidated Subsidiaries Onituska Tiger Company Yuya Sugiyama Ayako Ishibas",
+      "annotations": {
+        "expense_types": [
+          "营销费用",
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    },
+    {
+      "id": "asics_mda_346",
+      "page": 80,
+      "original_text": "ASICS China Trading Co., Ltd. Division Mark Brunton Misato Shirokaze Finance Division ASICS Oceania Pty. Ltd. Y Is o a t m ar u o O Ta c g h u i chi Sota Fukushima C A D yu O M Of i f u ic r e a Miwa Naito K Yu a r z i u N y a a k T a s m u u jiu ra e A A A S S si I I c C C s S S A A B ra r s a b ia s i i a P l D F te Z is . E t L r t ib d u . icao Ecomercio de Artigos Esportivos Ltda. K M M o a a s i a u H y k a a e r F a H u d a ji a m t a a moto C T E Y o u r o i s r k k p h o i o K i h T r a",
+      "annotations": {
+        "expense_types": [
+          "技术成本"
+        ],
+        "trends": [],
+        "drivers": [],
+        "sentiment": "中性"
+      }
+    }
+  ]
+}

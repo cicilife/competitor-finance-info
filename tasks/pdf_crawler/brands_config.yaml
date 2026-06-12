@@ -1,0 +1,139 @@
+# 品牌详细配置
+# 包含股票代码、数据源URL等，用于从各财经平台抓取财报
+
+brands:
+  - name: 安踏体育
+    english_name: ANTA Sports
+    stock_codes:
+      hk: "02020"
+      us: ""
+      sh: ""
+    keywords:
+      - 安踏
+      - ANTA Sports
+    official_ir: "https://ir.anta.com"
+
+  - name: 李宁
+    english_name: Li-Ning
+    stock_codes:
+      hk: "02331"
+      us: ""
+      sh: ""
+    keywords:
+      - 李宁
+      - Li-Ning
+    official_ir: "https://ir.lining.com.hk"
+
+  - name: 特步国际
+    english_name: Xtep
+    stock_codes:
+      hk: "01368"
+      us: ""
+      sh: ""
+    keywords:
+      - 特步
+      - Xtep
+    official_ir: "https://ir.xtep.com"
+
+  - name: 361度
+    english_name: 361 Degrees
+    stock_codes:
+      hk: "01361"
+      us: ""
+      sh: ""
+    keywords:
+      - 361度
+      - 361 Degrees
+    official_ir: "https://ir.361sport.com"
+
+  - name: 滔搏国际
+    english_name: Topsports
+    stock_codes:
+      hk: "06110"
+      us: ""
+      sh: ""
+    keywords:
+      - 滔搏
+      - Topsports
+    official_ir: "https://ir.topsports.com.hk"
+
+  - name: 宝胜国际
+    english_name: Pou Sheng
+    stock_codes:
+      hk: "03813"
+      us: ""
+      sh: ""
+    keywords:
+      - 宝胜
+      - Pou Sheng
+    official_ir: "https://ir.pou-sheng.com"
+
+  - name: Decathlon迪卡侬
+    english_name: Decathlon
+    stock_codes:
+      hk: ""
+      us: ""
+      sh: ""
+    keywords:
+      - 迪卡侬
+      - Decathlon
+    official_ir: "https://www.decathlon-group.com/en/investors"
+
+  - name: NIKE耐克
+    english_name: Nike
+    stock_codes:
+      hk: ""
+      us: "NKE"
+      sh: ""
+    keywords:
+      - 耐克
+      - Nike
+    official_ir: "https://investor.nike.com"
+
+  - name: Adidas阿迪达斯
+    english_name: Adidas
+    stock_codes:
+      hk: ""
+      us: "ADDYY"
+      sh: ""
+    keywords:
+      - 阿迪达斯
+      - Adidas
+    official_ir: "https://www.adidas-group.com/en/investors"
+
+  - name: Lululemon
+    english_name: Lululemon Athletica
+    stock_codes:
+      hk: ""
+      us: "LULU"
+      sh: ""
+    keywords:
+      - Lululemon
+      - 露露乐蒙
+    official_ir: "https://investor.lululemon.com"
+
+  - name: PUMA彪马
+    english_name: PUMA
+    stock_codes:
+      hk: ""
+      us: "PUMSY"
+      sh: ""
+    keywords:
+      - PUMA
+      - 彪马
+    official_ir: "https://www.pumagroup.com/investor-relations"
+
+# 需要的报告年份范围
+report_years:
+  start: 2018
+  end: 2026
+
+# 需要的报告类型
+report_types:
+  - annual       # 年报
+  - quarterly     # 季报
+  - half_year    # 半年报
+  - q1           # Q1
+  - q2           # Q2
+  - q3           # Q3
+  - q4           # Q4

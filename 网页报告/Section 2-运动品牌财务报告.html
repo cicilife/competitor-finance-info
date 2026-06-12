@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>运动品牌财务报告 · 综合分析</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  .card { scroll-margin-top: 24px; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(180deg, #eef2f7 0%, #e2e8f0 100%);
+    color: #1f2937;
+    line-height: 1.55;
+  }
+  .page { max-width: 1320px; margin: 0 auto; padding: 32px 28px 80px; }
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #0ea5e9 100%);
+    color: #fff; border-radius: 16px; padding: 30px 36px;
+    box-shadow: 0 12px 28px rgba(30, 64, 175, 0.25);
+    margin-bottom: 28px;
+  }
+  .hero h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; letter-spacing: 0.5px; }
+  .hero p { margin: 0; opacity: 0.9; font-size: 13.5px; }
+  .hero .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; font-size: 12.5px; }
+  .hero .meta a {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 5px 14px;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: all 0.18s ease;
+    cursor: pointer;
+  }
+  .hero .meta a:hover {
+    background: #fff;
+    color: #1d4ed8;
+    border-color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  }
+  .hero .meta a:active { transform: translateY(0); }
+
+  .card {
+    background: #fff; border-radius: 14px; padding: 24px 28px 18px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    margin-bottom: 24px; border: 1px solid #eef0f3;
+    position: relative;
+  }
+  .card-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .card-header h2 { margin: 0; font-size: 19px; font-weight: 700; color: #111827; }
+  .card-header .tag { font-size: 12px; color: #6b7280; background: #f3f4f6; padding: 3px 10px; border-radius: 6px; }
+
+  /* P1 补充信息 pill + 悬停面板 */
+  .info-pill {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 11.5px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    padding: 2px 8px 2px 9px; border-radius: 999px; margin-left: 8px;
+    cursor: help; user-select: none; vertical-align: middle;
+    box-shadow: 0 2px 6px rgba(29,78,216,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .info-pill:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(29,78,216,0.40); }
+  .info-pill-icon { font-size: 10px; opacity: 0.95; }
+  .pill-panel {
+    position: absolute; z-index: 950; max-width: 460px; min-width: 300px;
+    background: #fff; border: 1px solid #dbeafe; border-radius: 10px;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.18);
+    padding: 14px 16px; font-size: 12.5px; line-height: 1.65; color: #1f2937;
+    opacity: 0; pointer-events: none; transform: translateY(-4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+  .pill-panel.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .pp-title { font-size: 13.5px; font-weight: 700; color: #1d4ed8; margin-bottom: 8px; }
+  .pp-text { color: #374151; margin-bottom: 10px; }
+  .pp-text b { color: #0c4a6e; background: #f0f9ff; padding: 0 4px; border-radius: 3px; }
+  .pp-links-title { font-size: 12px; font-weight: 600; color: #6b7280; margin-bottom: 4px; }
+  .pp-links { list-style: none; padding: 0; margin: 0; }
+  .pp-links li { margin-bottom: 4px; font-size: 12.5px; line-height: 1.55; }
+  .pp-links a {
+    color: #1d4ed8; text-decoration: none; word-break: break-all;
+    border-bottom: 1px dashed rgba(29,78,216,0.35);
+  }
+  .pp-links a:hover { color: #0c4a6e; border-bottom-style: solid; }
+  .card-desc { color: #6b7280; font-size: 13px; margin: 0 0 14px; }
+
+  .legend-bar { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; font-size: 12.5px; color: #374151; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.08); }
+  .legend-group-sep { width: 1px; height: 14px; background: #d1d5db; margin: 0 2px; }
+  .legend-rect { width: 14px; height: 10px; border-radius: 3px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .mini-card { background: #f8fafc; border: 1px solid #eef2f7; border-radius: 10px; padding: 12px 14px; }
+  .mini-card .ttl { font-size: 13px; font-weight: 600; color: #1f2937; margin-bottom: 4px; }
+  .mini-card .sub { font-size: 11.5px; color: #6b7280; margin-bottom: 6px; }
+  .mini-card .ch { width: 100%; height: 170px; }
+  .big-ch { width: 100%; height: 560px; }
+  .medium-ch { width: 100%; height: 480px; }
+  .small-ch { width: 100%; height: 340px; }
+
+  /* 自定义悬停面板 */
+  #hoverPanel {
+    position: fixed; width: 360px; max-height: 72vh; overflow-y: auto;
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+    padding: 16px 18px; z-index: 9999; font-size: 12.5px; line-height: 1.65;
+    color: #1f2937; opacity: 0; pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+  #hoverPanel.visible { opacity: 1; pointer-events: auto; }
+  #hoverPanel::-webkit-scrollbar { width: 6px; }
+  #hoverPanel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  .hp-header {
+    font-size: 14.5px; font-weight: 700; color: #1d4ed8;
+    margin-bottom: 6px; padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .hp-summary { font-size: 12px; color: #6b7280; margin-bottom: 10px; }
+  .hp-section { margin-bottom: 12px; }
+  .hp-section:last-child { margin-bottom: 0; }
+  .hp-title { font-weight: 600; color: #111827; margin-bottom: 4px; font-size: 13px; }
+  .hp-text { color: #4b5563; }
+  .hp-link {
+    display: inline-block; margin-top: 6px; color: #1d4ed8;
+    text-decoration: none; font-size: 12px;
+    padding: 2px 10px; border: 1px solid #bfdbfe; border-radius: 4px; background: #eff6ff;
+  }
+  .hp-link:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+
+  /* 气泡图筛选器 */
+  .filter-bar {
+    display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 8px; font-size: 12.5px;
+    padding: 8px 12px; background: #f8fafc; border: 1px solid #eef2f7; border-radius: 8px;
+  }
+  .filter-label { color: #6b7280; font-weight: 600; margin-right: 2px; }
+  .filter-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: #fff; border: 1px solid #d1d5db; color: #6b7280;
+    padding: 4px 12px; border-radius: 999px; cursor: pointer;
+    font-size: 12.5px; font-family: inherit; transition: all 0.15s ease;
+  }
+  .filter-chip:hover { border-color: #1d4ed8; color: #1d4ed8; }
+  .filter-chip.view-toggle.active { background: #f59e0b; border-color: #f59e0b; color: #fff; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3); }
+  .filter-sep { width: 1px; height: 18px; background: #e5e7eb; margin: 0 4px; }
+  .filter-tip { color: #6b7280; font-size: 12px; }
+
+  /* 多选下拉 */
+  .multi-select { position: relative; }
+  .ms-trigger {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #fff; border: 1px solid #d1d5db; color: #374151;
+    padding: 5px 14px; border-radius: 8px; cursor: pointer;
+    font-size: 12.5px; font-family: inherit; min-width: 200px;
+    transition: all 0.15s ease;
+  }
+  .ms-trigger:hover { border-color: #1d4ed8; color: #1d4ed8; }
+  .multi-select.open .ms-trigger { border-color: #1d4ed8; box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12); }
+  .ms-caret { margin-left: auto; color: #9ca3af; transition: transform 0.18s ease; }
+  .multi-select.open .ms-caret { transform: rotate(180deg); color: #1d4ed8; }
+  .ms-dropdown {
+    position: absolute; top: calc(100% + 6px); left: 0;
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    min-width: 280px; max-width: 340px; max-height: 480px; overflow-y: auto;
+    z-index: 100; display: none; padding: 0;
+  }
+  .multi-select.open .ms-dropdown { display: block; }
+  .ms-actions {
+    display: flex; gap: 6px; padding: 8px 10px; border-bottom: 1px solid #f1f5f9;
+    position: sticky; top: 0; background: #fff; z-index: 2; align-items: center;
+  }
+  .ms-actions button {
+    font-size: 11.5px; padding: 3px 10px; border: 1px solid #d1d5db;
+    background: #fff; border-radius: 6px; cursor: pointer; color: #374151;
+    font-family: inherit; transition: all 0.12s;
+  }
+  .ms-actions button:hover { background: #f1f5f9; border-color: #1d4ed8; color: #1d4ed8; }
+  .ms-actions .ms-count { margin-left: auto; color: #1d4ed8; font-size: 11.5px; font-weight: 700; }
+  .ms-group { padding: 0; }
+  .ms-group-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 6px 12px; background: linear-gradient(90deg, #f8fafc, #fff);
+    font-size: 12px; font-weight: 700; color: #1f2937; cursor: pointer;
+    border-top: 1px solid #f1f5f9;
+  }
+  .ms-group-name { letter-spacing: 0.3px; }
+  .ms-group-toggle { color: #6b7280; font-size: 10.5px; font-weight: 500; }
+  .ms-subgroup { padding: 4px 0 2px; }
+  .ms-subgroup-name {
+    padding: 4px 12px 2px 24px; color: #6b7280; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.3px; background: #fafbfc;
+  }
+  .ms-item {
+    display: flex; align-items: center; gap: 7px;
+    padding: 4px 12px 4px 28px; cursor: pointer; font-size: 12.5px;
+    color: #374151; transition: background 0.1s;
+  }
+  .ms-item:hover { background: #f8fafc; }
+  .ms-item input { cursor: pointer; accent-color: #1d4ed8; }
+  .ms-item input:checked + span { color: #1d4ed8; font-weight: 600; }
+  .ms-group.collapsed .ms-group-body { display: none; }
+
+  /* 第 5 节 · 文本分析 */
+  .sub-h {
+    display: flex; align-items: center; gap: 10px;
+    margin: 18px 0 10px; font-size: 15px; font-weight: 700; color: #111827;
+  }
+  .sub-h::before {
+    content: ''; display: inline-block; width: 4px; height: 16px;
+    background: linear-gradient(180deg, #1d4ed8, #06b6d4); border-radius: 2px;
+  }
+  .sub-h .sub-tag { font-size: 11.5px; color: #6b7280; font-weight: 500; }
+  .heatmap { width: 100%; height: 420px; }
+  .insight-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px;
+  }
+  .ins-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    border: 1px solid #e5e7eb; border-left: 3px solid #1d4ed8;
+    border-radius: 8px; padding: 12px 14px;
+  }
+  .ins-card.warn  { border-left-color: #f59e0b; }
+  .ins-card.good  { border-left-color: #10b981; }
+  .ins-card.rose  { border-left-color: #e63946; }
+  .ins-card .ins-h { font-size: 12.5px; font-weight: 700; color: #111827; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .ins-card .ins-h .pill { font-size: 10.5px; padding: 1px 7px; border-radius: 999px; background: #fff; color: #6b7280; font-weight: 600; }
+  .ins-card .ins-b { font-size: 12px; color: #4b5563; line-height: 1.55; }
+  .ins-card .ins-b b { color: #111827; font-weight: 700; }
+  .ranking-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+  .ranking-card {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+    padding: 10px 12px; font-size: 12.5px; color: #374151;
+  }
+  .ranking-card h4 {
+    margin: 0 0 6px; font-size: 12.5px; font-weight: 700; color: #111827;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .ranking-card h4 .unit { font-size: 10.5px; color: #9ca3af; font-weight: 500; }
+  .rank-list { list-style: none; margin: 0; padding: 0; }
+  .rank-list li {
+    display: flex; align-items: center; gap: 8px; padding: 4px 0;
+    border-bottom: 1px dashed #f1f5f9;
+  }
+  .rank-list li:last-child { border-bottom: none; }
+  .rank-list .r-brand { font-weight: 600; color: #1f2937; min-width: 56px; }
+  .rank-list .r-bar {
+    flex: 1; height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden;
+  }
+  .rank-list .r-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #1d4ed8, #06b6d4); border-radius: 4px; }
+  .rank-list .r-val { font-weight: 700; color: #1d4ed8; min-width: 44px; text-align: right; }
+
+  /* ====================== 第 6 节 · 财报文本情感分析 ====================== */
+  .sent-page {
+    position: relative;
+    margin: 0 0 20px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #eef3fb 100%);
+    box-shadow: 0 6px 20px rgba(15, 30, 60, 0.08);
+    overflow: hidden;
+    border: 1px solid #e5ebf5;
+  }
+  .sent-page-inner { position: relative; padding: 22px 26px 18px; }
+  .sent-brand-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 12px; }
+  .sent-brand-title { display: flex; align-items: center; gap: 12px; }
+  .sent-brand-logo {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-family: "Noto Serif SC", serif; font-weight: 900;
+    font-size: 18px; box-shadow: 0 4px 12px rgba(15, 30, 60, 0.15);
+  }
+  .sent-brand-logo.sent-361 { background: linear-gradient(135deg, #FF7A29 0%, #E11D48 100%); }
+  .sent-brand-logo.sent-ant { background: linear-gradient(135deg, #0E2A4A 0%, #1F6FEB 100%); }
+  .sent-brand-meta h2 { margin: 0; font-family: "Noto Serif SC", serif; font-weight: 900; font-size: 21px; color: #0E2A4A; }
+  .sent-brand-meta .sent-tag { font-size: 12px; color: #6b7280; margin-top: 3px; }
+  .sent-stat-row { display: flex; gap: 8px; }
+  .sent-stat-chip {
+    display: flex; flex-direction: column; align-items: center;
+    background: #f1f4fa; border-radius: 9px;
+    padding: 6px 12px; min-width: 64px;
+  }
+  .sent-stat-chip .sent-n { font-size: 17px; font-weight: 800; color: #0E2A4A; }
+  .sent-stat-chip .sent-l { font-size: 11px; color: #6b7280; margin-top: 1px; }
+  .sent-stat-chip.sent-pos { background: rgba(22,163,74,0.10); }
+  .sent-stat-chip.sent-pos .sent-n { color: #16A34A; }
+  .sent-stat-chip.sent-neu { background: rgba(107,114,128,0.10); }
+  .sent-stat-chip.sent-neu .sent-n { color: #4B5563; }
+  .sent-stat-chip.sent-neg { background: rgba(225,29,72,0.10); }
+  .sent-stat-chip.sent-neg .sent-n { color: #E11D48; }
+
+  .sent-midline {
+    position: relative;
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    background: #0E2A4A;
+    color: #fff;
+    border-radius: 10px;
+    display: flex; align-items: center; gap: 14px;
+    font-size: 12.5px;
+  }
+  .sent-midline .sent-pill {
+    background: #FFB347; color: #0E2A4A;
+    padding: 3px 9px; border-radius: 5px;
+    font-weight: 700; font-size: 12px; flex: 0 0 auto;
+  }
+  .sent-midline .sent-text { line-height: 1.55; }
+  .sent-midline .sent-text b { color: #FFB347; }
+
+  .sent-layout-2col { display: grid; grid-template-columns: 280px 1fr; gap: 18px; margin-bottom: 14px; }
+  .sent-donut-card, .sent-summary-card {
+    background: #fff;
+    border: 1px solid #e5ebf5;
+    border-radius: 12px;
+    padding: 14px 14px 12px;
+    box-shadow: 0 4px 10px rgba(15, 30, 60, 0.04);
+  }
+  .sent-donut-card h4, .sent-summary-card h4 { margin: 0 0 8px; font-size: 13px; color: #0E2A4A; font-weight: 700; }
+  .sent-donut-wrap { display: flex; align-items: center; gap: 12px; }
+  .sent-donut-big { width: 110px; height: 110px; flex: 0 0 110px; position: relative; }
+  .sent-donut-big svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .sent-donut-big .sent-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; }
+  .sent-donut-big .sent-center .sent-num { font-size: 20px; font-weight: 800; color: #0E2A4A; }
+  .sent-donut-big .sent-center .sent-lbl { font-size: 10px; color: #6b7280; margin-top: 1px; }
+  .sent-donut-legend { flex: 1; display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #4b5563; }
+  .sent-donut-legend .sent-row { display: flex; align-items: center; gap: 6px; }
+  .sent-donut-legend .sent-row .sent-sw { width: 11px; height: 11px; border-radius: 3px; flex: 0 0 11px; }
+  .sent-donut-legend .sent-row .sent-lbl { flex: 1; }
+  .sent-donut-legend .sent-row .sent-pct { font-weight: 700; color: #0E2A4A; }
+
+  .sent-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size: 12px; color: #4b5563; }
+  .sent-summary-grid .sent-item { display: flex; align-items: flex-start; gap: 7px; padding: 5px 0; border-bottom: 1px dashed #eef1f7; }
+  .sent-summary-grid .sent-item .sent-ic {
+    flex: 0 0 20px; height: 20px; border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 11px; font-weight: 700;
+  }
+  .sent-summary-grid .sent-item .sent-ic.sent-pos { background: #16A34A; }
+  .sent-summary-grid .sent-item .sent-ic.sent-neu { background: #6B7280; }
+  .sent-summary-grid .sent-item .sent-ic.sent-neg { background: #E11D48; }
+  .sent-summary-grid .sent-item .sent-ic.sent-warn { background: #F5B400; }
+  .sent-summary-grid .sent-item .sent-txt { flex: 1; line-height: 1.5; }
+  .sent-summary-grid .sent-item .sent-txt b { color: #0E2A4A; }
+
+  .sent-quote-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .sent-quote-col {
+    background: #fff;
+    border: 1px solid #e5ebf5;
+    border-top: 3px solid var(--col, #1f6feb);
+    border-radius: 10px;
+    padding: 12px 12px 10px;
+    box-shadow: 0 4px 10px rgba(15, 30, 60, 0.04);
+  }
+  .sent-quote-col.sent-pos { --col: #16A34A; }
+  .sent-quote-col.sent-neu { --col: #6B7280; }
+  .sent-quote-col.sent-neg { --col: #E11D48; }
+  .sent-quote-col h5 {
+    margin: 0 0 3px; font-size: 13px; font-weight: 800; color: var(--col);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .sent-quote-col h5 .sent-badge-n {
+    background: var(--col); color: #fff;
+    font-size: 10px; padding: 1px 6px; border-radius: 999px; font-weight: 700;
+  }
+  .sent-quote-col .sent-desc { font-size: 11.5px; color: #6b7280; margin-bottom: 8px; }
+  .sent-quote-item { border-top: 1px dashed #eef1f7; padding: 7px 0 3px; }
+  .sent-quote-item:first-of-type { border-top: 0; padding-top: 0; }
+  .sent-quote-item .sent-meta { display: flex; flex-wrap: wrap; gap: 4px; font-size: 10.5px; color: #6b7280; margin-bottom: 3px; }
+  .sent-quote-item .sent-meta .sent-chip { background: #f1f4fa; color: #4b5563; padding: 1px 6px; border-radius: 4px; }
+  .sent-quote-item .sent-meta .sent-chip.sent-up { background: rgba(22,163,74,0.10); color: #16A34A; }
+  .sent-quote-item .sent-meta .sent-chip.sent-down { background: rgba(225,29,72,0.10); color: #E11D48; }
+  .sent-quote-item .sent-meta .sent-chip.sent-flat { background: rgba(107,114,128,0.10); color: #4B5563; }
+  .sent-quote-item .sent-meta .sent-chip.sent-new { background: rgba(245,180,0,0.15); color: #B45309; }
+  .sent-quote-item .sent-meta .sent-chip.sent-kw { background: rgba(31,111,235,0.10); color: #1F6FEB; }
+  .sent-quote-item .sent-text { font-size: 11.5px; color: #374151; line-height: 1.6; }
+  .sent-quote-item .sent-text mark { background: rgba(255,179,71,0.35); color: #0E2A4A; padding: 0 2px; border-radius: 2px; }
+
+  .sent-footer { padding: 12px 16px; background: #fff; border-radius: 10px; border: 1px solid #e5ebf5; font-size: 12px; color: #6b7280; line-height: 1.7; }
+  .sent-footer h4 { margin: 0 0 5px; font-size: 13px; color: #0E2A4A; font-weight: 700; }
+
+  /* ====================== 关键词悬停面板 ====================== */
+  .kw-panel {
+    position: fixed; z-index: 9999; max-width: 460px; min-width: 280px;
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+    padding: 14px 16px; font-size: 12.5px; line-height: 1.6; color: #1f2937;
+    display: none;
+  }
+  .kw-panel .kw-h {
+    font-size: 13px; font-weight: 700; color: #1d4ed8;
+    margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .kw-panel .kw-h .kw-badge {
+    font-size: 10.5px; padding: 1px 7px; border-radius: 999px;
+    background: #eff6ff; color: #1d4ed8; font-weight: 600;
+  }
+  .kw-panel .kw-line {
+    font-size: 12px; color: #4b5563; margin-bottom: 4px;
+    line-height: 1.6; word-break: break-word;
+  }
+  .kw-panel .kw-foot {
+    margin-top: 8px; padding-top: 6px;
+    border-top: 1px dashed #eef1f7;
+    font-size: 11px; color: #9ca3af;
+  }
+
+  /* ====================== 第 7 节 · 综合报告 ====================== */
+  .comprehensive-card {
+    display: grid; grid-template-columns: 300px 1fr; gap: 18px; margin-top: 14px;
+  }
+  .comp-preview {
+    background: #f8fafc; border: 1px solid #eef2f7; border-radius: 12px;
+    padding: 18px; text-align: center; display: flex; flex-direction: column; gap: 14px;
+  }
+  .comp-preview img {
+    width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  }
+  .comp-preview .comp-eyebrow {
+    display: inline-block;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px;
+    color: #1d4ed8; background: #eff6ff;
+    padding: 4px 10px; border-radius: 999px;
+    align-self: center;
+  }
+  .comp-preview .comp-title {
+    font-size: 17px; font-weight: 800; color: #0E2A4A; line-height: 1.45;
+  }
+  .comp-preview .comp-meta {
+    font-size: 12px; color: #6b7280; line-height: 1.6;
+    padding: 8px 6px; background: #fff; border-radius: 6px;
+    border: 1px dashed #e5e7eb;
+  }
+  .comp-pdf {
+    background: #fff; border: 1px solid #eef2f7; border-radius: 12px;
+    padding: 0; overflow: hidden; height: 640px; position: relative;
+  }
+  .comp-pdf object, .comp-pdf iframe {
+    width: 100%; height: 100%; border: 0;
+  }
+  .comp-pdf-fallback {
+    padding: 20px; text-align: center; color: #6b7280; font-size: 13px;
+  }
+  .dl-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: linear-gradient(135deg, #1d4ed8 0%, #06b6d4 100%);
+    color: #fff !important; padding: 10px 20px; border-radius: 8px;
+    text-decoration: none !important; font-size: 13px; font-weight: 600;
+    transition: all 0.18s; box-shadow: 0 4px 10px rgba(29,78,216,0.20);
+  }
+  .dl-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(29,78,216,0.30); }
+  .dl-btn.secondary {
+    background: #fff; color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe;
+  }
+  .dl-btn.secondary:hover { background: #eff6ff; }
+
+  /* ====================== 第 7 节 · 信息图 2 张 ====================== */
+  /* ====================== 2.5 重点品牌财报信息 Highlight ====================== */
+  .highlight-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    margin-top: 10px;
+  }
+  .highlight-col {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .highlight-col-head {
+    font-size: 13.5px; font-weight: 800; color: #0E2A4A;
+    padding: 9px 14px; border-radius: 8px;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border-left: 4px solid #1F6FEB;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .highlight-col-head.red    { border-left-color: #E11D48; }
+  .highlight-col-head.orange { border-left-color: #FF7A29; }
+
+  .highlight-card {
+    background: #fff; border: 1px solid #e5ebf5;
+    border-radius: 10px; padding: 11px 13px;
+    box-shadow: 0 2px 8px rgba(15,30,60,0.05);
+  }
+  .highlight-card .hc-head {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 5px; flex-wrap: wrap;
+  }
+  .hc-badge {
+    display: inline-block; color: #fff;
+    font-size: 10.5px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px;
+    flex: 0 0 auto; letter-spacing: 0.2px;
+  }
+  .hc-badge.b-red    { background: #E11D48; }
+  .hc-badge.b-orange { background: #FF7A29; }
+  .hc-badge.b-blue   { background: #1F6FEB; }
+  .hc-badge.b-green  { background: #16A34A; }
+  .hc-badge.b-gold   { background: #F5B400; color: #0E2A4A; }
+  .hc-badge.b-purple { background: #8B5CF6; }
+
+  .hc-title {
+    font-weight: 700; font-size: 13.5px;
+    color: #0E2A4A; line-height: 1.4;
+  }
+  .hc-delta {
+    font-size: 11px; font-weight: 700;
+    margin-left: 4px; padding: 1px 6px;
+    border-radius: 4px; vertical-align: middle;
+    white-space: nowrap;
+  }
+  .hc-delta.up   { background: rgba(22,163,74,0.12);  color: #15803d; }
+  .hc-delta.down { background: rgba(225,29,72,0.12);  color: #be123c; }
+
+  .hc-bullets {
+    list-style: none; margin: 4px 0 0; padding: 0;
+  }
+  .hc-bullets li {
+    position: relative; padding-left: 14px;
+    font-size: 12.3px; color: #374151;
+    margin-bottom: 3px; line-height: 1.6;
+  }
+  .hc-bullets li::before {
+    content: ""; position: absolute;
+    left: 2px; top: 7px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--tone, #1F6FEB);
+  }
+  .highlight-card.tone-red    { --tone: #E11D48; }
+  .highlight-card.tone-orange { --tone: #FF7A29; }
+  .highlight-card.tone-blue   { --tone: #1F6FEB; }
+  .highlight-card.tone-green  { --tone: #16A34A; }
+  .highlight-card.tone-gold   { --tone: #F5B400; }
+  .highlight-card.tone-purple { --tone: #8B5CF6; }
+  .hc-src {
+    margin-top: 6px; padding-top: 6px;
+    border-top: 1px dashed #eef1f7;
+    font-size: 10.5px; color: #94a3b8;
+    word-break: break-all;
+  }
+  .hc-src a {
+    color: #1F6FEB; text-decoration: none;
+    margin-right: 8px; border-bottom: 1px dotted #93c5fd;
+  }
+  .hc-src a:hover { color: #E11D48; border-bottom-color: #E11D48; }
+
+  @media (max-width: 900px) {
+    .highlight-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-section-head {
+    margin: 22px 0 12px; display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 700; color: #1d4ed8;
+    padding-bottom: 8px; border-bottom: 1px dashed #dbeafe;
+  }
+  .info-section-head .info-tag {
+    font-size: 10.5px; padding: 2px 8px; border-radius: 999px;
+    background: #eff6ff; color: #1d4ed8; font-weight: 600;
+  }
+  .info-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  }
+  .info-card {
+    background: #f8fafc; border: 1px solid #eef2f7; border-radius: 12px;
+    padding: 14px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .info-card .info-thumb-wrap {
+    position: relative; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10); background: #fff;
+    aspect-ratio: 16 / 10;
+  }
+  .info-card .info-thumb {
+    width: 100%; height: 100%; object-fit: cover; object-position: top;
+    display: block; cursor: zoom-in; transition: transform 0.25s;
+  }
+  .info-card .info-thumb:hover { transform: scale(1.02); }
+  .info-card .info-zoom-hint {
+    position: absolute; right: 8px; bottom: 8px;
+    background: rgba(15,23,42,0.75); color: #fff;
+    font-size: 11px; padding: 3px 9px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .info-card .info-body {
+    display: flex; flex-direction: column; gap: 8px; padding: 0 2px 2px;
+  }
+  .info-card .info-title {
+    font-size: 15px; font-weight: 800; color: #0E2A4A; line-height: 1.4;
+  }
+  .info-card .info-meta {
+    font-size: 12px; color: #6b7280; line-height: 1.6;
+  }
+  .info-card .info-btns {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px;
+  }
+  .info-card .info-btns .dl-btn { flex: 1 1 auto; justify-content: center; }
+
+  /* ===== 顶部可收起导航 ===== */
+  .nav-wrap {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    font-family: inherit;
+  }
+  .nav-trigger {
+    height: 14px; cursor: pointer;
+    background: linear-gradient(180deg, rgba(29,78,216,0.10), rgba(29,78,216,0));
+    border-bottom: 1px solid rgba(29,78,216,0.18);
+    transition: background 0.2s ease;
+  }
+  .nav-trigger:hover { background: linear-gradient(180deg, rgba(29,78,216,0.20), rgba(29,78,216,0.06)); }
+  .top-nav {
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.10);
+    transform: translateY(-100%);
+    transition: transform 0.28s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav-wrap:hover .top-nav,
+  .top-nav:hover { transform: translateY(0); }
+  .top-nav-inner {
+    max-width: 1320px; margin: 0 auto; padding: 8px 24px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .l1-group { position: relative; }
+  .top-nav .l1 {
+    text-decoration: none; color: #1f2937; font-size: 13.5px; font-weight: 600;
+    padding: 8px 16px; border-radius: 6px; transition: all 0.15s ease;
+    white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;
+    cursor: pointer; user-select: none;
+  }
+  .top-nav .l1:hover { background: #eff6ff; color: #1d4ed8; }
+  .top-nav .l1.active { background: #1d4ed8; color: #fff; }
+  .top-nav .l1 .caret { font-size: 9px; opacity: 0.6; transition: transform 0.18s; }
+  .l1-group:hover .l1 .caret { transform: rotate(180deg); }
+  .l2-menu {
+    position: absolute; top: calc(100% + 4px); left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14);
+    min-width: 220px; padding: 6px; opacity: 0; pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 1001;
+  }
+  .l1-group:hover .l2-menu {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  .l2-menu a {
+    display: block; text-decoration: none; color: #374151; font-size: 13px;
+    padding: 8px 12px; border-radius: 6px; transition: all 0.12s ease;
+    white-space: nowrap;
+  }
+  .l2-menu a:hover { background: #eff6ff; color: #1d4ed8; }
+  .l2-menu a.active { background: #1d4ed8; color: #fff; }
+  .l2-menu .l2-empty { padding: 8px 12px; color: #9ca3af; font-size: 12.5px; }
+  body { padding-top: 14px; }
+  .card { scroll-margin-top: 80px; }
+
+  @media (max-width: 1100px) {
+    .sent-layout-2col { grid-template-columns: 1fr; }
+    .sent-quote-grid { grid-template-columns: 1fr; }
+    .comprehensive-card { grid-template-columns: 1fr; }
+    .comp-pdf { height: 520px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .top-nav-inner { padding: 6px 10px; gap: 2px; flex-wrap: wrap; }
+    .top-nav .l1 { padding: 6px 10px; font-size: 12.5px; }
+    .l2-menu { min-width: 200px; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- 顶部可收起导航 -->
+<div class="nav-wrap">
+  <div class="nav-trigger"></div>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a class="l1" href="#sec-1" data-target="sec-1">1. 行业趋势</a>
+      <div class="l1-group">
+        <a class="l1" href="#sec-2-1" data-target="sec-2-1">2. 品牌重点财务指标 <span class="caret">▼</span></a>
+        <div class="l2-menu">
+          <a href="#sec-2-1" data-target="sec-2-1">2.1 品牌营收气泡图</a>
+          <a href="#sec-2-3" data-target="sec-2-3">2.3 品牌盈利情况</a>
+          <a href="#sec-2-2" data-target="sec-2-2">2.2 重点品牌 Highlight</a>
+        </div>
+      </div>
+      <div class="l1-group">
+        <a class="l1" href="#sec-3-1" data-target="sec-3-1">3. 经营费用细探 <span class="caret">▼</span></a>
+        <div class="l2-menu">
+          <a href="#sec-3-1" data-target="sec-3-1">3.1 安踏 &amp; 361° 经营费用细分</a>
+          <a href="#sec-3-2" data-target="sec-3-2">3.2 费用与驱动因素文本分析</a>
+          <a href="#sec-3-3" data-target="sec-3-3">3.3 安踏 &amp; 361° 文本情感分析</a>
+        </div>
+      </div>
+      <a class="l1" href="#sec-4" data-target="sec-4">4. 综合报告下载</a>
+    </div>
+  </nav>
+</div>
+<a id="top"></a>
+
+<div class="page">
+  <div class="hero">
+    <h1>运动品牌财务报告 · 综合分析</h1>
+    <p>覆盖 25+ 品牌 · FY2023 → FY2025 三大财年趋势对照 · 行业、品牌、盈利、费用四维度全景</p>
+    <p style="margin-top:10px;opacity:0.85;font-size:12.5px;">↑ 顶部导航已固定，可随时切换章节</p>
+  </div>
+
+  <!-- ============= 1. 行业趋势 ============= -->
+  <div class="card" id="sec-1">
+    <div class="card-header">
+      <h2>1. 行业趋势 <span class="info-pill" data-pill="p1">P1 <span class="info-pill-icon">ⓘ</span></span></h2>
+      <span class="tag">柱状图</span>
+    </div>
+    <p class="card-desc">FY2023 → FY2025 营收增速、毛利率、净利率、运营费用率均值变化（营收增速 FY2023 数据缺失）</p>
+    <div id="pill-panel-p1" class="pill-panel">
+      <div class="pp-title">📌 P1 · 行业趋势补充说明</div>
+      <div class="pp-text">多数运动品牌在 2024 年取得营收和净利率的更好表现，主要得益于 <b>"体育大年"</b> 的外部红利、户外与跑步等细分品类的爆发，以及企业内部经历两年的库存清理后，整体渠道运营效率大幅提升。</div>
+      <div class="pp-links-title">参考来源：</div>
+      <ul class="pp-links">
+        <li>① <a href="https://pdf.dfcfw.com/pdf/H3_AP202507221713589148_1.pdf?1753200162000.pdf" target="_blank" rel="noopener noreferrer">东方财富 PDF · 2024 年运动品牌业绩拆解报告</a></li>
+        <li>② <a href="https://www.thepaper.cn/newsDetail_forward_29573775" target="_blank" rel="noopener noreferrer">澎湃新闻 · 2024 运动品牌增长观察</a></li>
+      </ul>
+    </div>
+    <div class="grid-2x2" id="industryCharts">
+      <div class="mini-card"><div class="ttl">营收增速</div><div class="sub">2025 年 25% 品牌营收下滑</div><div class="ch" id="ch-rev"></div></div>
+      <div class="mini-card"><div class="ttl">毛利率均值</div><div class="sub">↓ 小幅下滑</div><div class="ch" id="ch-gp"></div></div>
+      <div class="mini-card"><div class="ttl">净利率均值</div><div class="sub">↑ 后 ↓</div><div class="ch" id="ch-np"></div></div>
+      <div class="mini-card"><div class="ttl">运营费用率均值</div><div class="sub">2025 年小涨 ↑</div><div class="ch" id="ch-oe"></div></div>
+    </div>
+  </div>
+
+  <!-- ============= 2. 品牌营收气泡图 ============= -->
+  
+
+  <!-- ============= 2. 品牌重点财务指标 · 分组 ============= -->
+  <div class="group-divider group-blue">
+    <h2 class="group-title">2. 品牌重点财务指标</h2>
+    <span class="group-subtitle">Brand Key Financial Metrics · 营收 · 盈利 · Highlight</span>
+  </div>
+
+<div class="card" id="sec-2-1">
+    <div class="card-header"><h2>2.1 品牌营收气泡图</h2><span class="tag">气泡图 · 50% 缩小</span></div>
+    <p class="card-desc">X 轴：FY23-24 营收变化率 ｜ Y 轴：FY24-25 营收变化率 ｜ 气泡大小：2025 营收 ｜ 颜色：覆盖区域</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">筛选品牌</span>
+      <div class="multi-select" id="brandFilter">
+        <button class="ms-trigger" id="brandTrigger" type="button">
+          <span class="ms-text">全部 24 个品牌</span>
+          <span class="ms-caret">▾</span>
+        </button>
+        <div class="ms-dropdown" id="brandDropdown"></div>
+      </div>
+      <span class="filter-sep"></span>
+      <button class="filter-chip view-toggle" id="logToggle" title="对数显示可压缩 80%+ 高增长点，便于查看 -20%~+20% 密集区">⚡ 对数显示</button>
+      <span class="filter-sep"></span>
+      <span class="filter-tip">🟡 金圈气泡悬停可看深度解读</span>
+    </div>
+    <div class="legend-bar" id="bubbleLegend"></div>
+    <div id="bubbleChart" class="big-ch"></div>
+  </div>
+
+  <!-- ============= 2.5 重点品牌财报信息 Highlight ============= -->
+  
+<div class="card" id="sec-2-3">
+    <div class="card-header"><h2>2.3 品牌盈利情况</h2><span class="tag">折线图 · 三段背景带</span></div>
+    <p class="card-desc">按净利率排名展示 17 个品牌的毛利率、净利率、运营费用率；背景三段色带区分 <b style="color:#059669">高盈利组</b> · <b style="color:#d97706">中等盈利</b> · <b style="color:#dc2626">盈利承压</b></p>
+    <div class="legend-bar">
+      <div class="legend-item"><span class="legend-rect" style="background:rgba(16,185,129,0.18);border:1px solid #10b981"></span>高盈利组（1-6）</div>
+      <div class="legend-item"><span class="legend-rect" style="background:rgba(245,158,11,0.18);border:1px solid #f59e0b"></span>中等盈利（7-13）</div>
+      <div class="legend-item"><span class="legend-rect" style="background:rgba(239,68,68,0.15);border:1px solid #ef4444"></span>盈利承压（14-17）</div>
+      <div class="legend-item" style="margin-left:auto"><span class="legend-dot" style="background:#1d4ed8"></span>毛利率</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>净利率</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span>运营费用率</div>
+    </div>
+    <div id="profitChart" class="medium-ch"></div>
+  </div>
+
+  <!-- ============= 4. 安踏 & 361° 经营费用细分 ============= -->
+  
+<div class="card" id="sec-2-2">
+    <div class="card-header"><h2>2.2 重点品牌财报信息 Highlight</h2><span class="tag">增长分化 · 谁在突围</span></div>
+    <p class="card-desc">2024 国际品牌在中国市场增速明显分化：<b>Lululemon、昂跑、伯希和</b>实现高增长领跑；<b>Nike、Puma</b>则陷入阶段性阵痛。本土安踏、361度 凭借多品牌矩阵与渠道下沉持续受益；亚玛芬、ASICS 通过 DTC 与本土化研发寻找新增量。</p>
+
+    <div class="highlight-grid">
+      <!-- ====== 左栏 · 品牌红黑榜 ====== -->
+      <div class="highlight-col">
+        <div class="highlight-col-head red">📊 品牌红黑榜（业绩 · 增速）</div>
+
+        <!-- Lululemon -->
+        <div class="highlight-card tone-red">
+          <div class="hc-head">
+            <span class="hc-badge b-red">红榜</span>
+            <div class="hc-title">领跑者：Lululemon <span class="hc-delta up">FY24-25 +28.9%</span></div>
+          </div>
+          <ul class="hc-bullets">
+            <li>中国市场 Q4 营收增长 <b>28%</b>，同店可比增长 26%</li>
+            <li>社区驱动策略持续奏效，DTC 模式深度运营</li>
+            <li>男装与鞋履品类成为下一增长引擎</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://corporate.lululemon.com/media/press-releases/2026/03-17-2026-200620717" target="_blank" rel="noopener">corporate.lululemon.com</a></div>
+        </div>
+
+        <!-- 安踏 -->
+        <div class="highlight-card tone-red">
+          <div class="hc-head">
+            <span class="hc-badge b-red">红榜</span>
+            <div class="hc-title">稳健派：安踏 ANTA <span class="hc-delta up">FY24-25 +13.3%</span></div>
+          </div>
+          <ul class="hc-bullets">
+            <li>多品牌战略稳定，FILA 持续贡献核心收入</li>
+            <li>2025 全年 FILA 收入 <b>284.69 亿元</b>，同比 +6.9%</li>
+            <li>FILA 保持高端时尚运动定位，毛利率领先</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://ir.anta.com/en/news_detail.php?id=126812" target="_blank" rel="noopener">ir.anta.com</a></div>
+        </div>
+
+        <!-- 361度 -->
+        <div class="highlight-card tone-gold">
+          <div class="hc-head">
+            <span class="hc-badge b-gold">红榜</span>
+            <div class="hc-title">持续增长：361度 <span class="hc-delta up">FY24-25 +10.6%</span></div>
+          </div>
+          <ul class="hc-bullets">
+            <li>渠道下沉策略持续见效，三四线市场渗透率提升</li>
+            <li>专业运动定位赢得大众跑者口碑</li>
+            <li>赞助专业赛事与国家队强化品牌专业度</li>
+          </ul>
+          <div class="hc-src">来源：361度国际 2025 年报</div>
+        </div>
+
+        <!-- Nike -->
+        <div class="highlight-card tone-blue">
+          <div class="hc-head">
+            <span class="hc-badge b-blue">黑榜</span>
+            <div class="hc-title">阵痛者：Nike 耐克 <span class="hc-delta down">DTC -14%</span></div>
+          </div>
+          <ul class="hc-bullets">
+            <li>FY2025 DTC 渠道营收下降 14%（10-K 年报）</li>
+            <li>经典款销量与电商客流双双下滑</li>
+            <li>管理层正处于 CEO 交替期</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://s1.q4cdn.com/806093406/files/doc_financials/2025/ar/Nike-Inc-2025_10K.pdf" target="_blank" rel="noopener">Nike FY2025 10-K</a></div>
+        </div>
+
+        <!-- Puma -->
+        <div class="highlight-card tone-purple">
+          <div class="hc-head">
+            <span class="hc-badge b-purple">黑榜</span>
+            <div class="hc-title">阵痛者：Puma 彪马 <span class="hc-delta down">FY24-25 -16.1%</span></div>
+          </div>
+          <ul class="hc-bullets">
+            <li>战略重组期间销售质量下降</li>
+            <li>品牌热度低，产品组合未切中市场需求</li>
+            <li>2025 年报："low brand heat, poor sales quality"</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://about.puma.com/sites/default/files/financial-report/2025/puma-gb-2025-gesamt-en-final.pdf" target="_blank" rel="noopener">Puma 2025 Annual Report</a></div>
+        </div>
+      </div>
+
+      <!-- ====== 右栏 · 行业机会&挑战 ====== -->
+      <div class="highlight-col">
+        <div class="highlight-col-head orange">🚀 行业机会 & 挑战（驱动力 · 风险点）</div>
+
+        <!-- 昂跑 On -->
+        <div class="highlight-card tone-orange">
+          <div class="hc-head">
+            <span class="hc-badge b-orange">机会</span>
+            <div class="hc-title">昂跑 On：China First 战略落地</div>
+          </div>
+          <ul class="hc-bullets">
+            <li>服装品类突破：2025 Q1 中国服装 <b>+93.1%</b>、配饰 <b>+99.2%</b></li>
+            <li>线下加速：2023 新开 10 家直营店，2024 再开 17 家</li>
+            <li>"中国优先"：从"增长引擎"升级为"创新试验场"</li>
+            <li>直营门店服装销售占比目标提升至 25-30%</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://m.winshang.com/news732599.html" target="_blank" rel="noopener">winshang.com</a> <a href="https://www.news.cn/fashion/20250815/3557967b451949f99b9f39de7deae0c4/c.html" target="_blank" rel="noopener">news.cn</a></div>
+        </div>
+
+        <!-- 亚玛芬 -->
+        <div class="highlight-card tone-green">
+          <div class="hc-head">
+            <span class="hc-badge b-green">机会</span>
+            <div class="hc-title">亚玛芬 Amer：DTC 与拓店双轮驱动</div>
+          </div>
+          <ul class="hc-bullets">
+            <li>高速拓店拉动营收持续增长</li>
+            <li>直面消费者（DTC）业务成为核心驱动力</li>
+            <li>多品牌矩阵协同：始祖鸟、Salomon、Wilson 三大引擎</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://www.stcn.com/article/detail/3652192.html" target="_blank" rel="noopener">stcn.com</a></div>
+        </div>
+
+        <!-- 伯希和 -->
+        <div class="highlight-card tone-orange">
+          <div class="hc-head">
+            <span class="hc-badge b-orange">挑战</span>
+            <div class="hc-title">伯希和：冲锋衣狂飙背后的高营销依赖</div>
+          </div>
+          <ul class="hc-bullets">
+            <li>冲锋衣裤为绝对主力：2023-2025 收入 4.81 → 10.02 → <b>14.54 亿元</b></li>
+            <li>占总收入比重均过半（50%+）</li>
+            <li>销售及分销费用激增：2.77 → <b>10.59 亿元</b>，营销驱动增长</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://www.jwview.com/jingwei/html/m/05-14/670650.shtml" target="_blank" rel="noopener">jwview.com</a></div>
+        </div>
+
+        <!-- ASICS -->
+        <div class="highlight-card tone-blue">
+          <div class="hc-head">
+            <span class="hc-badge b-blue">机会</span>
+            <div class="hc-title">ASICS 亚瑟士：技术回归 + 本土化</div>
+          </div>
+          <ul class="hc-bullets">
+            <li>跑鞋技术驱动，产品力重返第一梯队</li>
+            <li>拥抱运动时尚潮流，鬼塚虎等复古时尚线贡献增量</li>
+            <li>DTC 渠道加速，数字化全渠道营销提升会员粘性</li>
+            <li>2024 年成立中国研发中心，推进"在中国，为中国，惠全球"</li>
+          </ul>
+          <div class="hc-src">来源：<a href="https://finance.eastmoney.com/a/202508253493557771.html" target="_blank" rel="noopener">finance.eastmoney.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= 3. 品牌盈利情况 ============= -->
+  
+
+  <!-- ============= 3. 经营费用细探 · 分组 ============= -->
+  <div class="group-divider group-orange">
+    <h2 class="group-title">3. 经营费用细探</h2>
+    <span class="group-subtitle">Operating Expense Deep Dive · 费用细分 · 文本分析 · 情感分析</span>
+  </div>
+
+<div class="card" id="sec-3-1">
+    <div class="card-header"><h2>3.1 安踏 & 361° 经营费用细分</h2><span class="tag">双折线图</span></div>
+    <p class="card-desc">2021-2025 年广告及宣传、员工成本、研发投入占营收比例 · 361° 广告投放明显高于安踏</p>
+    <div class="grid-2">
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#0ea5e9;margin-bottom:4px;">361°</div>
+        <div id="ch361" class="small-ch"></div>
+      </div>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#1d4ed8;margin-bottom:4px;">安踏</div>
+        <div id="chAnta" class="small-ch"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= 5. 费用与驱动因素文本分析 ============= -->
+  
+<div class="card" id="sec-3-2">
+    <div class="card-header"><h2>3.2 费用与驱动因素文本分析</h2><span class="tag">热力图 · Top 排行</span></div>
+    <p class="card-desc">基于 13 家品牌 FY2025 年报与公告文本，统计费用类型提及密度（%）与驱动因素占比 · 颜色越深 = 讨论越密集</p>
+
+    <!-- 费用类型指数 -->
+    <div class="sub-h">费用类型讨论密度 <span class="sub-tag">单位 % · 9 类别 × 13 品牌</span></div>
+    <div id="costHeatmap" class="heatmap"></div>
+
+    <!-- 驱动因素指数 -->
+    <div class="sub-h">驱动因素讨论密度 <span class="sub-tag">单位 % · 8 驱动 × 13 品牌</span></div>
+    <div id="driverHeatmap" class="heatmap"></div>
+
+    <div class="insight-row" id="insightRow"></div>
+  </div>
+
+  <!-- ============= 3.3 安踏 & 361° 财报文本情感分析 ============= -->
+  
+<div class="card" id="sec-3-3">
+    <div class="card-header"><h2>3.3 安踏 & 361° 财报文本情感分析</h2><span class="tag">情感分布 · 原文摘录</span></div>
+    <p class="card-desc">基于 361度 与 安踏 FY2025 年报披露的经营费用相关文本，统计正面 / 中性 / 负面情感分布，并摘录代表性原文 —— 看清两品牌在研发 / 营销 / 人力 / 门店等费用维度的叙事差异。</p>
+
+    <!-- 361° -->
+    <div class="sent-page" data-page="361">
+      <div class="sent-page-inner">
+        <div class="sent-brand-bar">
+          <div class="sent-brand-title">
+            <div class="sent-brand-logo sent-361">361°</div>
+            <div class="sent-brand-meta">
+              <h2>361度 · FY2025 经营费用情感分析</h2>
+              <div class="sent-tag">HKEX: 1361 · 国民运动品牌 · 全年营收 ¥111 亿</div>
+            </div>
+          </div>
+          <div class="sent-stat-row">
+            <div class="sent-stat-chip sent-pos"><div class="sent-n">26</div><div class="sent-l">正面</div></div>
+            <div class="sent-stat-chip sent-neu"><div class="sent-n">44</div><div class="sent-l">中性</div></div>
+            <div class="sent-stat-chip sent-neg"><div class="sent-n">11</div><div class="sent-l">负面</div></div>
+          </div>
+        </div>
+
+        <div class="sent-midline">
+          <span class="sent-pill">核心洞察</span>
+          <span class="sent-text">正面叙事聚焦 <b>「增长 + 研发 + 电商」</b>，营收 10.6%、净利 14.0% 双增长；负面声音集中于 <b>中美贸易摩擦 + 第三方分销依赖</b>，对门店与运营带来不确定性。</span>
+        </div>
+
+        <div class="sent-layout-2col">
+          <div class="sent-donut-card">
+            <h4>📊 经营费用相关文本情感分布</h4>
+            <div class="sent-donut-wrap">
+              <div class="sent-donut-big">
+                <svg viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#EEF2F7" stroke-width="6"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#16A34A" stroke-width="6" stroke-dasharray="32.1 67.9" stroke-dashoffset="0"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#6B7280" stroke-width="6" stroke-dasharray="54.3 45.7" stroke-dashoffset="-32.1"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#E11D48" stroke-width="6" stroke-dasharray="13.6 86.4" stroke-dashoffset="-86.4"/>
+                </svg>
+                <div class="sent-center"><div class="sent-num">81</div><div class="sent-lbl">总样本段</div></div>
+              </div>
+              <div class="sent-donut-legend">
+                <div class="sent-row"><span class="sent-sw" style="background:#16A34A"></span><span class="sent-lbl">正面 · 增长 / 研发 / 数字化</span><span class="sent-pct">32.1%</span></div>
+                <div class="sent-row"><span class="sent-sw" style="background:#6B7280"></span><span class="sent-lbl">中性 · 数据陈述 / 口径说明</span><span class="sent-pct">54.3%</span></div>
+                <div class="sent-row"><span class="sent-sw" style="background:#E11D48"></span><span class="sent-lbl">负面 · 贸易摩擦 / 分销风险</span><span class="sent-pct">13.6%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sent-summary-card">
+            <h4>🔑 经营费用 · 关键叙事摘要</h4>
+            <div class="sent-summary-grid">
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt"><b>营收 +10.6%</b>、净利 +14.0%，增长由业务扩张与品牌建设驱动</div></div>
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt"><b>研发持续加大</b>，深化跑步 / 篮球核心品类技术壁垒</div></div>
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt"><b>电商加速迭代</b>，全渠道协同生态提升零售效率</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neu">=</div><div class="sent-txt">员工薪酬 ¥9.35 亿，<b>占收益比 8.4%</b>（上年 8.5%），人力成本结构稳定</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neu">=</div><div class="sent-txt">广告及宣传开支单独披露，电商广告费 2021 起并入线上销售</div></div>
+              <div class="sent-item"><div class="sent-ic sent-warn">↓</div><div class="sent-txt">财务成本 -21.9% 至 ¥1050 万，受 <b>平均利率下降</b> 带动</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neg">!</div><div class="sent-txt"><b>中美贸易摩擦</b> 对非必需商品消费情绪造成负面影响</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neg">!</div><div class="sent-txt">依赖第三方分销商，<b>失责风险</b> 对门店业务有重大不利影响</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sent-quote-grid">
+          <div class="sent-quote-col sent-pos">
+            <h5>😊 正面情感 <span class="sent-badge-n">26 段</span></h5>
+            <div class="sent-desc">聚焦业绩增长、研发投入、电商与全渠道提速</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：运营 / 技术</span><span class="sent-chip sent-up">趋势：上升</span><span class="sent-chip">驱动：业务扩张 · 品牌建设</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：同比增长 · 强劲 · 稳健</span></div>
+              <div class="sent-text">於回顧年度，本集團實現收益達 <mark>人民幣 111 億元</mark>，<mark>同比增長 10.6%</mark>，權益持有人應佔盈利為 <mark>人民幣 1,308.9 百萬元</mark>，<mark>同比增長 14.0%</mark>。為感謝廣大股東對本集團的信任與支持，董事會已建議派發截至回顧年度之末期股息每股普通股 11.3 港仙。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：研发 / 技术</span><span class="sent-chip sent-up">趋势：上升</span><span class="sent-chip">驱动：产品创新 · 投资驱动</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：持续加大 · 深化 · 提升</span></div>
+              <div class="sent-text">本集團 <mark>持續推動技術研發向產品實戰價值轉化</mark>，<mark>持續加大</mark> 研發投入，<mark>深化</mark> 跑步與籃球兩大核心品類的專業壁壘。於回顧年度，我們積極推進經典產品系列迭代升級，並推出多款戰略新品。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：数字营销 / 门店</span><span class="sent-chip sent-up">趋势：上升 · 新增</span><span class="sent-chip">驱动：DTC 转型 · 效率提升</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：加速 · 突破 · 高效</span></div>
+              <div class="sent-text">本集團 <mark>加速</mark> 電商渠道的迭代升級，<mark>加速</mark> 建設全渠道高效協同生態。通過強化終端獲客效能與精細化運營深度，<mark>驅動</mark> 零售效率與市場份額同步 <mark>提升</mark>。</div>
+            </div>
+          </div>
+
+          <div class="sent-quote-col sent-neu">
+            <h5>😐 中性情感 <span class="sent-badge-n">44 段</span></h5>
+            <div class="sent-desc">以数据陈述、口径说明为主，反映费用结构稳定</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：人力成本</span><span class="sent-chip sent-flat">趋势：持平</span></div>
+              <div class="sent-text">於回顧年度，本集團僱員薪酬總額為 <mark>人民幣 935.2 百萬元</mark>（二零二四年：人民幣 861.2 百萬元），佔本集團總收益的 <mark>8.4%</mark>（二零二四年：8.5%）。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：运营费用</span><span class="sent-chip sent-down">趋势：下降</span></div>
+              <div class="sent-text">於回顧年度，財務成本同比 <mark>減少 21.9%</mark> 至人民幣 10.5 百萬元（二零二四年：人民幣 13.5 百萬元），利息開支減少主要是由於回顧年度平均利率下降所致。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：营销费用</span></div>
+              <div class="sent-text">廣告及宣傳開支包括二零二二年至二零二五年經電子商務平台產生的廣告費用。電子商務平台產生的廣告費用在二零二一年納入線上銷售開支，並不包括在計算廣告及宣傳開支佔收益的百分比。</div>
+            </div>
+          </div>
+
+          <div class="sent-quote-col sent-neg">
+            <h5>😟 负面情感 <span class="sent-badge-n">11 段</span></h5>
+            <div class="sent-desc">聚焦外部贸易摩擦、第三方分销依赖与财务成本下行</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：运营 / 人力 / 门店</span><span class="sent-chip sent-down">趋势：下降</span><span class="sent-chip">驱动：外部因素 · 供应链</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：不利影響 · 負面影響 · 下滑</span></div>
+              <div class="sent-text">本集團的營運受到運動服飾市場及整體市場多種特有的風險因素所影響。來自本分銷商、供應商及合營企業夥伴的失責行為⋯可能對經營業績構成不同程度的 <mark>不利影響</mark>。隨著中美貿易戰進行，中美貿易摩擦已對客戶於回顧年度對非必需商品的消費情緒造成若干 <mark>負面影響</mark>。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：门店成本</span><span class="sent-chip">驱动：外部因素</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：不確定性 · 風險</span></div>
+              <div class="sent-text">本集團依賴若干第三方分銷商銷售本合同產品。倘有關分銷商未能履行其與本集團訂立的分銷協議項下責任，有關地區的授權零售商業務可能受到 <mark>重大不利影響</mark>。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：运营费用</span><span class="sent-chip sent-down">趋势：下降</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：減少 · 下降</span></div>
+              <div class="sent-text">財務成本同比 <mark>減少 21.9%</mark> 至人民幣 10.5 百萬元⋯利息開支 <mark>減少</mark> 主要是由於回顧年度平均利率下降所致。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 安踏 -->
+    <div class="sent-page" data-page="anta">
+      <div class="sent-page-inner">
+        <div class="sent-brand-bar">
+          <div class="sent-brand-title">
+            <div class="sent-brand-logo sent-ant">安踏</div>
+            <div class="sent-brand-meta">
+              <h2>安踏体育 · FY2025 经营费用情感分析</h2>
+              <div class="sent-tag">HKEX: 2020 · 多品牌运动集团 · 三大运动群 + 户外</div>
+            </div>
+          </div>
+          <div class="sent-stat-row">
+            <div class="sent-stat-chip sent-pos"><div class="sent-n">28</div><div class="sent-l">正面</div></div>
+            <div class="sent-stat-chip sent-neu"><div class="sent-n">58</div><div class="sent-l">中性</div></div>
+            <div class="sent-stat-chip sent-neg"><div class="sent-n">23</div><div class="sent-l">负面</div></div>
+          </div>
+        </div>
+
+        <div class="sent-midline">
+          <span class="sent-pill">核心洞察</span>
+          <span class="sent-text">正面叙事强调 <b>「AI + 增长 + 商品力」</b>，AI365 / 灵龙大模型重塑研发与设计；负面关注 <b>行业竞争 + 仿冒 IP</b> 对营销投入与品牌价值造成不利影响。</span>
+        </div>
+
+        <div class="sent-layout-2col">
+          <div class="sent-donut-card">
+            <h4>📊 经营费用相关文本情感分布</h4>
+            <div class="sent-donut-wrap">
+              <div class="sent-donut-big">
+                <svg viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#EEF2F7" stroke-width="6"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#16A34A" stroke-width="6" stroke-dasharray="25.7 74.3" stroke-dashoffset="0"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#6B7280" stroke-width="6" stroke-dasharray="53.2 46.8" stroke-dashoffset="-25.7"/>
+                  <circle cx="18" cy="18" r="15.915" fill="none" stroke="#E11D48" stroke-width="6" stroke-dasharray="21.1 78.9" stroke-dashoffset="-78.9"/>
+                </svg>
+                <div class="sent-center"><div class="sent-num">109</div><div class="sent-lbl">总样本段</div></div>
+              </div>
+              <div class="sent-donut-legend">
+                <div class="sent-row"><span class="sent-sw" style="background:#16A34A"></span><span class="sent-lbl">正面 · AI 提效 · 商品力</span><span class="sent-pct">25.7%</span></div>
+                <div class="sent-row"><span class="sent-sw" style="background:#6B7280"></span><span class="sent-lbl">中性 · 比率披露 / 行业环境</span><span class="sent-pct">53.2%</span></div>
+                <div class="sent-row"><span class="sent-sw" style="background:#E11D48"></span><span class="sent-lbl">负面 · 竞争加剧 · 仿冒 IP</span><span class="sent-pct">21.1%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sent-summary-card">
+            <h4>🔑 经营费用 · 关键叙事摘要</h4>
+            <div class="sent-summary-grid">
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt"><b>AI365 + 灵龙大模型</b> 深度融入研发 / 运营 / 营销 / 客服</div></div>
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt"><b>「增长是最好的企业文化」</b>：商品力 / 组织力 / 经营效率同步提升</div></div>
+              <div class="sent-item"><div class="sent-ic sent-pos">+</div><div class="sent-txt">户外赛道与体育用品市场延续增长，<b>消费市场新台阶</b></div></div>
+              <div class="sent-item"><div class="sent-ic sent-neu">=</div><div class="sent-txt">毛利率 62.0% / 经营溢利率 23.8% / <b>研发费用率 2.7%</b></div></div>
+              <div class="sent-item"><div class="sent-ic sent-neu">=</div><div class="sent-txt">广告及宣传开支率 8.0% · 员工成本率 15.3% · 结构稳定</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neu">=</div><div class="sent-txt">坚持 <b>「品牌 + 零售」</b> 独特商业模式，可迁移可复制的全球运营体系</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neg">!</div><div class="sent-txt"><b>行业竞争加剧</b>，国际品牌国内扩张迅速加快，对投资价值可能造成不利</div></div>
+              <div class="sent-item"><div class="sent-ic sent-neg">!</div><div class="sent-txt"><b>仿冒知名品牌</b> 非法销售，对品牌形象和盈利能力产生不利影响</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sent-quote-grid">
+          <div class="sent-quote-col sent-pos">
+            <h5>😊 正面情感 <span class="sent-badge-n">28 段</span></h5>
+            <div class="sent-desc">聚焦 AI 提效、设计革命与"增长文化"</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：研发 / 运营</span><span class="sent-chip sent-up">趋势：上升</span><span class="sent-chip">驱动：业务扩张 · 投资 · 效率</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：提升</span></div>
+              <div class="sent-text">AI 革新工作流程及 AI365 战略以降本增效、驱动增长、强化用户体验为核心目标，将 AI 技术 <mark>深度融入</mark> 研发设计、业务运营、营销、客户服务等核心业务环节，从 <mark>流程重构、效率提升</mark> 等方面全面赋能业务。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：研发 / 技术</span><span class="sent-chip sent-up">趋势：上升</span><span class="sent-chip">驱动：效率提升 · 产品创新</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：提升</span></div>
+              <div class="sent-text">本集团推出首个体育用品行业专用 AI 设计大模型 — <mark>「灵龙设计大模型」</mark>，基于 30 多年积累的上千万条鞋服数据，具备文生图、线稿生图、鞋服设计及图案创意设计等功能，<mark>显著提升</mark> 设计效率。</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：营销 / 技术</span><span class="sent-chip sent-up">趋势：上升 · 持平</span><span class="sent-chip">驱动：业务扩张 · 投资 · 品牌</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：提升</span></div>
+              <div class="sent-text">我们坚信：<mark>「增长是最好的企业文化」</mark>。增长不是简单的规模扩张，而是商品力、组织力与经营效率的 <mark>提升</mark>，是企业长期健康度最直接的体现。增长源于我们长期坚持的原则 — 好商品、懂经营⋯</div>
+            </div>
+          </div>
+
+          <div class="sent-quote-col sent-neu">
+            <h5>😐 中性情感 <span class="sent-badge-n">58 段</span></h5>
+            <div class="sent-desc">以经营比率披露、宏观环境与商业模式描述为主</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：人力成本</span><span class="sent-chip sent-flat">趋势：持平</span></div>
+              <div class="sent-text">股东应占溢利率 16.9%；<mark>广告及宣传开支比率（占收入百分比）8.0%</mark>；<mark>员工成本比率（占收入百分比）15.3%</mark>；研发活动成本比率（占收入百分比）2.7%⋯</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：人力成本</span><span class="sent-chip sent-flat">趋势：持平</span></div>
+              <div class="sent-text">毛利率 62.0%；经营溢利率 23.8%；股东应占溢利率 16.9%；<mark>广告及宣传开支比率 8.0%</mark>；员工成本比率 15.3%；<mark>研发活动成本比率 2.7%</mark>⋯</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：门店成本</span><span class="sent-chip sent-up">趋势：上升</span><span class="sent-chip">驱动：业务扩张</span></div>
+              <div class="sent-text">中国经济延续稳中求进趋势，<mark>2025 年 GDP 同比增长 5.0%</mark>，达成年初设定的目标。消费市场迈上新台阶，体育用品市场，特别是户外运动板块，仍是消费市场的重要增长动力⋯</div>
+            </div>
+          </div>
+
+          <div class="sent-quote-col sent-neg">
+            <h5>😟 负面情感 <span class="sent-badge-n">23 段</span></h5>
+            <div class="sent-desc">聚焦行业竞争加剧、仿冒 IP 与商业模式风险</div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：营销 / 运营 / 技术 / 物流 / 门店</span><span class="sent-chip sent-flat">趋势：持平</span><span class="sent-chip">驱动：业务扩张 · 品牌 · 供应链</span></div>
+              <div class="sent-text">集团坚持以品牌为中心的治理模式，充分授权品牌自主决策，使每个品牌能够保持独特性与创造力。同时，安踏体育的 <mark>「品牌 + 零售」</mark> 独特商业模式为可迁移、可复制的全球运营管理体系⋯</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：营销费用</span><span class="sent-chip">驱动：业务扩张 · 投资 · 品牌 · 外部</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：不利</span></div>
+              <div class="sent-text">当前国内运动鞋服行业竞争持续加剧，主要表现为行业规模日益扩大、产业集中度不断提高，以及国际品牌服装企业在 <mark>国内扩张迅速加快</mark>，产业竞争已经由数量、价格竞争转向新技术、高附加值产品等方面的竞争。虽然本公司已积极应对，但可能对投资价值造成 <mark>不利</mark> 影响⋯</div>
+            </div>
+            <div class="sent-quote-item">
+              <div class="sent-meta"><span class="sent-chip">费用：营销 / 运营</span><span class="sent-chip">驱动：品牌建设</span></div>
+              <div class="sent-meta"><span class="sent-chip sent-kw">关键词：不利</span></div>
+              <div class="sent-text">市场上某些不法厂商 <mark>仿冒知名品牌</mark> 进行非法销售，对被仿冒品牌造成了 <mark>不利</mark> 影响。本集团旗下品牌及运动鞋服产品在国内市场上具有相当的知名度，尽管已积极采取各种手段保护自主 IP，但如果未来产品被大量仿冒，将对品牌形象和盈利能力产生 <mark>不利</mark> 影响。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 资料来源 -->
+    <div class="sent-footer">
+      <h4>资料来源 / 备注</h4>
+      <div>① 361度 FY2025 年报：合并损益表、广告及宣传费用、研发费用、员工成本等章节；<br>
+        ② 安踏体育 FY2025 年报：合并损益表 (P.71-75)、广告及宣传费用 (P.82)、研发费用 (P.88)、员工成本 (P.90)；<br>
+        ③ 报告口径为公历 2025 财年（截至 2025-12-31），样本段数为年报中与"经营费用"直接相关的正 / 中 / 负情感文本数量；<br>
+        ④ 甜甜圈比例 = 各类情感段数 / 样本总数。</div>
+    </div>
+  </div>
+
+  <!-- ============= 7. 综合报告 · 行业分析 ============= -->
+  
+<div class="card" id="sec-4">
+    <div class="card-header"><h2>4. 综合报告下载</h2><span class="tag">在线阅读 / 下载 PDF</span></div>
+    <p class="card-desc">2025-2026Q1 运动服饰 & 器械行业分析报告 — 全量行业 / 品牌 / 趋势 / 竞争格局全景,支持在线翻阅或下载完整 PDF。</p>
+    <div class="comprehensive-card">
+      <div class="comp-preview">
+        <div class="comp-eyebrow">📕 行业全景报告</div>
+        <div class="comp-title">2025-2026Q1<br>运动服饰 & 器械行业分析报告</div>
+        <div class="comp-meta">完整版 · 行业趋势 / 品牌格局 / 渠道与产品 / 风险因素</div>
+        <a class="dl-btn" href="2025-2026Q1运动服饰%26器械行业分析报告.pdf" download>
+          ⬇ 下载完整 PDF
+        </a>
+        <a class="dl-btn secondary" href="2025-2026Q1运动服饰%26器械行业分析报告.pdf" target="_blank" rel="noopener noreferrer">
+          ↗ 在新窗口打开
+        </a>
+      </div>
+      <div class="comp-pdf">
+        <object data="2025-2026Q1运动服饰%26器械行业分析报告.pdf" type="application/pdf">
+          <div class="comp-pdf-fallback">
+            您的浏览器暂不支持 PDF 在线预览,请
+            <a href="2025-2026Q1运动服饰%26器械行业分析报告.pdf" target="_blank">点击下载</a>
+            或
+            <a href="2025-2026Q1运动服饰%26器械行业分析报告.pdf" target="_blank">在新窗口打开</a>
+            查看完整报告。
+          </div>
+        </object>
+      </div>
+    </div>
+
+    <!-- 信息图 2 张 -->
+    <div class="info-section-head">
+      <span>📊 关联信息图</span>
+      <span class="info-tag">在线查看 / 下载 PNG</span>
+    </div>
+    <div class="info-grid">
+      <!-- 2. 2026 纺织服装行业盘点 -->
+      <div class="info-card">
+        <a href="2026纺织服装行业盘点-信息图.png" target="_blank" rel="noopener noreferrer">
+          <div class="info-thumb-wrap">
+            <img class="info-thumb" loading="lazy" src="2026纺织服装行业盘点-信息图.png" alt="2026 纺织服装行业盘点信息图" />
+            <span class="info-zoom-hint">🔍 点击查看大图</span>
+          </div>
+        </a>
+        <div class="info-body">
+          <div class="info-title">2026 纺织服装行业盘点 · 信息图</div>
+          <div class="info-meta">纺织服装全产业链年度复盘:原料、品牌、渠道、出海与 ESG 关键趋势。</div>
+          <div class="info-btns">
+            <a class="dl-btn" href="2026纺织服装行业盘点-信息图.png" target="_blank" rel="noopener noreferrer">🔍 在线查看大图</a>
+            <a class="dl-btn secondary" href="2026纺织服装行业盘点-信息图.png" download>⬇ 下载 PNG</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div id="hoverPanel"></div>
+
+<script>
+// ====================== 通用配色 ======================
+// 顺序：前 3 个中国系 → 蓝（深→中→浅），后 2 个亚太系 → 黄（深→浅）
+const REGION_COLORS = {
+  '中国公司':       '#1e3a8a',  // 深蓝（深）
+  '中国内地':       '#3b82f6',  // 中蓝
+  '大中华区':       '#93c5fd',  // 浅蓝（浅）
+  '亚太区':         '#d97706',  // 深黄（深）
+  '亚太/其他地区':  '#fcd34d'   // 浅黄（浅）
+};
+const REGIONS = Object.keys(REGION_COLORS);
+
+const normRegion = (s) => (s || '').toString().replace(/\s+/g, ' ').trim();
+
+// ====================== 数据：行业趋势 ======================
+const industryData = {
+  years: ['FY2023', 'FY2024', 'FY2025'],
+  metrics: [
+    { id: 'rev', name: '营收增速',     sub: '2025 年 xx% 品牌营收下滑', values: [null, 0.1120, -0.0573], color: '#1d4ed8' },
+    { id: 'gp',  name: '毛利率均值',   sub: '↓ 小幅下滑',                 values: [0.4976, 0.4943, 0.4922], color: '#10b981' },
+    { id: 'np',  name: '净利率均值',   sub: '↑ 后 ↓',                     values: [0.0837, 0.0987, 0.0802], color: '#f59e0b' },
+    { id: 'oe',  name: '运营费用率均值', sub: '2025 年小涨 ↑',             values: [0.3351, 0.3336, 0.3410], color: '#ef4444' }
+  ]
+};
+
+function buildMiniBar(metric) {
+  const dom = document.getElementById('ch-' + metric.id);
+  const chart = echarts.init(dom);
+  chart.setOption({
+    grid: { top: 26, right: 12, bottom: 28, left: 40 },
+    tooltip: {
+      trigger: 'axis',
+      formatter: (p) => p.map(x => `${x.marker} ${x.name}<br/>&nbsp;&nbsp;${(x.value*100).toFixed(2)}%`).join('')
+    },
+    xAxis: { type: 'category', data: industryData.years, axisLine: { lineStyle: { color: '#d1d5db' } }, axisLabel: { color: '#6b7280', fontSize: 11 } },
+    yAxis: { type: 'value', axisLabel: { color: '#9ca3af', fontSize: 10, formatter: '{value}%' }, splitLine: { lineStyle: { color: '#f1f5f9' } } },
+    series: [{
+      type: 'bar', barWidth: 32, itemStyle: { color: metric.color, borderRadius: [4, 4, 0, 0] },
+      label: {
+        show: true,
+        position: 'top',
+        formatter: (p) => p.value === null || p.value === undefined ? '' : p.value + '%',
+        fontSize: 10.5, color: '#374151', fontWeight: 600
+      },
+      data: metric.values.map(v => v === null ? null : +(v*100).toFixed(2))
+    }]
+  });
+  return chart;
+}
+const miniCharts = industryData.metrics.map(buildMiniBar);
+
+// ====================== 数据：品牌营收气泡图 ======================
+const bubbleData = [
+  { brand: '安踏',           x: 13.58, y: 13.26,  rev: 80219,  region: '中国公司',       category: '中国大陆' },
+  { brand: 'Nike',           x: 4.10,  y: -12.71, rev: 47419,  region: '大中华区',       category: 'MCN' },
+  { brand: 'Inditex',        x: -0.92, y: -2.57,  rev: 36114,  region: '亚太/其他地区',  category: 'MCN' },
+  { brand: '李宁',           x: 3.91,  y: 3.22,   rev: 29598,  region: '中国公司',       category: '中国大陆' },
+  { brand: '滔搏',           x: 6.87,  y: -6.64,  rev: 27013,  region: '中国公司',       category: '中国大陆' },
+  { brand: 'Adidas',         x: 8.43,  y: 4.74,   rev: 28259,  region: '大中华区',       category: 'MCN' },
+  { brand: '特步',           x: 6.55,  y: 4.23,   rev: 14151,  region: '中国公司',       category: '中国大陆' },
+  { brand: '威富集团',       x: 1.39,  y: -1.37,  rev: 10103,  region: '亚太区',         category: 'MCN' },
+  { brand: '361度',          x: 19.59, y: 10.64,  rev: 11146,  region: '中国公司',       category: '中国大陆' },
+  { brand: 'Lululemon',      x: 41.25, y: 28.90,  rev: 12635,  region: '中国内地',       category: 'MCN' },
+  { brand: '亚玛芬',         x: 53.66, y: 43.43,  rev: 13406,  region: '大中华区',       category: 'MCN' },
+  { brand: '捷安特',         x: 7.46,  y: -37.08, rev: 4479,   region: '亚太区',         category: '中国台湾' },
+  { brand: '安德玛',         x: 5.78,  y: -13.47, rev: 5439,   region: '亚太区',         category: 'MCN' },
+  { brand: '彪马',           x: 3.74,  y: -19.14, rev: 3810,   region: '大中华区',       category: 'MCN' },
+  { brand: '哥伦比亚',       x: 7.83,  y: 9.00,   rev: 4400,   region: '亚太区',         category: 'MCN' },
+  { brand: '比音勒芬',       x: 13.24, y: 7.73,   rev: 4314,   region: '中国公司',       category: '中国大陆' },
+  { brand: 'ASICS',          x: 30.49, y: 19.42,  rev: 3933,   region: '中国内地',       category: 'MCN' },
+  { brand: 'Topgolf Callaway', x: -8.33, y: -25.53, rev: 2614, region: '亚太区',         category: 'MCN' },
+  { brand: 'Canada Goose',   x: 1.02,  y: 16.83,  rev: 2741,   region: '大中华区',       category: 'MCN' },
+  { brand: '昂跑',           x: 84.41, y: 96.43,  rev: 4140,   region: '亚太区',         category: 'MCN' },
+  { brand: '奔赴自然(伯希和）', x: 94.48, y: 58.15, rev: 2793,  region: '大中华区',       category: '中国大陆' },
+  { brand: '美津浓',         x: 15.49, y: 6.11,   rev: 1697,   region: '亚太区',         category: 'MCN' },
+  { brand: '探路者',         x: 14.44, y: -13.25, rev: 1381,   region: '中国公司',       category: '中国大陆' },
+  { brand: 'Uniqlo',         x: 9.16,  y: -3.96,  rev: 31158,  region: '大中华区',       category: 'MCN' }
+];
+
+// 9 品牌 hover 内容（从 Excel 第 7 列抓取）
+const HOVER_DATA = {
+  '安踏': [{
+    title: '1. 多品牌战略成效',
+    text: 'FILA 贡献稳定，2025 全年 FILA 收入 284.69 亿元，同比 +6.9%；FILA 斐乐 2025 全年业绩实现稳健增长，FILA 品牌保持高端时尚运动定位。',
+    url: 'https://ir.anta.com/en/news_detail.php?id=126812'
+  }],
+  'Nike': [{
+    title: '1. 业绩下滑原因',
+    text: 'DTC 渠道营收下降 14%（Nike FY2025 10-K，年报第 43 页）。',
+    url: 'https://s1.q4cdn.com/806093406/files/doc_financials/2025/ar/Nike-Inc-2025_10K.pdf'
+  }],
+  '361度': [{
+    title: '1. 渠道下沉策略',
+    text: '渠道下沉策略和专业运动定位持续见效。来源：361° 国际 2025 年年报。',
+    url: null
+  }],
+  'Lululemon': [{
+    title: '1. 中国市场表现',
+    text: '中国市场 Q4 营收增长 28%，社区驱动策略成功（Lululemon FY2025 财报）。"China remains the bright spot, with fourth-quarter revenue up 28% and comps up 26%".',
+    url: 'https://corporate.lululemon.com/media/press-releases/2026/03-17-2026-200620717'
+  }],
+  '亚玛芬': [{
+    title: '1. 增长驱动',
+    text: '高速拓店与直面消费者（DTC）业务驱动。',
+    url: 'https://www.stcn.com/article/detail/3652192.html'
+  }],
+  '彪马': [{
+    title: '1. 业绩下滑原因',
+    text: '战略重组期间销售质量下降，品牌热度低（彪马 2025 年报第 6 页）。"This is reflected in low brand heat, poor sales quality and a product range that did not cut through".',
+    url: 'https://about.puma.com/sites/default/files/financial-report/2025/puma-gb-2025-gesamt-en-final.pdf'
+  }],
+  'ASICS': [{
+    title: '1. 增长驱动',
+    text: '跑鞋技术驱动，产品端聚焦高毛利跑鞋，产品力重返第一梯队；拥抱运动时尚潮流，鬼塚虎等复古时尚线贡献增量；DTC 渠道加速，数字化全渠道营销提升会员粘性；2024 年成立中国研发中心，推进"在中国，为中国，惠全球"本土化战略，推出针对性产品。',
+    url: 'https://finance.eastmoney.com/a/202508253493557771.html'
+  }],
+  '昂跑': [
+    { title: '1. 服装品类突破', text: '2025 年第一季度，昂跑中国市场的服装与配饰销售额同比分别大涨 93.1% 和 99.2%，增速远超鞋类，服饰逐渐成为中国市场的第二大支柱。', url: 'https://m.winshang.com/news732599.html' },
+    { title: '2. 线下门店与渠道拓展', text: '加速中国核心商圈的直营门店布局，2023 年新开 10 家直营门店，2024 年再开 17 家，计划将直营门店中的服装销售占比提升至 25%-30%。', url: 'https://www.news.cn/fashion/20250815/3557967b451949f99b9f39de7deae0c4/c.html' },
+    { title: '3. 中国市场战略定位', text: '"中国优先"（China First）：从初期的"增长引擎"升级为"创新试验场"。品牌不仅将最佳零售体验落地中国，更试图通过中国消费者对高端运动生活方式的认同，重塑其全球收入结构。', url: 'https://m.winshang.com/news732599.html' }
+  ],
+  '奔赴自然(伯希和）': [
+    { title: '1. 冲锋衣裤为主力', text: '2023 年至 2025 年，冲锋衣裤分别贡献收入 4.81 亿元、10.02 亿元和 14.54 亿元，在总收入中占比均过半。', url: 'https://www.jwview.com/jingwei/html/m/05-14/670650.shtml' },
+    { title: '2. 营销驱动型增长', text: '虽然伯希和业绩实现"狂飙"，但其增长高度绑定线上渠道与高额的营销投入。其销售及分销费用由 2023 年的 2.77 亿元一路激增至 2025 年的 10.59 亿元。', url: null }
+  ]
+};
+
+const HOVER_BRANDS = Object.keys(HOVER_DATA);
+
+// legend
+// legend：前 3 个中国系（蓝）｜竖线分隔｜后 2 个亚太系（黄）
+const items = REGIONS.map(r => `<div class="legend-item"><span class="legend-dot" style="background:${REGION_COLORS[r]}"></span>${r}</div>`);
+const legendHtml = items.slice(0, 3).join('') + '<div class="legend-group-sep"></div>' + items.slice(3).join('');
+document.getElementById('bubbleLegend').innerHTML = legendHtml + `<div class="legend-item" style="margin-left:auto;color:#9ca3af;font-size:12px;">数据来源：运动品牌财务报告_气泡图.xlsx</div>`;
+
+// ====================== 气泡图：state + symlog + 高亮环 + 品牌多选 ======================
+let activeBrands = new Set(bubbleData.map(d => d.brand));
+let useLog = false;
+const SYMLOG_C = 20;
+const symlog    = v => Math.sign(v) * Math.log10(1 + Math.abs(v) / SYMLOG_C) * SYMLOG_C;
+const invSymlog = v => Math.sign(v) * SYMLOG_C * (Math.pow(10, Math.abs(v) / SYMLOG_C) - 1);
+const tx = v => useLog ? symlog(v) : v;
+
+// 构建品牌分组（二级：国/MCN → 细分）
+function buildBrandGroups() {
+  const g = { '中国': { '中国大陆': [], '中国台湾': [] }, 'MCN': [] };
+  bubbleData.forEach(d => {
+    if (d.category === '中国大陆') g['中国']['中国大陆'].push(d.brand);
+    else if (d.category === '中国台湾') g['中国']['中国台湾'].push(d.brand);
+    else if (d.category === 'MCN') g['MCN'].push(d.brand);
+  });
+  // 中文按拼音首字母排序
+  Object.values(g['中国']).forEach(arr => arr.sort((a, b) => a.localeCompare(b, 'zh-CN')));
+  g['MCN'].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+  return g;
+}
+
+function renderBrandDropdown() {
+  const g = buildBrandGroups();
+  const chinaCount = g['中国']['中国大陆'].length + g['中国']['中国台湾'].length;
+  const dropdownEl = document.getElementById('brandDropdown');
+  const renderItem = (b) => `<label class="ms-item"><input type="checkbox" data-brand="${b}" checked><span>${b}</span></label>`;
+  const renderGroup = (key, label, total, sub) => `
+    <div class="ms-group" data-group="${key}">
+      <div class="ms-group-head">
+        <span class="ms-group-name">${label} (${total})</span>
+        <span class="ms-group-toggle">展开 ▾</span>
+      </div>
+      <div class="ms-group-body">${sub}</div>
+    </div>`;
+  const chinaSub = `
+    <div class="ms-subgroup">
+      <div class="ms-subgroup-name">中国大陆 (${g['中国']['中国大陆'].length})</div>
+      ${g['中国']['中国大陆'].map(renderItem).join('')}
+    </div>
+    <div class="ms-subgroup">
+      <div class="ms-subgroup-name">中国台湾 (${g['中国']['中国台湾'].length})</div>
+      ${g['中国']['中国台湾'].map(renderItem).join('')}
+    </div>`;
+  const mcnSub = g['MCN'].map(renderItem).join('');
+  dropdownEl.innerHTML = `
+    <div class="ms-actions">
+      <button data-act="all">全选</button>
+      <button data-act="none">清空</button>
+      <button data-act="hover">仅 9 大重点</button>
+      <button data-act="china">仅中国</button>
+      <button data-act="mcn">仅 MCN</button>
+      <span class="ms-count" id="msCount">已选 ${activeBrands.size} / ${bubbleData.length}</span>
+    </div>
+    ${renderGroup('中国', '中国', chinaCount, chinaSub)}
+    ${renderGroup('MCN', 'MCN', g['MCN'].length, mcnSub)}`;
+}
+renderBrandDropdown();
+
+function updateTrigger() {
+  const text = document.querySelector('#brandTrigger .ms-text');
+  if (activeBrands.size === bubbleData.length) text.textContent = `全部 ${bubbleData.length} 个品牌`;
+  else if (activeBrands.size === 0) text.textContent = '未选择品牌（图表将空）';
+  else text.textContent = `已选 ${activeBrands.size} / ${bubbleData.length} 个品牌`;
+  document.getElementById('msCount').textContent = `已选 ${activeBrands.size} / ${bubbleData.length}`;
+}
+updateTrigger();
+
+const bubbleChart = echarts.init(document.getElementById('bubbleChart'));
+
+function buildBubbleOption() {
+  const filtered = bubbleData.filter(d => activeBrands.has(d.brand));
+  // 每个气泡 data 数组：[tx, ty, rev, brand, 原x, 原y]
+  const bubbleSeries = REGIONS.map(region => ({
+    name: region,
+    type: 'scatter',
+    symbolSize: (val) => Math.max(4, Math.sqrt(val[2]) * 0.4),
+    itemStyle: {
+      color: REGION_COLORS[region],
+      opacity: 0.78,
+      borderColor: (params) => HOVER_BRANDS.includes(params.data[3]) ? '#f59e0b' : '#fff',
+      borderWidth: (params) => HOVER_BRANDS.includes(params.data[3]) ? 2.2 : 1.2
+    },
+    emphasis: { focus: 'series', itemStyle: { opacity: 1, borderColor: '#1f2937', borderWidth: 2.2 } },
+    label: { show: true, formatter: p => p.data[3], position: 'right', fontSize: 10.5, color: '#1f2937', textBorderColor: '#fff', textBorderWidth: 2 },
+    data: filtered.filter(d => d.region === region).map(d => [tx(d.x), tx(d.y), d.rev, d.brand, d.x, d.y])
+  }));
+
+  const markLines = [
+    { xAxis: 0, label: { formatter: 'X=0', position: 'end' }, lineStyle: { color: '#9ca3af', type: 'dashed' } },
+    { yAxis: 0, label: { formatter: 'Y=0', position: 'end' }, lineStyle: { color: '#9ca3af', type: 'dashed' } }
+  ];
+  bubbleSeries.forEach(s => s.markLine = { silent: true, symbol: 'none', data: markLines, animation: false });
+
+  const ringSeries = REGIONS.map(region => ({
+    name: region + '_ring',
+    type: 'scatter',
+    symbolSize: (val) => Math.max(4, Math.sqrt(val[2]) * 0.4) + 3,
+    itemStyle: { color: 'transparent', borderColor: '#fbbf24', borderWidth: 1.5, opacity: 0.85 },
+    hoverAnimation: false,
+    silent: true,
+    data: filtered.filter(d => d.region === region && HOVER_BRANDS.includes(d.brand))
+                  .map(d => [tx(d.x), tx(d.y), d.rev, d.brand])
+  }));
+
+  const fmt = useLog ? (v) => {
+    const orig = invSymlog(v);
+    if (Math.abs(orig) < 0.5) return '0%';
+    return orig.toFixed(0) + '%';
+  } : '{value}%';
+
+  return {
+    tooltip: {
+      trigger: 'item',
+      backgroundColor: 'rgba(31, 41, 55, 0.95)', borderColor: 'rgba(31, 41, 55, 0.95)',
+      textStyle: { color: '#fff', fontSize: 12 },
+      formatter: (p) => {
+        const d = p.data;
+        if (p.seriesName.endsWith('_ring')) return '';
+        const origX = d[4], origY = d[5];
+        const cat = (bubbleData.find(b => b.brand === d[3]) || {}).category || '-';
+        return `<div style="font-weight:600;margin-bottom:6px;font-size:13px;">${d[3]}${HOVER_BRANDS.includes(d[3]) ? ' <span style="color:#fbbf24;">★</span>' : ''}</div>
+          <div>覆盖区域：<span style="color:${REGION_COLORS[p.seriesName]};font-weight:600">${p.seriesName}</span></div>
+          <div>企业分类：<b>${cat}</b></div>
+          <div>FY23-24：<b style="color:${origX>=0?'#34d399':'#fb7185'}">${origX.toFixed(2)}%</b></div>
+          <div>FY24-25：<b style="color:${origY>=0?'#34d399':'#fb7185'}">${origY.toFixed(2)}%</b></div>
+          <div>2025 营收：<b>${d[2].toLocaleString()} (百万)</b></div>
+          ${HOVER_BRANDS.includes(d[3]) ? '<div style="margin-top:6px;font-size:11px;color:#fbbf24;">★ 悬停可查看深度解读</div>' : ''}`;
+      }
+    },
+    grid: { left: 70, right: 30, top: 40, bottom: 70 },
+    xAxis: {
+      name: 'FY23-24 营收变化率 (%)' + (useLog ? ' · 对数刻度' : ''),
+      nameLocation: 'middle', nameGap: 32,
+      nameTextStyle: { fontSize: 13, color: '#374151', fontWeight: 600 },
+      type: 'value', min: useLog ? -6 : null, max: useLog ? 16 : null,
+      axisLine: { lineStyle: { color: '#d1d5db' } },
+      axisLabel: { color: '#6b7280', formatter: fmt },
+      splitLine: { lineStyle: { color: '#e5e7eb', type: 'dashed' } }
+    },
+    yAxis: {
+      name: 'FY24-25 营收变化率 (%)' + (useLog ? ' · 对数刻度' : ''),
+      nameLocation: 'middle', nameGap: 48,
+      nameTextStyle: { fontSize: 13, color: '#374151', fontWeight: 600 },
+      type: 'value', min: useLog ? -10 : null, max: useLog ? 18 : null,
+      axisLine: { lineStyle: { color: '#d1d5db' } },
+      axisLabel: { color: '#6b7280', formatter: fmt },
+      splitLine: { lineStyle: { color: '#e5e7eb', type: 'dashed' } }
+    },
+    series: [...bubbleSeries, ...ringSeries]
+  };
+}
+
+bubbleChart.setOption(buildBubbleOption());
+function updateBubble() { bubbleChart.setOption(buildBubbleOption(), true); }
+
+// ===== 多选下拉事件 =====
+const msEl = document.getElementById('brandFilter');
+const msTrigger = document.getElementById('brandTrigger');
+const msDropdown = document.getElementById('brandDropdown');
+msTrigger.addEventListener('click', (e) => { e.stopPropagation(); msEl.classList.toggle('open'); });
+document.addEventListener('click', (e) => { if (!msEl.contains(e.target)) msEl.classList.remove('open'); });
+
+// 复选框变化
+msDropdown.addEventListener('change', (e) => {
+  const cb = e.target;
+  if (cb.matches('input[type=checkbox][data-brand]')) {
+    if (cb.checked) activeBrands.add(cb.dataset.brand);
+    else activeBrands.delete(cb.dataset.brand);
+    updateTrigger();
+    updateBubble();
+  }
+});
+
+// 顶部操作按钮
+msDropdown.addEventListener('click', (e) => {
+  const btn = e.target.closest('.ms-actions button');
+  if (!btn) return;
+  const act = btn.dataset.act;
+  const apply = (set) => {
+    activeBrands = new Set(set);
+    msDropdown.querySelectorAll('input[type=checkbox][data-brand]').forEach(cb => {
+      cb.checked = activeBrands.has(cb.dataset.brand);
+    });
+    updateTrigger();
+    updateBubble();
+  };
+  if (act === 'all') apply(bubbleData.map(d => d.brand));
+  else if (act === 'none') apply([]);
+  else if (act === 'hover') apply(HOVER_BRANDS);
+  else if (act === 'china') apply(bubbleData.filter(d => d.category === '中国大陆' || d.category === '中国台湾').map(d => d.brand));
+  else if (act === 'mcn') apply(bubbleData.filter(d => d.category === 'MCN').map(d => d.brand));
+});
+
+// 分组展开/折叠
+msDropdown.addEventListener('click', (e) => {
+  const head = e.target.closest('.ms-group-head');
+  if (!head) return;
+  const group = head.parentElement;
+  group.classList.toggle('collapsed');
+  head.querySelector('.ms-group-toggle').textContent = group.classList.contains('collapsed') ? '展开 ▸' : '展开 ▾';
+});
+
+// 对数显示按钮
+document.getElementById('logToggle').addEventListener('click', () => {
+  useLog = !useLog;
+  const btn = document.getElementById('logToggle');
+  btn.classList.toggle('active', useLog);
+  btn.textContent = useLog ? '⚡ 对数显示 ✓' : '⚡ 对数显示';
+  updateBubble();
+});
+
+// ====================== 悬停面板 ======================
+const panel = document.getElementById('hoverPanel');
+let hideTimer = null;
+
+function renderPanel(brand) {
+  const items = HOVER_DATA[brand];
+  const brandData = bubbleData.find(d => d.brand === brand);
+  const change = brandData ? brandData.y : 0;
+  const sign = change >= 0 ? '+' : '';
+  panel.innerHTML = `
+    <div class="hp-header">${brand} · 中国市场深度解读</div>
+    <div class="hp-summary">FY24-25 营收变化率：<b style="color:${change>=0?'#059669':'#dc2626'}">${sign}${change.toFixed(2)}%</b></div>
+    ${items.map(it => `
+      <div class="hp-section">
+        <div class="hp-title">${it.title}</div>
+        <div class="hp-text">${it.text}</div>
+        ${it.url ? `<a class="hp-link" href="${it.url}" target="_blank" rel="noopener noreferrer">来源链接 →</a>` : ''}
+      </div>
+    `).join('')}
+  `;
+}
+
+function positionPanel(brand) {
+  const brandData = bubbleData.find(d => d.brand === brand);
+  if (!brandData) return;
+  const seriesIdx = REGIONS.indexOf(brandData.region);
+  const chartRect = bubbleChart.getDom().getBoundingClientRect();
+  // log 模式下坐标需用 symlog 变换值，convertToPixel 才能正确换算
+  const px = bubbleChart.convertToPixel({ seriesIndex: seriesIdx }, [tx(brandData.x), tx(brandData.y), brandData.rev, brandData.brand]);
+  const panelW = panel.offsetWidth || 360;
+  const panelH = panel.offsetHeight || 360;
+  let left = chartRect.left + px[0] + 24;
+  let top  = chartRect.top + px[1] - panelH / 2;
+  if (left + panelW > window.innerWidth - 16) left = chartRect.left + px[0] - panelW - 24;
+  if (left < 16) left = 16;
+  if (top < 90) top = 90;
+  if (top + panelH > window.innerHeight - 16) top = window.innerHeight - panelH - 16;
+  panel.style.left = left + 'px';
+  panel.style.top  = top + 'px';
+}
+
+function showPanel(brand) {
+  clearTimeout(hideTimer);
+  renderPanel(brand);
+  panel.classList.add('visible');
+  requestAnimationFrame(() => positionPanel(brand));
+}
+function hidePanel() { hideTimer = setTimeout(() => panel.classList.remove('visible'), 180); }
+
+bubbleChart.on('mouseover', (params) => {
+  if (HOVER_BRANDS.includes(params.data[3])) {
+    bubbleChart.dispatchAction({ type: 'hideTip' });
+    showPanel(params.data[3]);
+  }
+});
+bubbleChart.on('mouseout', (params) => {
+  if (HOVER_BRANDS.includes(params.data[3])) hidePanel();
+});
+panel.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+panel.addEventListener('mouseleave', hidePanel);
+
+// ====================== 3. 品牌盈利情况 ======================
+const profitData = [
+  { rank: 1,  brand: '安踏',     np: 0.195,  gp: 0.62,   oe: 0.247, group: '高盈利组' },
+  { rank: 2,  brand: 'Nike',     np: 0.182,  gp: 0.46,   oe: 0.357, group: '高盈利组' },
+  { rank: 3,  brand: 'Inditex',  np: 0.156,  gp: 0.5825, oe: null,  group: '高盈利组' },
+  { rank: 4,  brand: 'Lululemon',np: 0.142,  gp: 0.566,  oe: 0.366, group: '高盈利组' },
+  { rank: 5,  brand: '比音勒芬', np: 0.1277, gp: 0.7535, oe: 0.35,  group: '高盈利组' },
+  { rank: 6,  brand: '361度',    np: 0.117,  gp: 0.415,  oe: 0.223, group: '高盈利组' },
+  { rank: 7,  brand: '李宁',     np: 0.099,  gp: 0.49,   oe: 0.38,  group: '中等盈利' },
+  { rank: 8,  brand: '特步',     np: 0.097,  gp: 0.428,  oe: null,  group: '中等盈利' },
+  { rank: 9,  brand: '昂跑',     np: 0.0676, gp: 0.6282, oe: 0.503, group: '中等盈利' },
+  { rank: 10, brand: '亚玛芬',   np: 0.067,  gp: 0.5763, oe: 0.473, group: '中等盈利' },
+  { rank: 11, brand: '探路者',   np: 0.0572, gp: 0.4757, oe: 0.30,  group: '中等盈利' },
+  { rank: 12, brand: '滔搏',     np: 0.048,  gp: 0.384,  oe: 0.331, group: '中等盈利' },
+  { rank: 13, brand: '哥伦比亚', np: 0.039,  gp: 0.502,  oe: null,  group: '中等盈利' },
+  { rank: 14, brand: '威富集团', np: 0.027,  gp: 0.548,  oe: 0.485, group: '盈利承压' },
+  { rank: 15, brand: '捷安特',   np: 0.0144, gp: 0.1981, oe: 0.1802,group: '盈利承压' },
+  { rank: 16, brand: '牧高笛',   np: -0.0338,gp: 0.2662, oe: 0.25,  group: '盈利承压' },
+  { rank: 17, brand: '安德玛',   np: -0.039, gp: 0.479,  oe: 0.42,  group: '盈利承压' }
+];
+
+// 计算分组边界（按 X 类别索引）
+const brands = profitData.map(d => d.brand);
+const idxHighEnd  = profitData.findIndex(d => d.group !== '高盈利组');
+const idxMidEnd   = profitData.findIndex(d => d.group === '盈利承压');
+const markAreas = [
+  [{ xAxis: -0.5, itemStyle: { color: 'rgba(16,185,129,0.15)' } }, { xAxis: idxHighEnd - 0.5 }],
+  [{ xAxis: idxHighEnd - 0.5, itemStyle: { color: 'rgba(245,158,11,0.15)' } }, { xAxis: idxMidEnd - 0.5 }],
+  [{ xAxis: idxMidEnd - 0.5, itemStyle: { color: 'rgba(239,68,68,0.12)' } }, { xAxis: brands.length - 0.5 }]
+];
+
+const profitChart = echarts.init(document.getElementById('profitChart'));
+profitChart.setOption({
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: 'rgba(31,41,55,0.95)', borderColor: 'rgba(31,41,55,0.95)',
+    textStyle: { color: '#fff', fontSize: 12 },
+    formatter: (params) => {
+      const i = params[0].dataIndex;
+      const d = profitData[i];
+      const lines = params.map(p => {
+        const v = p.value;
+        const txt = v === null || v === undefined ? '<span style="color:#9ca3af">N/A</span>' : (v * 100).toFixed(2) + '%';
+        return `${p.marker} ${p.seriesName}：<b>${txt}</b>`;
+      }).join('<br/>');
+      return `<div style="font-weight:600;margin-bottom:6px;font-size:13px;">#${d.rank} ${d.brand} <span style="color:#9ca3af;font-size:11px;">· ${d.group}</span></div>${lines}`;
+    }
+  },
+  grid: { left: 60, right: 30, top: 30, bottom: 90 },
+  xAxis: {
+    type: 'category', data: brands,
+    axisLabel: { color: '#6b7280', fontSize: 11, interval: 0, rotate: 30 },
+    axisLine: { lineStyle: { color: '#d1d5db' } }
+  },
+  yAxis: {
+    type: 'value',
+    axisLabel: { color: '#9ca3af', formatter: (v) => (v * 100).toFixed(0) + '%' },
+    splitLine: { lineStyle: { color: '#f1f5f9' } },
+    max: 0.85
+  },
+  series: [
+    {
+      name: '毛利率', type: 'line', smooth: true, connectNulls: true,
+      symbolSize: 8, lineStyle: { width: 3, color: '#1d4ed8' },
+      itemStyle: { color: '#1d4ed8', borderColor: '#fff', borderWidth: 2 },
+      markArea: { silent: true, data: markAreas, label: { show: true, position: 'insideTop', color: '#6b7280', fontSize: 11, fontWeight: 600 } },
+      data: profitData.map(d => d.gp)
+    },
+    {
+      name: '净利率', type: 'line', smooth: true, connectNulls: true,
+      symbolSize: 8, lineStyle: { width: 3, color: '#10b981' },
+      itemStyle: { color: '#10b981', borderColor: '#fff', borderWidth: 2 },
+      data: profitData.map(d => d.np)
+    },
+    {
+      name: '运营费用率', type: 'line', smooth: true, connectNulls: true,
+      symbolSize: 8, lineStyle: { width: 3, color: '#f59e0b', type: 'dashed' },
+      itemStyle: { color: '#f59e0b', borderColor: '#fff', borderWidth: 2 },
+      data: profitData.map(d => d.oe)
+    }
+  ]
+});
+// 在 markArea 上加文字标签
+profitChart.setOption({
+  series: [
+    { markArea: { data: markAreas.map((m, i) => {
+      const labels = ['高盈利组', '中等盈利', '盈利承压'];
+      m[0].label = { show: true, position: 'insideTop', formatter: labels[i], color: i === 0 ? '#047857' : (i === 1 ? '#b45309' : '#b91c1c'), fontSize: 12, fontWeight: 700 };
+      return m;
+    }) } }
+  ]
+});
+
+// ====================== 4. 安踏 & 361° 经营费用细分 ======================
+const expenseData = {
+  years: ['2021', '2022', '2023', '2024', '2025'],
+  brand361: { ad: [10.2, 11.4, 12.7, 12.8, 10.5], staff: [11.1, 9.8, 9.2, 8.5, 8.4], rd: [4.2, 3.8, 3.7, 3.4, 3.4] },
+  anta:    { ad: [12.4, 10.3, 8.2, 9.0, 8.0],    staff: [13.5, 15.1, 14.9, 14.8, 15.3], rd: [2.3, 2.4, 2.6, 2.8, 2.7] }
+};
+
+function buildExpenseChart(domId, data, brandName, color) {
+  const chart = echarts.init(document.getElementById(domId));
+  const baseLabel = {
+    show: true,
+    formatter: '{c}%',
+    fontSize: 10,
+    color: '#374151',
+    textBorderColor: '#fff',
+    textBorderWidth: 2
+  };
+  chart.setOption({
+    tooltip: { trigger: 'axis', backgroundColor: 'rgba(31,41,55,0.95)', borderColor: 'rgba(31,41,55,0.95)', textStyle: { color: '#fff', fontSize: 12 },
+      formatter: (p) => p.map(x => `${x.marker} ${x.seriesName}：<b>${x.value}%</b>`).join('<br/>') + `<br/><span style="color:#cbd5e1;font-size:11px;">${brandName} · ${p[0].name}</span>` },
+    legend: { data: ['广告及宣传', '员工成本', '研发'], bottom: 0, textStyle: { color: '#374151', fontSize: 11 } },
+    grid: { top: 38, right: 18, bottom: 50, left: 44 },
+    xAxis: { type: 'category', data: expenseData.years, axisLine: { lineStyle: { color: '#d1d5db' } }, axisLabel: { color: '#6b7280' } },
+    yAxis: { type: 'value', axisLabel: { color: '#9ca3af', formatter: '{value}%' }, splitLine: { lineStyle: { color: '#f1f5f9' } } },
+    series: [
+      { name: '广告及宣传', type: 'line', smooth: true, symbolSize: 9, lineStyle: { width: 3, color: '#ef4444' }, itemStyle: { color: '#ef4444' }, label: { ...baseLabel, color: '#ef4444' }, data: data.ad },
+      { name: '员工成本',   type: 'line', smooth: true, symbolSize: 9, lineStyle: { width: 3, color: color },    itemStyle: { color: color },    label: { ...baseLabel, color: color },    data: data.staff },
+      { name: '研发',       type: 'line', smooth: true, symbolSize: 9, lineStyle: { width: 3, color: '#10b981' }, itemStyle: { color: '#10b981' }, label: { ...baseLabel, color: '#059669' }, data: data.rd }
+    ]
+  });
+  return chart;
+}
+const ch361  = buildExpenseChart('ch361',  expenseData.brand361, '361°', '#0ea5e9');
+const chAnta = buildExpenseChart('chAnta', expenseData.anta,    '安踏',  '#1d4ed8');
+
+// ====================== 5. 费用与驱动因素文本分析 ======================
+const brands13  = ['Nike', 'Adidas', '安踏', '361°', 'PUMA', 'On-昂跑', 'UA-安德玛', 'Asics', 'CG-加拿大鹅', 'Amer', 'VF-威富', '滔搏', '捷安特'];
+
+// 费用类型（9 行 × 13 列），按 max 占比从高到低排序
+const costTypes = ['技术成本', '运营费用', '门店成本', '营销费用', 'SG&A费用', '人力成本', '物流成本', '数字营销', '研发费用'];
+const costRaw = {
+  '技术成本':  [17.8, 13.5, 5.3,  11.8, 11.8, 22.2, 20.2, 5.4,  17.7, 15.9, 27.6, 0,    9.9],
+  '运营费用':  [16.1, 10.8, 0,    0,    5.5,  7.7,  12.1, 0.7,  8.1,  6.4,  14,   0,    3.3],
+  '门店成本':  [5.7,  2.7,  6.4,  4.4,  2.6,  7.4,  7.1,  0.7,  4.2,  5.4,  5.2,  12.2, 3.3],
+  '营销费用':  [2.9,  10.8, 0,    0,    0.8,  3,    4,    0.3,  1.7,  1,    1.6,  0,    0],
+  '研发费用':  [1.1,  0,    0,    0,    0,    0.6,  0,    0.7,  0,    0.4,  0.4,  0,    1.3],
+  '人力成本':  [1.7,  0,    1.1,  2.9,  0.9,  6.5,  5.7,  0.3,  4.2,  1.9,  4.8,  0,    4.6],
+  '数字营销':  [0.6,  2.7,  2.1,  0,    0.4,  0.9,  0,    0,    2,    1.7,  0.8,  0,    0],
+  '物流成本':  [3.4,  0,    0,    1.5,  1.1,  1.5,  1.7,  0,    0.5,  1.2,  2.8,  0,    0.7],
+  'SG&A费用': [6.3,  0,    0,    0,    1.1,  4.4,  6.1,  1,    5.7,  1.7,  7.2,  4.9,  0]
+};
+
+// 驱动因素（8 行 × 13 列），按 max 占比从高到低排序
+const drivers = ['业务扩张', '外部因素', '投资驱动', '品牌建设', 'DTC转型', '供应链', '产品创新', '效率提升'];
+const driverRaw = {
+  '外部因素':  [64.5, 70,   16.7, 8.8,  32.4, 40.3, 38.3, 0.8,  31.9, 44.2, 49.3, 2.9,  16.1],
+  '投资驱动':  [40.5, 20,   41.3, 35,   34,   35.2, 40,   39.5, 25.8, 34.6, 45.5, 17.1, 51.8],
+  '业务扩张':  [35.5, 73.3, 29.4, 40,   36.5, 52.8, 21.7, 65.5, 34.4, 37.3, 32.8, 34.3, 41.1],
+  'DTC转型':   [0.8,  16.7, 10.3, 12.5, 8.8,  17,   21.7, 8.4,  44.8, 22.6, 14.9, 14.3, 3.6],
+  '品牌建设':  [7.4,  6.7,  46,   41.2, 0,    1.3,  0,    0,    0.6,  0,    0.7,  45.7, 0],
+  '产品创新':  [34.7, 6.7,  20.6, 36.2, 10.4, 17.6, 4.3,  2.5,  6.1,  6,    3,    20,   8.9],
+  '效率提升':  [4.1,  0,    12.7, 17.5, 8.2,  5,    3.5,  6.7,  0.6,  6.9,  6.7,  28.6, 21.4],
+  '供应链':    [39.7, 3.3,  9.5,  10,   28.9, 17,   21.7, 9.2,  12.9, 18.9, 15.7, 5.7,  14.3]
+};
+
+// ====================== 关键词示例（P 列 · 来源：费用文本分析 sheet） ======================
+const costKeywords = {
+  '技术成本': '技术, 科技, 数字化, 信息化, 系统, 平台, AI, 人工智能\ntechnology, tech, digital, IT, software, cloud, data, cybersecurity\ninfrastructure, platform, system, automation\n研发, 研究开发, 创新, innovation, research, development\n技术成本, 技术费用, 技术投入, 研发投入, 创新投入, IT成本, IT费用',
+  '运营费用': '运营, 经营, 营业, 营业费用, 运营费用, 经营费用\noperating, operations, operational, facilities',
+  '门店成本': '门店, 店铺, 租金, 店面, 零售, 商业地产, 专柜, 租赁\nstore, retail, shop, outlet, rent, lease, real estate',
+  '营销费用': '营销, 市场推广, 广告, 推广, 宣传, 促销\nmarketing, advertising, promotion, campaign\n品牌建设, 品牌投入, 品牌投资, 品牌推广, 品牌营销, 品牌活动\nbrand building, brand investment, brand awareness, brand equity, brand campaign',
+  'SG&A费用': 'SG&A, SGA, 分销, 一般及行政, 管理费用, 销售及管理费用, 销售及管理\nselling, general, administrative, g&a, distribution',
+  '人力成本': '人力, 员工, 工资, 薪酬, 福利, 人力费用, 人员费用, 员工成本\nemployee, compensation, salary, wage, personnel, headcount, workforce, labor',
+  '物流成本': '物流, 仓储, 配送, 运输, 供应链, 履约\nlogistics, shipping, fulfillment, delivery, warehouse, supply chain\n物流成本, 仓储成本, 运输成本',
+  '数字营销': '数字营销, 电商, 线上, 直播, 社交媒体\ndigital marketing, e-commerce, ecommerce, social media, online\nDTC, direct-to-consumer, direct to consumer, 自有零售',
+  '研发费用': '研发, 研究开发, 产品创新, 技术创新\nresearch, development, R&D, innovation, new product, new technology\n研发费用, 研发投入'
+};
+
+const driverKeywords = {
+  '业务扩张': '扩张, 增长, 成长, 规模化, 新市场, 新店, 拓展, 开店\nexpansion, grow, growth, scale, new market, new region, new store',
+  '外部因素': '外部, 宏观, 经济, 汇率, 地缘, 疫情, 通胀, 利率, 市场环境, 外部环境\nexternal, macro, economy, currency, geopolitical, pandemic, inflation, interest rate',
+  '投资驱动': '投资, 投入, 支出, 资本支出, 资金投入, 加投\ninvestment, invest, spending, capex, capital expenditure, funded',
+  '品牌建设': '品牌建设, 品牌投入, 品牌投资, 品牌推广, 品牌营销, 品牌活动\nbrand building, brand investment, brand awareness, brand equity, brand campaign',
+  'DTC转型':  'DTC, 直面消费者, 直营, 自有零售, 渠道转型\nDTC, direct-to-consumer, direct to consumer, owned retail, consumer direct',
+  '供应链':   '供应链, 供应商, 采购, 物流, 库存, 仓储\nsupply chain, supplier, sourcing, logistics, inventory, warehouse',
+  '产品创新': '创新, 新产品, 新技术, 研发, 产品开发, 产品创新, 差异化\ninnovation, innovative, new product, new technology, R&D, product development',
+  '效率提升': '效率, 提升, 优化, 降低成本, 精简, 自动化, 改善\nefficiency, improve, optimization, cost reduction, streamline, automation'
+};
+
+// 关键词悬停面板（懒创建）
+let _kwPanel = null;
+function getKwPanel() {
+  if (!_kwPanel) {
+    _kwPanel = document.createElement('div');
+    _kwPanel.className = 'kw-panel';
+    document.body.appendChild(_kwPanel);
+  }
+  return _kwPanel;
+}
+function showKwPanel(name, kws, e) {
+  const panel = getKwPanel();
+  const lines = kws.split('\n').map(s => s.trim()).filter(Boolean);
+  panel.innerHTML = `
+    <div class="kw-h">📑 ${name}<span class="kw-badge">关键词示例 · P 列</span></div>
+    ${lines.map(l => `<div class="kw-line">${l}</div>`).join('')}
+    <div class="kw-foot">数据来源：「5. 费用文本分析」sheet · P 列关键词示例</div>
+  `;
+  panel.style.display = 'block';
+  const w = 460, h = panel.offsetHeight || 200;
+  let x = (e.clientX || 0) + 16;
+  let y = (e.clientY || 0) - 20;
+  if (x + w > window.innerWidth - 8) x = (e.clientX || 0) - w - 16;
+  x = Math.max(8, x);
+  y = Math.max(8, Math.min(y, window.innerHeight - h - 8));
+  panel.style.left = x + 'px';
+  panel.style.top  = y + 'px';
+}
+function hideKwPanel() { if (_kwPanel) _kwPanel.style.display = 'none'; }
+
+function buildHeatmapData(raw, rows) {
+  // raw: { rowName: [v0, v1, ...] }, rows: rowName 数组
+  // 输出: [[colIdx, rowIdx, value], ...] (X=brand, Y=row)
+  const data = [];
+  rows.forEach((r, y) => {
+    raw[r].forEach((v, x) => {
+      data.push([x, y, v === null ? 0 : v]);
+    });
+  });
+  return data;
+}
+
+function makeHeatmap(domId, raw, rows, keywords, title, opts = {}) {
+  const data = buildHeatmapData(raw, rows);
+  const max = Math.max(...data.map(d => d[2]));
+  const chart = echarts.init(document.getElementById(domId));
+  const hasKw = !!(keywords && Object.keys(keywords).length);
+  chart.setOption({
+    tooltip: {
+      position: 'top',
+      backgroundColor: 'rgba(31,41,55,0.95)', borderColor: 'rgba(31,41,55,0.95)',
+      textStyle: { color: '#fff', fontSize: 12 },
+      formatter: (p) => {
+        const [x, y, v] = p.data;
+        return `<div style="font-weight:600;margin-bottom:4px;font-size:13px;">${brands13[x]} · ${rows[y]}</div>
+          <div>讨论密度：<b style="color:#34d399;font-size:14px;">${v.toFixed(1)}%</b></div>`;
+      }
+    },
+    grid: { top: 30, left: 80, right: 30, bottom: 70 },
+    xAxis: {
+      type: 'category', data: brands13,
+      axisLabel: { color: '#374151', fontSize: 11, rotate: 30, interval: 0 },
+      axisLine: { lineStyle: { color: '#d1d5db' } },
+      splitArea: { show: true, areaStyle: { color: ['rgba(255,255,255,0.02)', 'rgba(0,0,0,0.02)'] } }
+    },
+    yAxis: {
+      type: 'category', data: rows,
+      inverse: !!opts.inverse,
+      triggerEvent: hasKw,
+      axisLabel: {
+        color: '#374151', fontSize: 12, fontWeight: 600,
+        cursor: hasKw ? 'help' : 'default',
+        // 字段名后追加 ⓘ 标识可悬停查看关键词
+        formatter: hasKw ? (v) => `${v}  ⓘ` : undefined
+      },
+      axisLine: { lineStyle: { color: '#d1d5db' } },
+      splitArea: { show: true, areaStyle: { color: ['rgba(255,255,255,0.02)', 'rgba(0,0,0,0.02)'] } }
+    },
+    visualMap: {
+      min: 0, max: max, calculable: true, orient: 'horizontal',
+      left: 'center', bottom: 8,
+      textStyle: { color: '#6b7280', fontSize: 11 },
+      inRange: { color: ['#f1f5f9', '#dbeafe', '#93c5fd', '#3b82f6', '#1d4ed8', '#0c1e6b'] },
+      itemWidth: 12, itemHeight: 120,
+      formatter: (v) => v.toFixed(0) + '%'
+    },
+    series: [{
+      name: title,
+      type: 'heatmap',
+      data: data,
+      label: {
+        show: true,
+        formatter: (p) => p.data[2] === 0 ? '' : p.data[2].toFixed(1),
+        fontSize: 11,
+        fontWeight: 700,
+        // 第一张热力图（费用类型）：全部用深色 #0c1e6b
+        // 其他（驱动因素）：> 70% max 用白字，其余深色
+        color: opts.allDarkLabel ? '#0c1e6b' : (p) => {
+          const v = p.data[2];
+          return v > max * 0.7 ? '#ffffff' : '#0c1e6b';
+        }
+      },
+      itemStyle: {
+        borderColor: '#fff', borderWidth: 1, borderRadius: 2
+      },
+      emphasis: {
+        itemStyle: { shadowBlur: 8, shadowColor: 'rgba(29,78,216,0.4)' },
+        label: { fontSize: 12, fontWeight: 700 }
+      }
+    }]
+  });
+
+  // 绑定 y 轴字段悬停关键词
+  if (hasKw) {
+    chart.on('mouseover', { elementType: 'axisLabel' }, (params) => {
+      if (params.componentType !== 'yAxis') return;
+      const kws = keywords[params.value];
+      if (kws && params.event) showKwPanel(params.value, kws, params.event);
+    });
+    chart.on('mouseout', { elementType: 'axisLabel' }, () => hideKwPanel());
+  }
+
+  return chart;
+}
+
+const costHeatmap   = makeHeatmap('costHeatmap',   costRaw,   costTypes, costKeywords,   '费用类型', { inverse: true, allDarkLabel: true });
+const driverHeatmap = makeHeatmap('driverHeatmap', driverRaw, drivers,   driverKeywords, '驱动因素', { inverse: true });
+
+// ========== Top 排行榜 ==========
+function renderRankList(domId, sourceData, mode) {
+  // mode: 'cost-rd' (技术+研发), 'cost-op' (运营+SG&A), 'driver-brand', 'driver-dtc'
+  const list = brands13.map((b, i) => {
+    let v;
+    if (mode === 'cost-rd')   v = (costRaw['技术成本'][i] || 0) + (costRaw['研发费用'][i] || 0);
+    if (mode === 'cost-op')   v = (costRaw['运营费用'][i] || 0) + (costRaw['SG&A费用'][i] || 0);
+    if (mode === 'driver-brand') v = driverRaw['品牌建设'][i] || 0;
+    if (mode === 'driver-dtc')   v = driverRaw['DTC转型'][i] || 0;
+    return { brand: b, value: v };
+  }).sort((a, b) => b.value - a.value).slice(0, 5);
+  const maxV = list[0].value || 1;
+  const html = list.map(r => `
+    <li>
+      <span class="r-brand">${r.brand}</span>
+      <span class="r-bar"><span style="width:${(r.value / maxV * 100).toFixed(1)}%"></span></span>
+      <span class="r-val">${r.value.toFixed(1)}</span>
+    </li>
+  `).join('');
+  document.getElementById(domId).innerHTML = html;
+}
+function safeRenderRankList(domId, mode) {
+  if (!document.getElementById(domId)) return;
+  renderRankList(domId, null, mode);
+}
+safeRenderRankList('costRank1',   'cost-rd');
+safeRenderRankList('costRank2',   'cost-op');
+safeRenderRankList('driverRank1', 'driver-brand');
+safeRenderRankList('driverRank2', 'driver-dtc');
+
+
+// ========== 关键洞察卡片 ==========
+const insights = [
+  {
+    type: 'rose',
+    icon: '🛠️',
+    title: '技术 / 研发投入重仓',
+    body: '<b>VF-威富 27.6% · On-昂跑 22.2% · UA-安德玛 20.2% · Nike 17.8%</b> 文本中讨论度最高，On 等新锐品牌将技术成本作为核心叙事；相比之下国内品牌（安踏 5.3%、361° 11.8%）讨论度偏低，可视为"研发投入"对外传播的潜在差距。'
+  },
+  {
+    type: 'warn',
+    icon: '🏪',
+    title: '门店扩张仍是主要叙事',
+    body: '<b>滔搏 12.2% · On-昂跑 7.4% · UA-安德玛 7.1%</b> 门店成本讨论度领先，叠加 3.2 中 On 业务扩张 52.8% / UA 21.7%，DTC 转型正在从"渠道叙事"转向"门店落地"。'
+  },
+  {
+    type: 'good',
+    icon: '🚀',
+    title: '安踏 / 361° 强品牌建设',
+    body: '<b>安踏品牌建设 46.0% · 361° 41.2%</b> 是国产品牌中最高的；与 Nike（7.4%）、Adidas（6.7%）形成对比，说明本土头部品牌仍处"通过品牌建设沉淀"阶段。'
+  }
+];
+document.getElementById('insightRow').innerHTML = insights.map(i => `
+  <div class="ins-card ${i.type}">
+    <div class="ins-h">${i.icon} ${i.title} <span class="pill">洞察</span></div>
+    <div class="ins-b">${i.body}</div>
+  </div>
+`).join('');
+
+// ====================== 自适应 ======================
+window.addEventListener('resize', () => {
+  miniCharts.forEach(c => c.resize());
+  bubbleChart.resize();
+  profitChart.resize();
+  ch361.resize();
+  chAnta.resize();
+  costHeatmap.resize();
+  driverHeatmap.resize();
+  if (panel.classList.contains('visible')) {
+    const cur = panel.querySelector('.hp-header')?.textContent.split(' ')[0];
+    if (cur) positionPanel(cur);
+  }
+  // 关键词面板跟随视口
+  hideKwPanel();
+});
+
+// 滚动时隐藏关键词面板
+window.addEventListener('scroll', hideKwPanel, { passive: true });
+
+// ============== 固定导航 · 滚动激活态 ==============
+(function() {
+  const navLinks = document.querySelectorAll('.top-nav a[data-target]');
+  const sectionIds = ['sec-1','sec-2-1','sec-2-3','sec-2-2','sec-3-1','sec-3-2','sec-3-3','sec-4'];
+  const sections = sectionIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive(id) {
+    navLinks.forEach(a => {
+      if (a.getAttribute('data-target') === id) a.classList.add('active');
+      else a.classList.remove('active');
+    });
+  }
+
+  function onScroll() {
+    const offset = 90; // 收起时顶部小条 + 余量
+    let current = sections[0] ? sections[0].id : null;
+    for (const sec of sections) {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top - offset <= 0) current = sec.id;
+    }
+    if (current) setActive(current);
+  }
+
+  // 平滑滚动 + 跳转时立即高亮
+  navLinks.forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('data-target');
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.pageYOffset - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        setActive(id);
+        history.replaceState(null, '', '#' + id);
+      }
+    });
+  });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', onScroll);
+  onScroll();
+})();
+
+// ============== P1 信息 pill 悬停面板 ==============
+(function() {
+  const pills = document.querySelectorAll('.info-pill[data-pill]');
+  pills.forEach(pill => {
+    const key = pill.getAttribute('data-pill');
+    const panel = document.getElementById('pill-panel-' + key);
+    if (!panel) return;
+
+    function show() {
+      // 定位：贴在 pill 下方
+      const rect = pill.getBoundingClientRect();
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+      panel.style.top  = (rect.bottom + scrollY + 6) + 'px';
+      // 居中于 pill，但避免超出视口
+      const panelWidth = Math.min(460, window.innerWidth - 24);
+      let left = rect.left + scrollX + rect.width / 2 - panelWidth / 2;
+      left = Math.max(12, Math.min(left, window.innerWidth + scrollX - panelWidth - 12));
+      panel.style.left = left + 'px';
+      panel.style.width = panelWidth + 'px';
+      panel.classList.add('visible');
+    }
+    function hide() { panel.classList.remove('visible'); }
+
+    pill.addEventListener('mouseenter', show);
+    pill.addEventListener('mouseleave', hide);
+    panel.addEventListener('mouseenter', show);
+    panel.addEventListener('mouseleave', hide);
+    pill.addEventListener('click', (e) => { e.stopPropagation(); show(); });
+  });
+  // 点击空白处关闭
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.pill-panel.visible').forEach(p => p.classList.remove('visible'));
+  });
+  // 滚动时关闭（避免定位错位）
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.pill-panel.visible').forEach(p => p.classList.remove('visible'));
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

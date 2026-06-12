@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>运动品牌财务报告 - 品牌营收气泡图</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf3 100%);
+    min-height: 100vh;
+  }
+  .header {
+    padding: 28px 40px 14px;
+    background: #fff;
+    border-bottom: 1px solid #eaecef;
+  }
+  .header h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    color: #1f2937;
+    font-weight: 600;
+  }
+  .header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+  }
+  .legend-bar {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 14px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eaecef;
+    align-items: center;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #374151;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .legend-group-sep {
+    width: 1px;
+    height: 14px;
+    background: #d1d5db;
+    margin: 0 2px;
+  }
+  #chart {
+    width: 100%;
+    height: calc(100vh - 140px);
+    min-height: 620px;
+  }
+  #onPanel {
+    position: fixed;
+    width: 340px;
+    max-height: 72vh;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+    padding: 16px 18px;
+    z-index: 9999;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #1f2937;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+  #onPanel.visible { opacity: 1; pointer-events: auto; }
+  #onPanel::-webkit-scrollbar { width: 6px; }
+  #onPanel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  .on-panel-header {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e63946;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .on-panel-list { margin: 0; padding-left: 18px; }
+  .on-panel-list li { margin-bottom: 14px; }
+  .on-panel-list li:last-child { margin-bottom: 0; }
+  .on-panel-title { font-weight: 600; color: #1f2937; margin-bottom: 4px; font-size: 13px; }
+  .on-panel-text { color: #4b5563; }
+  .on-panel-link {
+    display: inline-block;
+    margin-top: 6px;
+    color: #1d4ed8;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 2px 8px;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    background: #eff6ff;
+  }
+  .on-panel-link:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>运动品牌财务报告 · 品牌营收气泡图</h1>
+    <p>X 轴：FY23-24 营收变化率 &nbsp;|&nbsp; Y 轴：FY24-25 营收变化率 &nbsp;|&nbsp; 气泡大小：2025 营收规模 &nbsp;|&nbsp; 颜色：覆盖区域</p>
+  </div>
+  <div class="legend-bar" id="legendBar"></div>
+  <div id="chart"></div>
+
+<script>
+const rawData = [
+  { brand: '安踏',           x: 13.58, y: 13.26,  rev: 80219,  region: '中国公司',     category: '中国公司' },
+  { brand: 'Nike',           x: 4.10,  y: -12.71, rev: 47419,  region: '大中华区',     category: '大中华区' },
+  { brand: 'Inditex',        x: -0.92, y: -2.57,  rev: 36114,  region: '亚太/其他地区', category: '亚太/其他地区' },
+  { brand: '李宁',           x: 3.91,  y: 3.22,   rev: 29598,  region: '中国公司',     category: '中国公司' },
+  { brand: '滔搏',           x: 6.87,  y: -6.64,  rev: 27013,  region: '中国公司',     category: '中国公司' },
+  { brand: 'Adidas',         x: 8.43,  y: 4.74,   rev: 28259,  region: '大中华区',     category: '大中华区' },
+  { brand: '特步',           x: 6.55,  y: 4.23,   rev: 14151,  region: '中国公司',     category: '中国公司' },
+  { brand: '威富集团',       x: 1.39,  y: -1.37,  rev: 10103,  region: '亚太区',       category: '亚太区' },
+  { brand: '361度',          x: 19.59, y: 10.64,  rev: 11146,  region: '中国公司',     category: '中国公司' },
+  { brand: 'Lululemon',      x: 41.25, y: 28.90,  rev: 12635,  region: '中国内地',     category: '中国内地' },
+  { brand: '亚玛芬',         x: 53.66, y: 43.43,  rev: 13406,  region: '大中华区',     category: '大中华区' },
+  { brand: '捷安特',         x: 7.46,  y: -37.08, rev: 4479,   region: '亚太区',       category: '亚太区' },
+  { brand: '安德玛',         x: 5.78,  y: -13.47, rev: 5439,   region: '亚太区',       category: '亚太区' },
+  { brand: '彪马',           x: 3.74,  y: -19.14, rev: 3810,   region: '大中华区',     category: '大中华区' },
+  { brand: '哥伦比亚',       x: 7.83,  y: 9.00,   rev: 4400,   region: '亚太区',       category: '亚太区' },
+  { brand: '比音勒芬',       x: 13.24, y: 7.73,   rev: 4314,   region: '中国公司',     category: '中国公司' },
+  { brand: 'ASICS',          x: 30.49, y: 19.42,  rev: 3933,   region: '中国内地',     category: '中国内地' },
+  { brand: 'Topgolf Callaway', x: -8.33, y: -25.53, rev: 2614, region: '亚太区',       category: '亚太区' },
+  { brand: 'Canada Goose',   x: 1.02,  y: 16.83,  rev: 2741,   region: '大中华区',     category: '大中华区' },
+  { brand: '昂跑',           x: 84.41, y: 96.43,  rev: 4140,   region: '亚太区',       category: '亚太区' },
+  { brand: '奔赴自然(伯希和)', x: 94.48, y: 58.15, rev: 2793,  region: '大中华区',     category: '大中华区' },
+  { brand: '美津浓',         x: 15.49, y: 6.11,   rev: 1697,   region: '亚太区',       category: '亚太区' },
+  { brand: '探路者',         x: 14.44, y: -13.25, rev: 1381,   region: '中国公司',     category: '中国公司' },
+  { brand: 'Uniqlo',         x: 9.16,  y: -3.96,  rev: 31158,  region: '大中华区',     category: '大中华区' }
+];
+
+// 颜色映射（按覆盖区域分类）
+// 顺序：前 3 个中国系 → 蓝（深→中→浅），后 2 个亚太系 → 黄（深→浅）
+const regionColors = {
+  '中国公司':       '#1e3a8a',  // 深蓝（深）
+  '中国内地':       '#3b82f6',  // 中蓝
+  '大中华区':       '#93c5fd',  // 浅蓝（浅）
+  '亚太区':         '#d97706',  // 深黄（深）
+  '亚太/其他地区':  '#fcd34d'   // 浅黄（浅）
+};
+
+const regions = Object.keys(regionColors);
+
+// 构建 legend DOM（中国系 vs 亚太系 用竖线分组）
+const legendBar = document.getElementById('legendBar');
+const items = regions.map((r, i) =>
+  `<div class="legend-item"><span class="legend-dot" style="background:${regionColors[r]}"></span>${r}</div>`
+);
+const html = items.slice(0, 3).join('') + '<div class="legend-group-sep"></div>' + items.slice(3).join('')
+           + `<div class="legend-item" style="margin-left:auto;color:#9ca3af;font-size:12px;">数据来源：运动品牌财务报告_气泡图.xlsx</div>`;
+legendBar.innerHTML = html;
+
+// 把数据按 region 分组
+const series = regions.map(region => {
+  const items = rawData.filter(d => d.category === region);
+  return {
+    name: region,
+    type: 'scatter',
+    symbolSize: function (val) {
+      // 营收规模映射到气泡大小（平方根缩放，整体 50% 缩小）
+      const rev = val[2];
+      return Math.max(7, Math.sqrt(rev) * 0.7);
+    },
+    itemStyle: {
+      color: regionColors[region],
+      opacity: 0.75,
+      borderColor: '#fff',
+      borderWidth: 1.5
+    },
+    emphasis: {
+      focus: 'series',
+      itemStyle: { opacity: 1, borderColor: '#1f2937', borderWidth: 2 }
+    },
+    label: {
+      show: true,
+      formatter: function (p) { return p.data[3]; },
+      position: 'right',
+      fontSize: 11,
+      color: '#1f2937',
+      textBorderColor: '#fff',
+      textBorderWidth: 2
+    },
+    data: items.map(d => [d.x, d.y, d.rev, d.brand])
+  };
+});
+
+// 在 X=0, Y=0 处画参考线
+const markLineData = [
+  { xAxis: 0, label: { formatter: 'X=0', position: 'end' }, lineStyle: { color: '#9ca3af', type: 'dashed' } },
+  { yAxis: 0, label: { formatter: 'Y=0', position: 'end' }, lineStyle: { color: '#9ca3af', type: 'dashed' } }
+];
+
+series.forEach(s => s.markLine = { silent: true, symbol: 'none', data: markLineData, animation: false });
+
+const option = {
+  tooltip: {
+    trigger: 'item',
+    backgroundColor: 'rgba(31, 41, 55, 0.95)',
+    borderColor: 'rgba(31, 41, 55, 0.95)',
+    textStyle: { color: '#fff', fontSize: 12 },
+    formatter: function (p) {
+      const d = p.data;
+      return `<div style="font-weight:600;margin-bottom:6px;font-size:13px;">${d[3]}</div>
+        <div>覆盖区域：<span style="color:${regionColors[p.seriesName]};font-weight:600">${p.seriesName}</span></div>
+        <div>FY23-24 变化率：<b style="color:${d[0]>=0?'#34d399':'#fb7185'}">${d[0].toFixed(2)}%</b></div>
+        <div>FY24-25 变化率：<b style="color:${d[1]>=0?'#34d399':'#fb7185'}">${d[1].toFixed(2)}%</b></div>
+        <div>2025 营收：<b>${d[2].toLocaleString()} (百万)</b></div>`;
+    }
+  },
+  grid: { left: 70, right: 30, top: 40, bottom: 70 },
+  xAxis: {
+    name: 'FY23-24 营收变化率 (%)',
+    nameLocation: 'middle',
+    nameGap: 32,
+    nameTextStyle: { fontSize: 13, color: '#374151', fontWeight: 600 },
+    type: 'value',
+    axisLine: { lineStyle: { color: '#d1d5db' } },
+    axisLabel: { color: '#6b7280', formatter: '{value}%' },
+    splitLine: { lineStyle: { color: '#e5e7eb', type: 'dashed' } }
+  },
+  yAxis: {
+    name: 'FY24-25 营收变化率 (%)',
+    nameLocation: 'middle',
+    nameGap: 48,
+    nameTextStyle: { fontSize: 13, color: '#374151', fontWeight: 600 },
+    type: 'value',
+    axisLine: { lineStyle: { color: '#d1d5db' } },
+    axisLabel: { color: '#6b7280', formatter: '{value}%' },
+    splitLine: { lineStyle: { color: '#e5e7eb', type: 'dashed' } }
+  },
+  series: series
+};
+
+const chart = echarts.init(document.getElementById('chart'));
+chart.setOption(option);
+window.addEventListener('resize', () => chart.resize());
+
+// ============ 昂跑（On）自定义悬停面板 ============
+const onInfo = {
+  brand: '昂跑',
+  items: [
+    {
+      title: '1. 服装品类突破',
+      text: '中国市场不仅带动了标志性跑鞋的销量，更是昂跑全球服装类目的核心增长引擎。2025年第一季度，昂跑中国市场的服装与配饰销售额同比分别大涨93.1%和99.2%，增速远超鞋类，服饰逐渐成为中国市场的第二大支柱。',
+      url: 'https://m.winshang.com/news732599.html'
+    },
+    {
+      title: '2. 线下门店与渠道拓展',
+      text: '直营渠道发力：昂跑不断加速中国核心商圈的直营门店布局。2023年在中国市场新开10家直营门店，2024年再开17家。高端体验落地：随着门店规模升级（如2025年4月开业的成都太古里旗舰店），昂跑在中国的自有零售门店数量已大幅扩展，且计划将直营门店中的服装销售占比提升至25%-30%。',
+      url: 'https://www.news.cn/fashion/20250815/3557967b451949f99b9f39de7deae0c4/c.html'
+    },
+    {
+      title: '3. 中国市场战略定位：「中国优先」（China First）',
+      text: '昂跑将中国市场从初期的"增长引擎"升级为"创新试验场"。品牌不仅将最佳零售体验落地中国，更试图通过中国消费者对高端运动生活方式的认同，重塑其全球收入结构。',
+      url: 'https://m.winshang.com/news732599.html'
+    }
+  ]
+};
+
+const onData = rawData.find(d => d.brand === onInfo.brand);
+const onSeriesIdx = regions.indexOf(onData.category);
+
+// 构建面板
+const onPanel = document.createElement('div');
+onPanel.id = 'onPanel';
+onPanel.innerHTML = `
+  <div class="on-panel-header">${onInfo.brand}（On） · 中国市场战略解读</div>
+  <ol class="on-panel-list">
+    ${onInfo.items.map(it => `
+      <li>
+        <div class="on-panel-title">${it.title}</div>
+        <div class="on-panel-text">${it.text}</div>
+        <a class="on-panel-link" href="${it.url}" target="_blank" rel="noopener noreferrer">来源链接 →</a>
+      </li>
+    `).join('')}
+  </ol>
+`;
+document.body.appendChild(onPanel);
+
+let hideTimer = null;
+function positionOnPanel() {
+  const chartRect = chart.getDom().getBoundingClientRect();
+  const px = chart.convertToPixel({ seriesIndex: onSeriesIdx }, [onData.x, onData.y]);
+  const panelW = onPanel.offsetWidth || 340;
+  const panelH = onPanel.offsetHeight || 360;
+  // 优先放在气泡右侧，超出右边界则放左侧
+  let left = chartRect.left + px[0] + 24;
+  let top  = chartRect.top + px[1] - panelH / 2;
+  if (left + panelW > window.innerWidth - 16) {
+    left = chartRect.left + px[0] - panelW - 24;
+  }
+  if (left < 16) left = 16;
+  if (top < 90) top = 90;
+  if (top + panelH > window.innerHeight - 16) top = window.innerHeight - panelH - 16;
+  onPanel.style.left = left + 'px';
+  onPanel.style.top  = top + 'px';
+}
+function showOnPanel() {
+  clearTimeout(hideTimer);
+  onPanel.classList.add('visible');
+  // 等可见后再定位（确保 offsetWidth/Height 已生效）
+  requestAnimationFrame(positionOnPanel);
+}
+function hideOnPanel() {
+  hideTimer = setTimeout(() => onPanel.classList.remove('visible'), 180);
+}
+
+// 监听昂跑气泡的 hover
+chart.on('mouseover', { seriesIndex: onSeriesIdx }, (params) => {
+  if (params.data && params.data[3] === onInfo.brand) {
+    chart.dispatchAction({ type: 'hideTip' });
+    showOnPanel();
+  }
+});
+chart.on('mouseout', { seriesIndex: onSeriesIdx }, (params) => {
+  if (params.data && params.data[3] === onInfo.brand) hideOnPanel();
+});
+// 鼠标进入面板区域时保持显示，离开后再隐藏
+onPanel.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+onPanel.addEventListener('mouseleave', hideOnPanel);
+// 窗口大小变化时重新定位
+window.addEventListener('resize', () => {
+  if (onPanel.classList.contains('visible')) positionOnPanel();
+});
+</script>
+</body>
+</html>
