@@ -56,11 +56,39 @@ coverage_stats_output.xlsx
 presentation.html
 __pycache__/
 
+# 临时txt/json输出(核查过程中产生的)
+*.txt
+!requirements.txt
+!README.txt
+*.json
+!package.json
+!tsconfig.json
+
+# 临时Python脚本(核查过程中产生的)
+scripts/temp_scripts/
+
 # Large data / binary files (track code, not data)
-*.xlsx
+# 保留 xlsx 在仓库中以便协作和数据共享
+# 历史版本归档在 data_versions/，不提交到 Git
 *.xls
 *.csv
 !data/**/*.csv
+data_versions/
+data/processed/*.xlsx
+# 历史版本xlsx(保留v2和v2_latest最新两个)
+竞品财务数据库_标准模板v2_new_v*.xlsx
+竞品财务数据库_标准模板v2-*.xlsx
+*.zip
+*.tar.gz
+
+# PDF年报原始文件(太大且可能有版权问题)
+竞品财务PDF库/
+*.pdf
+
+# 用户上传的早期xlsx快照(在网页报告子目录中)
+网页报告/**/user_input_files/*.xlsx
+网页报告/运动品牌财务报告_*.xlsx
+网页报告/网页报告/运动品牌财务报告_*.xlsx
 
 # Notebook checkpoints
 .ipynb_checkpoints/

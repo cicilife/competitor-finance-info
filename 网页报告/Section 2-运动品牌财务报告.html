@@ -89,6 +89,8 @@
   }
   .pp-links a:hover { color: #0c4a6e; border-bottom-style: solid; }
   .card-desc { color: #6b7280; font-size: 13px; margin: 0 0 14px; }
+  .card-note { display: flex; flex-direction: column; gap: 4px; padding: 10px 14px; margin: -6px 0 12px; background: #fff8e6; border-left: 3px solid #f59e0b; border-radius: 6px; font-size: 12px; color: #6b4a09; line-height: 1.55; }
+  .card-note span { display: block; }
 
   .legend-bar { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; font-size: 12.5px; color: #374151; }
   .legend-item { display: flex; align-items: center; gap: 6px; }
@@ -769,10 +771,14 @@
   
 <div class="card" id="sec-2-3">
     <div class="card-header"><h2>2.3 品牌盈利情况</h2><span class="tag">折线图 · 三段背景带</span></div>
-    <p class="card-desc">按净利率排名展示 17 个品牌的毛利率、净利率、运营费用率；背景三段色带区分 <b style="color:#059669">高盈利组</b> · <b style="color:#d97706">中等盈利</b> · <b style="color:#dc2626">盈利承压</b></p>
+    <p class="card-desc">按净利率排名展示 14 个品牌的毛利率、净利率、运营费用率；背景三段色带区分 <b style="color:#059669">高盈利组</b> · <b style="color:#d97706">中等盈利</b> · <b style="color:#dc2626">盈利承压</b></p>
+    <div class="card-note">
+      <span>*区域覆盖未统一</span>
+      <span>**运营费用率仅为 SG&amp;A 相关费用，为（毛利率 - 净利率）中的一部分，不含利息收支、联营公司损益、其他收益、公允价值变动、所得税收入等</span>
+    </div>
     <div class="legend-bar">
       <div class="legend-item"><span class="legend-rect" style="background:rgba(16,185,129,0.18);border:1px solid #10b981"></span>高盈利组（1-6）</div>
-      <div class="legend-item"><span class="legend-rect" style="background:rgba(245,158,11,0.18);border:1px solid #f59e0b"></span>中等盈利（7-13）</div>
+      <div class="legend-item"><span class="legend-rect" style="background:rgba(245,158,11,0.18);border:1px solid #f59e0b"></span>中等盈利（7-12）</div>
       <div class="legend-item"><span class="legend-rect" style="background:rgba(239,68,68,0.15);border:1px solid #ef4444"></span>盈利承压（14-17）</div>
       <div class="legend-item" style="margin-left:auto"><span class="legend-dot" style="background:#1d4ed8"></span>毛利率</div>
       <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>净利率</div>
@@ -1690,24 +1696,22 @@ panel.addEventListener('mouseenter', () => clearTimeout(hideTimer));
 panel.addEventListener('mouseleave', hidePanel);
 
 // ====================== 3. 品牌盈利情况 ======================
+// 数据源: Excel「3. 品牌盈利情况」sheet · 2025 年报盈利 & 经营指标
 const profitData = [
-  { rank: 1,  brand: '安踏',     np: 0.195,  gp: 0.62,   oe: 0.247, group: '高盈利组' },
-  { rank: 2,  brand: 'Nike',     np: 0.182,  gp: 0.46,   oe: 0.357, group: '高盈利组' },
-  { rank: 3,  brand: 'Inditex',  np: 0.156,  gp: 0.5825, oe: null,  group: '高盈利组' },
-  { rank: 4,  brand: 'Lululemon',np: 0.142,  gp: 0.566,  oe: 0.366, group: '高盈利组' },
-  { rank: 5,  brand: '比音勒芬', np: 0.1277, gp: 0.7535, oe: 0.35,  group: '高盈利组' },
-  { rank: 6,  brand: '361度',    np: 0.117,  gp: 0.415,  oe: 0.223, group: '高盈利组' },
-  { rank: 7,  brand: '李宁',     np: 0.099,  gp: 0.49,   oe: 0.38,  group: '中等盈利' },
-  { rank: 8,  brand: '特步',     np: 0.097,  gp: 0.428,  oe: null,  group: '中等盈利' },
-  { rank: 9,  brand: '昂跑',     np: 0.0676, gp: 0.6282, oe: 0.503, group: '中等盈利' },
-  { rank: 10, brand: '亚玛芬',   np: 0.067,  gp: 0.5763, oe: 0.473, group: '中等盈利' },
-  { rank: 11, brand: '探路者',   np: 0.0572, gp: 0.4757, oe: 0.30,  group: '中等盈利' },
-  { rank: 12, brand: '滔搏',     np: 0.048,  gp: 0.384,  oe: 0.331, group: '中等盈利' },
-  { rank: 13, brand: '哥伦比亚', np: 0.039,  gp: 0.502,  oe: null,  group: '中等盈利' },
-  { rank: 14, brand: '威富集团', np: 0.027,  gp: 0.548,  oe: 0.485, group: '盈利承压' },
-  { rank: 15, brand: '捷安特',   np: 0.0144, gp: 0.1981, oe: 0.1802,group: '盈利承压' },
-  { rank: 16, brand: '牧高笛',   np: -0.0338,gp: 0.2662, oe: 0.25,  group: '盈利承压' },
-  { rank: 17, brand: '安德玛',   np: -0.039, gp: 0.479,  oe: 0.42,  group: '盈利承压' }
+  { rank: 1,  brand: '安踏',     np: 0.195,   gp: 0.62,    oe: 0.247,  group: '高盈利组' },
+  { rank: 2,  brand: 'Nike',     np: 0.182,   gp: 0.46,    oe: 0.2281, group: '高盈利组' },
+  { rank: 4,  brand: 'Lululemon',np: 0.142,   gp: 0.566,   oe: 0.366,  group: '高盈利组' },
+  { rank: 5,  brand: '比音勒芬', np: 0.1277,  gp: 0.7535,  oe: 0.35,   group: '高盈利组' },
+  { rank: 6,  brand: '361度',    np: 0.117,   gp: 0.415,   oe: 0.223,  group: '高盈利组' },
+  { rank: 7,  brand: '李宁',     np: 0.099,   gp: 0.49,    oe: 0.38,   group: '中等盈利' },
+  { rank: 9,  brand: '昂跑',     np: 0.0676,  gp: 0.6282,  oe: 0.503,  group: '中等盈利' },
+  { rank: 10, brand: '亚玛芬',   np: 0.067,   gp: 0.5763,  oe: 0.473,  group: '中等盈利' },
+  { rank: 11, brand: '探路者',   np: 0.0572,  gp: 0.4757,  oe: 0.30,   group: '中等盈利' },
+  { rank: 12, brand: '滔搏',     np: 0.048,   gp: 0.384,   oe: 0.331,  group: '中等盈利' },
+  { rank: 14, brand: '威富集团', np: 0.027,   gp: 0.548,   oe: 0.485,  group: '盈利承压' },
+  { rank: 15, brand: '捷安特',   np: 0.0144,  gp: 0.1981,  oe: 0.1802, group: '盈利承压' },
+  { rank: 16, brand: '牧高笛',   np: -0.0338, gp: 0.2662,  oe: 0.25,   group: '盈利承压' },
+  { rank: 17, brand: '安德玛',   np: -0.039,  gp: 0.479,   oe: 0.42,   group: '盈利承压' }
 ];
 
 // 计算分组边界（按 X 类别索引）
