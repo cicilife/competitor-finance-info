@@ -155,9 +155,9 @@ MIT License
 
 ## 联系方式
 
-- 仓库: https://github.com/your-username/competitor-finance-info
-- 邮箱: [your-email]
+- 仓库: https://github.com/cicilife/competitor-finance-info
+- 邮箱: wusi159753@163.com
 
 ---
 
-**最后更新**: 2025-06-15
+**最后更新**: 2026-06-15
